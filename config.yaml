@@ -38,7 +38,7 @@ params:
         subtitle: 
         avatar:
             local: true
-            src: img/avatar.png
+            src: img/avatar.jpg
 
     article:
         math: false
@@ -116,6 +116,24 @@ menu:
           url: /
           weight: -100
           pre: home
+
+        - identifier: about
+          name: About
+          url: /about
+          weight: -90
+          pre: user
+
+        # - identifier: archives
+        #   name: Archives
+        #   url: archives
+        #   weight: -70
+        #   pre: archives
+
+        # - identifier: search
+        #   name: Search
+        #   url: search
+        #   weight: -50
+        #   pre: search
 
 related:
     includeNewer: true
