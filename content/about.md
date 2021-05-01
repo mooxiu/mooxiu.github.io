@@ -4,7 +4,7 @@ date: 2021-04-30T22:59:26+08:00
 author: "Xwithoutcolor"
 ---
 
-音乐制作人（虽然还没有作品）/ 写程序的人/ Podcaster
+Music Producer (No product yet)/ Programmer/ Podcaster
 
 ### Podcast: 
 - Official Website: [ShuffleShuffle|随机掉落](https://www.shuffleshuffle.com)
