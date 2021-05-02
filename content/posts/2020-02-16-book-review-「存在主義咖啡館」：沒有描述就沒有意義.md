@@ -1,13 +1,13 @@
 ---
 title: '「存在主義咖啡館」：沒有描述就沒有意義'
+description: 'a book review on 莎拉·贝克韦尔「存在主义咖啡馆」'
 author: Xwithoutcolor
 date: 2020-02-16T09:41:05+00:00
-url: /2020/02/16/book-review-「存在主義咖啡館」：沒有描述就沒有意義/
 categories:
   - Review
 tags:
-  - 存在主义
-  - 哲学
+  - philosophy
+  - book
 
 ---
 豆瓣頁面：[「存在主义咖啡馆」][1]

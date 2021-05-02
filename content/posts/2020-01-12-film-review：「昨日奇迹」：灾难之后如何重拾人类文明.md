@@ -1,12 +1,13 @@
 ---
 title: 「昨日奇迹」：灾难之后如何重拾人类文明
+description: a review of movie 「昨日奇迹」
 author: Xwithoutcolor
 date: 2020-01-12T15:35:10+00:00
-url: /2020/01/12/film-review：「昨日奇迹」：灾难之后如何重拾人类文明/
 categories:
   - Review
 tags:
-  - 披头士
+  - The Beatles
+  - movie
 
 ---
 <p class="has-normal-font-size">

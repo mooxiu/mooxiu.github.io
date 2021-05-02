@@ -6,7 +6,7 @@ url: /2020/02/20/projet-de-open-japonais-livre/
 categories:
   - 语言
 tags:
-  - 日语
+  - Japanese
 
 ---
 ### 语言和文字

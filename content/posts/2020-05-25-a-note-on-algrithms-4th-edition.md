@@ -5,7 +5,8 @@ draft: true
 categories:
   - 笔记
 tags:
-  - 算法
+  - algorithms
+  - book
 
 ---
 这则笔记主要记录我在阅读「算法」（by Robert Sedgewick et Kevin Wayne）这本书时学到的基本的算法和思想。
