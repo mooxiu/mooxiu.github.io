@@ -1,7 +1,6 @@
 ---
 title: 不是所有ology都应是science
 author: Xwithoutcolor
-type: post
 date: 2020-01-31T18:58:01+00:00
 url: /2020/01/31/不是所有ology都应是science/
 categories:

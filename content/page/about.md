@@ -23,3 +23,6 @@ Music Producer (No product yet)/ Programmer/ Podcaster
 
 ### Follow me on Douban:
 [我的豆瓣](https://www.douban.com/people/57087441/)
+
+### 2021/4/30 Note On Migration:
+> This blog has been migrated from original 「狸猫的写作场所」. In the deature, I will focus on music producing (at least I hope so), my thoughts on programming, and the extension from my podcast. Hope to see no more theme changing.

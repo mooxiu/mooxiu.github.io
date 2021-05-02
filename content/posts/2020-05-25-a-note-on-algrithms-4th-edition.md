@@ -1,10 +1,7 @@
 ---
 title: 「算法4」笔记
 author: Xwithoutcolor
-type: post
-date: -001-11-30T00:00:00+00:00
 draft: true
-url: /?p=328
 categories:
   - 笔记
 tags:
@@ -76,13 +73,8 @@ tags:
   * 插入（put）：将新的一组键值对存入表中。
   * 查找（get）：根据所给的键得到相应的值。
 
-<blockquote class="wp-block-quote">
-  <p>
     在<a href="https://zh.wikipedia.org/wiki/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6">计算机科学</a>中，<strong>符号表</strong>是一种用于语言翻译器（例如<a href="https://zh.wikipedia.org/wiki/%E7%BC%96%E8%AF%91%E5%99%A8">编译器</a>和<a href="https://zh.wikipedia.org/wiki/%E8%A7%A3%E9%87%8A%E5%99%A8">解释器</a>）中的数据结构。在符号表中，程序<a href="https://zh.wikipedia.org/wiki/%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</a>中的每个标识符都和它的声明或使用信息绑定在一起，比如其<a href="https://zh.wikipedia.org/wiki/%E6%95%B8%E6%93%9A%E9%A1%9E%E5%9E%8B">数据类型</a>、<a href="https://zh.wikipedia.org/wiki/%E4%BD%9C%E7%94%A8%E5%9F%9F">作用域</a>以及<a href="https://zh.wikipedia.org/wiki/%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80">内存地址</a>。
-  </p>
   
-  <cite>Wikipedia：<a href="https://zh.wikipedia.org/wiki/%E7%AC%A6%E5%8F%B7%E8%A1%A8">符号表</a></cite>
-</blockquote>
 
 符号表的实现方式：
 
