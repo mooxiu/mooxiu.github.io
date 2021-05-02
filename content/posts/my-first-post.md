@@ -1,5 +1,5 @@
 ---
-title: "First Post After Migration"
+title: "Migration"
 date: 2021-04-30T22:59:26+08:00
 author: "Xwithoutcolor"
 tags: [""]
