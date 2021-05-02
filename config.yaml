@@ -41,7 +41,7 @@ params:
             src: img/avatar.jpg
 
     article:
-        math: false
+        math: true
         license:
             enabled: true
             default: Licensed under CC BY-NC-SA 4.0
@@ -49,6 +49,7 @@ params:
     comments:
         enabled: true
         provider: disqus
+        disqusShortname: discussionTestName
 
         utterances:
             repo:
@@ -75,6 +76,7 @@ params:
 
         archives:
             limit: 5
+            path: /archives
 
         tagCloud:
             limit: 10
@@ -125,13 +127,13 @@ menu:
 
         # - identifier: archives
         #   name: Archives
-        #   url: archives
+        #   url: /archives
         #   weight: -70
         #   pre: archives
 
         # - identifier: search
         #   name: Search
-        #   url: search
+        #   url: /search
         #   weight: -50
         #   pre: search
 
