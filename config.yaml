@@ -5,7 +5,7 @@ paginate: 8
 title: New River, New Water
 
 # Change it to your Disqus shortname before using
-disqusShortname: hugo-theme-stack
+disqusShortname: nrnw
 
 # GA Tracking ID
 googleAnalytics:
@@ -49,7 +49,6 @@ params:
     comments:
         enabled: true
         provider: disqus
-        disqusShortname: discussionTestName
 
         utterances:
             repo:
