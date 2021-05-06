@@ -2,8 +2,12 @@
 title: "Note for TOXIC breakdown"
 description: "关于Britney Spears的Toxic的制作"
 date: 2021-05-06T21:27:12+08:00
-tags: ["音乐制作", "乐理"]
-category: "音乐"
+tags:
+    - Music Production
+    - Music Theory
+category:
+    - Music
+    - 笔记
 ---
 
 Britney Spears的Toxic一直是我喜欢的一首歌，[Britney Spears: The Story of Toxic](https://www.youtube.com/watch?v=4CUPuUlq65Y) 解析了这首歌的制作，以下是一些提到的或许有用的点：
