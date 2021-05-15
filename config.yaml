@@ -28,6 +28,8 @@ params:
     footer:
         since: 2020
         customText:
+        podcast: 
+            src: img/applePodcast.svg
 
     dateFormat:
         published: Jan 02, 2006
