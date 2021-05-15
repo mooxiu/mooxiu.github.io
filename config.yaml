@@ -29,7 +29,8 @@ params:
         since: 2020
         customText:
         podcast: 
-            src: img/applePodcast.svg
+            local: true
+            apple: img/applePodcast.svg
 
     dateFormat:
         published: Jan 02, 2006
