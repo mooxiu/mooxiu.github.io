@@ -5,8 +5,7 @@ date: 2021-05-06T21:27:12+08:00
 tags:
     - Music Production
     - Music Theory
-category:
-    - Music
+categories:
     - 笔记
 ---
 

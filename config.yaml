@@ -1,7 +1,7 @@
 baseurl: https://muyaoxiao.github.io
 languageCode: en-us
 theme: hugo-theme-stack
-paginate: 6
+paginate: 5
 title: New River, New Water
 
 # Change it to your Disqus shortname before using
@@ -26,7 +26,7 @@ params:
     favicon:
 
     footer:
-        since: 2020
+        since: 2019
         customText:
         podcast: 
             local: true

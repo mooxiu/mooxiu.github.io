@@ -5,7 +5,7 @@ date: {{ .Date }}
 draft: true
 tags: 
     - Tag
-category: 
+categories: 
     - Cate
 ---
 
