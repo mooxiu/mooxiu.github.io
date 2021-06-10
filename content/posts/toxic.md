@@ -7,6 +7,7 @@ tags:
     - Music Theory
 categories:
     - 笔记
+    - Music
 ---
 
 Britney Spears的Toxic一直是我喜欢的一首歌，[Britney Spears: The Story of Toxic](https://www.youtube.com/watch?v=4CUPuUlq65Y) 解析了这首歌的制作，以下是一些提到的或许有用的点：

@@ -6,6 +6,7 @@ tags:
     - Music Theory
 categories: 
     - Music
+    - 笔记
 ---
 
 ## 复习时间
