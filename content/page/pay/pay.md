@@ -12,8 +12,9 @@ menu:
 如果你喜欢我的文章并愿意为此捐赠，你有以下方式可以选择：
 
 **1. 支付宝 (5元):**
-   
-    ![alipay](alipay.jpg)
+
+![alipay](alipay.png)
+
 **2. 微信（5元）:**
 
-    ![wechat](wechat.jpg)
+![wechat](wechat.png)
