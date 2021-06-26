@@ -13,6 +13,8 @@ menu:
 
 **1. 支付宝 (5元):**
 
+<img src="posts/pay/alipay.png" alt="alipay" width="300"/>
+
 ![alipay](alipay.png)
 
 **2. 微信（5元）:**
