@@ -4,7 +4,7 @@ date: 2021-04-30T22:59:26+08:00
 author: "Xwithoutcolor"
 menu:
     main: 
-        name: 捐赠
+        name: 捐赠 Donation
         weight: -5
         pre: coin
 ---
