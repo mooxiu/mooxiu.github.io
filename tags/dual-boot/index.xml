@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dual Boot on New River, New Water</title>
-    <link>https://muyaoxiao.github.io/tags/dual-boot/</link>
+    <link>https://mooxiu.github.io/tags/dual-boot/</link>
     <description>Recent content in Dual Boot on New River, New Water</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Jul 2021 10:06:18 +0800</lastBuildDate><atom:link href="https://muyaoxiao.github.io/tags/dual-boot/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Jul 2021 10:06:18 +0800</lastBuildDate><atom:link href="https://mooxiu.github.io/tags/dual-boot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>双系统升级Win10 20H1的时候Linux引导失效修理</title>
-      <link>https://muyaoxiao.github.io/posts/boot_fix/</link>
+      <link>https://mooxiu.github.io/posts/boot_fix/</link>
       <pubDate>Mon, 26 Jul 2021 10:06:18 +0800</pubDate>
       
-      <guid>https://muyaoxiao.github.io/posts/boot_fix/</guid>
+      <guid>https://mooxiu.github.io/posts/boot_fix/</guid>
       <description>The Situation Dual boot: Win10 and Manjaro Linux.
 When trying to update Win10 to the latest Win10 20H version, after rebooting my system, it did not enter the booting interface, rather it says:
  Unknown filesystem, entering rescue mod

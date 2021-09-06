@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>New River, New Water</title>
-        <link>https://muyaoxiao.github.io/</link>
+        <link>https://mooxiu.github.io/</link>
         <description>Recent content on New River, New Water</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 06 Sep 2021 21:22:09 +0800</lastBuildDate><atom:link href="https://muyaoxiao.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 06 Sep 2021 21:22:09 +0800</lastBuildDate><atom:link href="https://mooxiu.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>轻食是为了留长发</title>
-        <link>https://muyaoxiao.github.io/posts/what_to_eat/</link>
+        <link>https://mooxiu.github.io/posts/what_to_eat/</link>
         <pubDate>Mon, 06 Sep 2021 21:22:09 +0800</pubDate>
         
-        <guid>https://muyaoxiao.github.io/posts/what_to_eat/</guid>
+        <guid>https://mooxiu.github.io/posts/what_to_eat/</guid>
         <description>&lt;h2 id=&#34;长发和减肥有什么关系&#34;&gt;长发和减肥有什么关系&lt;/h2&gt;
 &lt;p&gt;小时候我一直对长发男性怀有憧憬，单因为严格的管教，至今未能实现我的心愿。我爸妈在这方面简直就是警察，看到我刚剪的头发都要做出一副友邦惊诧的样子，说「你有多久没剪头发啦！」 但其实我刚刚剪过：刘海不及眉毛，鬓角和后翼更是寸草不生，即便如此，他们仍不满意。&lt;/p&gt;
 &lt;p&gt;于是我觉得，我要留长发————而且不是那种暗戳戳的长发，而是如假包换，让所有人看到都能意识到我是有意识留长发的，长发。既然下定决心，那么接下来需要做的事情唯有等待而已。但在我刚刚踌躇满志地将我的计划告诉女朋友之后，她刚刚小心翼翼地指出：「只有瘦的人留长头发才好看」。&lt;/p&gt;
@@ -53,10 +53,10 @@
         </item>
         <item>
         <title>双系统升级Win10 20H1的时候Linux引导失效修理</title>
-        <link>https://muyaoxiao.github.io/posts/boot_fix/</link>
+        <link>https://mooxiu.github.io/posts/boot_fix/</link>
         <pubDate>Mon, 26 Jul 2021 10:06:18 +0800</pubDate>
         
-        <guid>https://muyaoxiao.github.io/posts/boot_fix/</guid>
+        <guid>https://mooxiu.github.io/posts/boot_fix/</guid>
         <description>&lt;h2 id=&#34;the-situation&#34;&gt;The Situation&lt;/h2&gt;
 &lt;p&gt;Dual boot: Win10 and Manjaro Linux.&lt;/p&gt;
 &lt;p&gt;When trying to update Win10 to the latest Win10 20H version, after rebooting my system, it did not enter the booting interface, rather it says:&lt;/p&gt;
@@ -101,10 +101,10 @@ it will save your config&lt;/p&gt;
         </item>
         <item>
         <title>Tritone, 三全音代理或降二代五和弦</title>
-        <link>https://muyaoxiao.github.io/posts/tritone/</link>
+        <link>https://mooxiu.github.io/posts/tritone/</link>
         <pubDate>Sun, 30 May 2021 18:18:15 +0800</pubDate>
         
-        <guid>https://muyaoxiao.github.io/posts/tritone/</guid>
+        <guid>https://mooxiu.github.io/posts/tritone/</guid>
         <description>&lt;h2 id=&#34;复习时间&#34;&gt;复习时间&lt;/h2&gt;
 &lt;h3 id=&#34;ii-v-i&#34;&gt;II-&amp;gt;V-&amp;gt;I&lt;/h3&gt;
 &lt;p&gt;五级和弦（特别是属七和弦）有强烈的趋势接到一级和弦，最常见的&lt;strong&gt;C&lt;/strong&gt;大调progression:&lt;/p&gt;
@@ -127,8 +127,8 @@ it will save your config&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;C -&amp;gt; B7 -&amp;gt; E7 -&amp;gt; Am
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and this trick goes on and on&amp;hellip; Yes! it reminds us of &lt;strong&gt;Circle of 5th(五度圏)&lt;/strong&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;figure style=&#34;flex-grow: 100; flex-basis: 240px&#34;&gt;
-		&lt;a href=&#34;https://muyaoxiao.github.io/posts/tritone/c5.png&#34; data-size=&#34;1200x1200&#34;&gt;&lt;img src=&#34;https://muyaoxiao.github.io/posts/tritone/c5.png&#34;
-					srcset=&#34;https://muyaoxiao.github.io/posts/tritone/c5_hu5f765df6b29321f84f318c6d9b91b2fe_176131_480x0_resize_box_2.png 480w, https://muyaoxiao.github.io/posts/tritone/c5_hu5f765df6b29321f84f318c6d9b91b2fe_176131_1024x0_resize_box_2.png 1024w&#34;
+		&lt;a href=&#34;https://mooxiu.github.io/posts/tritone/c5.png&#34; data-size=&#34;1200x1200&#34;&gt;&lt;img src=&#34;https://mooxiu.github.io/posts/tritone/c5.png&#34;
+					srcset=&#34;https://mooxiu.github.io/posts/tritone/c5_hu5f765df6b29321f84f318c6d9b91b2fe_176131_480x0_resize_box_2.png 480w, https://mooxiu.github.io/posts/tritone/c5_hu5f765df6b29321f84f318c6d9b91b2fe_176131_1024x0_resize_box_2.png 1024w&#34;
 					width=&#34;800&#34;
 					height=&#34;800&#34;
 					loading=&#34;lazy&#34;
@@ -163,10 +163,10 @@ it will save your config&lt;/p&gt;
         </item>
         <item>
         <title>Note for TOXIC breakdown</title>
-        <link>https://muyaoxiao.github.io/posts/toxic/</link>
+        <link>https://mooxiu.github.io/posts/toxic/</link>
         <pubDate>Thu, 06 May 2021 21:27:12 +0800</pubDate>
         
-        <guid>https://muyaoxiao.github.io/posts/toxic/</guid>
+        <guid>https://mooxiu.github.io/posts/toxic/</guid>
         <description>&lt;p&gt;Britney Spears的Toxic一直是我喜欢的一首歌，&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=4CUPuUlq65Y&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Britney Spears: The Story of Toxic&lt;/a&gt; 解析了这首歌的制作，以下是一些提到的或许有用的点：&lt;/p&gt;
 &lt;h2 id=&#34;前奏的采样&#34;&gt;前奏的采样&lt;/h2&gt;
@@ -207,10 +207,10 @@ it will save your config&lt;/p&gt;
         </item>
         <item>
         <title>现在很多「肉糜」都几乎免费送了，何不「食肉糜」</title>
-        <link>https://muyaoxiao.github.io/posts/2020-06-20-%E7%8E%B0%E5%9C%A8%E5%BE%88%E5%A4%9A%E8%82%89%E7%B3%9C%E9%83%BD%E5%87%A0%E4%B9%8E%E5%85%8D%E8%B4%B9%E9%80%81%E4%BA%86%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89/</link>
+        <link>https://mooxiu.github.io/posts/2020-06-20-%E7%8E%B0%E5%9C%A8%E5%BE%88%E5%A4%9A%E8%82%89%E7%B3%9C%E9%83%BD%E5%87%A0%E4%B9%8E%E5%85%8D%E8%B4%B9%E9%80%81%E4%BA%86%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89/</link>
         <pubDate>Sat, 20 Jun 2020 15:34:29 +0000</pubDate>
         
-        <guid>https://muyaoxiao.github.io/posts/2020-06-20-%E7%8E%B0%E5%9C%A8%E5%BE%88%E5%A4%9A%E8%82%89%E7%B3%9C%E9%83%BD%E5%87%A0%E4%B9%8E%E5%85%8D%E8%B4%B9%E9%80%81%E4%BA%86%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89/</guid>
+        <guid>https://mooxiu.github.io/posts/2020-06-20-%E7%8E%B0%E5%9C%A8%E5%BE%88%E5%A4%9A%E8%82%89%E7%B3%9C%E9%83%BD%E5%87%A0%E4%B9%8E%E5%85%8D%E8%B4%B9%E9%80%81%E4%BA%86%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89/</guid>
         <description>&lt;p&gt;墨西哥小说家 瓦莱里娅・路易塞利 的小说「&lt;!-- raw HTML omitted --&gt;我牙齿的故事&lt;!-- raw HTML omitted --&gt;」，首页说「献给胡麦克斯工厂的工人们！」。事实上，这本小说的写作方式也相当实验，她每个星期把最新写就的小说段落印刷给工人阅读，工人们组成了阅读小组，并且朗读她的作品，提供意见。作者在后记中说，这种做法古已有之：19世纪中期在古巴曾有有在工厂为工人朗读小说以减轻长期工作带来的疲惫感的运动。&lt;/p&gt;
 &lt;p&gt;但有趣的是，这部小说根本不是什么什么通俗易懂的读物，显然要比我看过的一些拉美作家比如马尔克斯，博尔赫斯的几本最著名的小说晦涩许多。一些左翼叙事的问题在于，他们尽管站在劳工这边，但总会设想他们是智力粗鄙，审美低下的人。他们尽管想给劳工带来福利，但总是觉得只要把他们喂饱就行了，至于对艺术的需求——他们便开始夸夸其谈「市场下沉」了。&lt;/p&gt;
 &lt;p&gt;坂本龙一年轻的时候说：「&lt;!-- raw HTML omitted --&gt;效仿中国人民解放军的精神，我们也要用音乐为劳工服务&lt;!-- raw HTML omitted --&gt;」，然后祭出的却是最前卫的音乐风格。总是有人需要被提醒，像「Dark Side of The Moon」这样的前卫摇滚，是历史上最畅销的专辑之一。我们如果就因为家里的长辈使用起了BiliBili，知道了几个网络迷因，就感叹他们也站在时代浪尖上的话——这并不是他们也变得前卫了，只是大众（如果这个词在如今仍有所指的话）和你一起变得后卫了。&lt;/p&gt;
@@ -218,10 +218,10 @@ it will save your config&lt;/p&gt;
         </item>
         <item>
         <title>鏈接接接平等，但有些鏈接比其他更平等</title>
-        <link>https://muyaoxiao.github.io/2020/03/06/inequality-of-links/</link>
+        <link>https://mooxiu.github.io/2020/03/06/inequality-of-links/</link>
         <pubDate>Fri, 06 Mar 2020 15:16:36 +0000</pubDate>
         
-        <guid>https://muyaoxiao.github.io/2020/03/06/inequality-of-links/</guid>
+        <guid>https://mooxiu.github.io/2020/03/06/inequality-of-links/</guid>
         <description>&lt;p&gt;或許移動互聯網給我們帶來了不愛點鏈接，和不愛在文本中置入鏈接的瀏覽和寫作習慣。本質上，移動設備中（甚至是移動設備的瀏覽器）鏈接與鏈接之間的關係，和 PC/Mac 瀏覽器中的鏈接和鏈接之間的關係並不平等。&lt;/p&gt;
 &lt;p&gt;移動設備的世界是由一個個App構成的，它們猶如一個個平行世界。正因為有了這樣的結構，它的網絡瀏覽有了「App內」及「App外」的分野。鏈接如果將你帶到了另一個App，會讓瀏覽體驗產生一種斷裂感，特別是跳轉到那些你沒有下載或者沒有註冊過的App時。這種以鄰為壑的姿態讓這種封閉的趨勢加強。&lt;/p&gt;
 &lt;p&gt;但在 PC/Mac 的瀏覽器上，以當下版本的Chrome 為例，即便是鏈接將你帶入另一個場所，它也僅僅只是體現為瀏覽器上的一個新頁面。你的體驗並不會被割裂，同時，你也更方便返回你原先的位置。因此，PC/Mac 的瀏覽器上的鏈接帶來的是一種在不同空間自由穿梭的體驗。&lt;/p&gt;
@@ -230,10 +230,10 @@ it will save your config&lt;/p&gt;
         </item>
         <item>
         <title>For Japanese beginners</title>
-        <link>https://muyaoxiao.github.io/2020/02/20/projet-de-open-japonais-livre/</link>
+        <link>https://mooxiu.github.io/2020/02/20/projet-de-open-japonais-livre/</link>
         <pubDate>Thu, 20 Feb 2020 15:47:27 +0000</pubDate>
         
-        <guid>https://muyaoxiao.github.io/2020/02/20/projet-de-open-japonais-livre/</guid>
+        <guid>https://mooxiu.github.io/2020/02/20/projet-de-open-japonais-livre/</guid>
         <description>&lt;h3 id=&#34;语言和文字&#34;&gt;语言和文字&lt;/h3&gt;
 &lt;p&gt;语言和文字是不同的，但在中文的表述中这两者常常被混为一谈。「日文」是日本语的表记，或者从索绪尔的现代语言学中，叫做能指（Signifier）。平假名，片假名，日文汉字……这些构成了日文。而当我们谈论日语的时候，往往是在论述包囊文字，语音，语法的广义的概念。&lt;/p&gt;
 &lt;p&gt;明白了语言和文字的关系，我们才能更好地讨论日文的读音，乃至语法。&lt;/p&gt;
@@ -343,10 +343,10 @@ it will save your config&lt;/p&gt;
         </item>
         <item>
         <title>「存在主義咖啡館」：沒有描述就沒有意義</title>
-        <link>https://muyaoxiao.github.io/posts/2020-02-16-book-review-%E5%AD%98%E5%9C%A8%E4%B8%BB%E7%BE%A9%E5%92%96%E5%95%A1%E9%A4%A8%E6%B2%92%E6%9C%89%E6%8F%8F%E8%BF%B0%E5%B0%B1%E6%B2%92%E6%9C%89%E6%84%8F%E7%BE%A9/</link>
+        <link>https://mooxiu.github.io/posts/2020-02-16-book-review-%E5%AD%98%E5%9C%A8%E4%B8%BB%E7%BE%A9%E5%92%96%E5%95%A1%E9%A4%A8%E6%B2%92%E6%9C%89%E6%8F%8F%E8%BF%B0%E5%B0%B1%E6%B2%92%E6%9C%89%E6%84%8F%E7%BE%A9/</link>
         <pubDate>Sun, 16 Feb 2020 09:41:05 +0000</pubDate>
         
-        <guid>https://muyaoxiao.github.io/posts/2020-02-16-book-review-%E5%AD%98%E5%9C%A8%E4%B8%BB%E7%BE%A9%E5%92%96%E5%95%A1%E9%A4%A8%E6%B2%92%E6%9C%89%E6%8F%8F%E8%BF%B0%E5%B0%B1%E6%B2%92%E6%9C%89%E6%84%8F%E7%BE%A9/</guid>
+        <guid>https://mooxiu.github.io/posts/2020-02-16-book-review-%E5%AD%98%E5%9C%A8%E4%B8%BB%E7%BE%A9%E5%92%96%E5%95%A1%E9%A4%A8%E6%B2%92%E6%9C%89%E6%8F%8F%E8%BF%B0%E5%B0%B1%E6%B2%92%E6%9C%89%E6%84%8F%E7%BE%A9/</guid>
         <description>&lt;p&gt;豆瓣頁面：&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/27170538/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;「存在主义咖啡馆」&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;題材是存在主義哲學家的群像。廁所讀物當中最令我驚訝的一本，引用詳實，而且也不忘對觀念脈絡進行闡述。中文翻譯很流暢。下面對一些畫線的地方進行評述：&lt;/p&gt;
@@ -395,10 +395,10 @@ it will save your config&lt;/p&gt;
         </item>
         <item>
         <title>不是所有ology都应是science</title>
-        <link>https://muyaoxiao.github.io/2020/01/31/%E4%B8%8D%E6%98%AF%E6%89%80%E6%9C%89ology%E9%83%BD%E5%BA%94%E6%98%AFscience/</link>
+        <link>https://mooxiu.github.io/2020/01/31/%E4%B8%8D%E6%98%AF%E6%89%80%E6%9C%89ology%E9%83%BD%E5%BA%94%E6%98%AFscience/</link>
         <pubDate>Fri, 31 Jan 2020 18:58:01 +0000</pubDate>
         
-        <guid>https://muyaoxiao.github.io/2020/01/31/%E4%B8%8D%E6%98%AF%E6%89%80%E6%9C%89ology%E9%83%BD%E5%BA%94%E6%98%AFscience/</guid>
+        <guid>https://mooxiu.github.io/2020/01/31/%E4%B8%8D%E6%98%AF%E6%89%80%E6%9C%89ology%E9%83%BD%E5%BA%94%E6%98%AFscience/</guid>
         <description>&lt;p&gt;心理学在努力成为科学之前曾经有过许多有趣而且实用的概念，比如精神分析（在如今依然作为一种治疗手法被保留下来）。但它如此执着于走一条认知科学的道路，以至于道路越走越窄，毕竟，那边还有脑科学神经科学之类听起来更「科学」的学科。但如今的确是科学主义当道的时代，社会科学也得管自己叫科学不是么。&lt;/p&gt;
 &lt;p&gt;但其实并非所有学术都得是科学不可。很简单的例子，比如各种艺术，都不是科学。技术，这也是当今显学，同样是非常经验的非科学：比如土木工程的很多经验公式，材料学更不用说，和计算机科学区分开来的软件工程——我看很多人也只是学了几个框架就开始上班了。金融学，商学……非科学的学术数不胜数。&lt;/p&gt;
 &lt;p&gt;所以，在我看来，尽管中医是一门已经高度系统化的学问了，但我觉得不妨大大方方承认它并非科学。当然，这并不妨碍你用科学的方法去研究它——比如分析里面的某些成分，进行对照试验（不过这不就是现代医学，所谓「西医」了？）……这段话听起来像知乎上随处可见的cliche，不过与其成为一门伪科学，还不如说自己是非科学。&lt;/p&gt;
@@ -410,10 +410,10 @@ it will save your config&lt;/p&gt;
         </item>
         <item>
         <title>从马尔可夫不等式到弱大数定律</title>
-        <link>https://muyaoxiao.github.io/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/</link>
+        <link>https://mooxiu.github.io/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/</link>
         <pubDate>Sat, 18 Jan 2020 19:15:01 +0000</pubDate>
         
-        <guid>https://muyaoxiao.github.io/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/</guid>
+        <guid>https://mooxiu.github.io/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/</guid>
         <description>&lt;p&gt;回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚：&lt;/p&gt;
 &lt;h5 id=&#34;首先是markov不等式&#34;&gt;首先是Markov不等式。&lt;/h5&gt;
 &lt;p&gt;它是以俄国数学家Andrey Andreyevich Markov的名字命名，同时也有Markov Chain这个在信息论上著名的东西。这个不等式，简单而言，就是我们可以一个随机变量的期望值判断这个随机变量取值的概率：&lt;/p&gt;
@@ -473,10 +473,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>「昨日奇迹」：灾难之后如何重拾人类文明</title>
-        <link>https://muyaoxiao.github.io/posts/2020-01-12-film-review%E6%98%A8%E6%97%A5%E5%A5%87%E8%BF%B9%E7%81%BE%E9%9A%BE%E4%B9%8B%E5%90%8E%E5%A6%82%E4%BD%95%E9%87%8D%E6%8B%BE%E4%BA%BA%E7%B1%BB%E6%96%87%E6%98%8E/</link>
+        <link>https://mooxiu.github.io/posts/2020-01-12-film-review%E6%98%A8%E6%97%A5%E5%A5%87%E8%BF%B9%E7%81%BE%E9%9A%BE%E4%B9%8B%E5%90%8E%E5%A6%82%E4%BD%95%E9%87%8D%E6%8B%BE%E4%BA%BA%E7%B1%BB%E6%96%87%E6%98%8E/</link>
         <pubDate>Sun, 12 Jan 2020 15:35:10 +0000</pubDate>
         
-        <guid>https://muyaoxiao.github.io/posts/2020-01-12-film-review%E6%98%A8%E6%97%A5%E5%A5%87%E8%BF%B9%E7%81%BE%E9%9A%BE%E4%B9%8B%E5%90%8E%E5%A6%82%E4%BD%95%E9%87%8D%E6%8B%BE%E4%BA%BA%E7%B1%BB%E6%96%87%E6%98%8E/</guid>
+        <guid>https://mooxiu.github.io/posts/2020-01-12-film-review%E6%98%A8%E6%97%A5%E5%A5%87%E8%BF%B9%E7%81%BE%E9%9A%BE%E4%B9%8B%E5%90%8E%E5%A6%82%E4%BD%95%E9%87%8D%E6%8B%BE%E4%BA%BA%E7%B1%BB%E6%96%87%E6%98%8E/</guid>
         <description>&lt;p&gt;国内的恶俗综艺（比如「奇葩说」）和恶俗网站（比如「知乎」）喜欢假设这种问题：人类在灾难之后，应该如何尽快恢复人类文明。不过基本上都是讨论技术上的一些事情，比如如何重建数学和物理上的理论体系，金属的炼制，一直到计算机的重新制造等等。&lt;/p&gt;
 &lt;p&gt;但这部电影给我们展示的是，如何重拾另外一种人类文明，比如The Beatles. 当然电影中还给我们展示了其他带有人类文明印记的东西，比如Oasis，可口可乐，还有——我不太愿意承认它也是人类文明的一部分——哈利波特。&lt;/p&gt;
 &lt;p&gt;尽管情节简单，整个故事的高潮设定为在演唱会上表白——这么一个恶俗的情节（难怪编剧还写出了更恶俗的「真爱至上」）。但是你很难在其他的电影里听到这么多的Beatles了。对此，&lt;a class=&#34;link&#34; href=&#34;https://www.douban.com/people/lannymomo/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -490,10 +490,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>生活黑客</title>
-        <link>https://muyaoxiao.github.io/2019/12/14/%E7%94%9F%E6%B4%BB%E9%BB%91%E5%AE%A2/</link>
+        <link>https://mooxiu.github.io/2019/12/14/%E7%94%9F%E6%B4%BB%E9%BB%91%E5%AE%A2/</link>
         <pubDate>Sat, 14 Dec 2019 03:10:22 +0000</pubDate>
         
-        <guid>https://muyaoxiao.github.io/2019/12/14/%E7%94%9F%E6%B4%BB%E9%BB%91%E5%AE%A2/</guid>
+        <guid>https://mooxiu.github.io/2019/12/14/%E7%94%9F%E6%B4%BB%E9%BB%91%E5%AE%A2/</guid>
         <description>&lt;p&gt;我昨天才了解到了一个词：Lifehacker，中文直译为生活黑客。其实意思也非常直观，即运用技巧和捷径来提高生产和生活效率。这个词源自「Life Hack」，维基上说这个词的来源是2004年在O’Reilly的新兴技术会议上，科技记者Danny O’Brien用以描述一些IT技术者们为了让他们工作完成所采用的「令人尴尬的」脚本和捷径。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://painanpainan.home.blog/2019/07/22/%E9%BB%91%E5%AE%A2%E7%94%9F%E6%B4%BB/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;这篇介绍生活黑客的文章&lt;/a&gt; 认为生活黑客乃是用对待系统的思维去对待生活的行为。如果从这个角度来看，其实无论是每天记录自己身体指标的所谓「量化自我」派，还是发现了购物网站不为人知省钱秘诀的人，都是某种Lifehacker的行为。生活黑客们和技术黑客们一样，热爱实验和折腾，试图在纷扰的生活系统中寻求一个最短的路线完成某项活动。&lt;/p&gt;
@@ -503,10 +503,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>折纸的乐趣？</title>
-        <link>https://muyaoxiao.github.io/2019/11/23/%E6%8A%98%E7%BA%B8%E7%9A%84%E4%B9%90%E8%B6%A3%EF%BC%9F/</link>
+        <link>https://mooxiu.github.io/2019/11/23/%E6%8A%98%E7%BA%B8%E7%9A%84%E4%B9%90%E8%B6%A3%EF%BC%9F/</link>
         <pubDate>Sat, 23 Nov 2019 06:29:22 +0000</pubDate>
         
-        <guid>https://muyaoxiao.github.io/2019/11/23/%E6%8A%98%E7%BA%B8%E7%9A%84%E4%B9%90%E8%B6%A3%EF%BC%9F/</guid>
+        <guid>https://mooxiu.github.io/2019/11/23/%E6%8A%98%E7%BA%B8%E7%9A%84%E4%B9%90%E8%B6%A3%EF%BC%9F/</guid>
         <description>&lt;p&gt;前几天参加公司的一个培训，日本那边的同事和中国这边的混合坐在一起分成几个小组，做一些活动之类。坐在我旁边的日本女生一直在无聊的时候折恐龙，我意识到这是一种非常优雅地表达自己玩世不恭的方式，但她本意是否如此我就不得而知了，至少她是一个做笔记和小组讨论极其认真的人。&lt;/p&gt;
 &lt;p&gt;数学上来说，折纸带给我一种维度极速扩张的体验。就像编曲中加入各种和声乐器，但折纸是一种成本更为低廉，速度更加迅猛，更加可感的体验方式。我觉得欧拉或者高斯一定是折纸高手。我维基百科了一下，发现果然有所谓「&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/wiki/%E6%91%BA%E7%B4%99%E6%95%B8%E5%AD%B8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;折纸数学&lt;/a&gt;」这种东西，上面说：&lt;/p&gt;
@@ -522,10 +522,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>爲什麽應當慎重擇業</title>
-        <link>https://muyaoxiao.github.io/2019/11/17/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BA%94%E5%BD%93%E6%85%8E%E9%87%8D%E6%8B%A9%E4%B8%9A/</link>
+        <link>https://mooxiu.github.io/2019/11/17/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BA%94%E5%BD%93%E6%85%8E%E9%87%8D%E6%8B%A9%E4%B8%9A/</link>
         <pubDate>Sun, 17 Nov 2019 15:01:13 +0000</pubDate>
         
-        <guid>https://muyaoxiao.github.io/2019/11/17/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BA%94%E5%BD%93%E6%85%8E%E9%87%8D%E6%8B%A9%E4%B8%9A/</guid>
+        <guid>https://mooxiu.github.io/2019/11/17/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BA%94%E5%BD%93%E6%85%8E%E9%87%8D%E6%8B%A9%E4%B8%9A/</guid>
         <description>&lt;p&gt;成为社会人以后，我对社畜境遇变得异常关注。最近在华尔街日报中文网读到一片名为「如何摆脱时刻待命的职场文化」的文章，里面推荐了四部相关电影：1992年的「大玩家 the Player」，2006年「穿普拉达的女王 The Devil Wears Prada」，2009年的「在云端 Up in the Air」和2018年的「牵线 Set it Up」。我在周末看了后面三部。尽管故事好坏参差不齐，但女主人公的境遇都相似：她们从事某个职业的原因都不是因为她们喜欢这个职业，而是因为她们希望通过这份工作实现什么别的东西。「在云端」女主选择当下工作是为了自己的男朋友，「穿普拉达的女王」和「牵线」的女主则是为了能自己写东西。问题的关键在于，正是因为她们从事了当前的职业，以至于她们和自己为了那个东西而从事这份职业的那个东西越走越远。&lt;/p&gt;
 &lt;p&gt;但神奇的是，她们没有一个人是因为收入高而从事当前的工作的。这里的困境和我周围的困境有所不同，如果你想要的是钱之外的事情，那困境就可能有转机，在老板前面数落他的人品并怒吼「我他妈不干了」才不会是无根之木。但此时此刻，这里很多劳工面临着的是多重困局：他们有家庭得养活，以及他们面临的是抽象的系统。&lt;/p&gt;
 &lt;p&gt;前者很好理解，电影里面那些人没有一个有丈夫有小孩，他们只需要养活自己，因此他们才可以在必要的时候选择流动。但选择流动并不代表你可以把咖啡倒在你老板的脸上，因为在某些公司，某些岗位之上，你从入职之日到你离职之时你的老板都未必知道有你这个人，反过来说，你甚至也不知道你的老板长什么样子，你可能在维基百科或是公司官网上见过这个人，但你连给他买咖啡的交集都没有。&lt;/p&gt;
