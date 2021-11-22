@@ -23,8 +23,23 @@ Music Producer (No product yet)/ Programmer/ Podcaster
 
 <iframe src="https://embed.podcasts.apple.com/us/podcast/shuffleshuffle-%E9%9A%8F%E6%9C%BA%E6%8E%89%E8%90%BD/id1551443928?itsct=podcast_box_player&amp;itscg=30200&amp;theme=dark" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; background: transparent none repeat scroll 0% 0%;" height="450px" frameborder="0"></iframe>
 
-### Follow me on Douban:
-[我的豆瓣](https://www.douban.com/people/57087441/)
+### Write To Me:
+[Write An Email To Me](mailto:monetshaw@outlook.com)
 
 ### 2021/4/30 Note On Migration:
 > This blog has been migrated from original 「狸猫的写作场所」. In the deature, I will focus on music producing (at least I hope so), my thoughts on programming, and the extension from my podcast. Hope to see no more theme changing.
+
+### My Public Key
+```
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5ABOApIZe01+lYUe0lST
+gvu83r81adRJ/E4ERVa+Zxy9O5FcosCvDDcilCzBkc74D4DwfZIdmxpFP7gFD9iu
+Oz+Az90JQd136Sm7CffqcoagkLS1RV0bmtNZp6GIupaiBTeSMPGge6I6ELVQld0v
+AYv4Vg5sD4C03ekxEliht/VzRGsE1ydzTW50wntmuhm51q4KjbjCCfz2KZ1xUYNO
+GfPf/Y+Ymz4f6V0jqPBu/JI7/iWjgB8bdx0EmMFwi0KV3AwY5wwWv5FoJ8JgnuGS
+5NpNhzXtEsA5I8b9mXlcfvNvVD5ri1cLjfC6xsO4ZW+i7nZfnrVyMMEDgLInKoF3
+MwIDAQAB
+-----END PUBLIC KEY-----
+```
+
+[Download `.pem` file](assets/public_key.pem)
