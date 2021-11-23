@@ -41,7 +41,7 @@ params:
         subtitle: 
         avatar:
             local: true
-            src: img/avatar.jpg
+            src: img/main.png
 
     article:
         math: true

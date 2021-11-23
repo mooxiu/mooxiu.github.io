@@ -27,7 +27,7 @@ Music Producer (No product yet)/ Programmer/ Podcaster
 [Write An Email To Me](mailto:monetshaw@outlook.com)
 
 ### 2021/4/30 Note On Migration:
-> This blog has been migrated from original 「狸猫的写作场所」. In the deature, I will focus on music producing (at least I hope so), my thoughts on programming, and the extension from my podcast. Hope to see no more theme changing.
+This blog has been migrated from original 「狸猫的写作场所」. 
 
 ### My Public Key
 ```
@@ -42,4 +42,4 @@ MwIDAQAB
 -----END PUBLIC KEY-----
 ```
 
-[Download `.pem` file](assets/public_key.pem)
+[Download `.pem` file](public_key.pem)
