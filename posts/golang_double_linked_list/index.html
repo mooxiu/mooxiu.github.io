@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Although list is rarely used in golang (Just about always when you are thinking of a list - use a slice instead in Go), but there is an implementation of double linked list in standard package of golang. After reading the implementation (go standard package: src/container/list/list.go), I found it very inspiring.
+The Node Basiclly, it first defines Node, which is referred to as Element in the standard package:
+type Element struct { prev, next Element list *List Value interface{} } It is, actually a structure we create a lot when solving linked list problem in websites like LeetCode.'><title>Go的双向链表</title>
+
+<link rel='canonical' href='https://mooxiu.github.io/posts/golang_double_linked_list/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Go的双向链表'>
+<meta property='og:description' content='Although list is rarely used in golang (Just about always when you are thinking of a list - use a slice instead in Go), but there is an implementation of double linked list in standard package of golang. After reading the implementation (go standard package: src/container/list/list.go), I found it very inspiring.
+The Node Basiclly, it first defines Node, which is referred to as Element in the standard package:
+type Element struct { prev, next Element list *List Value interface{} } It is, actually a structure we create a lot when solving linked list problem in websites like LeetCode.'>
+<meta property='og:url' content='https://mooxiu.github.io/posts/golang_double_linked_list/'>
+<meta property='og:site_name' content='New River, New Water'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='Data Structure' /><meta property='article:tag' content='Golang' /><meta property='article:published_time' content='2021-12-10T00:01:30&#43;08:00'/><meta property='article:modified_time' content='2021-12-10T00:01:30&#43;08:00'/>
+<meta name="twitter:title" content="Go的双向链表">
+<meta name="twitter:description" content="Although list is rarely used in golang (Just about always when you are thinking of a list - use a slice instead in Go), but there is an implementation of double linked list in standard package of golang. After reading the implementation (go standard package: src/container/list/list.go), I found it very inspiring.
+The Node Basiclly, it first defines Node, which is referred to as Element in the standard package:
+type Element struct { prev, next Element list *List Value interface{} } It is, actually a structure we create a lot when solving linked list problem in websites like LeetCode.">
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/programming/" >
+                Programming
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/posts/golang_double_linked_list/">Go的双向链表</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 10, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <p>Although list is rarely used in golang (<a class="link" href="https://stackoverflow.com/a/21328187"  target="_blank" rel="noopener"
+    >Just about always when you are thinking of a list - use a slice instead in Go</a>), but there is an implementation of double linked list in standard package of golang. After reading the implementation (<a class="link" href="https://pkg.go.dev/container/list"  target="_blank" rel="noopener"
+    >go standard package: src/container/list/list.go</a>), I found it very inspiring.</p>
+<h2 id="the-node">The Node</h2>
+<p>Basiclly, it first defines <code>Node</code>, which is referred to as <code>Element</code> in the standard package:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Element</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">prev</span><span class="p">,</span> <span class="nx">next</span> <span class="nx">Element</span>
+    <span class="nx">list</span> <span class="o">*</span><span class="nx">List</span>
+    <span class="nx">Value</span> <span class="kd">interface</span><span class="p">{}</span> 
+<span class="p">}</span>
+</code></pre></div><p>It is, actually a structure we create a lot when solving linked list problem in websites like LeetCode. The difference is:</p>
+<ol>
+<li>One single Element simutaneously points to TWO other elements, as it is a double-linked list(or doubly linked list).</li>
+<li>It has a field pointing to the list which it belongs to, which can be very convenient when we want to decide whether an element belongs to a list.</li>
+</ol>
+<h2 id="the-list">The List</h2>
+<p>Then the list part:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">List</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">root</span> <span class="nx">Element</span>
+    <span class="nx">len</span> <span class="kt">int</span>
+<span class="p">}</span>
+</code></pre></div><p>It has only two fields: a root of the list, and the length of the list.</p>
+<p>The interesting part of that is: The root is actually not the most front element of the list, but an empty element point to the beginning element of the list. It is the so-called <strong>Sentinel</strong>.</p>
+<h2 id="the-sentinel-element">The Sentinel Element</h2>
+<p>Sentinel is actually a very common practice when dealing with linked list. Because we usually have to do some operations like remove or insert a head node to the linked list. It can be very helpful to have a static node which we can always rely on.</p>
+<p>But here, the sentinel is even more helpful, as it is not only pointer to the beginnig <code>Element</code> of the list, but also the ending <code>Element</code> of the list. We can conclude from following code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Front returns the first element of list l or nil if the list is empty.
+</span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">l</span> <span class="o">*</span><span class="nx">List</span><span class="p">)</span> <span class="nf">Front</span><span class="p">()</span> <span class="o">*</span><span class="nx">Element</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="nx">l</span><span class="p">.</span><span class="nx">len</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="kc">nil</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nx">l</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">next</span>
+<span class="p">}</span>
+
+<span class="c1">// Back returns the last element of list l or nil if the list is empty.
+</span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">l</span> <span class="o">*</span><span class="nx">List</span><span class="p">)</span> <span class="nf">Back</span><span class="p">()</span> <span class="o">*</span><span class="nx">Element</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="nx">l</span><span class="p">.</span><span class="nx">len</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="kc">nil</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nx">l</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">prev</span>
+<span class="p">}</span>
+</code></pre></div><p>Therefore considering the existence of the sentinel <code>Element</code>, we are actually having a hypothetical circle. The sentinel <code>Element</code> connect the beginning and the end of the double linked list.</p>
+<p>We do not need to keep 2 fields to point to the beginning and the end <code>Element</code> of the list anymore, the root <code>Element</code> can handle all of these.</p>
+<h2 id="what-can-list-does-for-us">What Can List Does For Us</h2>
+<p>Although as it is said at the beginning of this article, list is rarely used in golang. It can be replaced in most situations simply by <code>Slice</code>. However, I do think about one certain situation when it can be adopted: The LRU cache.</p>
+<p>If you do not have an idea of what LRU is, please refer to <a class="link" href="https://www.interviewcake.com/concept/java/lru-cache"  target="_blank" rel="noopener"
+    >this article</a>.</p>
+<p>So what kind of structure do we need to implement a LRU in golang?</p>
+<p>Consider when a key is hitted in LRU, we often assume that it can be frequently accessed, so we need to move it to the front of our structure.</p>
+<p>On the other hand, if the capacity is full and we need to add a new key to the structure, we also need to quickly drop out the oldest key at the end of our structure.</p>
+<p>In this situation, a double linked list can achieve the above 2 operations very effectively.</p>
+<!-- raw HTML omitted -->
+<hr>
+<p>If you like my article and want to make a donation, you can click the <a class="link" href="https://mooxiu.github.io/donate/"  target="_blank" rel="noopener"
+    >捐赠 Donation</a> button on the side bar.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/data-structure/">Data Structure</a>
+        
+            <a href="/tags/golang/">Golang</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "nrnw" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2019 - 
+        
+        2021 New River, New Water
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-node">The Node</a></li>
+    <li><a href="#the-list">The List</a></li>
+    <li><a href="#the-sentinel-element">The Sentinel Element</a></li>
+    <li><a href="#what-can-list-does-for-us">What Can List Does For Us</a></li>
+  </ul>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

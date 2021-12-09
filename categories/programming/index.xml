@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on New River, New Water</title>
+    <link>https://mooxiu.github.io/categories/programming/</link>
+    <description>Recent content in Programming on New River, New Water</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Dec 2021 00:01:30 +0800</lastBuildDate><atom:link href="https://mooxiu.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go的双向链表</title>
+      <link>https://mooxiu.github.io/posts/golang_double_linked_list/</link>
+      <pubDate>Fri, 10 Dec 2021 00:01:30 +0800</pubDate>
+      
+      <guid>https://mooxiu.github.io/posts/golang_double_linked_list/</guid>
+      <description>Although list is rarely used in golang (Just about always when you are thinking of a list - use a slice instead in Go), but there is an implementation of double linked list in standard package of golang. After reading the implementation (go standard package: src/container/list/list.go), I found it very inspiring.
+The Node Basiclly, it first defines Node, which is referred to as Element in the standard package:
+type Element struct { prev, next Element list *List Value interface{} } It is, actually a structure we create a lot when solving linked list problem in websites like LeetCode.</description>
+    </item>
+    
+  </channel>
+</rss>
