@@ -13,9 +13,9 @@
       <pubDate>Fri, 10 Dec 2021 00:01:30 +0800</pubDate>
       
       <guid>https://mooxiu.github.io/posts/golang_double_linked_list/</guid>
-      <description>Although list is rarely used in golang (Just about always when you are thinking of a list - use a slice instead in Go), but there is an implementation of double linked list in standard package of golang. After reading the implementation (go standard package: src/container/list/list.go), I found it very inspiring.
-The Node Basiclly, it first defines Node, which is referred to as Element in the standard package:
-type Element struct { prev, next Element list *List Value interface{} } It is, actually a structure we create a lot when solving linked list problem in websites like LeetCode.</description>
+      <description>Although list has rarely been used in Go (Just about always when you are thinking of a list - use a slice instead in Go), there is an official implementation in the standard library. After reading the implementation (go standard package: src/container/list/list.go), I found it very inspiring.
+The Node Basically, it first defines Node, which is referred to as Element in the standard package:
+type Element struct { prev, next Element list *List Value interface{} } It is actually a structure we create a lot when solving linked list problems in websites like LeetCode.</description>
     </item>
     
   </channel>
