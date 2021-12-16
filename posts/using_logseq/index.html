@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='今天看到一种说法，叫做现如今（今天是2021年12月16日）所有的笔记软件都在抄 notion 。notion 确实是一款非常成功的笔记软件，但如果仅仅将它作为笔记软件，则是狭隘化了它的用途，我们看看跟它对标的产品：
+比如 AppFlowy：  AppFlowy 
+再比如微软的Microsoft Loop:  Microsoft Loop 
+他们除了作为笔记软件以外，更强调 workspace。特别是他们都有类似敏捷开发的TODO， DOING， DONE 的 dashboard， 小型团队使用这样的软件作为它们的计划管理工具和知识共享仓库简直再适合不过。
+所以我为什么不再使用Notion了 我将 notion 作为个人的主要笔记软件使用过一段时间，最喜欢的地方是……每一篇文章都可以给我自动生成一个 emoji，看起来非常活泼。但问题也相当明显：
+ notion 的使用必须联网；一直保持联网意味着你的数据并不存储在你的本地，如果你的笔记涉及到非常隐私的部分，这让人非常不安心。而且这个逻辑也预设你必须要一直有网络连接，这让我感到非常不愉快。 notion 没有标准的markdown编辑器。我非常习惯在笔记中嵌入代码，插入引用，加入数学公式，插入超链接……这些在一个标准的markdown 编辑环境非常容易实现而且可以直接在键盘上完成，根本不需要对着菜单的选项点来点去。点击右键，选择插入超链接，粘贴地址，再加上标题这样的操作简直是Microsoft Word的编辑体验。也许它有自己的一套快捷键，但是既然业界已经有标准，为什么还要恶心你？ 商业化？商业化不是坏事但我觉得开源软件更酷一些。  也有一些别的问题，比如它是一个electron软件（尽管我现在这篇文章就是在同是electron写的vscode上编辑的），这让软件非常重， 而且体验和在浏览器中打开没有区别，几乎没有提升；再比如我觉得它过于强调视觉体验，我并不是说拥有好的设计不好，只是我觉得这模糊了记笔记的焦点。
+所以为什么LogSeq 如果我想和其他人共享一个工作空间，共同做点什么项目，我觉得notion 可能依然是一个不错的选择。但我使用的场景仅仅是记笔记，所以我想选择一个更加专一，对我自己而言使用体验更好的软件。
+我已经忘记是在哪里看到logseq的推荐了，回过头来，我已经使用logseq超过一个月了。我几乎每天都会在上面写点什么，上述notion 的缺点它都避免了：
+ 它支持标准的markdown，同时你也可以单纯将它作为一个索引工具，你可以在特定的文件夹下面使用任何软件编辑你的.md文件，比如typora 或者 VSCode。 如果你想要同步你的文件，你可以使用自己的网盘或者干脆把github当作你的网盘，它在后台会自动使用git来版本控制你的变更。 如果你不想要同步你的文件，比如我在公司记录的业务相关的东西，并不是我自己的东西，所以我不希望它同步，我只需要添加一个本地的文件夹作为另一个分区（在logseq中称为graph）。这样我在家里只看得见我同步的graph，完全不会看见不同步的graph。 它是一个开源的项目，而且用Clojure写的，非常酷。  logseq默认记录笔记的地方叫做Journals，写起来就像日记一样，但如果你想要写一个特定主题的东西，你可以新建一个page，这就和普通的软件一样了。但这个Journal最厉害的地方在于，你可以随心所欲记录你想要记录的东西，只需要在前面加上一个类似你在社交网站上加的tag，这样这些tag就会汇集到以这个tag作为标题的页面中去。
+比如我最近在学习编译原理，每天临时看到东西会打一个compilers的tag，比如这是14号的笔记：  14日的笔记 
+这是我7号的相关笔记（关于这个主题只记了短短一句话）：  7日的笔记 
+但是我可以从这个tag点到一个page，这个page囊括了所有我记录这个主题的文字：  关于这个主题的所有记录 
+不足 这个产品还在开放中，截至2021年12月16日，这个软件的最新版本号是0.5.4，还是早期的阶段。我之前有看到说这个软件会丢笔记，但我也看到这个软件开发者迅速回应并在当天修复了这个问题。目前来说，这个软件存在的不足之处有：
+ 不支持网页clip，这一点做得最成熟的是EverNote。当然我并不是这个功能的重度用户。 还没有vim插件。如果有vim插件的话编辑起来的手感一定更舒服，之前我甚至一直都是用typora打开文件记笔记。   If you like my article and want to make a donation, you can click the 捐赠 Donation button on the side bar.'><title>notion很好，所以我选择logseq</title>
+
+<link rel='canonical' href='https://mooxiu.github.io/posts/using_logseq/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='notion很好，所以我选择logseq'>
+<meta property='og:description' content='今天看到一种说法，叫做现如今（今天是2021年12月16日）所有的笔记软件都在抄 notion 。notion 确实是一款非常成功的笔记软件，但如果仅仅将它作为笔记软件，则是狭隘化了它的用途，我们看看跟它对标的产品：
+比如 AppFlowy：  AppFlowy 
+再比如微软的Microsoft Loop:  Microsoft Loop 
+他们除了作为笔记软件以外，更强调 workspace。特别是他们都有类似敏捷开发的TODO， DOING， DONE 的 dashboard， 小型团队使用这样的软件作为它们的计划管理工具和知识共享仓库简直再适合不过。
+所以我为什么不再使用Notion了 我将 notion 作为个人的主要笔记软件使用过一段时间，最喜欢的地方是……每一篇文章都可以给我自动生成一个 emoji，看起来非常活泼。但问题也相当明显：
+ notion 的使用必须联网；一直保持联网意味着你的数据并不存储在你的本地，如果你的笔记涉及到非常隐私的部分，这让人非常不安心。而且这个逻辑也预设你必须要一直有网络连接，这让我感到非常不愉快。 notion 没有标准的markdown编辑器。我非常习惯在笔记中嵌入代码，插入引用，加入数学公式，插入超链接……这些在一个标准的markdown 编辑环境非常容易实现而且可以直接在键盘上完成，根本不需要对着菜单的选项点来点去。点击右键，选择插入超链接，粘贴地址，再加上标题这样的操作简直是Microsoft Word的编辑体验。也许它有自己的一套快捷键，但是既然业界已经有标准，为什么还要恶心你？ 商业化？商业化不是坏事但我觉得开源软件更酷一些。  也有一些别的问题，比如它是一个electron软件（尽管我现在这篇文章就是在同是electron写的vscode上编辑的），这让软件非常重， 而且体验和在浏览器中打开没有区别，几乎没有提升；再比如我觉得它过于强调视觉体验，我并不是说拥有好的设计不好，只是我觉得这模糊了记笔记的焦点。
+所以为什么LogSeq 如果我想和其他人共享一个工作空间，共同做点什么项目，我觉得notion 可能依然是一个不错的选择。但我使用的场景仅仅是记笔记，所以我想选择一个更加专一，对我自己而言使用体验更好的软件。
+我已经忘记是在哪里看到logseq的推荐了，回过头来，我已经使用logseq超过一个月了。我几乎每天都会在上面写点什么，上述notion 的缺点它都避免了：
+ 它支持标准的markdown，同时你也可以单纯将它作为一个索引工具，你可以在特定的文件夹下面使用任何软件编辑你的.md文件，比如typora 或者 VSCode。 如果你想要同步你的文件，你可以使用自己的网盘或者干脆把github当作你的网盘，它在后台会自动使用git来版本控制你的变更。 如果你不想要同步你的文件，比如我在公司记录的业务相关的东西，并不是我自己的东西，所以我不希望它同步，我只需要添加一个本地的文件夹作为另一个分区（在logseq中称为graph）。这样我在家里只看得见我同步的graph，完全不会看见不同步的graph。 它是一个开源的项目，而且用Clojure写的，非常酷。  logseq默认记录笔记的地方叫做Journals，写起来就像日记一样，但如果你想要写一个特定主题的东西，你可以新建一个page，这就和普通的软件一样了。但这个Journal最厉害的地方在于，你可以随心所欲记录你想要记录的东西，只需要在前面加上一个类似你在社交网站上加的tag，这样这些tag就会汇集到以这个tag作为标题的页面中去。
+比如我最近在学习编译原理，每天临时看到东西会打一个compilers的tag，比如这是14号的笔记：  14日的笔记 
+这是我7号的相关笔记（关于这个主题只记了短短一句话）：  7日的笔记 
+但是我可以从这个tag点到一个page，这个page囊括了所有我记录这个主题的文字：  关于这个主题的所有记录 
+不足 这个产品还在开放中，截至2021年12月16日，这个软件的最新版本号是0.5.4，还是早期的阶段。我之前有看到说这个软件会丢笔记，但我也看到这个软件开发者迅速回应并在当天修复了这个问题。目前来说，这个软件存在的不足之处有：
+ 不支持网页clip，这一点做得最成熟的是EverNote。当然我并不是这个功能的重度用户。 还没有vim插件。如果有vim插件的话编辑起来的手感一定更舒服，之前我甚至一直都是用typora打开文件记笔记。   If you like my article and want to make a donation, you can click the 捐赠 Donation button on the side bar.'>
+<meta property='og:url' content='https://mooxiu.github.io/posts/using_logseq/'>
+<meta property='og:site_name' content='New River, New Water'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='logseq' /><meta property='article:tag' content='notion' /><meta property='article:tag' content='关于笔记的笔记' /><meta property='article:published_time' content='2021-12-16T22:17:13&#43;08:00'/><meta property='article:modified_time' content='2021-12-16T22:17:13&#43;08:00'/>
+<meta name="twitter:title" content="notion很好，所以我选择logseq">
+<meta name="twitter:description" content="今天看到一种说法，叫做现如今（今天是2021年12月16日）所有的笔记软件都在抄 notion 。notion 确实是一款非常成功的笔记软件，但如果仅仅将它作为笔记软件，则是狭隘化了它的用途，我们看看跟它对标的产品：
+比如 AppFlowy：  AppFlowy 
+再比如微软的Microsoft Loop:  Microsoft Loop 
+他们除了作为笔记软件以外，更强调 workspace。特别是他们都有类似敏捷开发的TODO， DOING， DONE 的 dashboard， 小型团队使用这样的软件作为它们的计划管理工具和知识共享仓库简直再适合不过。
+所以我为什么不再使用Notion了 我将 notion 作为个人的主要笔记软件使用过一段时间，最喜欢的地方是……每一篇文章都可以给我自动生成一个 emoji，看起来非常活泼。但问题也相当明显：
+ notion 的使用必须联网；一直保持联网意味着你的数据并不存储在你的本地，如果你的笔记涉及到非常隐私的部分，这让人非常不安心。而且这个逻辑也预设你必须要一直有网络连接，这让我感到非常不愉快。 notion 没有标准的markdown编辑器。我非常习惯在笔记中嵌入代码，插入引用，加入数学公式，插入超链接……这些在一个标准的markdown 编辑环境非常容易实现而且可以直接在键盘上完成，根本不需要对着菜单的选项点来点去。点击右键，选择插入超链接，粘贴地址，再加上标题这样的操作简直是Microsoft Word的编辑体验。也许它有自己的一套快捷键，但是既然业界已经有标准，为什么还要恶心你？ 商业化？商业化不是坏事但我觉得开源软件更酷一些。  也有一些别的问题，比如它是一个electron软件（尽管我现在这篇文章就是在同是electron写的vscode上编辑的），这让软件非常重， 而且体验和在浏览器中打开没有区别，几乎没有提升；再比如我觉得它过于强调视觉体验，我并不是说拥有好的设计不好，只是我觉得这模糊了记笔记的焦点。
+所以为什么LogSeq 如果我想和其他人共享一个工作空间，共同做点什么项目，我觉得notion 可能依然是一个不错的选择。但我使用的场景仅仅是记笔记，所以我想选择一个更加专一，对我自己而言使用体验更好的软件。
+我已经忘记是在哪里看到logseq的推荐了，回过头来，我已经使用logseq超过一个月了。我几乎每天都会在上面写点什么，上述notion 的缺点它都避免了：
+ 它支持标准的markdown，同时你也可以单纯将它作为一个索引工具，你可以在特定的文件夹下面使用任何软件编辑你的.md文件，比如typora 或者 VSCode。 如果你想要同步你的文件，你可以使用自己的网盘或者干脆把github当作你的网盘，它在后台会自动使用git来版本控制你的变更。 如果你不想要同步你的文件，比如我在公司记录的业务相关的东西，并不是我自己的东西，所以我不希望它同步，我只需要添加一个本地的文件夹作为另一个分区（在logseq中称为graph）。这样我在家里只看得见我同步的graph，完全不会看见不同步的graph。 它是一个开源的项目，而且用Clojure写的，非常酷。  logseq默认记录笔记的地方叫做Journals，写起来就像日记一样，但如果你想要写一个特定主题的东西，你可以新建一个page，这就和普通的软件一样了。但这个Journal最厉害的地方在于，你可以随心所欲记录你想要记录的东西，只需要在前面加上一个类似你在社交网站上加的tag，这样这些tag就会汇集到以这个tag作为标题的页面中去。
+比如我最近在学习编译原理，每天临时看到东西会打一个compilers的tag，比如这是14号的笔记：  14日的笔记 
+这是我7号的相关笔记（关于这个主题只记了短短一句话）：  7日的笔记 
+但是我可以从这个tag点到一个page，这个page囊括了所有我记录这个主题的文字：  关于这个主题的所有记录 
+不足 这个产品还在开放中，截至2021年12月16日，这个软件的最新版本号是0.5.4，还是早期的阶段。我之前有看到说这个软件会丢笔记，但我也看到这个软件开发者迅速回应并在当天修复了这个问题。目前来说，这个软件存在的不足之处有：
+ 不支持网页clip，这一点做得最成熟的是EverNote。当然我并不是这个功能的重度用户。 还没有vim插件。如果有vim插件的话编辑起来的手感一定更舒服，之前我甚至一直都是用typora打开文件记笔记。   If you like my article and want to make a donation, you can click the 捐赠 Donation button on the side bar.">
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%A9%BA%E8%B0%88/" style="background-color: #7DD320; color: #fff;">
+                空谈
+            </a>
+        
+            <a href="/categories/%E5%B7%A5%E5%85%B7/" >
+                工具
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/posts/using_logseq/">notion很好，所以我选择logseq</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 16, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <p>今天看到一种说法，叫做现如今（今天是2021年12月16日）所有的笔记软件都在抄 notion 。notion 确实是一款非常成功的笔记软件，但如果仅仅将它作为笔记软件，则是狭隘化了它的用途，我们看看跟它对标的产品：</p>
+<p>比如 <a class="link" href="https://github.com/AppFlowy-IO/appflowy"  target="_blank" rel="noopener"
+    >AppFlowy</a>：
+<figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 105; 
+			flex-basis: 252px"
+	>
+	<a href="/posts/using_logseq/appflowy.png" data-size="880x835">
+		<img src="/posts/using_logseq/appflowy.png"
+			width="880"
+			height="835"
+			srcset="/posts/using_logseq/appflowy_hu5c690587be10e7515c2b4b8966dd4daa_156804_480x0_resize_box_3.png 480w, /posts/using_logseq/appflowy_hu5c690587be10e7515c2b4b8966dd4daa_156804_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="AppFlowy">
+	</a>
+	
+	<figcaption>AppFlowy</figcaption>
+	
+</figure></p>
+<p>再比如微软的<a class="link" href="https://www.microsoft.com/en-us/microsoft-loop?ms.url=microsoftcommicrosoft-loop"  target="_blank" rel="noopener"
+    >Microsoft Loop</a>:
+<figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 178; 
+			flex-basis: 429px"
+	>
+	<a href="/posts/using_logseq/loop.png" data-size="1300x727">
+		<img src="/posts/using_logseq/loop.png"
+			width="1300"
+			height="727"
+			srcset="/posts/using_logseq/loop_huc3bf8c545cbe0f335470030b80658afb_533039_480x0_resize_box_3.png 480w, /posts/using_logseq/loop_huc3bf8c545cbe0f335470030b80658afb_533039_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="Microsoft Loop">
+	</a>
+	
+	<figcaption>Microsoft Loop</figcaption>
+	
+</figure></p>
+<p>他们除了作为笔记软件以外，更强调 workspace。特别是他们都有类似敏捷开发的TODO， DOING， DONE 的 dashboard， 小型团队使用这样的软件作为它们的计划管理工具和知识共享仓库简直再适合不过。</p>
+<h2 id="所以我为什么不再使用notion了">所以我为什么不再使用Notion了</h2>
+<p>我将 notion 作为个人的主要笔记软件使用过一段时间，最喜欢的地方是……每一篇文章都可以给我自动生成一个 emoji，看起来非常活泼。但问题也相当明显：</p>
+<ul>
+<li>notion 的使用必须联网；一直保持联网意味着你的数据并不存储在你的本地，如果你的笔记涉及到非常隐私的部分，这让人非常不安心。而且这个逻辑也预设你必须要一直有网络连接，这让我感到非常不愉快。</li>
+<li>notion 没有标准的markdown编辑器。我非常习惯在笔记中嵌入代码，插入引用，加入数学公式，插入超链接……这些在一个标准的markdown 编辑环境非常容易实现而且可以直接在键盘上完成，根本不需要对着菜单的选项点来点去。<strong>点击右键，选择插入超链接，粘贴地址，再加上标题</strong>这样的操作简直是Microsoft Word的编辑体验。也许它有自己的一套快捷键，但是既然业界已经有标准，为什么还要恶心你？</li>
+<li>商业化？商业化不是坏事但我觉得开源软件更酷一些。</li>
+</ul>
+<p>也有一些别的问题，比如它是一个electron软件（尽管我现在这篇文章就是在同是electron写的vscode上编辑的），这让软件非常重， 而且体验和在浏览器中打开没有区别，几乎没有提升；再比如我觉得它过于强调视觉体验，我并不是说拥有好的设计不好，只是我觉得这模糊了记笔记的焦点。</p>
+<h2 id="所以为什么logseq">所以为什么LogSeq</h2>
+<p>如果我想和其他人共享一个工作空间，共同做点什么项目，我觉得notion 可能依然是一个不错的选择。但我使用的场景仅仅是记笔记，所以我想选择一个更加专一，对我自己而言使用体验更好的软件。</p>
+<p>我已经忘记是在哪里看到logseq的推荐了，回过头来，我已经使用logseq超过一个月了。我几乎每天都会在上面写点什么，上述notion 的缺点它都避免了：</p>
+<ul>
+<li>它支持标准的markdown，同时你也可以单纯将它作为一个索引工具，你可以在特定的文件夹下面使用任何软件编辑你的<code>.md</code>文件，比如<code>typora</code> 或者 <code>VSCode</code>。</li>
+<li>如果你想要同步你的文件，你可以使用自己的网盘或者干脆把github当作你的网盘，它在后台会自动使用git来版本控制你的变更。</li>
+<li>如果你不想要同步你的文件，比如我在公司记录的业务相关的东西，并不是我自己的东西，所以我不希望它同步，我只需要添加一个本地的文件夹作为另一个分区（在logseq中称为graph）。这样我在家里只看得见我同步的graph，完全不会看见不同步的graph。</li>
+<li>它是一个<a class="link" href="https://github.com/logseq/logseq"  target="_blank" rel="noopener"
+    >开源的项目</a>，而且用Clojure写的，非常酷。</li>
+</ul>
+<p>logseq默认记录笔记的地方叫做Journals，写起来就像日记一样，但如果你想要写一个特定主题的东西，你可以新建一个page，这就和普通的软件一样了。但这个Journal最厉害的地方在于，你可以随心所欲记录你想要记录的东西，只需要在前面加上一个类似你在社交网站上加的tag，这样这些tag就会汇集到以这个tag作为标题的页面中去。</p>
+<p>比如我最近在学习编译原理，每天临时看到东西会打一个<code>compilers</code>的tag，比如这是14号的笔记：
+<figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 119; 
+			flex-basis: 286px"
+	>
+	<a href="/posts/using_logseq/note_14.png" data-size="1580x1322">
+		<img src="/posts/using_logseq/note_14.png"
+			width="1580"
+			height="1322"
+			srcset="/posts/using_logseq/note_14_hu56884e980047527ac7124e4a418730b0_378765_480x0_resize_box_3.png 480w, /posts/using_logseq/note_14_hu56884e980047527ac7124e4a418730b0_378765_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="14日的笔记">
+	</a>
+	
+	<figcaption>14日的笔记</figcaption>
+	
+</figure></p>
+<p>这是我7号的相关笔记（关于这个主题只记了短短一句话）：
+<figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 662; 
+			flex-basis: 1590px"
+	>
+	<a href="/posts/using_logseq/note_7.png" data-size="1484x224">
+		<img src="/posts/using_logseq/note_7.png"
+			width="1484"
+			height="224"
+			srcset="/posts/using_logseq/note_7_hue94bd72736ea78bfd259b1f0ff5fd462_30775_480x0_resize_box_3.png 480w, /posts/using_logseq/note_7_hue94bd72736ea78bfd259b1f0ff5fd462_30775_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="7日的笔记">
+	</a>
+	
+	<figcaption>7日的笔记</figcaption>
+	
+</figure></p>
+<p>但是我可以从这个tag点到一个page，这个page囊括了所有我记录这个主题的文字：
+<figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 87; 
+			flex-basis: 208px"
+	>
+	<a href="/posts/using_logseq/compilers.png" data-size="1586x1822">
+		<img src="/posts/using_logseq/compilers.png"
+			width="1586"
+			height="1822"
+			srcset="/posts/using_logseq/compilers_huaa1bad177a1d1347c0d9550cd6c5e042_394538_480x0_resize_box_3.png 480w, /posts/using_logseq/compilers_huaa1bad177a1d1347c0d9550cd6c5e042_394538_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="关于这个主题的所有记录">
+	</a>
+	
+	<figcaption>关于这个主题的所有记录</figcaption>
+	
+</figure></p>
+<h2 id="不足">不足</h2>
+<p>这个产品还在开放中，截至2021年12月16日，这个软件的最新版本号是<code>0.5.4</code>，还是早期的阶段。我之前有看到说这个软件会丢笔记，但我也看到这个软件开发者迅速回应并在当天修复了这个问题。目前来说，这个软件存在的不足之处有：</p>
+<ul>
+<li>不支持网页clip，这一点做得最成熟的是EverNote。当然我并不是这个功能的重度用户。</li>
+<li>还没有vim插件。如果有vim插件的话编辑起来的手感一定更舒服，之前我甚至一直都是用typora打开文件记笔记。</li>
+</ul>
+<hr>
+<p>If you like my article and want to make a donation, you can click the <a class="link" href="https://mooxiu.github.io/donate/"  target="_blank" rel="noopener"
+    >捐赠 Donation</a> button on the side bar.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/logseq/">logseq</a>
+        
+            <a href="/tags/notion/">notion</a>
+        
+            <a href="/tags/%E5%85%B3%E4%BA%8E%E7%AC%94%E8%AE%B0%E7%9A%84%E7%AC%94%E8%AE%B0/">关于笔记的笔记</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/posts/play_civilization/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">文明玩后感</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/steak/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Juicy Steak, Finally</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/what_to_eat/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">轻食是为了留长发</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/2020/03/06/inequality-of-links/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">鏈接接接平等，但有些鏈接比其他更平等</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/2020/01/31/%E4%B8%8D%E6%98%AF%E6%89%80%E6%9C%89ology%E9%83%BD%E5%BA%94%E6%98%AFscience/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">不是所有ology都应是science</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "nrnw" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2019 - 
+        
+        2021 New River, New Water
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#所以我为什么不再使用notion了">所以我为什么不再使用Notion了</a></li>
+    <li><a href="#所以为什么logseq">所以为什么LogSeq</a></li>
+    <li><a href="#不足">不足</a></li>
+  </ul>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
