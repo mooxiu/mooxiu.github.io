@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>键盘 on New River, New Water</title>
+    <link>https://mooxiu.github.io/tags/%E9%94%AE%E7%9B%98/</link>
+    <description>Recent content in 键盘 on New River, New Water</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Dec 2021 21:23:11 +0800</lastBuildDate><atom:link href="https://mooxiu.github.io/tags/%E9%94%AE%E7%9B%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>键盘艺术的练习之路：vim和emacs</title>
+      <link>https://mooxiu.github.io/posts/viming/</link>
+      <pubDate>Fri, 17 Dec 2021 21:23:11 +0800</pubDate>
+      
+      <guid>https://mooxiu.github.io/posts/viming/</guid>
+      <description>两年前，我写了一篇叫做「如何像演奏乐器一样打字」的文字。那个时候，我改进了一个虽然非常微妙，但并不trivial的键盘使用技法，那就是使用shift键而不是caps lock键来切换大小写。这样做的好处在于：
+ 并不是所有的键盘的caps lock键都是用来切换大小写的，比如Mac的中文键盘这个位置的键是用来中英文切换的。 我们需要持续输入大写字母的场合并不多，而且个人非常讨厌看到一堆连续的大写字母。需要大写字母的场合，往往都需要紧跟小写字母，这样如果是用caps lock反而会降低输入速度（热知识：SQL是大小写不敏感的，你可以一直根本不输入大写字母）   プロのようにvimを使う 最近练习的新技巧是很多人都已经可以熟练使用的vim快捷键。长久以来，我对于vim的习得程度就是「能用」。在没有GUI的计算机上我不得不效率低下地使用它编辑文本，但一到真正需要高效编辑的情形，我又会切换成最符合直觉的输入方式。
+不过，我至少可以记忆vim快捷键的原因在于：长久以来我都在浏览器（Chrome和Firefox）上使用一个叫做Vimium的插件，你可以用vim的快捷键浏览网页，比如 j向下滚动, k向上滚动, /搜索, gg到网页最上方, G到网页底部。那个时候我曾经有一个仅仅使用键盘来流畅使用计算机的梦想。
+最近一两个星期，我痛定思痛，决定纯粹使用vim快捷键来写代码。我大概需要追加记忆的快捷键大概有：o从下一行插入, a从一格插入, $定位到行尾, ^定位到有文字的行首, 0定位到行首, y复制, p粘贴，d删除。
+经过一两个星期的习惯之后，现在已经可以非常熟练地输入了。尽管我觉得使用vim快捷键替代原来的输入方式在实际上并不一定能够带来什么好处，但我认为这是一个将键盘使用作为演奏艺术来看待的人的必修课。
+除此之外，我觉得它还拥有的好处是，它会强迫你输入英文，因为vim快捷键仅在英文输入法下生效，在需要切换中英文的场景下，使用vim快捷键效率不高。于此同时，在工作的时候练习vim给枯燥的工作增添了乐趣。
+ 意外にemacsも習得 众所周知，在编辑器领域，一直有所谓「编辑器之神」vim和「神之编辑器」emacs双足鼎力的说法。
+长久以来，我都对RMS 充满了敬佩，因此在我心中，emacs永远是是格调的顶层。但它似乎离我非常遥远，我曾经尝试学习过一次emacs，但什么也记不住。
+在这次练习vim快捷键的时候，有一个意外之喜，那就是被同时告知，MacOS其实原生就在文本编辑上绑定了emacs的快捷键。这样一来，在自己的打字风格中融入一点emacs就多了许多的现实意义。比如在很多地方control + a意味着移动到行首，control + e 意味着移动到行尾……诸如此类。于是我大概学习了10个左右的emacs快捷键，发现他们可以在非常多的场合下使用这些快捷键。我进一步替代了上下左右四个方向键的使用。
+于此同时，我还意识到了vim和emacs在哲学上的不同：
+vim通过两个形态（insert mode 和非 insert mode）让同样的键盘多了更多的功能，同时可以通过连续的指令组合成更复杂的指令，众所周知，这是Unix的哲学。
+而emacs则是通过control键区分了「输入字符」和「输入命令」这两件事，也就是说，emacs强迫你不得不有时候同时按下两个以上的按键，这就是键盘演奏的「和弦」。
+ 将来は？ 对于一个中文世界的职业的键盘演奏者，我觉得我也不得不思考如何让中文输入更具艺术性。我现在使用的是拼音输入法，而且我不打缩写，也就是说，如果我要说：
+ 如何像演奏乐器一样打字
+ 我的输入是
+ ru he xiang yan zou yue qi yi yang da zi
+ 而不是类似下面这种
+ rh xiang yz yq yy dz</description>
+    </item>
+    
+  </channel>
+</rss>
