@@ -6,7 +6,78 @@
         <description>Recent content on New River, New Water</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 17 Dec 2021 21:23:11 +0800</lastBuildDate><atom:link href="https://mooxiu.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 07 Jan 2022 22:29:21 +0800</lastBuildDate><atom:link href="https://mooxiu.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Understanding Relationship of Math Rock, Mid-Western Emo, Prog Metal, etc</title>
+        <link>https://mooxiu.github.io/posts/math_rock_in_go/</link>
+        <pubDate>Fri, 07 Jan 2022 22:29:21 +0800</pubDate>
+        
+        <guid>https://mooxiu.github.io/posts/math_rock_in_go/</guid>
+        <description>&lt;p&gt;I am really confused about the relationship among following genres:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Math Rock&lt;/li&gt;
+&lt;li&gt;Mid Westen Emo&lt;/li&gt;
+&lt;li&gt;Progressive Metal&lt;/li&gt;
+&lt;li&gt;Post Rock&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I mean, when people talking about math-rock, they tend to mention &lt;em&gt;mid-western emo&lt;/em&gt; chord, blabla. I&amp;rsquo;m getting more and more lost in those conceptions, however I begin to get things into shape when I think about this problem in a programming way.&lt;/p&gt;
+&lt;p&gt;So here is the result from &lt;strong&gt;My Own Understanding&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Rock&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;c1&#34;&gt;// ... so many things to write
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;MathRock&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;Rock&lt;/span&gt;
+	&lt;span class=&#34;nf&#34;&gt;TooManyTapping&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+	&lt;span class=&#34;nf&#34;&gt;BaicallyInstrumental&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+	&lt;span class=&#34;nf&#34;&gt;TooManyOddTimeSignature&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;PostRock&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;Rock&lt;/span&gt;
+	&lt;span class=&#34;nf&#34;&gt;BasicallyInstrumental&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;		
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;MidWesternEmo&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ProgMetal&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+
+&lt;span class=&#34;c1&#34;&gt;// Here are some example:
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;AmericanFootball&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;c1&#34;&gt;// Embed mid western emo struct 
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;nx&#34;&gt;MidWesternEmo&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;// Implements all the Math Rock Method
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;AmericanFootball&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;TooManyTapping&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;AmericanFootball&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;BasicallyInstrumental&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;AmericanFootball&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;TooManyOddSignature&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;// Implements all Rock methods...
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;What can we conclude from code above:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Math Rock can be treated as Post Rock, as it impelments all methods of the later one.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gernes lik &lt;em&gt;emo&lt;/em&gt; or &lt;em&gt;prog metal&lt;/em&gt; are more eccentric to the band, thus should be regarded as &lt;code&gt;struct&lt;/code&gt;s. If one prog band implements all the math rock methods, that is &lt;strong&gt;playing music in a math rock way&lt;/strong&gt;, it should also be regarded as a math rock band.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Same thing with &lt;code&gt;Blues&lt;/code&gt; and &lt;code&gt;Jazz&lt;/code&gt;. In this case, Blues should be &lt;code&gt;struct&lt;/code&gt; and &lt;code&gt;Jazz&lt;/code&gt; is an interface. You can play Blues in a Jazz way, then you are both &lt;em&gt;Blues&lt;/em&gt; and &lt;em&gt;Jazzy&lt;/em&gt;. But you can also play &lt;code&gt;Classical&lt;/code&gt; in a Jazz way, then you are both &lt;em&gt;Classical&lt;/em&gt; and &lt;em&gt;Jazzy&lt;/em&gt;, as &lt;strong&gt;Keith Jarrett&lt;/strong&gt; does.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like my article and want to make a donation, you can click the &lt;a class=&#34;link&#34; href=&#34;https://mooxiu.github.io/donate/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;捐赠 Donation&lt;/a&gt; button on the sidebar.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>键盘艺术的练习之路：vim和emacs</title>
         <link>https://mooxiu.github.io/posts/viming/</link>
         <pubDate>Fri, 17 Dec 2021 21:23:11 +0800</pubDate>

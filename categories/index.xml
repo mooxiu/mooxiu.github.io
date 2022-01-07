@@ -6,22 +6,31 @@
     <description>Recent content in Categories on New River, New Water</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Dec 2021 21:23:11 +0800</lastBuildDate><atom:link href="https://mooxiu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jan 2022 22:29:21 +0800</lastBuildDate><atom:link href="https://mooxiu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>工具</title>
-      <link>https://mooxiu.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
-      <pubDate>Fri, 17 Dec 2021 21:23:11 +0800</pubDate>
+      <title>Music</title>
+      <link>https://mooxiu.github.io/categories/music/</link>
+      <pubDate>Fri, 07 Jan 2022 22:29:21 +0800</pubDate>
       
-      <guid>https://mooxiu.github.io/categories/%E5%B7%A5%E5%85%B7/</guid>
+      <guid>https://mooxiu.github.io/categories/music/</guid>
       <description></description>
     </item>
     
     <item>
       <title>空谈</title>
       <link>https://mooxiu.github.io/categories/%E7%A9%BA%E8%B0%88/</link>
-      <pubDate>Fri, 17 Dec 2021 21:23:11 +0800</pubDate>
+      <pubDate>Fri, 07 Jan 2022 22:29:21 +0800</pubDate>
       
       <guid>https://mooxiu.github.io/categories/%E7%A9%BA%E8%B0%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>工具</title>
+      <link>https://mooxiu.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Fri, 17 Dec 2021 21:23:11 +0800</pubDate>
+      
+      <guid>https://mooxiu.github.io/categories/%E5%B7%A5%E5%85%B7/</guid>
       <description></description>
     </item>
     
@@ -40,15 +49,6 @@
       <pubDate>Mon, 04 Oct 2021 18:38:25 +0800</pubDate>
       
       <guid>https://mooxiu.github.io/categories/%E7%AC%94%E8%AE%B0/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Music</title>
-      <link>https://mooxiu.github.io/categories/music/</link>
-      <pubDate>Sun, 30 May 2021 18:18:15 +0800</pubDate>
-      
-      <guid>https://mooxiu.github.io/categories/music/</guid>
       <description></description>
     </item>
     
