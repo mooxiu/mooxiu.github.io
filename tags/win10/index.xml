@@ -15,8 +15,8 @@
       <guid>https://mooxiu.github.io/posts/boot_fix/</guid>
       <description>The Situation Dual boot: Win10 and Manjaro Linux.
 When trying to update Win10 to the latest Win10 20H version, after rebooting my system, it did not enter the booting interface, rather it says:
- Unknown filesystem, entering rescue mod
- First Try After searching the internet, I find this video shows the same problem.
+Unknown filesystem, entering rescue mod
+First Try After searching the internet, I find this video shows the same problem.
 However, after I ls my hd partion one by one on my pc, I found there are 3 partions showing they have ext2 filesystem.</description>
     </item>
     

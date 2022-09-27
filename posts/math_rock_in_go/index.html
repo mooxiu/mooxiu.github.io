@@ -270,46 +270,44 @@
 </ul>
 <p>I mean, when people talking about math-rock, they tend to mention <em>mid-western emo</em> chord, blabla. I&rsquo;m getting more and more lost in those conceptions, however I begin to get things into shape when I think about this problem in a programming way.</p>
 <p>So here is the result from <strong>My Own Understanding</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Rock</span> <span class="kd">interface</span> <span class="p">{</span>
-	<span class="c1">// ... so many things to write
-</span><span class="c1"></span><span class="p">}</span>
-
-<span class="kd">type</span> <span class="nx">MathRock</span> <span class="kd">interface</span> <span class="p">{</span>
-	<span class="nx">Rock</span>
-	<span class="nf">TooManyTapping</span><span class="p">()</span>
-	<span class="nf">BaicallyInstrumental</span><span class="p">()</span>
-	<span class="nf">TooManyOddTimeSignature</span><span class="p">()</span>
-<span class="p">}</span>
-
-<span class="kd">type</span> <span class="nx">PostRock</span> <span class="kd">interface</span> <span class="p">{</span>
-	<span class="nx">Rock</span>
-	<span class="nf">BasicallyInstrumental</span><span class="p">()</span>		
-<span class="p">}</span>
-
-<span class="kd">type</span> <span class="nx">MidWesternEmo</span> <span class="kd">struct</span> <span class="p">{</span>
-<span class="p">}</span>
-
-<span class="kd">type</span> <span class="nx">ProgMetal</span> <span class="kd">struct</span> <span class="p">{</span>
-<span class="p">}</span>
-
-
-<span class="c1">// Here are some example:
-</span><span class="c1"></span><span class="kd">struct</span> <span class="nx">AmericanFootball</span> <span class="kd">struct</span> <span class="p">{</span>
-	<span class="c1">// Embed mid western emo struct 
-</span><span class="c1"></span>	<span class="nx">MidWesternEmo</span>
-<span class="p">}</span>
-
-<span class="c1">// Implements all the Math Rock Method
-</span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">a</span> <span class="o">*</span><span class="nx">AmericanFootball</span><span class="p">)</span> <span class="nf">TooManyTapping</span><span class="p">()</span> <span class="p">{}</span>
-
-<span class="kd">func</span> <span class="p">(</span><span class="nx">a</span> <span class="o">*</span><span class="nx">AmericanFootball</span><span class="p">)</span> <span class="nf">BasicallyInstrumental</span><span class="p">()</span> <span class="p">{}</span>
-
-<span class="kd">func</span> <span class="p">(</span><span class="nx">a</span> <span class="o">*</span><span class="nx">AmericanFootball</span><span class="p">)</span> <span class="nf">TooManyOddSignature</span><span class="p">()</span> <span class="p">{}</span>
-
-<span class="c1">// Implements all Rock methods...
-</span><span class="c1"></span>
-
-</code></pre></div><p>What can we conclude from code above:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">Rock</span> <span class="kd">interface</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// ... so many things to write
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">MathRock</span> <span class="kd">interface</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Rock</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">TooManyTapping</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">BaicallyInstrumental</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">TooManyOddTimeSignature</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">PostRock</span> <span class="kd">interface</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">Rock</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">BasicallyInstrumental</span><span class="p">()</span>		
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">MidWesternEmo</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">ProgMetal</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Here are some example:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">struct</span> <span class="nx">AmericanFootball</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// Embed mid western emo struct 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">MidWesternEmo</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Implements all the Math Rock Method
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">a</span> <span class="o">*</span><span class="nx">AmericanFootball</span><span class="p">)</span> <span class="nf">TooManyTapping</span><span class="p">()</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">a</span> <span class="o">*</span><span class="nx">AmericanFootball</span><span class="p">)</span> <span class="nf">BasicallyInstrumental</span><span class="p">()</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">a</span> <span class="o">*</span><span class="nx">AmericanFootball</span><span class="p">)</span> <span class="nf">TooManyOddSignature</span><span class="p">()</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Implements all Rock methods...
+</span></span></span></code></pre></div><p>What can we conclude from code above:</p>
 <ol>
 <li>
 <p>Math Rock can be treated as Post Rock, as it impelments all methods of the later one.</p>

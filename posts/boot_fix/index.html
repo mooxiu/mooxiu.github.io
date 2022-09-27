@@ -136,11 +136,11 @@
 <li>swap partion</li>
 </ul>
 <p>so I have to <code>set boot</code> and <code>set prefix</code> one by one and test. I typed:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">set</span> <span class="nv">boot</span><span class="o">=(</span>hd0,gpt7<span class="o">)</span>
-<span class="nb">set</span> <span class="nv">prefix</span><span class="o">=(</span>hd0,gpt<span class="o">)</span>/boot/grub
-insmod normal
-normal
-</code></pre></div><p>but they all show:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">set</span> <span class="nv">boot</span><span class="o">=(</span>hd0,gpt7<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> <span class="nv">prefix</span><span class="o">=(</span>hd0,gpt<span class="o">)</span>/boot/grub
+</span></span><span class="line"><span class="cl">insmod normal
+</span></span><span class="line"><span class="cl">normal
+</span></span></code></pre></div><p>but they all show:</p>
 <blockquote>
 <p>&lsquo;/boot/grub/xxx/normal.mod&rsquo; not found</p>
 </blockquote>
