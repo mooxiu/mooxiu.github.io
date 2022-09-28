@@ -52,7 +52,7 @@ categories:
 
 新的工作台，希望可以在这个角落做更多的事:
 
-<img src="desktop.jpeg" alt="desktop" style="zoom:50%;" />
+![新的工作台，希望可以在这个角落做更多的事](desktop.jpeg)
 
 
 
