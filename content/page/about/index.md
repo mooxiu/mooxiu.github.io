@@ -2,14 +2,9 @@
 title: "About"
 date: 2021-04-30T22:59:26+08:00
 author: "Xwithoutcolor"
-aliases:
-  - about-us
-  - about-hugo
-  - contact
-license: CC BY-NC-ND
-lastmod: '2020-10-09'
 menu:
     main: 
+        name: About
         weight: -90
         pre: user
 ---
