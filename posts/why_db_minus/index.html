@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='使用音频软件对音乐进行编辑的时候，我们几乎总是会注意到，在这些软件中，音乐的分贝总是一个负值(下面是一张compressor（压缩器）的截图，请注意红色方框中但分贝数字)：
+minus db in logic pro 这几乎和我们日常的经验截然不同，日常生活中，我们常能听到类似以下的描述：
+人耳最好不要长期曝露在xx分贝之下
+或者
+施工的声音大约是xx分贝
+dB（分贝），似乎是我们都很熟悉很基本的对声音大小进行衡量的单位，但此时跟在一个负值后面的它显得如此陌生。事实上，前面一句话的「对声音大小进行衡量的单位」这句话就非常模糊，何谓声音大小？如果两个人的耳朵对于同样的声音有着不同的敏感度的话，那么这个声音对于两个人的声音大小是不同的吗？一旦有诸如此类的问题，我们就会发现对声音大小（响度）进行描述的物理单位似乎需要被更严谨地定义。
+If you like my article and want to make a donation, you can click the 捐赠 Donation button on the side bar.'><title>为何分贝总是负值？</title>
+
+<link rel='canonical' href='https://mooxiu.github.io/posts/why_db_minus/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='为何分贝总是负值？'>
+<meta property='og:description' content='使用音频软件对音乐进行编辑的时候，我们几乎总是会注意到，在这些软件中，音乐的分贝总是一个负值(下面是一张compressor（压缩器）的截图，请注意红色方框中但分贝数字)：
+minus db in logic pro 这几乎和我们日常的经验截然不同，日常生活中，我们常能听到类似以下的描述：
+人耳最好不要长期曝露在xx分贝之下
+或者
+施工的声音大约是xx分贝
+dB（分贝），似乎是我们都很熟悉很基本的对声音大小进行衡量的单位，但此时跟在一个负值后面的它显得如此陌生。事实上，前面一句话的「对声音大小进行衡量的单位」这句话就非常模糊，何谓声音大小？如果两个人的耳朵对于同样的声音有着不同的敏感度的话，那么这个声音对于两个人的声音大小是不同的吗？一旦有诸如此类的问题，我们就会发现对声音大小（响度）进行描述的物理单位似乎需要被更严谨地定义。
+If you like my article and want to make a donation, you can click the 捐赠 Donation button on the side bar.'>
+<meta property='og:url' content='https://mooxiu.github.io/posts/why_db_minus/'>
+<meta property='og:site_name' content='New River, New Water'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='Music Production' /><meta property='article:tag' content='Sound Deisgn' /><meta property='article:published_time' content='2021-11-24T21:50:38&#43;08:00'/><meta property='article:modified_time' content='2021-11-24T21:50:38&#43;08:00'/>
+<meta name="twitter:title" content="为何分贝总是负值？">
+<meta name="twitter:description" content="使用音频软件对音乐进行编辑的时候，我们几乎总是会注意到，在这些软件中，音乐的分贝总是一个负值(下面是一张compressor（压缩器）的截图，请注意红色方框中但分贝数字)：
+minus db in logic pro 这几乎和我们日常的经验截然不同，日常生活中，我们常能听到类似以下的描述：
+人耳最好不要长期曝露在xx分贝之下
+或者
+施工的声音大约是xx分贝
+dB（分贝），似乎是我们都很熟悉很基本的对声音大小进行衡量的单位，但此时跟在一个负值后面的它显得如此陌生。事实上，前面一句话的「对声音大小进行衡量的单位」这句话就非常模糊，何谓声音大小？如果两个人的耳朵对于同样的声音有着不同的敏感度的话，那么这个声音对于两个人的声音大小是不同的吗？一旦有诸如此类的问题，我们就会发现对声音大小（响度）进行描述的物理单位似乎需要被更严谨地定义。
+If you like my article and want to make a donation, you can click the 捐赠 Donation button on the side bar.">
+    </head>
+    <body class="
+    article-page 
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        on-phone--column extended
+    
+">
+    
+        <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/main_huc2be7be84717863e8b51ab2450ec341d_7096_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">👀</span>
+                
+            </figure>
+            
+        
+        
+        <h1 class="site-name"><a href="/">New River, New Water</a></h1>
+        <h2 class="site-description"></h2></header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                    
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                    
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/donate/' >
+                
+                
+                    
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-coin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4h-2a2 2 0 0 1 -1.8 -1" />
+  <path d="M12 6v2m0 8v2" />
+</svg>
+
+
+
+                
+                <span>捐赠 Donation</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%AC%94%E8%AE%B0/" style="background-color: #373668; color: #fff;">
+                笔记
+            </a>
+        
+            <a href="/categories/music/" style="background-color: #2a9d8f; color: #fff;">
+                Music
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/posts/why_db_minus/">为何分贝总是负值？</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 24, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <p>使用音频软件对音乐进行编辑的时候，我们几乎总是会注意到，在这些软件中，音乐的分贝总是一个负值(下面是一张compressor（压缩器）的截图，请注意红色方框中但分贝数字)：</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 129; 
+			flex-basis: 309px"
+	>
+	<a href="/posts/why_db_minus/logic_pro_screenshot.png" data-size="1028x796">
+		<img src="/posts/why_db_minus/logic_pro_screenshot.png"
+			width="1028"
+			height="796"
+			srcset="/posts/why_db_minus/logic_pro_screenshot_hu65931aff0e479fb668c92daa1c3dcbb0_741111_480x0_resize_box_3.png 480w, /posts/why_db_minus/logic_pro_screenshot_hu65931aff0e479fb668c92daa1c3dcbb0_741111_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="minus db in logic pro">
+	</a>
+	
+	<figcaption>minus db in logic pro</figcaption>
+	
+</figure></p>
+<p>这几乎和我们日常的经验截然不同，日常生活中，我们常能听到类似以下的描述：</p>
+<blockquote>
+<p>人耳最好不要长期曝露在xx分贝之下</p>
+</blockquote>
+<p>或者</p>
+<blockquote>
+<p>施工的声音大约是xx分贝</p>
+</blockquote>
+<p>dB（分贝），似乎是我们都很熟悉很基本的对声音大小进行衡量的单位，但此时跟在一个负值后面的它显得如此陌生。事实上，前面一句话的「对声音大小进行衡量的单位」这句话就非常模糊，何谓声音大小？如果两个人的耳朵对于同样的声音有着不同的敏感度的话，那么这个声音对于两个人的声音大小是不同的吗？一旦有诸如此类的问题，我们就会发现对声音大小（响度）进行描述的物理单位似乎需要被更严谨地定义。</p>
+<hr>
+<p>If you like my article and want to make a donation, you can click the <a class="link" href="https://mooxiu.github.io/donate/"  target="_blank" rel="noopener"
+    >捐赠 Donation</a> button on the side bar.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/music-production/">Music Production</a>
+        
+            <a href="/tags/sound-deisgn/">Sound Deisgn</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/posts/toxic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Note for TOXIC breakdown</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/tritone/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Tritone, 三全音代理或降二代五和弦</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/math_rock_in_go/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Understanding Relationship of Math Rock, Mid-Western Emo, Prog Metal, etc</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/steak/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Juicy Steak, Finally</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/boot_fix/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">双系统升级Win10 20H1的时候Linux引导失效修理</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="mooxiu/mooxiu.github.io"
+        issue-term="pathname"
+        
+        label="Comment"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2019 - 
+        
+        2024 New River, New Water
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

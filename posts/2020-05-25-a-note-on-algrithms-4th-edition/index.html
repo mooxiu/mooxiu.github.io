@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='这则笔记主要记录我在阅读「算法」（by Robert Sedgewick et Kevin Wayne）这本书时学到的基本的算法和思想。
+第一章：算法基础 面向API编程的思维：先去考量这个程序将要实现什么API，然后分门别类写它的实现。
+三种数据结构：背包（bag），队列（queue）（包括双向队列），栈（stack）。分别用数组（array）和链表（linked list）实现。
+算法分析：能够分析算法的时间复杂度。（当然这个我以前就会，因此不再赘述）
+具体问题：
+binomial distribution： 伯努利分布（二项分布）的递归和递推 Binary Search： 时间复杂度为(lg N) 的一种查找方式，前提是数列本身是有序的。 fibonacci Search： 一种只用加减的查找方式，二分查找的一种变体。 Welford 算法： 一种求方差的one-pass 算法，可以实现空间复杂度仅为(O(1)) 。因为精度的缘故，数学上普通的方差计算方式极有可能得到相当离谱的方差结果。 Dijkstra 双栈算数表达式求和：非常经典的算法。双栈模型可以用于各种问题的解决，并且本身也可以做到相当多的事情：比如仅用递归函数，用双栈对其中一个栈进行逆序。 2-sum：是解决3-sum的基础。一般而言比较优秀的算法是首先进行快排，接着进行遍历&#43;二分查找。这样可以让时间复杂度变为(O(N lg N))。 第二章：排序 初级排序算法：选择排序(Select Sort)， 插入排序(Insertion Sort)，希尔排序(Shell Sort)。我将Shell Sort看作是Insetion Sort的一种特别形式。这三种算法中，尽管Select是最慢的（因为无法利用最初输入的顺序），但它所需要的空间是最小的。
+归并排序（Merge Sort）（我总是不记得到底是「归并」还是「并归」）：一种分治（divide-and-conquer）思想的排序算法。事实上分成两个部分，一个部分是一个递归的sort函数，另一个是将sort的两部分merge起来的函数。是一种渐进最优的排序算法，时间是(N lg N)级别的。
+快速排序（Quick Sort）：Merge排序依然需要一个辅助的队列auxiliay。但快速排序则是将时间最短和空间小这两个优点结合了起来。它同样其实也是两个部分，一个是一个递归的Sort函数，另一个是寻找切分点的partition函数。但它的问题是比较脆弱。
+脆弱来源于何处：比如在选取分割点的时候，如果每次取得用于分割的元素恰好位于最小或者最大值，这样性能就比较低劣。因为在快排的时候一定要事先进行Shuffle使得数组处于乱序。这样平均之下更容易取到恰好中间分割的数字。（引申出了我一个问题：如何最快取得一个数组的中位数？如何one-pass地获取一个stream的中位数列？）
+处理含有大量重复元素时：三向切分是更有效的方式。
+重点： 切分的写法。
+优先队列（Priority Queues）：事实上是一种部分排序的数据模型。比如当计算机给各种应用分配资源时，看重的是最重要的若干个程序的资源，因此实际上我们只要能够找出有限个的最大值就可。
+它支持两种操作：delMax（删除最大元素）， 以及 insert（插入元素）。
+为了实现优先队列，这里提到了一种新的数据结构，这里提到了新的数据结构：二叉堆（binary heap）（或者简称「堆」）。但事实上，它仍然是一个数组，it’s all about imagination。这些数组可以被想象成树状结构，因此我们在删除最大元素和插入元素时可以以(O(lgN))的时间复杂度完成它。
+但这本书截至介绍二叉堆时，其实并没有介绍二叉树（？）。关于二叉树（Binary tree），完全二叉树（Complete Binary Tree）的东西：CMU的课件。
+我对于优先队列的认知是，能够在输入数据的同时对数据加以排序。
+索引优先队列：为了方便引用优先队列中的元素，在优先队列上，给每个元素做了索引。实现了更多的几个方法。
+堆排序（HeapSort）： 唯一能够同时最优利用空间和时间的方法。但是现代应用程序当中排序主要还是利用快排，之所以如此是因为堆排序无法利用缓存。
+具体问题：'><title>「算法4」笔记</title>
+
+<link rel='canonical' href='https://mooxiu.github.io/posts/2020-05-25-a-note-on-algrithms-4th-edition/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='「算法4」笔记'>
+<meta property='og:description' content='这则笔记主要记录我在阅读「算法」（by Robert Sedgewick et Kevin Wayne）这本书时学到的基本的算法和思想。
+第一章：算法基础 面向API编程的思维：先去考量这个程序将要实现什么API，然后分门别类写它的实现。
+三种数据结构：背包（bag），队列（queue）（包括双向队列），栈（stack）。分别用数组（array）和链表（linked list）实现。
+算法分析：能够分析算法的时间复杂度。（当然这个我以前就会，因此不再赘述）
+具体问题：
+binomial distribution： 伯努利分布（二项分布）的递归和递推 Binary Search： 时间复杂度为(lg N) 的一种查找方式，前提是数列本身是有序的。 fibonacci Search： 一种只用加减的查找方式，二分查找的一种变体。 Welford 算法： 一种求方差的one-pass 算法，可以实现空间复杂度仅为(O(1)) 。因为精度的缘故，数学上普通的方差计算方式极有可能得到相当离谱的方差结果。 Dijkstra 双栈算数表达式求和：非常经典的算法。双栈模型可以用于各种问题的解决，并且本身也可以做到相当多的事情：比如仅用递归函数，用双栈对其中一个栈进行逆序。 2-sum：是解决3-sum的基础。一般而言比较优秀的算法是首先进行快排，接着进行遍历&#43;二分查找。这样可以让时间复杂度变为(O(N lg N))。 第二章：排序 初级排序算法：选择排序(Select Sort)， 插入排序(Insertion Sort)，希尔排序(Shell Sort)。我将Shell Sort看作是Insetion Sort的一种特别形式。这三种算法中，尽管Select是最慢的（因为无法利用最初输入的顺序），但它所需要的空间是最小的。
+归并排序（Merge Sort）（我总是不记得到底是「归并」还是「并归」）：一种分治（divide-and-conquer）思想的排序算法。事实上分成两个部分，一个部分是一个递归的sort函数，另一个是将sort的两部分merge起来的函数。是一种渐进最优的排序算法，时间是(N lg N)级别的。
+快速排序（Quick Sort）：Merge排序依然需要一个辅助的队列auxiliay。但快速排序则是将时间最短和空间小这两个优点结合了起来。它同样其实也是两个部分，一个是一个递归的Sort函数，另一个是寻找切分点的partition函数。但它的问题是比较脆弱。
+脆弱来源于何处：比如在选取分割点的时候，如果每次取得用于分割的元素恰好位于最小或者最大值，这样性能就比较低劣。因为在快排的时候一定要事先进行Shuffle使得数组处于乱序。这样平均之下更容易取到恰好中间分割的数字。（引申出了我一个问题：如何最快取得一个数组的中位数？如何one-pass地获取一个stream的中位数列？）
+处理含有大量重复元素时：三向切分是更有效的方式。
+重点： 切分的写法。
+优先队列（Priority Queues）：事实上是一种部分排序的数据模型。比如当计算机给各种应用分配资源时，看重的是最重要的若干个程序的资源，因此实际上我们只要能够找出有限个的最大值就可。
+它支持两种操作：delMax（删除最大元素）， 以及 insert（插入元素）。
+为了实现优先队列，这里提到了一种新的数据结构，这里提到了新的数据结构：二叉堆（binary heap）（或者简称「堆」）。但事实上，它仍然是一个数组，it’s all about imagination。这些数组可以被想象成树状结构，因此我们在删除最大元素和插入元素时可以以(O(lgN))的时间复杂度完成它。
+但这本书截至介绍二叉堆时，其实并没有介绍二叉树（？）。关于二叉树（Binary tree），完全二叉树（Complete Binary Tree）的东西：CMU的课件。
+我对于优先队列的认知是，能够在输入数据的同时对数据加以排序。
+索引优先队列：为了方便引用优先队列中的元素，在优先队列上，给每个元素做了索引。实现了更多的几个方法。
+堆排序（HeapSort）： 唯一能够同时最优利用空间和时间的方法。但是现代应用程序当中排序主要还是利用快排，之所以如此是因为堆排序无法利用缓存。
+具体问题：'>
+<meta property='og:url' content='https://mooxiu.github.io/posts/2020-05-25-a-note-on-algrithms-4th-edition/'>
+<meta property='og:site_name' content='New River, New Water'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='algorithms' /><meta property='article:tag' content='book' />
+<meta name="twitter:title" content="「算法4」笔记">
+<meta name="twitter:description" content="这则笔记主要记录我在阅读「算法」（by Robert Sedgewick et Kevin Wayne）这本书时学到的基本的算法和思想。
+第一章：算法基础 面向API编程的思维：先去考量这个程序将要实现什么API，然后分门别类写它的实现。
+三种数据结构：背包（bag），队列（queue）（包括双向队列），栈（stack）。分别用数组（array）和链表（linked list）实现。
+算法分析：能够分析算法的时间复杂度。（当然这个我以前就会，因此不再赘述）
+具体问题：
+binomial distribution： 伯努利分布（二项分布）的递归和递推 Binary Search： 时间复杂度为(lg N) 的一种查找方式，前提是数列本身是有序的。 fibonacci Search： 一种只用加减的查找方式，二分查找的一种变体。 Welford 算法： 一种求方差的one-pass 算法，可以实现空间复杂度仅为(O(1)) 。因为精度的缘故，数学上普通的方差计算方式极有可能得到相当离谱的方差结果。 Dijkstra 双栈算数表达式求和：非常经典的算法。双栈模型可以用于各种问题的解决，并且本身也可以做到相当多的事情：比如仅用递归函数，用双栈对其中一个栈进行逆序。 2-sum：是解决3-sum的基础。一般而言比较优秀的算法是首先进行快排，接着进行遍历&#43;二分查找。这样可以让时间复杂度变为(O(N lg N))。 第二章：排序 初级排序算法：选择排序(Select Sort)， 插入排序(Insertion Sort)，希尔排序(Shell Sort)。我将Shell Sort看作是Insetion Sort的一种特别形式。这三种算法中，尽管Select是最慢的（因为无法利用最初输入的顺序），但它所需要的空间是最小的。
+归并排序（Merge Sort）（我总是不记得到底是「归并」还是「并归」）：一种分治（divide-and-conquer）思想的排序算法。事实上分成两个部分，一个部分是一个递归的sort函数，另一个是将sort的两部分merge起来的函数。是一种渐进最优的排序算法，时间是(N lg N)级别的。
+快速排序（Quick Sort）：Merge排序依然需要一个辅助的队列auxiliay。但快速排序则是将时间最短和空间小这两个优点结合了起来。它同样其实也是两个部分，一个是一个递归的Sort函数，另一个是寻找切分点的partition函数。但它的问题是比较脆弱。
+脆弱来源于何处：比如在选取分割点的时候，如果每次取得用于分割的元素恰好位于最小或者最大值，这样性能就比较低劣。因为在快排的时候一定要事先进行Shuffle使得数组处于乱序。这样平均之下更容易取到恰好中间分割的数字。（引申出了我一个问题：如何最快取得一个数组的中位数？如何one-pass地获取一个stream的中位数列？）
+处理含有大量重复元素时：三向切分是更有效的方式。
+重点： 切分的写法。
+优先队列（Priority Queues）：事实上是一种部分排序的数据模型。比如当计算机给各种应用分配资源时，看重的是最重要的若干个程序的资源，因此实际上我们只要能够找出有限个的最大值就可。
+它支持两种操作：delMax（删除最大元素）， 以及 insert（插入元素）。
+为了实现优先队列，这里提到了一种新的数据结构，这里提到了新的数据结构：二叉堆（binary heap）（或者简称「堆」）。但事实上，它仍然是一个数组，it’s all about imagination。这些数组可以被想象成树状结构，因此我们在删除最大元素和插入元素时可以以(O(lgN))的时间复杂度完成它。
+但这本书截至介绍二叉堆时，其实并没有介绍二叉树（？）。关于二叉树（Binary tree），完全二叉树（Complete Binary Tree）的东西：CMU的课件。
+我对于优先队列的认知是，能够在输入数据的同时对数据加以排序。
+索引优先队列：为了方便引用优先队列中的元素，在优先队列上，给每个元素做了索引。实现了更多的几个方法。
+堆排序（HeapSort）： 唯一能够同时最优利用空间和时间的方法。但是现代应用程序当中排序主要还是利用快排，之所以如此是因为堆排序无法利用缓存。
+具体问题：">
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%AC%94%E8%AE%B0/" style="background-color: #373668; color: #fff;">
+                笔记
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/posts/2020-05-25-a-note-on-algrithms-4th-edition/">「算法4」笔记</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <p>这则笔记主要记录我在阅读「算法」（by Robert Sedgewick et Kevin Wayne）这本书时学到的基本的算法和思想。</p>
+<h4 id="第一章算法基础">第一章：算法基础</h4>
+<p>面向API编程的思维：先去考量这个程序将要实现什么API，然后分门别类写它的实现。</p>
+<p><strong>三种数据结构：背包（bag），队列（queue）（包括双向队列），栈（stack）。分别用数组（array）和链表（linked list）实现。</strong></p>
+<p>算法分析：能够分析算法的时间复杂度。（当然这个我以前就会，因此不再赘述）</p>
+<p>具体问题：</p>
+<ul>
+<li>binomial distribution： 伯努利分布（二项分布）的递归和递推</li>
+<li>Binary Search： 时间复杂度为(lg N) 的一种查找方式，前提是数列本身是有序的。</li>
+<li>fibonacci Search： 一种只用加减的查找方式，二分查找的一种变体。</li>
+<li>Welford 算法： 一种求方差的one-pass 算法，可以实现空间复杂度仅为(O(1)) 。因为精度的缘故，数学上普通的方差计算方式极有可能得到相当离谱的方差结果。</li>
+<li>Dijkstra 双栈算数表达式求和：非常经典的算法。双栈模型可以用于各种问题的解决，并且本身也可以做到相当多的事情：比如仅用递归函数，用双栈对其中一个栈进行逆序。</li>
+<li>2-sum：是解决3-sum的基础。一般而言比较优秀的算法是首先进行快排，接着进行遍历+二分查找。这样可以让时间复杂度变为(O(N lg N))。</li>
+</ul>
+<h4 id="第二章排序">第二章：排序</h4>
+<p>初级排序算法：选择排序(Select Sort)， 插入排序(Insertion Sort)，希尔排序(Shell Sort)。我将Shell Sort看作是Insetion Sort的一种特别形式。这三种算法中，尽管Select是最慢的（因为无法利用最初输入的顺序），但它所需要的空间是最小的。</p>
+<p>归并排序（Merge Sort）（我总是不记得到底是「归并」还是「并归」）：一种分治（divide-and-conquer）思想的排序算法。事实上分成两个部分，一个部分是一个递归的sort函数，另一个是将sort的两部分merge起来的函数。是一种渐进最优的排序算法，时间是(N lg N)级别的。</p>
+<p>快速排序（Quick Sort）：Merge排序依然需要一个辅助的队列auxiliay。但快速排序则是将时间最短和空间小这两个优点结合了起来。它同样其实也是两个部分，一个是一个递归的Sort函数，另一个是寻找切分点的partition函数。但它的问题是比较脆弱。<br>
+脆弱来源于何处：比如在选取分割点的时候，如果每次取得用于分割的元素恰好位于最小或者最大值，这样性能就比较低劣。因为在快排的时候一定要事先进行Shuffle使得数组处于乱序。这样平均之下更容易取到恰好中间分割的数字。（引申出了我一个问题：如何最快取得一个数组的中位数？如何one-pass地获取一个stream的中位数列？）<br>
+处理含有大量重复元素时：三向切分是更有效的方式。<br>
+<strong>重点： 切分的写法。</strong></p>
+<p><strong>优先队列（Priority Queues）：事实上是一种部分排序的数据模型。比如当计算机给各种应用分配资源时，看重的是最重要的若干个程序的资源，因此实际上我们只要能够找出有限个的最大值就可。<br>
+它支持两种操作：delMax（删除最大元素）， 以及 insert（插入元素）。</strong></p>
+<p>为了实现优先队列，这里提到了一种新的数据结构，这里提到了新的数据结构：二叉堆（binary heap）（或者简称「堆」）。但事实上，它仍然是一个数组，it’s all about imagination。这些数组可以被想象成树状结构，因此我们在删除最大元素和插入元素时可以以(O(lgN))的时间复杂度完成它。</p>
+<p>但这本书截至介绍二叉堆时，其实并没有介绍二叉树（？）。关于二叉树（Binary tree），完全二叉树（Complete Binary Tree）的东西：<a class="link" href="https://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/trees.html"  target="_blank" rel="noopener"
+    >CMU的课件</a>。</p>
+<p>我对于优先队列的认知是，能够在输入数据的同时对数据加以排序。</p>
+<p>索引优先队列：为了方便引用优先队列中的元素，在优先队列上，给每个元素做了索引。实现了更多的几个方法。</p>
+<p>堆排序（HeapSort）： 唯一能够同时最优利用空间和时间的方法。但是现代应用程序当中排序主要还是利用快排，之所以如此是因为堆排序无法利用缓存。</p>
+<p>具体问题：</p>
+<ul>
+<li>哨兵（Sentinel）：关于排序时的边界条件确认。</li>
+<li>Binary Heap：sink（）和swim（）的思想和写法。</li>
+<li>中位数：寻找第k个元素，如果k较小或者较大，利用优先队列，或者快排即可。但如果k与总元素成比例（比如中位数），则使用快排中partition的思维去找。</li>
+</ul>
+<h4 id="第三章查找">第三章：查找</h4>
+<p>符号表（Symbol Table）：将键与值联系起来。</p>
+<p>大哉问：Dictionary， Map 还有 Table这三个的区别是什么？</p>
+<p>支持的操作：</p>
+<ul>
+<li>
+<p>插入（put）：将新的一组键值对存入表中。</p>
+</li>
+<li>
+<p>查找（get）：根据所给的键得到相应的值。</p>
+<p>在<!-- raw HTML omitted -->计算机科学<!-- raw HTML omitted -->中，<!-- raw HTML omitted -->符号表<!-- raw HTML omitted -->是一种用于语言翻译器（例如<!-- raw HTML omitted -->编译器<!-- raw HTML omitted -->和<!-- raw HTML omitted -->解释器<!-- raw HTML omitted -->）中的数据结构。在符号表中，程序<!-- raw HTML omitted -->源代码<!-- raw HTML omitted -->中的每个标识符都和它的声明或使用信息绑定在一起，比如其<!-- raw HTML omitted -->数据类型<!-- raw HTML omitted -->、<!-- raw HTML omitted -->作用域<!-- raw HTML omitted -->以及<!-- raw HTML omitted -->内存地址<!-- raw HTML omitted -->。</p>
+</li>
+</ul>
+<p>符号表的实现方式：</p>
+<ul>
+<li>LinkedList: 最基础的实现方式（但依然要注意delete方法的递归实现）。但在put方法的实现上，查找方式上又可以分为顺序查找和二分查找。<br>
+– SequentialSearchST<br>
+-BinarySeacrhST</li>
+<li>BinarySearchTrees: 二叉查找树。二叉查找树的结构为，对于一个Node来说，左肢的所有Node的key都要小于它，而右肢的所有Node都要大于它。这样一种可以左右选择的结构可以方便使用二分查找。而树状的结构又有利于将时间限于对数范围。<br>
+但插入的顺序不同，树的结构未必会是我们期待的，往完全树（complete tree）靠近的结构（这样可以使得高度(height)最短）。因此时间依然是随机的。<br>
+考虑到根节点正好将整个树二分（左边的都小于它(comparable意义而言的)，右边都大于它），我们会发现「二叉查找树和快速排序几乎就是『双胞胎』」。<br>
+在书中，对于这种数据结构的介绍中，主要用递归的方式进行实现（尽管这并非是效率最高的实现方式，但是理解上最容易）。但依然不那么容易理解，特别是比如delete()方法的实现。</li>
+<li>BinancedSearchTree: 平衡查找树: 二叉查找树在随机插入的时候很好，但是最坏的情况依然可能发生，那就是在插入的时候已经按照从大到小或者从小到大的顺序插入。那么树的形状将是一条斜线。这样一来，查找的时间又会回到(O(N)) .为了解决这个问题，因此引入了平衡查找树。有一些说法叫它「平衡二叉查找树」。平衡查找树应当描述的是一系列平衡二叉树的实践：</li>
+</ul>
+<p>平衡查找树（2-3树）：</p>
+<ul>
+<li>2-3树：
+<ul>
+<li>2- 结点：一个key，两个link，左link都小于它，右link指向都大于它</li>
+<li>3- 结点： 两个key，三条link， 左link小于它，右link都大于它，中link在两个key之间</li>
+<li>完美平衡：所有末端的空链到达root的距离相同</li>
+</ul>
+</li>
+<li>2-3树的插入：
+<ul>
+<li>如果搜索结束于一个2-结点时，将这个2-结点加上这个新的元素变成3-结点即可。</li>
+<li>如果搜索结束于一个3-结点：
+<ul>
+<li>只有一个3-结点的树：先临时变为一个4-结点的树，再转换为3个2-结点组成的2-3树：</li>
+<li>父节点为2-结点的3-结点中插入</li>
+<li>父节点为3-结点的3-结点中插入</li>
+<li>根结点的分解</li>
+<li>一般的二叉树的建立是从上到下（根结点开始），而2-3树的生长是从下到上的</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>红黑二叉树（Red–black tree）:</p>
+<h4 id="第四章图">第四章：图</h4>
+<p>最短路径：</p>
+<ul>
+<li>不含环，负边的加权无向图：DijkstraSP 算法。
+<ul>
+<li>关键步骤：放松（relax）</li>
+</ul>
+</li>
+<li>加权有向环：AcyclicSP 算法——按照拓扑顺序放松，会比Dijkstra算法更快</li>
+<li>最长算法：
+<ul>
+<li>用于优先限制下的并行任务调度CriticalPathMethod：一个运筹学问题</li>
+<li>如果加上最后期限，问题转换称为一个有环，负边，的有向图最短路径问题：但需要注意，如果含有负权重的环，那这样的最短路径是没有意义的。仅研究任意点都不存在负权重环当中的最短路径：Bellman-Ford算法</li>
+<li>套汇——负权重环的检测</li>
+</ul>
+</li>
+</ul>
+<h4 id="第五章字符串">第五章：字符串</h4>
+<p>字符串排序：利用字符串的特殊性质将字符串键排序，或许比通用的排序算法效率更高。</p>
+<p>两种字符串排序方式：</p>
+<ol>
+<li>least-significant-digit (LSD) string sorts: 低位优先排序。从右到左检查字符。</li>
+<li>most-significant-digit (MSD) string sorts: 从左到右，先检查最高位的——和快速排序类似。</li>
+</ol>
+<p>作为基础，我们首先看的是一种叫做Key-indexed counting（键索引计数法），它分为四步:</p>
+<ol>
+<li>Compute frequency counts：计算每个键出现的频率</li>
+<li>Transform frequency to indices：频率转换成索引，知道每一个键值最开始所在的位置（顺序）</li>
+<li>Distribute the data: 生成一个辅助数列，进行排序</li>
+<li>Copy Back</li>
+</ol>
+<p>LSD string sort:</p>
+<p>首先复习什么是DeDup–&gt; Data Deduplication.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/algorithms/">algorithms</a>
+        
+            <a href="/tags/book/">book</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/posts/why_db_minus/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">为何分贝总是负值？</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/steak/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Juicy Steak, Finally</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/boot_fix/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">双系统升级Win10 20H1的时候Linux引导失效修理</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/tritone/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Tritone, 三全音代理或降二代五和弦</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/toxic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Note for TOXIC breakdown</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="mooxiu/mooxiu.github.io"
+        issue-term="pathname"
+        
+        label="Comment"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2019 - 
+        
+        2024 New River, New Water
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
