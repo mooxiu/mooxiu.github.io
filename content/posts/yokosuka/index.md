@@ -1,7 +1,7 @@
 ---
 title: "横须贺，逗子日归旅游笔记"
 date: 2024-01-03T00:59:07+09:00
-draft: true
+draft: false 
 tags: 
     - 横须贺
     - 逗子海岸
