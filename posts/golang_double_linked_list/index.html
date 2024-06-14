@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Although list has rarely been used in Go (Just about always when you are thinking of a list - use a slice instead in Go), there is an official implementation in the standard library. After reading the implementation (go standard package: src/container/list/list.go), I found it very inspiring.
 The Node Basically, it first defines Node, which is referred to as Element in the standard package:
 type Element struct { prev, next Element list *List Value interface{} } It is actually a structure we create a lot when solving linked list problems in websites like LeetCode.'><title>Go的双向链表</title>
 
-<link rel='canonical' href='https://mooxiu.github.io/posts/golang_double_linked_list/'>
+<link rel='canonical' href='http://localhost:1313/posts/golang_double_linked_list/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Go的双向链表'>
 <meta property='og:description' content='Although list has rarely been used in Go (Just about always when you are thinking of a list - use a slice instead in Go), there is an official implementation in the standard library. After reading the implementation (go standard package: src/container/list/list.go), I found it very inspiring.
 The Node Basically, it first defines Node, which is referred to as Element in the standard package:
 type Element struct { prev, next Element list *List Value interface{} } It is actually a structure we create a lot when solving linked list problems in websites like LeetCode.'>
-<meta property='og:url' content='https://mooxiu.github.io/posts/golang_double_linked_list/'>
+<meta property='og:url' content='http://localhost:1313/posts/golang_double_linked_list/'>
 <meta property='og:site_name' content='New River, New Water'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='Data Structure' /><meta property='article:tag' content='Golang' /><meta property='article:published_time' content='2021-12-10T00:01:30&#43;08:00'/><meta property='article:modified_time' content='2021-12-10T00:01:30&#43;08:00'/>
 <meta name="twitter:title" content="Go的双向链表">
 <meta name="twitter:description" content="Although list has rarely been used in Go (Just about always when you are thinking of a list - use a slice instead in Go), there is an official implementation in the standard library. After reading the implementation (go standard package: src/container/list/list.go), I found it very inspiring.
 The Node Basically, it first defines Node, which is referred to as Element in the standard package:
 type Element struct { prev, next Element list *List Value interface{} } It is actually a structure we create a lot when solving linked list problems in websites like LeetCode.">
+  
+
+
     </head>
     <body class="
     article-page has-toc
@@ -235,6 +238,25 @@ type Element struct { prev, next Element list *List Value interface{} } It is ac
 
     <aside class="related-contents--wrapper">
     
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/posts/data_structure_tree/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Memo: Data Structure Tree</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
     
 </aside>
 

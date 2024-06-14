@@ -2,23 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Win10 on New River, New Water</title>
-    <link>https://mooxiu.github.io/tags/win10/</link>
+    <link>http://localhost:1313/tags/win10/</link>
     <description>Recent content in Win10 on New River, New Water</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Jul 2021 10:06:18 +0800</lastBuildDate><atom:link href="https://mooxiu.github.io/tags/win10/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Jul 2021 10:06:18 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/win10/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>双系统升级Win10 20H1的时候Linux引导失效修理</title>
-      <link>https://mooxiu.github.io/posts/boot_fix/</link>
+      <link>http://localhost:1313/posts/boot_fix/</link>
       <pubDate>Mon, 26 Jul 2021 10:06:18 +0800</pubDate>
-      
-      <guid>https://mooxiu.github.io/posts/boot_fix/</guid>
-      <description>The Situation Dual boot: Win10 and Manjaro Linux.
-When trying to update Win10 to the latest Win10 20H version, after rebooting my system, it did not enter the booting interface, rather it says:
-Unknown filesystem, entering rescue mod
-First Try After searching the internet, I find this video shows the same problem.
-However, after I ls my hd partion one by one on my pc, I found there are 3 partions showing they have ext2 filesystem.</description>
+      <guid>http://localhost:1313/posts/boot_fix/</guid>
+      <description>The Situation Dual boot: Win10 and Manjaro Linux.&#xA;When trying to update Win10 to the latest Win10 20H version, after rebooting my system, it did not enter the booting interface, rather it says:&#xA;Unknown filesystem, entering rescue mod&#xA;First Try After searching the internet, I find this video shows the same problem.&#xA;However, after I ls my hd partion one by one on my pc, I found there are 3 partions showing they have ext2 filesystem.</description>
     </item>
-    
   </channel>
 </rss>

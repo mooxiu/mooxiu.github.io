@@ -2,16 +2,110 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>New River, New Water</title>
-        <link>https://mooxiu.github.io/</link>
+        <link>http://localhost:1313/</link>
         <description>Recent content on New River, New Water</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 03 Jan 2024 00:59:07 +0900</lastBuildDate><atom:link href="https://mooxiu.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 14 Jun 2024 18:26:57 +0900</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>为什么看街景猜地点就这么好玩</title>
+        <link>http://localhost:1313/posts/geoguessr/</link>
+        <pubDate>Fri, 14 Jun 2024 18:26:57 +0900</pubDate>
+        
+        <guid>http://localhost:1313/posts/geoguessr/</guid>
+        <description>&lt;p&gt;GeoGuessr这个游戏出现于2013年，开发于斯德哥尔摩，但我第一次接触它的时候已经是2021年左右了。它的玩法可以用一句话概括：根据Google地图街景，在地图上点出街景对应的地点。&lt;/p&gt;
+&lt;p&gt;这个玩法有一些变体，主要有三种模式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Move: 这个模式中你也可以在其中移动，就像你可以在Google地图街景中做的那样。&lt;/li&gt;
+&lt;li&gt;No Move: 这个模式中你只能站在一个点上，你可以四处旋转看看前后左右上下的样子，也可以放大缩小。&lt;/li&gt;
+&lt;li&gt;NMPZ(No Move, Pan, or Zoom): 比上一个模式更困难，这个模式中你眼前的只有一张静态的图片，你无法对这张图片放大缩小（zoom）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;因为这个游戏的运行实际上就是一个web application调用一些Google Map的API，因此只需要一个浏览器就可以玩。但2024年的当下，你需要订阅才可以玩，一年的订阅费大概是200人民币左右, 但你也可以按月订阅。尽管如此，这是我今年最值得的消费之一。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://coolmomtech.com/wp-content/uploads/sites/2/2018/07/geoguessr.jpg&#34; &gt;
+		&lt;img src=&#34;https://coolmomtech.com/wp-content/uploads/sites/2/2018/07/geoguessr.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;这个游戏好玩在哪儿&#34;&gt;这个游戏好玩在哪儿？&lt;/h2&gt;
+&lt;p&gt;如果要让我举出玩这个游戏最开心的瞬间，无疑是那些在2分钟之内从世界地图上精确地猜出眼前街景所处的地点（不超过10米）的时候。你需要综合一切你对世界各个国家的认知，以及对Google地图街景本身的认知。你会意识到，人类的模式识别能力是何等强大。&lt;/p&gt;
+&lt;p&gt;顶尖高手可以在几十秒的时间之内看着某条荒无人烟的高速公路，然后根据道路的方向，公路的粉刷风格，周围植物的样貌，Google街景的图像风格，在地图上&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=4DYao5xYX5I&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;找到某个位于俄罗斯的精确的点&lt;/a&gt;。&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/4DYao5xYX5I&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这真的可能吗？但事实上通过一些练习和记忆，很快你就能达到震撼周围的人的境地。而这个练习和记忆的过程本身就非常有趣，比如世界各国的公路长什么样子，世界各个国家说什么语言，各种语言长什么样子，各个国家的建筑大概是什么风格？很快你就会知道墨西哥城有粉色的出租车，南非和悉尼有紫色的蓝花楹(Jacaranda)，以及罗马尼亚的电线杆长什么样子。这会让你的游戏过程就像破解悬案。如果你喜欢看柯南，听悬案类podcast，那你也会喜欢玩这个游戏。&lt;/p&gt;
+&lt;p&gt;更不用说瑞典人优秀的审美让这个游戏的avatar也非常可爱，如果喜欢的话，你完全可以把这个游戏当作奇迹暖暖玩，打扮你的人物形象。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 84; 
+			flex-basis: 203px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/posts/geoguessr/avatar.jpg&#34; data-size=&#34;456x538&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/geoguessr/avatar.jpg&#34;
+			width=&#34;456&#34;
+			height=&#34;538&#34;
+			srcset=&#34;http://localhost:1313/posts/geoguessr/avatar_hu22c7cd8dbd9ff6ef7d5f068985131757_43227_480x0_resize_q75_box.jpg 480w, http://localhost:1313/posts/geoguessr/avatar_hu22c7cd8dbd9ff6ef7d5f068985131757_43227_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;高手可以达到什么水平&#34;&gt;高手可以达到什么水平&lt;/h2&gt;
+&lt;p&gt;尽管你可以看到像Rainbolt这样的顶尖玩家在视频中展示只看&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=ff6E4mrUkBY&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;0.1秒街景就能在地图上点出相近的地点&lt;/a&gt;，但需要注意这有剪辑的成分，有时候他们也会做出一些离谱的猜测。但你大致可以感受到人类的极限远比我们想象的要高。&lt;/p&gt;
+&lt;p&gt;别把网页游戏不当电子竞技。2023年开始，这个游戏开始举办世界杯，来自尼德兰的Consus最终打败众多高手拿到冠军。这个游戏的竞技模式是1对1玩我上面说的三种游戏模式，如果你的猜测离真实的点更近，那你就会对对方造成一定伤害，直到在多轮比赛中消耗对方所有的血量。但简单来说，我们需要做的，就是在地图上点出街景的拍摄地点，越近越好。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 178; 
+			flex-basis: 427px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/posts/geoguessr/game.jpg&#34; data-size=&#34;1644x922&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/geoguessr/game.jpg&#34;
+			width=&#34;1644&#34;
+			height=&#34;922&#34;
+			srcset=&#34;http://localhost:1313/posts/geoguessr/game_hu136caba8350d18fd9b8aa2881ec66847_338877_480x0_resize_q75_box.jpg 480w, http://localhost:1313/posts/geoguessr/game_hu136caba8350d18fd9b8aa2881ec66847_338877_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;如何入门和提高&#34;&gt;如何入门和提高&lt;/h2&gt;
+&lt;h3 id=&#34;判断国家&#34;&gt;判断国家&lt;/h3&gt;
+&lt;p&gt;最开始很有可能你能猜到一些世界知名地点，比如在地图上点出埃菲尔铁塔，自由女神像这样的地点。&lt;/p&gt;
+&lt;p&gt;更进一步，在简单的地图上，你往往会被给到城市的街景。城市中有大量的信息，你可以通过语言来判断你身处何处，所以了解各种语言长什么样子非常重要。有时候你会在街上的广告上找到一个网址，比如一个www.example.nl网址告诉你，你有很大概率身处尼德兰，因为nl是🇳🇱的顶级域名。&lt;/p&gt;
+&lt;p&gt;接下来你可能可以通过住宅的风格判断出你此时处于某个巴尔干地区国家；通过高耸的山峦判断你处于挪威而不是瑞典；根据西班牙语国家路面上的黄色车牌判断你处于哥伦比亚。等等不一而足。&lt;/p&gt;
+&lt;p&gt;但顶级选手还会对Google Map本身进行研究，比如吉尔吉斯斯坦，加纳，多米尼加这样的国家进行街景拍摄的车和其他的地方有显著的不同；比如拍摄在保加利亚的街景往往都是冬天，所以看起来都非常阴沉。&lt;/p&gt;
+&lt;h3 id=&#34;判断城市地区&#34;&gt;判断城市/地区&lt;/h3&gt;
+&lt;p&gt;当你开始更进一步想要猜到具体的城市或者地区的时候，往往你已经充分找到了这个游戏的乐趣。这也是我现在正在突破的地方，你需要对各种国家一个一个进行研究。&lt;/p&gt;
+&lt;p&gt;以荷兰为例，如果你的周围都是现代建筑，那你大概处在鹿特丹，因为该城市在二战中被夷为平地，建筑都是新建的； 或者如果你看到一个显然是北美的地方，但是周围都是法语，那你很可能在Montreal或者Quebec City；或者你身处日本但发现交通灯的方向是竖着的，那你大概率处在北海道。&lt;/p&gt;
+&lt;p&gt;但面积广袤，特别是横跨的经度特别大的国家，像俄罗斯，美国，印度尼西亚，是非常难猜的。判断自己究竟能够到达哪个地步然后move on也是非常重要的。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like my article and want to donate, click the &lt;a class=&#34;link&#34; href=&#34;https://mooxiu.github.io/donate/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;捐赠 Donation&lt;/a&gt; button on the sidebar.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>横须贺，逗子日归旅游笔记</title>
-        <link>https://mooxiu.github.io/posts/yokosuka/</link>
+        <link>http://localhost:1313/posts/yokosuka/</link>
         <pubDate>Wed, 03 Jan 2024 00:59:07 +0900</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/yokosuka/</guid>
+        <guid>http://localhost:1313/posts/yokosuka/</guid>
         <description>&lt;p&gt;和很多常来日本旅游行踪遍布整个岛屿的人不一样，我是一个非常不热衷旅行的人，我在日本总计已经快四年了，迄今唯一一次出东京圈的经验是去过两次河口湖，而且都是当日往返。我没有什么特别讨厌旅行的原因，但当我拥有一台MacBook和 Retina屏幕之后，我发现我更加没有旅行的理由了，那么多高分辨率和高帧率的视频完全可以带给你优美的风景，你不需要去面对不确定的风险，汽油的臭味，昂贵的账单和肮脏的厕所。与此同时，大多数风景优美的地方都在农村和县城，而我在农村和县城待了几十年了，我太懂它们是什么样子了，加上我没有车，所以我敬而远之。&lt;/p&gt;
 &lt;p&gt;但每次假期超过三天，我就心想，出去走走吧，即便是一都三县，我还有好多没有去过但是想去的地方，比如千叶的馆山，南房总，銚子等等，有些地方我在六七年前读书的时候就在想什么时候去看看，结果竟然一直没有动身（事实上到现在还没有）。&lt;/p&gt;
 &lt;h2 id=&#34;横須賀&#34;&gt;横須賀&lt;/h2&gt;
@@ -28,11 +122,11 @@
 			flex-grow: 133; 
 			flex-basis: 320px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/yokosuka/warship1.jpg&#34; data-size=&#34;4032x3024&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/yokosuka/warship1.jpg&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/yokosuka/warship1.jpg&#34; data-size=&#34;4032x3024&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/yokosuka/warship1.jpg&#34;
 			width=&#34;4032&#34;
 			height=&#34;3024&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/yokosuka/warship1_hue5fba45026cf7b5ddf440278949002b3_2045375_480x0_resize_q75_box.jpg 480w, https://mooxiu.github.io/posts/yokosuka/warship1_hue5fba45026cf7b5ddf440278949002b3_2045375_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/yokosuka/warship1_hue5fba45026cf7b5ddf440278949002b3_2045375_480x0_resize_q75_box.jpg 480w, http://localhost:1313/posts/yokosuka/warship1_hue5fba45026cf7b5ddf440278949002b3_2045375_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -45,11 +139,11 @@
 			flex-grow: 133; 
 			flex-basis: 320px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/yokosuka/warship2.jpg&#34; data-size=&#34;4032x3024&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/yokosuka/warship2.jpg&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/yokosuka/warship2.jpg&#34; data-size=&#34;4032x3024&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/yokosuka/warship2.jpg&#34;
 			width=&#34;4032&#34;
 			height=&#34;3024&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/yokosuka/warship2_hu499ec1784996d584f896b522edcdffaf_1871030_480x0_resize_q75_box.jpg 480w, https://mooxiu.github.io/posts/yokosuka/warship2_hu499ec1784996d584f896b522edcdffaf_1871030_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/yokosuka/warship2_hu499ec1784996d584f896b522edcdffaf_1871030_480x0_resize_q75_box.jpg 480w, http://localhost:1313/posts/yokosuka/warship2_hu499ec1784996d584f896b522edcdffaf_1871030_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -63,11 +157,11 @@
 			flex-grow: 133; 
 			flex-basis: 320px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/yokosuka/jellyfish.jpg&#34; data-size=&#34;4032x3024&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/yokosuka/jellyfish.jpg&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/yokosuka/jellyfish.jpg&#34; data-size=&#34;4032x3024&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/yokosuka/jellyfish.jpg&#34;
 			width=&#34;4032&#34;
 			height=&#34;3024&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/yokosuka/jellyfish_hu73d4f5f39cfe3a2c26562401c2615b48_2803387_480x0_resize_q75_box.jpg 480w, https://mooxiu.github.io/posts/yokosuka/jellyfish_hu73d4f5f39cfe3a2c26562401c2615b48_2803387_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/yokosuka/jellyfish_hu73d4f5f39cfe3a2c26562401c2615b48_2803387_480x0_resize_q75_box.jpg 480w, http://localhost:1313/posts/yokosuka/jellyfish_hu73d4f5f39cfe3a2c26562401c2615b48_2803387_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -81,11 +175,11 @@
 			flex-grow: 75; 
 			flex-basis: 180px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/yokosuka/duck.jpg&#34; data-size=&#34;3024x4032&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/yokosuka/duck.jpg&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/yokosuka/duck.jpg&#34; data-size=&#34;3024x4032&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/yokosuka/duck.jpg&#34;
 			width=&#34;3024&#34;
 			height=&#34;4032&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/yokosuka/duck_huc4eca50037a4850eff87ff2c9dce4ff6_2763562_480x0_resize_q75_box.jpg 480w, https://mooxiu.github.io/posts/yokosuka/duck_huc4eca50037a4850eff87ff2c9dce4ff6_2763562_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/yokosuka/duck_huc4eca50037a4850eff87ff2c9dce4ff6_2763562_480x0_resize_q75_box.jpg 480w, http://localhost:1313/posts/yokosuka/duck_huc4eca50037a4850eff87ff2c9dce4ff6_2763562_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -101,11 +195,11 @@
 			flex-grow: 75; 
 			flex-basis: 180px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/yokosuka/frame.jpg&#34; data-size=&#34;3024x4032&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/yokosuka/frame.jpg&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/yokosuka/frame.jpg&#34; data-size=&#34;3024x4032&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/yokosuka/frame.jpg&#34;
 			width=&#34;3024&#34;
 			height=&#34;4032&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/yokosuka/frame_hu05776baf799f4e4eef6eee60cdd396be_2272959_480x0_resize_q75_box.jpg 480w, https://mooxiu.github.io/posts/yokosuka/frame_hu05776baf799f4e4eef6eee60cdd396be_2272959_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/yokosuka/frame_hu05776baf799f4e4eef6eee60cdd396be_2272959_480x0_resize_q75_box.jpg 480w, http://localhost:1313/posts/yokosuka/frame_hu05776baf799f4e4eef6eee60cdd396be_2272959_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -121,11 +215,11 @@
 			flex-grow: 75; 
 			flex-basis: 180px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/yokosuka/ishihara.jpg&#34; data-size=&#34;3024x4032&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/yokosuka/ishihara.jpg&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/yokosuka/ishihara.jpg&#34; data-size=&#34;3024x4032&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/yokosuka/ishihara.jpg&#34;
 			width=&#34;3024&#34;
 			height=&#34;4032&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/yokosuka/ishihara_hu4050f6b0a646386036f3cfb95954d360_2278605_480x0_resize_q75_box.jpg 480w, https://mooxiu.github.io/posts/yokosuka/ishihara_hu4050f6b0a646386036f3cfb95954d360_2278605_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/yokosuka/ishihara_hu4050f6b0a646386036f3cfb95954d360_2278605_480x0_resize_q75_box.jpg 480w, http://localhost:1313/posts/yokosuka/ishihara_hu4050f6b0a646386036f3cfb95954d360_2278605_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -141,11 +235,11 @@
 			flex-grow: 133; 
 			flex-basis: 320px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/yokosuka/yokosuka.jpg&#34; data-size=&#34;4032x3024&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/yokosuka/yokosuka.jpg&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/yokosuka/yokosuka.jpg&#34; data-size=&#34;4032x3024&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/yokosuka/yokosuka.jpg&#34;
 			width=&#34;4032&#34;
 			height=&#34;3024&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/yokosuka/yokosuka_hub033023b15ccfe4db8111320f502076b_2516683_480x0_resize_q75_box.jpg 480w, https://mooxiu.github.io/posts/yokosuka/yokosuka_hub033023b15ccfe4db8111320f502076b_2516683_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/yokosuka/yokosuka_hub033023b15ccfe4db8111320f502076b_2516683_480x0_resize_q75_box.jpg 480w, http://localhost:1313/posts/yokosuka/yokosuka_hub033023b15ccfe4db8111320f502076b_2516683_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -159,11 +253,11 @@
 			flex-grow: 95; 
 			flex-basis: 230px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/yokosuka/zushi.jpg&#34; data-size=&#34;2323x2422&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/yokosuka/zushi.jpg&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/yokosuka/zushi.jpg&#34; data-size=&#34;2323x2422&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/yokosuka/zushi.jpg&#34;
 			width=&#34;2323&#34;
 			height=&#34;2422&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/yokosuka/zushi_hub6ebdc063244b044ebd60e6e178c6f76_1047668_480x0_resize_q75_box.jpg 480w, https://mooxiu.github.io/posts/yokosuka/zushi_hub6ebdc063244b044ebd60e6e178c6f76_1047668_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/yokosuka/zushi_hub6ebdc063244b044ebd60e6e178c6f76_1047668_480x0_resize_q75_box.jpg 480w, http://localhost:1313/posts/yokosuka/zushi_hub6ebdc063244b044ebd60e6e178c6f76_1047668_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -173,10 +267,10 @@
         </item>
         <item>
         <title>サヨナラ2022</title>
-        <link>https://mooxiu.github.io/posts/sayonara2022/</link>
+        <link>http://localhost:1313/posts/sayonara2022/</link>
         <pubDate>Fri, 30 Dec 2022 21:31:53 +0900</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/sayonara2022/</guid>
+        <guid>http://localhost:1313/posts/sayonara2022/</guid>
         <description>&lt;p&gt;2022居然已經快要過去了，回顧起來這是我過去的幾年當中最豐富的一年。在2021年的最後一天，我終於鼓足勇氣斥資購買了我人生中第一把電吉他，雖然沒有想到它只陪伴了我差不多七個月的時間，我不得不在離開上海之前賣掉了它。&lt;/p&gt;
 &lt;p&gt;離開上海並不是從沒有想過，只是沒有想到是在這樣的時間點，但另一方面，過去的幾年我一直都覺得我會回到東京，只是這一年的四月和五月讓我有了如此的緊迫感。在那之前我一直在想，如果我像Richard Yates的小說「革命之路」的主人公一樣，一直念叨著一個「法國」，是不是就永遠去不了「法國」了，還好沒有。在新的工作確定之後，迅速在六月結了婚，神奇的是在預約結婚註冊的時候還不知道那個時候能不能離開家門，但居然就在預約日期的一個星期前重新開放了（結婚那天是我今年休的唯一的一天年假）。但沒有半點結婚的實感，和結婚之前的生活幾乎沒有任何差別，除了八月份在兩方家長的催促下匆匆辦了一個尷尬的婚禮之外。從前我想到婚禮的場景，不知為什麼總是想起「圍城」裡曹元朗選在夏天結婚全身汗涔涔的描寫，沒想到我也是那種模樣。不過除了一些老家的親戚之外，我沒有邀請任何人來（當然也不至於有人跑到這種鄉下來）。&lt;/p&gt;
 &lt;p&gt;九月搭乘飛機回東京的那一天像是做夢一樣。在那之前，我緊張地等待了一個多月的在留資格和簽證，從廣州出發的時候，因為事先從藍鳥上聽到了一些出國被勸返的留言，儘管我出國工作的理由十分正當，但真正到了那一天穿過無人的機場，接受海關盤問的時候還是非常緊張。但事後看來其實非常順利，機票也是以一個相對合理的價格買到的。當我走到最後的候機廳的時候，我發現我在小聲哼唱Happy End的名曲「さよなら　アメリカ、さよなら　ニッポン」（再見美國，再見日本）。&lt;/p&gt;
@@ -189,10 +283,10 @@
         </item>
         <item>
         <title>东京 塔</title>
-        <link>https://mooxiu.github.io/posts/tokyo_tower/</link>
+        <link>http://localhost:1313/posts/tokyo_tower/</link>
         <pubDate>Fri, 04 Nov 2022 21:07:21 +0900</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/tokyo_tower/</guid>
+        <guid>http://localhost:1313/posts/tokyo_tower/</guid>
         <description>&lt;p&gt;几年前我路过池袋的时候，就惊讶于这么一座不明所以的白色的塔，应该有个名字吧。但我一直没有特别去查，因为位于池袋北口（也就是现在的池袋西口北），我一直在心里称之为「池袋北塔」：
 &lt;figure 
 	
@@ -201,11 +295,11 @@
 			flex-grow: 75; 
 			flex-basis: 180px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/tokyo_tower/ikebukuro.jpg&#34; data-size=&#34;960x1280&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/tokyo_tower/ikebukuro.jpg&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/tokyo_tower/ikebukuro.jpg&#34; data-size=&#34;960x1280&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/tokyo_tower/ikebukuro.jpg&#34;
 			width=&#34;960&#34;
 			height=&#34;1280&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/tokyo_tower/ikebukuro_hu72ee39109cb0352052777029f1642c04_90125_480x0_resize_q75_box.jpg 480w, https://mooxiu.github.io/posts/tokyo_tower/ikebukuro_hu72ee39109cb0352052777029f1642c04_90125_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/tokyo_tower/ikebukuro_hu72ee39109cb0352052777029f1642c04_90125_480x0_resize_q75_box.jpg 480w, http://localhost:1313/posts/tokyo_tower/ikebukuro_hu72ee39109cb0352052777029f1642c04_90125_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;池袋北塔&#34;&gt;
 	&lt;/a&gt;
@@ -222,11 +316,11 @@
 			flex-grow: 106; 
 			flex-basis: 256px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/tokyo_tower/jin.jpg&#34; data-size=&#34;1125x1052&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/tokyo_tower/jin.jpg&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/tokyo_tower/jin.jpg&#34; data-size=&#34;1125x1052&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/tokyo_tower/jin.jpg&#34;
 			width=&#34;1125&#34;
 			height=&#34;1052&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/tokyo_tower/jin_hu9b430cba28bd4455e773fcf3dfbfe8e0_83263_480x0_resize_q75_box.jpg 480w, https://mooxiu.github.io/posts/tokyo_tower/jin_hu9b430cba28bd4455e773fcf3dfbfe8e0_83263_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/tokyo_tower/jin_hu9b430cba28bd4455e773fcf3dfbfe8e0_83263_480x0_resize_q75_box.jpg 480w, http://localhost:1313/posts/tokyo_tower/jin_hu9b430cba28bd4455e773fcf3dfbfe8e0_83263_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;金字塔&#34;&gt;
 	&lt;/a&gt;
@@ -243,11 +337,11 @@
 			flex-grow: 75; 
 			flex-basis: 180px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/tokyo_tower/shibuya2.jpg&#34; data-size=&#34;960x1280&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/tokyo_tower/shibuya2.jpg&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/tokyo_tower/shibuya2.jpg&#34; data-size=&#34;960x1280&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/tokyo_tower/shibuya2.jpg&#34;
 			width=&#34;960&#34;
 			height=&#34;1280&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/tokyo_tower/shibuya2_hu2bbd84279fdb78850c80559bf655aee6_228717_480x0_resize_q75_box.jpg 480w, https://mooxiu.github.io/posts/tokyo_tower/shibuya2_hu2bbd84279fdb78850c80559bf655aee6_228717_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/tokyo_tower/shibuya2_hu2bbd84279fdb78850c80559bf655aee6_228717_480x0_resize_q75_box.jpg 480w, http://localhost:1313/posts/tokyo_tower/shibuya2_hu2bbd84279fdb78850c80559bf655aee6_228717_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;惠比寿站远望&#34;&gt;
 	&lt;/a&gt;
@@ -263,11 +357,11 @@
 			flex-grow: 75; 
 			flex-basis: 180px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/tokyo_tower/shibuya.jpg&#34; data-size=&#34;960x1280&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/tokyo_tower/shibuya.jpg&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/tokyo_tower/shibuya.jpg&#34; data-size=&#34;960x1280&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/tokyo_tower/shibuya.jpg&#34;
 			width=&#34;960&#34;
 			height=&#34;1280&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/tokyo_tower/shibuya_hu82564d5000472121ce844690c33f3c97_170132_480x0_resize_q75_box.jpg 480w, https://mooxiu.github.io/posts/tokyo_tower/shibuya_hu82564d5000472121ce844690c33f3c97_170132_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/tokyo_tower/shibuya_hu82564d5000472121ce844690c33f3c97_170132_480x0_resize_q75_box.jpg 480w, http://localhost:1313/posts/tokyo_tower/shibuya_hu82564d5000472121ce844690c33f3c97_170132_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;涩谷清扫工厂&#34;&gt;
 	&lt;/a&gt;
@@ -284,11 +378,11 @@
 			flex-grow: 133; 
 			flex-basis: 320px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/tokyo_tower/meguro.jpg&#34; data-size=&#34;1280x960&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/tokyo_tower/meguro.jpg&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/tokyo_tower/meguro.jpg&#34; data-size=&#34;1280x960&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/tokyo_tower/meguro.jpg&#34;
 			width=&#34;1280&#34;
 			height=&#34;960&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/tokyo_tower/meguro_hu2198360ce4cac331b4361a84d2f19c1b_259391_480x0_resize_q75_box.jpg 480w, https://mooxiu.github.io/posts/tokyo_tower/meguro_hu2198360ce4cac331b4361a84d2f19c1b_259391_1024x0_resize_q75_box.jpg 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/tokyo_tower/meguro_hu2198360ce4cac331b4361a84d2f19c1b_259391_480x0_resize_q75_box.jpg 480w, http://localhost:1313/posts/tokyo_tower/meguro_hu2198360ce4cac331b4361a84d2f19c1b_259391_1024x0_resize_q75_box.jpg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;目黑清扫工厂&#34;&gt;
 	&lt;/a&gt;
@@ -309,10 +403,10 @@
         </item>
         <item>
         <title>重返日本的三个星期感受</title>
-        <link>https://mooxiu.github.io/posts/migrate_to_japan/</link>
+        <link>http://localhost:1313/posts/migrate_to_japan/</link>
         <pubDate>Tue, 27 Sep 2022 19:32:14 +0900</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/migrate_to_japan/</guid>
+        <guid>http://localhost:1313/posts/migrate_to_japan/</guid>
         <description>&lt;p&gt;到东京已经第三个星期了，虽然下周才开始工作，但今天才几乎把家里布置好。&lt;/p&gt;
 &lt;p&gt;我不知道在别的国家工作怎么样，但我觉得日本工作应该是比较麻烦的：&lt;/p&gt;
 &lt;p&gt;首先是租房。尽管我学生时代在日本已经度过了两年半，但作为外国人依然觉得租房困难重重。而且，相比我离开日本的2019年，现在日本的房价似乎普遍有上涨。&lt;/p&gt;
@@ -345,11 +439,11 @@
 			flex-grow: 133; 
 			flex-basis: 320px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/migrate_to_japan/desktop.jpeg&#34; data-size=&#34;4032x3024&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/migrate_to_japan/desktop.jpeg&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/migrate_to_japan/desktop.jpeg&#34; data-size=&#34;4032x3024&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/migrate_to_japan/desktop.jpeg&#34;
 			width=&#34;4032&#34;
 			height=&#34;3024&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/migrate_to_japan/desktop_hud32aa23790b6e2f8968b772c8cef05b6_3736940_480x0_resize_q75_box.jpeg 480w, https://mooxiu.github.io/posts/migrate_to_japan/desktop_hud32aa23790b6e2f8968b772c8cef05b6_3736940_1024x0_resize_q75_box.jpeg 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/migrate_to_japan/desktop_hud32aa23790b6e2f8968b772c8cef05b6_3736940_480x0_resize_q75_box.jpeg 480w, http://localhost:1313/posts/migrate_to_japan/desktop_hud32aa23790b6e2f8968b772c8cef05b6_3736940_1024x0_resize_q75_box.jpeg 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;新的工作台，希望可以在这个角落做更多的事&#34;&gt;
 	&lt;/a&gt;
@@ -364,10 +458,10 @@
         </item>
         <item>
         <title>看病</title>
-        <link>https://mooxiu.github.io/posts/see_a_doctor/</link>
+        <link>http://localhost:1313/posts/see_a_doctor/</link>
         <pubDate>Thu, 23 Jun 2022 16:30:11 +0800</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/see_a_doctor/</guid>
+        <guid>http://localhost:1313/posts/see_a_doctor/</guid>
         <description>&lt;p&gt;Seinfeld 中有一集（S03E01），Seinfeld讲道：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;每次有人推荐一位医生，他总是最好的医生&lt;/p&gt;
@@ -384,10 +478,10 @@
         </item>
         <item>
         <title>从「爱你」到爱你</title>
-        <link>https://mooxiu.github.io/posts/from_love_you_to_love_cyndi/</link>
+        <link>http://localhost:1313/posts/from_love_you_to_love_cyndi/</link>
         <pubDate>Sun, 29 May 2022 20:32:04 +0800</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/from_love_you_to_love_cyndi/</guid>
+        <guid>http://localhost:1313/posts/from_love_you_to_love_cyndi/</guid>
         <description>&lt;p&gt;最近王心凌的回春居然成为热门话题，不免让我想到，喜欢上王心凌可能是我排名前五的改变人生的事情。&lt;/p&gt;
 &lt;p&gt;我开始喜欢这个人是在2015（2014？）年大三的时候，我相信很少有人在这个时间点开始关注她，如果看看那个时候她的几张专辑「爱不爱」，「第十个王心凌」的相关照片就知道，那正是她走成熟路线的几年，跟所谓「白幼瘦」审美沾不上边。&lt;/p&gt;
 &lt;p&gt;那年九月的某一天晚上，我开始思考这样一个问题：「那些过气歌手都在干什么呢？」&lt;/p&gt;
@@ -405,10 +499,10 @@
         </item>
         <item>
         <title>Neoliberalism Nostalgia</title>
-        <link>https://mooxiu.github.io/posts/neoliberalism_nostagia/</link>
+        <link>http://localhost:1313/posts/neoliberalism_nostagia/</link>
         <pubDate>Tue, 05 Apr 2022 14:48:54 +0800</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/neoliberalism_nostagia/</guid>
+        <guid>http://localhost:1313/posts/neoliberalism_nostagia/</guid>
         <description>&lt;p&gt;我成長的城市沒有麥當勞，直到現在仍舊如此；想吃的話，最近的選項是搭巴士去八十分鐘之外的，我讀高中的城市。&lt;/p&gt;
 &lt;p&gt;我不記得我第一次吃它是在什麼時候，但那個時候這些西洋快餐和發達國家的形象是如此緊密地聯繫在一起。每當我重新回憶那個時候的城市街景，腦海裡總是一副人頭攢動的場景，在能夠吃到麥當勞的城市，街上甚至能看到金黃色頭髮的外國人。我深知記憶是不牢靠不可信的，但每當我回到家鄉看著空蕩蕩的街頭，總是會疑惑，那麼多的人到底去哪兒了。我讀高中的時候，周圍的同學幾乎都是從小學就開始上英語課了，儘管處於那個年代的尾聲，但或許是因為深處內地，去往海外仍是時髦，動感的想像。我現在記得當我的高中朋友告訴我他喜歡聽Britney Spears的場景，我儘管知道這個名字但我完全沒有機會聽她的歌，我覺得他時髦極了，我覺得我聽的歌弱爆了。在我16到20歲的那段時間，我幾乎每天都要控制自己的自卑之情，如何像一個自然的「城裡人」一直是我的課題。什麼是「城裡人」呢，至少吃麥當勞不會露怯吧，我這樣想，我從雜誌上瞭解到了很多麥當勞與KFC的不同之處，包括它們對冰淇淋的不同稱呼⋯⋯&lt;/p&gt;
 &lt;p&gt;我真正能夠自由自在吃麥當勞已經是讀修士在日本的時候了。我的小學老師曾經去香港旅遊，回來之後告訴我們那裏的物價之驚人，麥當勞這種屬於最便宜的了，他們只能天天吃麥當勞。而這基本上就是我在日本的情形，因為我不吃海鮮，選擇面一下少了很多，出去牛肉飯和拉麵之外，快捷的選擇自然是麥當勞。因為我的成長因素，麥當勞在我這裡既是一個廉價的果腹之選，也是一個難以抹滅的紀念碑。&lt;/p&gt;
@@ -421,10 +515,10 @@
         </item>
         <item>
         <title>Eight Days A Week</title>
-        <link>https://mooxiu.github.io/posts/eight_days_a_week/</link>
+        <link>http://localhost:1313/posts/eight_days_a_week/</link>
         <pubDate>Sun, 20 Mar 2022 19:16:40 +0800</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/eight_days_a_week/</guid>
+        <guid>http://localhost:1313/posts/eight_days_a_week/</guid>
         <description>&lt;p&gt;在疫情已经过了两年半之后，我终于讽刺地第一次体验到了在家办公，与此同时，世界上的其他国家几乎都宣布了疫情的结束。&lt;/p&gt;
 &lt;p&gt;与大多数人不同的是，我对于长时间处在同一个物理空间这件事情没有任何怨言，只要这里安静，没有其他人，我可以自由地变化任何姿势，坐着，站着，趴着，这都让我觉得非常自由，&lt;code&gt;Free As In Freedom&lt;/code&gt;。我不明白为什么很多人对于疫情期间无法出门旅游这件事情感到如此愤怒，与此同时，这些人在无法自由访问各种网站这件事情上却没有任何不满。&lt;/p&gt;
 &lt;p&gt;我一开始以为WFH会是&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=Rgx8dpiPwpA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -446,11 +540,125 @@
 </description>
         </item>
         <item>
+        <title>Vim_markdown</title>
+        <link>http://localhost:1313/posts/vim_markdown/</link>
+        <pubDate>Wed, 09 Feb 2022 00:14:03 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/vim_markdown/</guid>
+        <description>&lt;p&gt;在编辑markdown文档这件事情上，我曾使用过许多工具。&lt;/p&gt;
+&lt;p&gt;最开始是Typora，它的「所见即所得」的特性令人陶醉，而且非常优美。但我觉得我不应当陶醉于此，我想用更hardcore一点的方式，同时我也希望能够使用vim进行编辑。于是我把目光投向了&lt;em&gt;VSCode&lt;/em&gt;，它的编辑体验就更像我以前写&lt;em&gt;LaTEx&lt;/em&gt;的体验了，左边是raw文档，右边是渲染的结果。为了让这件事情更彻底，我开始探索纯粹使用vim来进行markdown编辑。&lt;/p&gt;
+&lt;h2 id=&#34;markdown语法高亮&#34;&gt;markdown语法高亮&lt;/h2&gt;
+&lt;h2 id=&#34;markdown的preview&#34;&gt;markdown的Preview&lt;/h2&gt;
+&lt;h3 id=&#34;management-httpsgithubcomjunegunnvim-plug&#34;&gt;Management: &lt;a class=&#34;link&#34; href=&#34;https://github.com/junegunn/vim-plug&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/junegunn/vim-plug&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;preview-httpsgithubcominstant-markdownvim-instant-markdown&#34;&gt;Preview: &lt;a class=&#34;link&#34; href=&#34;https://github.com/instant-markdown/vim-instant-markdown&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/instant-markdown/vim-instant-markdown&lt;/a&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like my article and want to make a donation, you can click the &lt;a class=&#34;link&#34; href=&#34;https://mooxiu.github.io/donate/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;捐赠 Donation&lt;/a&gt; button on the side bar.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Memo: Data Structure Tree</title>
+        <link>http://localhost:1313/posts/data_structure_tree/</link>
+        <pubDate>Thu, 03 Feb 2022 11:33:10 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/data_structure_tree/</guid>
+        <description>&lt;p&gt;This is a memo about &lt;code&gt;Tree&lt;/code&gt; structure. When dealing with &lt;code&gt;Tree&lt;/code&gt; related problems in Leetcode, I try to write concise and clear code.&lt;/p&gt;
+&lt;h1 id=&#34;define-the-structure&#34;&gt;Define the Structure&lt;/h1&gt;
+&lt;p&gt;For a node in a tree, it can be described as :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;TreeNode&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;Val&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;Left&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TreeNode&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;Right&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TreeNode&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;traversal&#34;&gt;Traversal&lt;/h1&gt;
+&lt;p&gt;There are 3 fundamental types of traversal. They are &lt;em&gt;Pre-Order Traversal&lt;/em&gt;, &lt;em&gt;In-Order Traversal&lt;/em&gt;, and &lt;em&gt;Post-Order Traversal&lt;/em&gt;. &lt;em&gt;Order&lt;/em&gt; is to describe the ranking of root node.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Pre-Order&lt;/em&gt;(NLR): Node -&amp;gt; Left -&amp;gt; Right&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;In-Order&lt;/em&gt;(LNR): Left -&amp;gt; Node -&amp;gt; Right&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Post-Order&lt;/em&gt;(LRN): Left -&amp;gt; Right -&amp;gt; Node&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See the diagram from &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Tree_traversal#In-order,_LNR&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Wikipedia&lt;/a&gt; about tree traversal:
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;pre-order&#34;&gt;Pre-Order&lt;/h2&gt;
+&lt;h3 id=&#34;recursive&#34;&gt;Recursive&lt;/h3&gt;
+&lt;p&gt;Recursive method is pretty straightforward:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;preOrderTraversalRecursive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TreeNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// do with current node
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;nf&#34;&gt;printNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// do with left 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;nf&#34;&gt;preOrderTraversalRecursive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Left&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// do with right	
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;nf&#34;&gt;preOrderTraversalRecursive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Right&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;iteration&#34;&gt;Iteration&lt;/h3&gt;
+&lt;p&gt;We need a stack when using iteration method.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;preOrderTraversalIteration&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TreeNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;stack&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;New&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;curr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;stack&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;curr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;curr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nf&#34;&gt;printNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;curr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nx&#34;&gt;stack&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;PushBack&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;curr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// push element in the stack (add element to the back of the list)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;			&lt;span class=&#34;nx&#34;&gt;curr&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;curr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Left&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nx&#34;&gt;back&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;stack&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Back&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nx&#34;&gt;curr&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;back&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TreeNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Right&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nx&#34;&gt;stack&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Remove&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;back&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;in-order&#34;&gt;In-Order&lt;/h2&gt;
+&lt;h3 id=&#34;recursive-1&#34;&gt;Recursive&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;inOrderTraversalRecursive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TreeNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// do with left node
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;nf&#34;&gt;inOrderTraversalRecursive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Left&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// do with current node
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;nf&#34;&gt;printNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// do with right node
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;nf&#34;&gt;inOrderTraversalRecursive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Right&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;iteration-1&#34;&gt;Iteration&lt;/h3&gt;
+&lt;p&gt;// todo&lt;/p&gt;
+&lt;h2 id=&#34;post-order&#34;&gt;Post-Order&lt;/h2&gt;
+&lt;h3 id=&#34;recursive-2&#34;&gt;Recursive&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;postOrderTraversalRecursive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TreeNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// do with left node
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;nf&#34;&gt;postOrderTraversalRecursive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Left&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// do with right node
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;nf&#34;&gt;postOrderTraversalRecursive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Right&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// do with current node
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;nf&#34;&gt;printNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;iteration-2&#34;&gt;Iteration&lt;/h3&gt;
+&lt;h1 id=&#34;binary-search-treebst-不是bts&#34;&gt;Binary Search Tree(BST, 不是BTS)&lt;/h1&gt;
+&lt;h2 id=&#34;validation&#34;&gt;Validation&lt;/h2&gt;
+&lt;p&gt;A valid BST should satisfy following requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like my article and want to make a donation, you can click the &lt;a class=&#34;link&#34; href=&#34;https://mooxiu.github.io/donate/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;捐赠 Donation&lt;/a&gt; button on the sidebar.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Understanding Relationship of Math Rock, Mid-Western Emo, Prog Metal, etc</title>
-        <link>https://mooxiu.github.io/posts/math_rock_in_go/</link>
+        <link>http://localhost:1313/posts/math_rock_in_go/</link>
         <pubDate>Fri, 07 Jan 2022 22:29:21 +0800</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/math_rock_in_go/</guid>
+        <guid>http://localhost:1313/posts/math_rock_in_go/</guid>
         <description>&lt;p&gt;I am really confused about the relationship among following genres:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Math Rock&lt;/li&gt;
@@ -516,10 +724,10 @@
         </item>
         <item>
         <title>键盘艺术的练习之路：vim和emacs</title>
-        <link>https://mooxiu.github.io/posts/viming/</link>
+        <link>http://localhost:1313/posts/viming/</link>
         <pubDate>Fri, 17 Dec 2021 21:23:11 +0800</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/viming/</guid>
+        <guid>http://localhost:1313/posts/viming/</guid>
         <description>&lt;p&gt;两年前，我写了一篇叫做「&lt;a class=&#34;link&#34; href=&#34;https://www.douban.com/note/726968772/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;如何像演奏乐器一样打字&lt;/a&gt;」的文字。那个时候，我改进了一个虽然非常微妙，但并不trivial的键盘使用技法，那就是使用&lt;code&gt;shift&lt;/code&gt;键而不是&lt;code&gt;caps lock&lt;/code&gt;键来切换大小写。这样做的好处在于：&lt;/p&gt;
 &lt;ul&gt;
@@ -602,10 +810,10 @@
         </item>
         <item>
         <title>notion很好，所以我选择logseq</title>
-        <link>https://mooxiu.github.io/posts/using_logseq/</link>
+        <link>http://localhost:1313/posts/using_logseq/</link>
         <pubDate>Thu, 16 Dec 2021 22:17:13 +0800</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/using_logseq/</guid>
+        <guid>http://localhost:1313/posts/using_logseq/</guid>
         <description>&lt;p&gt;今天看到一种说法，叫做现如今（今天是2021年12月16日）所有的笔记软件都在抄 notion 。notion 确实是一款非常成功的笔记软件，但如果仅仅将它作为笔记软件，则是狭隘化了它的用途，我们看看跟它对标的产品：&lt;/p&gt;
 &lt;p&gt;比如 &lt;a class=&#34;link&#34; href=&#34;https://github.com/AppFlowy-IO/appflowy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;AppFlowy&lt;/a&gt;：
@@ -616,11 +824,11 @@
 			flex-grow: 105; 
 			flex-basis: 252px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/using_logseq/appflowy.png&#34; data-size=&#34;880x835&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/using_logseq/appflowy.png&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/using_logseq/appflowy.png&#34; data-size=&#34;880x835&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/using_logseq/appflowy.png&#34;
 			width=&#34;880&#34;
 			height=&#34;835&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/using_logseq/appflowy_hu5c690587be10e7515c2b4b8966dd4daa_156804_480x0_resize_box_3.png 480w, https://mooxiu.github.io/posts/using_logseq/appflowy_hu5c690587be10e7515c2b4b8966dd4daa_156804_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/using_logseq/appflowy_hu5c690587be10e7515c2b4b8966dd4daa_156804_480x0_resize_box_3.png 480w, http://localhost:1313/posts/using_logseq/appflowy_hu5c690587be10e7515c2b4b8966dd4daa_156804_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;AppFlowy&#34;&gt;
 	&lt;/a&gt;
@@ -637,11 +845,11 @@
 			flex-grow: 178; 
 			flex-basis: 429px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/using_logseq/loop.png&#34; data-size=&#34;1300x727&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/using_logseq/loop.png&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/using_logseq/loop.png&#34; data-size=&#34;1300x727&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/using_logseq/loop.png&#34;
 			width=&#34;1300&#34;
 			height=&#34;727&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/using_logseq/loop_huc3bf8c545cbe0f335470030b80658afb_533039_480x0_resize_box_3.png 480w, https://mooxiu.github.io/posts/using_logseq/loop_huc3bf8c545cbe0f335470030b80658afb_533039_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/using_logseq/loop_huc3bf8c545cbe0f335470030b80658afb_533039_480x0_resize_box_3.png 480w, http://localhost:1313/posts/using_logseq/loop_huc3bf8c545cbe0f335470030b80658afb_533039_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;Microsoft Loop&#34;&gt;
 	&lt;/a&gt;
@@ -677,11 +885,11 @@
 			flex-grow: 119; 
 			flex-basis: 286px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/using_logseq/note_14.png&#34; data-size=&#34;1580x1322&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/using_logseq/note_14.png&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/using_logseq/note_14.png&#34; data-size=&#34;1580x1322&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/using_logseq/note_14.png&#34;
 			width=&#34;1580&#34;
 			height=&#34;1322&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/using_logseq/note_14_hu56884e980047527ac7124e4a418730b0_378765_480x0_resize_box_3.png 480w, https://mooxiu.github.io/posts/using_logseq/note_14_hu56884e980047527ac7124e4a418730b0_378765_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/using_logseq/note_14_hu56884e980047527ac7124e4a418730b0_378765_480x0_resize_box_3.png 480w, http://localhost:1313/posts/using_logseq/note_14_hu56884e980047527ac7124e4a418730b0_378765_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;14日的笔记&#34;&gt;
 	&lt;/a&gt;
@@ -697,11 +905,11 @@
 			flex-grow: 662; 
 			flex-basis: 1590px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/using_logseq/note_7.png&#34; data-size=&#34;1484x224&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/using_logseq/note_7.png&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/using_logseq/note_7.png&#34; data-size=&#34;1484x224&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/using_logseq/note_7.png&#34;
 			width=&#34;1484&#34;
 			height=&#34;224&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/using_logseq/note_7_hue94bd72736ea78bfd259b1f0ff5fd462_30775_480x0_resize_box_3.png 480w, https://mooxiu.github.io/posts/using_logseq/note_7_hue94bd72736ea78bfd259b1f0ff5fd462_30775_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/using_logseq/note_7_hue94bd72736ea78bfd259b1f0ff5fd462_30775_480x0_resize_box_3.png 480w, http://localhost:1313/posts/using_logseq/note_7_hue94bd72736ea78bfd259b1f0ff5fd462_30775_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;7日的笔记&#34;&gt;
 	&lt;/a&gt;
@@ -717,11 +925,11 @@
 			flex-grow: 87; 
 			flex-basis: 208px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/using_logseq/compilers.png&#34; data-size=&#34;1586x1822&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/using_logseq/compilers.png&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/using_logseq/compilers.png&#34; data-size=&#34;1586x1822&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/using_logseq/compilers.png&#34;
 			width=&#34;1586&#34;
 			height=&#34;1822&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/using_logseq/compilers_huaa1bad177a1d1347c0d9550cd6c5e042_394538_480x0_resize_box_3.png 480w, https://mooxiu.github.io/posts/using_logseq/compilers_huaa1bad177a1d1347c0d9550cd6c5e042_394538_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/using_logseq/compilers_huaa1bad177a1d1347c0d9550cd6c5e042_394538_480x0_resize_box_3.png 480w, http://localhost:1313/posts/using_logseq/compilers_huaa1bad177a1d1347c0d9550cd6c5e042_394538_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;关于这个主题的所有记录&#34;&gt;
 	&lt;/a&gt;
@@ -742,10 +950,10 @@
         </item>
         <item>
         <title>Go的双向链表</title>
-        <link>https://mooxiu.github.io/posts/golang_double_linked_list/</link>
+        <link>http://localhost:1313/posts/golang_double_linked_list/</link>
         <pubDate>Fri, 10 Dec 2021 00:01:30 +0800</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/golang_double_linked_list/</guid>
+        <guid>http://localhost:1313/posts/golang_double_linked_list/</guid>
         <description>&lt;p&gt;Although &lt;code&gt;list&lt;/code&gt; has rarely been used in Go (&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/a/21328187&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Just about always when you are thinking of a list - use a slice instead in Go&lt;/a&gt;), there is an official implementation in the standard library. After reading the implementation (&lt;a class=&#34;link&#34; href=&#34;https://pkg.go.dev/container/list&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;go standard package: src/container/list/list.go&lt;/a&gt;), I found it very inspiring.&lt;/p&gt;
@@ -805,10 +1013,10 @@
         </item>
         <item>
         <title>文明玩后感</title>
-        <link>https://mooxiu.github.io/posts/play_civilization/</link>
+        <link>http://localhost:1313/posts/play_civilization/</link>
         <pubDate>Mon, 06 Dec 2021 22:37:46 +0800</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/play_civilization/</guid>
+        <guid>http://localhost:1313/posts/play_civilization/</guid>
         <description>&lt;p&gt;在Cyber Monday花了70多块钱购入了「文明6」，似乎是除了游戏本身以外还带了几个DLC。看起来非常划算，但应该也是steam定价策略的一环。&lt;/p&gt;
 &lt;p&gt;在Apple Silicon的MBP上的表现似乎有点问题（这个游戏需要通过rosette转译，性能还行，我选择了2k 120Hz的分辨率，没有遇到卡顿， 当然打了之后电脑温热），如果我新建游戏时选择使用完整的世界地图就会进入游戏失败。但总之最后让电脑帮我选了个角色进去玩了。&lt;/p&gt;
 &lt;p&gt;我认为这个游戏最残忍的地方在于一个游戏最后只有一个胜利者，如果你在500回合之内没有取得胜利就会直接给你失败的标签，没有诸如「恭喜你获得了第二名」，「恭喜你活了下来」这样的结果。但好在在胜利方式上可以有很多种：统治胜利，文化胜利，科技胜利，外交胜利，等等。而这其中每一个方面似乎都可以简化为一个数值，这是我感到不太对劲的地方。如果你想要文化胜利，你似乎就需要招募一些大文学家，大音乐家之类的，但问题是文化和科技，外交不是正交的存在，而是相互之间有着复杂的相互作用：比如前工业时代的人就无法生产后工业时代的的文化产品……这样看来，似乎必须得在每一个方面都不能放松。&lt;/p&gt;
@@ -821,11 +1029,51 @@
 </description>
         </item>
         <item>
+        <title>为何分贝总是负值？</title>
+        <link>http://localhost:1313/posts/why_db_minus/</link>
+        <pubDate>Wed, 24 Nov 2021 21:50:38 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/why_db_minus/</guid>
+        <description>&lt;p&gt;使用音频软件对音乐进行编辑的时候，我们几乎总是会注意到，在这些软件中，音乐的分贝总是一个负值(下面是一张compressor（压缩器）的截图，请注意红色方框中但分贝数字)：&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 129; 
+			flex-basis: 309px&#34;
+	&gt;
+	&lt;a href=&#34;http://localhost:1313/posts/why_db_minus/logic_pro_screenshot.png&#34; data-size=&#34;1028x796&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/why_db_minus/logic_pro_screenshot.png&#34;
+			width=&#34;1028&#34;
+			height=&#34;796&#34;
+			srcset=&#34;http://localhost:1313/posts/why_db_minus/logic_pro_screenshot_hu65931aff0e479fb668c92daa1c3dcbb0_741111_480x0_resize_box_3.png 480w, http://localhost:1313/posts/why_db_minus/logic_pro_screenshot_hu65931aff0e479fb668c92daa1c3dcbb0_741111_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;minus db in logic pro&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;minus db in logic pro&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;这几乎和我们日常的经验截然不同，日常生活中，我们常能听到类似以下的描述：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;人耳最好不要长期曝露在xx分贝之下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;或者&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;施工的声音大约是xx分贝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;dB（分贝），似乎是我们都很熟悉很基本的对声音大小进行衡量的单位，但此时跟在一个负值后面的它显得如此陌生。事实上，前面一句话的「对声音大小进行衡量的单位」这句话就非常模糊，何谓声音大小？如果两个人的耳朵对于同样的声音有着不同的敏感度的话，那么这个声音对于两个人的声音大小是不同的吗？一旦有诸如此类的问题，我们就会发现对声音大小（响度）进行描述的物理单位似乎需要被更严谨地定义。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like my article and want to make a donation, you can click the &lt;a class=&#34;link&#34; href=&#34;https://mooxiu.github.io/donate/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;捐赠 Donation&lt;/a&gt; button on the side bar.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Juicy Steak, Finally</title>
-        <link>https://mooxiu.github.io/posts/steak/</link>
+        <link>http://localhost:1313/posts/steak/</link>
         <pubDate>Mon, 04 Oct 2021 18:38:25 +0800</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/steak/</guid>
+        <guid>http://localhost:1313/posts/steak/</guid>
         <description>&lt;p&gt;连续几个周末，因为减肥的需求，有时候我依靠牛排来度过一餐晚饭。在我的记忆中，我在日本的时候可以做出很好吃的牛排，但前几个星期我做出的牛排又老又柴，不能说难以下咽，但也着实不符合我心目中自己的水准。&lt;/p&gt;
 &lt;p&gt;黄油，迷迭香这些配料我应有尽有，但总感觉是错了什么步骤，直到昨天看了名厨Gorden Ramsay的几个视频(比如 &lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1qM4y1G7Er&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;厨神戈登·拉姆齐教你：在家烹饪出完美牛排的10大要点&lt;/a&gt;， 还有 &lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1gE411V79g&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -846,10 +1094,10 @@
         </item>
         <item>
         <title>轻食是为了留长发</title>
-        <link>https://mooxiu.github.io/posts/what_to_eat/</link>
+        <link>http://localhost:1313/posts/what_to_eat/</link>
         <pubDate>Mon, 06 Sep 2021 21:22:09 +0800</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/what_to_eat/</guid>
+        <guid>http://localhost:1313/posts/what_to_eat/</guid>
         <description>&lt;h2 id=&#34;长发和减肥有什么关系&#34;&gt;长发和减肥有什么关系&lt;/h2&gt;
 &lt;p&gt;小时候我一直对长发男性怀有憧憬，单因为严格的管教，至今未能实现我的心愿。我爸妈在这方面简直就是警察，看到我刚剪的头发都要做出一副友邦惊诧的样子，说「你有多久没剪头发啦！」 但其实我刚刚剪过：刘海不及眉毛，鬓角和后翼更是寸草不生，即便如此，他们仍不满意。&lt;/p&gt;
 &lt;p&gt;于是我觉得，我要留长发————而且不是那种暗戳戳的长发，而是如假包换，让所有人看到都能意识到我是有意识留长发的，长发。既然下定决心，那么接下来需要做的事情唯有等待而已。但在我刚刚踌躇满志地将我的计划告诉女朋友之后，她刚刚小心翼翼地指出：「只有瘦的人留长头发才好看」。&lt;/p&gt;
@@ -891,10 +1139,10 @@
         </item>
         <item>
         <title>双系统升级Win10 20H1的时候Linux引导失效修理</title>
-        <link>https://mooxiu.github.io/posts/boot_fix/</link>
+        <link>http://localhost:1313/posts/boot_fix/</link>
         <pubDate>Mon, 26 Jul 2021 10:06:18 +0800</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/boot_fix/</guid>
+        <guid>http://localhost:1313/posts/boot_fix/</guid>
         <description>&lt;h2 id=&#34;the-situation&#34;&gt;The Situation&lt;/h2&gt;
 &lt;p&gt;Dual boot: Win10 and Manjaro Linux.&lt;/p&gt;
 &lt;p&gt;When trying to update Win10 to the latest Win10 20H version, after rebooting my system, it did not enter the booting interface, rather it says:&lt;/p&gt;
@@ -939,10 +1187,10 @@ it will save your config&lt;/p&gt;
         </item>
         <item>
         <title>Tritone, 三全音代理或降二代五和弦</title>
-        <link>https://mooxiu.github.io/posts/tritone/</link>
+        <link>http://localhost:1313/posts/tritone/</link>
         <pubDate>Sun, 30 May 2021 18:18:15 +0800</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/tritone/</guid>
+        <guid>http://localhost:1313/posts/tritone/</guid>
         <description>&lt;h2 id=&#34;复习时间&#34;&gt;复习时间&lt;/h2&gt;
 &lt;h3 id=&#34;ii-v-i&#34;&gt;II-&amp;gt;V-&amp;gt;I&lt;/h3&gt;
 &lt;p&gt;五级和弦（特别是属七和弦）有强烈的趋势接到一级和弦，最常见的&lt;strong&gt;C&lt;/strong&gt;大调progression:&lt;/p&gt;
@@ -971,11 +1219,11 @@ it will save your config&lt;/p&gt;
 			flex-grow: 100; 
 			flex-basis: 240px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/posts/tritone/c5.png&#34; data-size=&#34;1200x1200&#34;&gt;
-		&lt;img src=&#34;https://mooxiu.github.io/posts/tritone/c5.png&#34;
+	&lt;a href=&#34;http://localhost:1313/posts/tritone/c5.png&#34; data-size=&#34;1200x1200&#34;&gt;
+		&lt;img src=&#34;http://localhost:1313/posts/tritone/c5.png&#34;
 			width=&#34;1200&#34;
 			height=&#34;1200&#34;
-			srcset=&#34;https://mooxiu.github.io/posts/tritone/c5_hu5f765df6b29321f84f318c6d9b91b2fe_176131_480x0_resize_box_3.png 480w, https://mooxiu.github.io/posts/tritone/c5_hu5f765df6b29321f84f318c6d9b91b2fe_176131_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;http://localhost:1313/posts/tritone/c5_hu5f765df6b29321f84f318c6d9b91b2fe_176131_480x0_resize_box_3.png 480w, http://localhost:1313/posts/tritone/c5_hu5f765df6b29321f84f318c6d9b91b2fe_176131_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;circle of 5th&#34;&gt;
 	&lt;/a&gt;
@@ -1020,11 +1268,89 @@ it will save your config&lt;/p&gt;
 </description>
         </item>
         <item>
+        <title>Sounds_explore</title>
+        <link>http://localhost:1313/posts/sounds_explore/</link>
+        <pubDate>Sun, 23 May 2021 19:27:54 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/sounds_explore/</guid>
+        <description>&lt;p&gt;列举一些我们常常听到但是不知道叫什么名字的声音。&lt;/p&gt;
+&lt;h1 id=&#34;orchestra-hit&#34;&gt;Orchestra Hit&lt;/h1&gt;
+&lt;p&gt;八十年代音乐常常出现的弦乐打击音，&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=8A1Aj1_EF9Y&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.youtube.com/watch?v=8A1Aj1_EF9Y&lt;/a&gt; 这个视频介绍了这个声音究竟来源何处：Stravinsky的「Firebirds」中Infernal Dance(地狱之舞)的开头，是一个小六度。&lt;/p&gt;
+&lt;p&gt;Fairlight CMI designed by Peter Vogel，最早的Digital Synthesizer, Digital audio workstation(DAW) 以及Digital sampler。80年代是Sequencer(序列发生器)和Digital Sampler（数字采样器）进入音乐家视野的年代。数字采样器可以通过一段任意长度的录制下的片段，在键盘上弹奏出不同的音高。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Babooshka&lt;/em&gt; by Kate Bush, 1980: 采样了一段砸碎玻璃的声音&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Peter Vogel手边正好有一张Firebird的唱片，它录制了开头的声音作为一段采样并命名为「ORCH2.VC」（然而根据&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Orchestra_hit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Wikipedia&lt;/a&gt;的介绍，它的名字应该是「ORCH5」，「ORCH2」是一个loop过的版本）。
+使用了Orchestra Hit采样的音乐包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Planet Rock&lt;/em&gt; by Afrika Bambaataa, 1982: 第一张使用orch2.vc采样的音乐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;the-whihelm-scream&#34;&gt;The Whihelm Scream&lt;/h1&gt;
+&lt;p&gt;也就是「AHHHHOU」这样的声音。&lt;/p&gt;
+&lt;p&gt;最早来自于一部1951年的电影「Distant Drums」，当一个士兵泅水的时候被短吻鳄袭击时发出的声音。
+而「The Whihelm Scream」这个名字则是因为1953年的电影「The Charge at Feather River」当中名为「Pvt. Whilhelm」中箭时的采样。&lt;/p&gt;
+&lt;p&gt;这个声音后来变得如此知名和广为应用，则是因为sound designer Ben Butt在为Star Wars电影工作的时候注意到了这个声音，并且在电影中大量使用。&lt;/p&gt;
+&lt;p&gt;从这个&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=cdbYsoEasio&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;合集&lt;/a&gt;中也可以看出来。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sound Effects(&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=BpSygUv0qEE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.youtube.com/watch?v=BpSygUv0qEE&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Famous Sound(&lt;a class=&#34;link&#34; href=&#34;https://www.synthmania.com/Famous%20Sounds.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.synthmania.com/Famous%20Sounds.htm&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Strings_in_logic_pro</title>
+        <link>http://localhost:1313/posts/strings_in_logic_pro/</link>
+        <pubDate>Mon, 10 May 2021 22:12:37 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/strings_in_logic_pro/</guid>
+        <description>&lt;p&gt;对Logic Pro当中弦乐的研究，我想要编出&lt;strong&gt;饱满的&lt;/strong&gt;，&lt;strong&gt;有力的&lt;/strong&gt;，以及&lt;strong&gt;富有弹性&lt;/strong&gt;的声音。&lt;/p&gt;
+&lt;h2 id=&#34;control-panel-of-studio-violin&#34;&gt;Control Panel of &lt;strong&gt;Studio Violin&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Monophonic(单音的): 当选择OFF的时候代表我们可以演奏和弦&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dynamics via CC：如果选择OFF代表按下去音的大小都是一样的，如果选择on，我们可以利用键盘上的调制器控制渐强渐弱：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Attack: 反馈的速度，是按下去一瞬间渐强还是最强&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Release：释放瞬间声音是渐弱还是一下子消失&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Articulation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sustain&lt;/li&gt;
+&lt;li&gt;Staccato: 短促的&lt;/li&gt;
+&lt;li&gt;Spiccato：更加短促有力，punch&lt;/li&gt;
+&lt;li&gt;Pizzicato：跳弓&lt;/li&gt;
+&lt;li&gt;Tremolo：紧张感&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;弦乐组架构&#34;&gt;弦乐组架构&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Violin1&lt;/li&gt;
+&lt;li&gt;Violin2&lt;/li&gt;
+&lt;li&gt;violas&lt;/li&gt;
+&lt;li&gt;cello&lt;/li&gt;
+&lt;li&gt;double bass&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;bus 调大：更多混响&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Note for TOXIC breakdown</title>
-        <link>https://mooxiu.github.io/posts/toxic/</link>
+        <link>http://localhost:1313/posts/toxic/</link>
         <pubDate>Thu, 06 May 2021 21:27:12 +0800</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/toxic/</guid>
+        <guid>http://localhost:1313/posts/toxic/</guid>
         <description>&lt;p&gt;Britney Spears的Toxic一直是我喜欢的一首歌，&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=4CUPuUlq65Y&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Britney Spears: The Story of Toxic&lt;/a&gt; 解析了这首歌的制作，以下是一些提到的或许有用的点：&lt;/p&gt;
 &lt;h2 id=&#34;前奏的采样&#34;&gt;前奏的采样&lt;/h2&gt;
@@ -1065,10 +1391,10 @@ it will save your config&lt;/p&gt;
         </item>
         <item>
         <title>现在很多「肉糜」都几乎免费送了，何不「食肉糜」</title>
-        <link>https://mooxiu.github.io/posts/2020-06-20-%E7%8E%B0%E5%9C%A8%E5%BE%88%E5%A4%9A%E8%82%89%E7%B3%9C%E9%83%BD%E5%87%A0%E4%B9%8E%E5%85%8D%E8%B4%B9%E9%80%81%E4%BA%86%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89/</link>
+        <link>http://localhost:1313/posts/2020-06-20-%E7%8E%B0%E5%9C%A8%E5%BE%88%E5%A4%9A%E8%82%89%E7%B3%9C%E9%83%BD%E5%87%A0%E4%B9%8E%E5%85%8D%E8%B4%B9%E9%80%81%E4%BA%86%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89/</link>
         <pubDate>Sat, 20 Jun 2020 15:34:29 +0000</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/2020-06-20-%E7%8E%B0%E5%9C%A8%E5%BE%88%E5%A4%9A%E8%82%89%E7%B3%9C%E9%83%BD%E5%87%A0%E4%B9%8E%E5%85%8D%E8%B4%B9%E9%80%81%E4%BA%86%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89/</guid>
+        <guid>http://localhost:1313/posts/2020-06-20-%E7%8E%B0%E5%9C%A8%E5%BE%88%E5%A4%9A%E8%82%89%E7%B3%9C%E9%83%BD%E5%87%A0%E4%B9%8E%E5%85%8D%E8%B4%B9%E9%80%81%E4%BA%86%E4%BD%95%E4%B8%8D%E9%A3%9F%E8%82%89/</guid>
         <description>&lt;p&gt;墨西哥小说家 瓦莱里娅・路易塞利 的小说「&lt;!-- raw HTML omitted --&gt;我牙齿的故事&lt;!-- raw HTML omitted --&gt;」，首页说「献给胡麦克斯工厂的工人们！」。事实上，这本小说的写作方式也相当实验，她每个星期把最新写就的小说段落印刷给工人阅读，工人们组成了阅读小组，并且朗读她的作品，提供意见。作者在后记中说，这种做法古已有之：19世纪中期在古巴曾有有在工厂为工人朗读小说以减轻长期工作带来的疲惫感的运动。&lt;/p&gt;
 &lt;p&gt;但有趣的是，这部小说根本不是什么什么通俗易懂的读物，显然要比我看过的一些拉美作家比如马尔克斯，博尔赫斯的几本最著名的小说晦涩许多。一些左翼叙事的问题在于，他们尽管站在劳工这边，但总会设想他们是智力粗鄙，审美低下的人。他们尽管想给劳工带来福利，但总是觉得只要把他们喂饱就行了，至于对艺术的需求——他们便开始夸夸其谈「市场下沉」了。&lt;/p&gt;
 &lt;p&gt;坂本龙一年轻的时候说：「&lt;!-- raw HTML omitted --&gt;效仿中国人民解放军的精神，我们也要用音乐为劳工服务&lt;!-- raw HTML omitted --&gt;」，然后祭出的却是最前卫的音乐风格。总是有人需要被提醒，像「Dark Side of The Moon」这样的前卫摇滚，是历史上最畅销的专辑之一。我们如果就因为家里的长辈使用起了BiliBili，知道了几个网络迷因，就感叹他们也站在时代浪尖上的话——这并不是他们也变得前卫了，只是大众（如果这个词在如今仍有所指的话）和你一起变得后卫了。&lt;/p&gt;
@@ -1076,10 +1402,10 @@ it will save your config&lt;/p&gt;
         </item>
         <item>
         <title>鏈接接接平等，但有些鏈接比其他更平等</title>
-        <link>https://mooxiu.github.io/2020/03/06/inequality-of-links/</link>
+        <link>http://localhost:1313/2020/03/06/inequality-of-links/</link>
         <pubDate>Fri, 06 Mar 2020 15:16:36 +0000</pubDate>
         
-        <guid>https://mooxiu.github.io/2020/03/06/inequality-of-links/</guid>
+        <guid>http://localhost:1313/2020/03/06/inequality-of-links/</guid>
         <description>&lt;p&gt;或許移動互聯網給我們帶來了不愛點鏈接，和不愛在文本中置入鏈接的瀏覽和寫作習慣。本質上，移動設備中（甚至是移動設備的瀏覽器）鏈接與鏈接之間的關係，和 PC/Mac 瀏覽器中的鏈接和鏈接之間的關係並不平等。&lt;/p&gt;
 &lt;p&gt;移動設備的世界是由一個個App構成的，它們猶如一個個平行世界。正因為有了這樣的結構，它的網絡瀏覽有了「App內」及「App外」的分野。鏈接如果將你帶到了另一個App，會讓瀏覽體驗產生一種斷裂感，特別是跳轉到那些你沒有下載或者沒有註冊過的App時。這種以鄰為壑的姿態讓這種封閉的趨勢加強。&lt;/p&gt;
 &lt;p&gt;但在 PC/Mac 的瀏覽器上，以當下版本的Chrome 為例，即便是鏈接將你帶入另一個場所，它也僅僅只是體現為瀏覽器上的一個新頁面。你的體驗並不會被割裂，同時，你也更方便返回你原先的位置。因此，PC/Mac 的瀏覽器上的鏈接帶來的是一種在不同空間自由穿梭的體驗。&lt;/p&gt;
@@ -1088,10 +1414,10 @@ it will save your config&lt;/p&gt;
         </item>
         <item>
         <title>For Japanese beginners</title>
-        <link>https://mooxiu.github.io/2020/02/20/projet-de-open-japonais-livre/</link>
+        <link>http://localhost:1313/2020/02/20/projet-de-open-japonais-livre/</link>
         <pubDate>Thu, 20 Feb 2020 15:47:27 +0000</pubDate>
         
-        <guid>https://mooxiu.github.io/2020/02/20/projet-de-open-japonais-livre/</guid>
+        <guid>http://localhost:1313/2020/02/20/projet-de-open-japonais-livre/</guid>
         <description>&lt;h3 id=&#34;语言和文字&#34;&gt;语言和文字&lt;/h3&gt;
 &lt;p&gt;语言和文字是不同的，但在中文的表述中这两者常常被混为一谈。「日文」是日本语的表记，或者从索绪尔的现代语言学中，叫做能指（Signifier）。平假名，片假名，日文汉字……这些构成了日文。而当我们谈论日语的时候，往往是在论述包囊文字，语音，语法的广义的概念。&lt;/p&gt;
 &lt;p&gt;明白了语言和文字的关系，我们才能更好地讨论日文的读音，乃至语法。&lt;/p&gt;
@@ -1203,10 +1529,10 @@ it will save your config&lt;/p&gt;
         </item>
         <item>
         <title>「存在主義咖啡館」：沒有描述就沒有意義</title>
-        <link>https://mooxiu.github.io/posts/2020-02-16-book-review-%E5%AD%98%E5%9C%A8%E4%B8%BB%E7%BE%A9%E5%92%96%E5%95%A1%E9%A4%A8%E6%B2%92%E6%9C%89%E6%8F%8F%E8%BF%B0%E5%B0%B1%E6%B2%92%E6%9C%89%E6%84%8F%E7%BE%A9/</link>
+        <link>http://localhost:1313/posts/2020-02-16-book-review-%E5%AD%98%E5%9C%A8%E4%B8%BB%E7%BE%A9%E5%92%96%E5%95%A1%E9%A4%A8%E6%B2%92%E6%9C%89%E6%8F%8F%E8%BF%B0%E5%B0%B1%E6%B2%92%E6%9C%89%E6%84%8F%E7%BE%A9/</link>
         <pubDate>Sun, 16 Feb 2020 09:41:05 +0000</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/2020-02-16-book-review-%E5%AD%98%E5%9C%A8%E4%B8%BB%E7%BE%A9%E5%92%96%E5%95%A1%E9%A4%A8%E6%B2%92%E6%9C%89%E6%8F%8F%E8%BF%B0%E5%B0%B1%E6%B2%92%E6%9C%89%E6%84%8F%E7%BE%A9/</guid>
+        <guid>http://localhost:1313/posts/2020-02-16-book-review-%E5%AD%98%E5%9C%A8%E4%B8%BB%E7%BE%A9%E5%92%96%E5%95%A1%E9%A4%A8%E6%B2%92%E6%9C%89%E6%8F%8F%E8%BF%B0%E5%B0%B1%E6%B2%92%E6%9C%89%E6%84%8F%E7%BE%A9/</guid>
         <description>&lt;p&gt;豆瓣頁面：&lt;a class=&#34;link&#34; href=&#34;https://book.douban.com/subject/27170538/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;「存在主义咖啡馆」&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;題材是存在主義哲學家的群像。廁所讀物當中最令我驚訝的一本，引用詳實，而且也不忘對觀念脈絡進行闡述。中文翻譯很流暢。下面對一些畫線的地方進行評述：&lt;/p&gt;
@@ -1255,10 +1581,10 @@ it will save your config&lt;/p&gt;
         </item>
         <item>
         <title>不是所有ology都应是science</title>
-        <link>https://mooxiu.github.io/2020/01/31/%E4%B8%8D%E6%98%AF%E6%89%80%E6%9C%89ology%E9%83%BD%E5%BA%94%E6%98%AFscience/</link>
+        <link>http://localhost:1313/2020/01/31/%E4%B8%8D%E6%98%AF%E6%89%80%E6%9C%89ology%E9%83%BD%E5%BA%94%E6%98%AFscience/</link>
         <pubDate>Fri, 31 Jan 2020 18:58:01 +0000</pubDate>
         
-        <guid>https://mooxiu.github.io/2020/01/31/%E4%B8%8D%E6%98%AF%E6%89%80%E6%9C%89ology%E9%83%BD%E5%BA%94%E6%98%AFscience/</guid>
+        <guid>http://localhost:1313/2020/01/31/%E4%B8%8D%E6%98%AF%E6%89%80%E6%9C%89ology%E9%83%BD%E5%BA%94%E6%98%AFscience/</guid>
         <description>&lt;p&gt;心理学在努力成为科学之前曾经有过许多有趣而且实用的概念，比如精神分析（在如今依然作为一种治疗手法被保留下来）。但它如此执着于走一条认知科学的道路，以至于道路越走越窄，毕竟，那边还有脑科学神经科学之类听起来更「科学」的学科。但如今的确是科学主义当道的时代，社会科学也得管自己叫科学不是么。&lt;/p&gt;
 &lt;p&gt;但其实并非所有学术都得是科学不可。很简单的例子，比如各种艺术，都不是科学。技术，这也是当今显学，同样是非常经验的非科学：比如土木工程的很多经验公式，材料学更不用说，和计算机科学区分开来的软件工程——我看很多人也只是学了几个框架就开始上班了。金融学，商学……非科学的学术数不胜数。&lt;/p&gt;
 &lt;p&gt;所以，在我看来，尽管中医是一门已经高度系统化的学问了，但我觉得不妨大大方方承认它并非科学。当然，这并不妨碍你用科学的方法去研究它——比如分析里面的某些成分，进行对照试验（不过这不就是现代医学，所谓「西医」了？）……这段话听起来像知乎上随处可见的cliche，不过与其成为一门伪科学，还不如说自己是非科学。&lt;/p&gt;
@@ -1270,10 +1596,10 @@ it will save your config&lt;/p&gt;
         </item>
         <item>
         <title>从马尔可夫不等式到弱大数定律</title>
-        <link>https://mooxiu.github.io/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/</link>
+        <link>http://localhost:1313/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/</link>
         <pubDate>Sat, 18 Jan 2020 19:15:01 +0000</pubDate>
         
-        <guid>https://mooxiu.github.io/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/</guid>
+        <guid>http://localhost:1313/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/</guid>
         <description>&lt;p&gt;回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚：&lt;/p&gt;
 &lt;h5 id=&#34;首先是markov不等式&#34;&gt;首先是Markov不等式。&lt;/h5&gt;
 &lt;p&gt;它是以俄国数学家Andrey Andreyevich Markov的名字命名，同时也有Markov Chain这个在信息论上著名的东西。这个不等式，简单而言，就是我们可以一个随机变量的期望值判断这个随机变量取值的概率：&lt;/p&gt;
@@ -1333,10 +1659,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>「昨日奇迹」：灾难之后如何重拾人类文明</title>
-        <link>https://mooxiu.github.io/posts/2020-01-12-film-review%E6%98%A8%E6%97%A5%E5%A5%87%E8%BF%B9%E7%81%BE%E9%9A%BE%E4%B9%8B%E5%90%8E%E5%A6%82%E4%BD%95%E9%87%8D%E6%8B%BE%E4%BA%BA%E7%B1%BB%E6%96%87%E6%98%8E/</link>
+        <link>http://localhost:1313/posts/2020-01-12-film-review%E6%98%A8%E6%97%A5%E5%A5%87%E8%BF%B9%E7%81%BE%E9%9A%BE%E4%B9%8B%E5%90%8E%E5%A6%82%E4%BD%95%E9%87%8D%E6%8B%BE%E4%BA%BA%E7%B1%BB%E6%96%87%E6%98%8E/</link>
         <pubDate>Sun, 12 Jan 2020 15:35:10 +0000</pubDate>
         
-        <guid>https://mooxiu.github.io/posts/2020-01-12-film-review%E6%98%A8%E6%97%A5%E5%A5%87%E8%BF%B9%E7%81%BE%E9%9A%BE%E4%B9%8B%E5%90%8E%E5%A6%82%E4%BD%95%E9%87%8D%E6%8B%BE%E4%BA%BA%E7%B1%BB%E6%96%87%E6%98%8E/</guid>
+        <guid>http://localhost:1313/posts/2020-01-12-film-review%E6%98%A8%E6%97%A5%E5%A5%87%E8%BF%B9%E7%81%BE%E9%9A%BE%E4%B9%8B%E5%90%8E%E5%A6%82%E4%BD%95%E9%87%8D%E6%8B%BE%E4%BA%BA%E7%B1%BB%E6%96%87%E6%98%8E/</guid>
         <description>&lt;p&gt;国内的恶俗综艺（比如「奇葩说」）和恶俗网站（比如「知乎」）喜欢假设这种问题：人类在灾难之后，应该如何尽快恢复人类文明。不过基本上都是讨论技术上的一些事情，比如如何重建数学和物理上的理论体系，金属的炼制，一直到计算机的重新制造等等。&lt;/p&gt;
 &lt;p&gt;但这部电影给我们展示的是，如何重拾另外一种人类文明，比如The Beatles. 当然电影中还给我们展示了其他带有人类文明印记的东西，比如Oasis，可口可乐，还有——我不太愿意承认它也是人类文明的一部分——哈利波特。&lt;/p&gt;
 &lt;p&gt;尽管情节简单，整个故事的高潮设定为在演唱会上表白——这么一个恶俗的情节（难怪编剧还写出了更恶俗的「真爱至上」）。但是你很难在其他的电影里听到这么多的Beatles了。对此，&lt;a class=&#34;link&#34; href=&#34;https://www.douban.com/people/lannymomo/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1350,10 +1676,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>生活黑客</title>
-        <link>https://mooxiu.github.io/2019/12/14/%E7%94%9F%E6%B4%BB%E9%BB%91%E5%AE%A2/</link>
+        <link>http://localhost:1313/2019/12/14/%E7%94%9F%E6%B4%BB%E9%BB%91%E5%AE%A2/</link>
         <pubDate>Sat, 14 Dec 2019 03:10:22 +0000</pubDate>
         
-        <guid>https://mooxiu.github.io/2019/12/14/%E7%94%9F%E6%B4%BB%E9%BB%91%E5%AE%A2/</guid>
+        <guid>http://localhost:1313/2019/12/14/%E7%94%9F%E6%B4%BB%E9%BB%91%E5%AE%A2/</guid>
         <description>&lt;p&gt;我昨天才了解到了一个词：Lifehacker，中文直译为生活黑客。其实意思也非常直观，即运用技巧和捷径来提高生产和生活效率。这个词源自「Life Hack」，维基上说这个词的来源是2004年在O’Reilly的新兴技术会议上，科技记者Danny O’Brien用以描述一些IT技术者们为了让他们工作完成所采用的「令人尴尬的」脚本和捷径。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://painanpainan.home.blog/2019/07/22/%E9%BB%91%E5%AE%A2%E7%94%9F%E6%B4%BB/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;这篇介绍生活黑客的文章&lt;/a&gt; 认为生活黑客乃是用对待系统的思维去对待生活的行为。如果从这个角度来看，其实无论是每天记录自己身体指标的所谓「量化自我」派，还是发现了购物网站不为人知省钱秘诀的人，都是某种Lifehacker的行为。生活黑客们和技术黑客们一样，热爱实验和折腾，试图在纷扰的生活系统中寻求一个最短的路线完成某项活动。&lt;/p&gt;
@@ -1363,10 +1689,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>折纸的乐趣？</title>
-        <link>https://mooxiu.github.io/2019/11/23/%E6%8A%98%E7%BA%B8%E7%9A%84%E4%B9%90%E8%B6%A3%EF%BC%9F/</link>
+        <link>http://localhost:1313/2019/11/23/%E6%8A%98%E7%BA%B8%E7%9A%84%E4%B9%90%E8%B6%A3%EF%BC%9F/</link>
         <pubDate>Sat, 23 Nov 2019 06:29:22 +0000</pubDate>
         
-        <guid>https://mooxiu.github.io/2019/11/23/%E6%8A%98%E7%BA%B8%E7%9A%84%E4%B9%90%E8%B6%A3%EF%BC%9F/</guid>
+        <guid>http://localhost:1313/2019/11/23/%E6%8A%98%E7%BA%B8%E7%9A%84%E4%B9%90%E8%B6%A3%EF%BC%9F/</guid>
         <description>&lt;p&gt;前几天参加公司的一个培训，日本那边的同事和中国这边的混合坐在一起分成几个小组，做一些活动之类。坐在我旁边的日本女生一直在无聊的时候折恐龙，我意识到这是一种非常优雅地表达自己玩世不恭的方式，但她本意是否如此我就不得而知了，至少她是一个做笔记和小组讨论极其认真的人。&lt;/p&gt;
 &lt;p&gt;数学上来说，折纸带给我一种维度极速扩张的体验。就像编曲中加入各种和声乐器，但折纸是一种成本更为低廉，速度更加迅猛，更加可感的体验方式。我觉得欧拉或者高斯一定是折纸高手。我维基百科了一下，发现果然有所谓「&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/wiki/%E6%91%BA%E7%B4%99%E6%95%B8%E5%AD%B8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;折纸数学&lt;/a&gt;」这种东西，上面说：&lt;/p&gt;
@@ -1382,10 +1708,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>爲什麽應當慎重擇業</title>
-        <link>https://mooxiu.github.io/2019/11/17/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BA%94%E5%BD%93%E6%85%8E%E9%87%8D%E6%8B%A9%E4%B8%9A/</link>
+        <link>http://localhost:1313/2019/11/17/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BA%94%E5%BD%93%E6%85%8E%E9%87%8D%E6%8B%A9%E4%B8%9A/</link>
         <pubDate>Sun, 17 Nov 2019 15:01:13 +0000</pubDate>
         
-        <guid>https://mooxiu.github.io/2019/11/17/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BA%94%E5%BD%93%E6%85%8E%E9%87%8D%E6%8B%A9%E4%B8%9A/</guid>
+        <guid>http://localhost:1313/2019/11/17/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BA%94%E5%BD%93%E6%85%8E%E9%87%8D%E6%8B%A9%E4%B8%9A/</guid>
         <description>&lt;p&gt;成为社会人以后，我对社畜境遇变得异常关注。最近在华尔街日报中文网读到一片名为「如何摆脱时刻待命的职场文化」的文章，里面推荐了四部相关电影：1992年的「大玩家 the Player」，2006年「穿普拉达的女王 The Devil Wears Prada」，2009年的「在云端 Up in the Air」和2018年的「牵线 Set it Up」。我在周末看了后面三部。尽管故事好坏参差不齐，但女主人公的境遇都相似：她们从事某个职业的原因都不是因为她们喜欢这个职业，而是因为她们希望通过这份工作实现什么别的东西。「在云端」女主选择当下工作是为了自己的男朋友，「穿普拉达的女王」和「牵线」的女主则是为了能自己写东西。问题的关键在于，正是因为她们从事了当前的职业，以至于她们和自己为了那个东西而从事这份职业的那个东西越走越远。&lt;/p&gt;
 &lt;p&gt;但神奇的是，她们没有一个人是因为收入高而从事当前的工作的。这里的困境和我周围的困境有所不同，如果你想要的是钱之外的事情，那困境就可能有转机，在老板前面数落他的人品并怒吼「我他妈不干了」才不会是无根之木。但此时此刻，这里很多劳工面临着的是多重困局：他们有家庭得养活，以及他们面临的是抽象的系统。&lt;/p&gt;
 &lt;p&gt;前者很好理解，电影里面那些人没有一个有丈夫有小孩，他们只需要养活自己，因此他们才可以在必要的时候选择流动。但选择流动并不代表你可以把咖啡倒在你老板的脸上，因为在某些公司，某些岗位之上，你从入职之日到你离职之时你的老板都未必知道有你这个人，反过来说，你甚至也不知道你的老板长什么样子，你可能在维基百科或是公司官网上见过这个人，但你连给他买咖啡的交集都没有。&lt;/p&gt;
@@ -1398,6 +1724,131 @@ $$&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;从这个意义上而言，只有行动的人才是真正活着的人；仅仅从事以物或事为中介的工作的生活，并非真正的生活。这几部电影的女主人公，无一例外地冲进了人群之中，他们必须不停与各种各样的人周旋，这也带给了他们尽管忙碌但真正的生活。她们收获了真实的感觉，获得了真实的经验，完成了自我的改变，同时，也在互动之中改变了她人，这也是故事从何发生。这就是为什么，备受尊敬的程序员很有可能是失去“行动”的，活着与否相当可疑的人群。而销售员，社工，记者这样的职业，才是会产生故事，拥有真实意义的人。&lt;/p&gt;
 &lt;p&gt;但这些都和是否需要长时间劳动没有关系，那是现代社会带来的另一个问题了。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>「算法4」笔记</title>
+        <link>http://localhost:1313/posts/2020-05-25-a-note-on-algrithms-4th-edition/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/posts/2020-05-25-a-note-on-algrithms-4th-edition/</guid>
+        <description>&lt;p&gt;这则笔记主要记录我在阅读「算法」（by Robert Sedgewick et Kevin Wayne）这本书时学到的基本的算法和思想。&lt;/p&gt;
+&lt;h4 id=&#34;第一章算法基础&#34;&gt;第一章：算法基础&lt;/h4&gt;
+&lt;p&gt;面向API编程的思维：先去考量这个程序将要实现什么API，然后分门别类写它的实现。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;三种数据结构：背包（bag），队列（queue）（包括双向队列），栈（stack）。分别用数组（array）和链表（linked list）实现。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;算法分析：能够分析算法的时间复杂度。（当然这个我以前就会，因此不再赘述）&lt;/p&gt;
+&lt;p&gt;具体问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;binomial distribution： 伯努利分布（二项分布）的递归和递推&lt;/li&gt;
+&lt;li&gt;Binary Search： 时间复杂度为(lg N) 的一种查找方式，前提是数列本身是有序的。&lt;/li&gt;
+&lt;li&gt;fibonacci Search： 一种只用加减的查找方式，二分查找的一种变体。&lt;/li&gt;
+&lt;li&gt;Welford 算法： 一种求方差的one-pass 算法，可以实现空间复杂度仅为(O(1)) 。因为精度的缘故，数学上普通的方差计算方式极有可能得到相当离谱的方差结果。&lt;/li&gt;
+&lt;li&gt;Dijkstra 双栈算数表达式求和：非常经典的算法。双栈模型可以用于各种问题的解决，并且本身也可以做到相当多的事情：比如仅用递归函数，用双栈对其中一个栈进行逆序。&lt;/li&gt;
+&lt;li&gt;2-sum：是解决3-sum的基础。一般而言比较优秀的算法是首先进行快排，接着进行遍历+二分查找。这样可以让时间复杂度变为(O(N lg N))。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;第二章排序&#34;&gt;第二章：排序&lt;/h4&gt;
+&lt;p&gt;初级排序算法：选择排序(Select Sort)， 插入排序(Insertion Sort)，希尔排序(Shell Sort)。我将Shell Sort看作是Insetion Sort的一种特别形式。这三种算法中，尽管Select是最慢的（因为无法利用最初输入的顺序），但它所需要的空间是最小的。&lt;/p&gt;
+&lt;p&gt;归并排序（Merge Sort）（我总是不记得到底是「归并」还是「并归」）：一种分治（divide-and-conquer）思想的排序算法。事实上分成两个部分，一个部分是一个递归的sort函数，另一个是将sort的两部分merge起来的函数。是一种渐进最优的排序算法，时间是(N lg N)级别的。&lt;/p&gt;
+&lt;p&gt;快速排序（Quick Sort）：Merge排序依然需要一个辅助的队列auxiliay。但快速排序则是将时间最短和空间小这两个优点结合了起来。它同样其实也是两个部分，一个是一个递归的Sort函数，另一个是寻找切分点的partition函数。但它的问题是比较脆弱。&lt;br&gt;
+脆弱来源于何处：比如在选取分割点的时候，如果每次取得用于分割的元素恰好位于最小或者最大值，这样性能就比较低劣。因为在快排的时候一定要事先进行Shuffle使得数组处于乱序。这样平均之下更容易取到恰好中间分割的数字。（引申出了我一个问题：如何最快取得一个数组的中位数？如何one-pass地获取一个stream的中位数列？）&lt;br&gt;
+处理含有大量重复元素时：三向切分是更有效的方式。&lt;br&gt;
+&lt;strong&gt;重点： 切分的写法。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;优先队列（Priority Queues）：事实上是一种部分排序的数据模型。比如当计算机给各种应用分配资源时，看重的是最重要的若干个程序的资源，因此实际上我们只要能够找出有限个的最大值就可。&lt;br&gt;
+它支持两种操作：delMax（删除最大元素）， 以及 insert（插入元素）。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;为了实现优先队列，这里提到了一种新的数据结构，这里提到了新的数据结构：二叉堆（binary heap）（或者简称「堆」）。但事实上，它仍然是一个数组，it’s all about imagination。这些数组可以被想象成树状结构，因此我们在删除最大元素和插入元素时可以以(O(lgN))的时间复杂度完成它。&lt;/p&gt;
+&lt;p&gt;但这本书截至介绍二叉堆时，其实并没有介绍二叉树（？）。关于二叉树（Binary tree），完全二叉树（Complete Binary Tree）的东西：&lt;a class=&#34;link&#34; href=&#34;https://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/trees.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CMU的课件&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;我对于优先队列的认知是，能够在输入数据的同时对数据加以排序。&lt;/p&gt;
+&lt;p&gt;索引优先队列：为了方便引用优先队列中的元素，在优先队列上，给每个元素做了索引。实现了更多的几个方法。&lt;/p&gt;
+&lt;p&gt;堆排序（HeapSort）： 唯一能够同时最优利用空间和时间的方法。但是现代应用程序当中排序主要还是利用快排，之所以如此是因为堆排序无法利用缓存。&lt;/p&gt;
+&lt;p&gt;具体问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;哨兵（Sentinel）：关于排序时的边界条件确认。&lt;/li&gt;
+&lt;li&gt;Binary Heap：sink（）和swim（）的思想和写法。&lt;/li&gt;
+&lt;li&gt;中位数：寻找第k个元素，如果k较小或者较大，利用优先队列，或者快排即可。但如果k与总元素成比例（比如中位数），则使用快排中partition的思维去找。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;第三章查找&#34;&gt;第三章：查找&lt;/h4&gt;
+&lt;p&gt;符号表（Symbol Table）：将键与值联系起来。&lt;/p&gt;
+&lt;p&gt;大哉问：Dictionary， Map 还有 Table这三个的区别是什么？&lt;/p&gt;
+&lt;p&gt;支持的操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;插入（put）：将新的一组键值对存入表中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查找（get）：根据所给的键得到相应的值。&lt;/p&gt;
+&lt;p&gt;在&lt;!-- raw HTML omitted --&gt;计算机科学&lt;!-- raw HTML omitted --&gt;中，&lt;!-- raw HTML omitted --&gt;符号表&lt;!-- raw HTML omitted --&gt;是一种用于语言翻译器（例如&lt;!-- raw HTML omitted --&gt;编译器&lt;!-- raw HTML omitted --&gt;和&lt;!-- raw HTML omitted --&gt;解释器&lt;!-- raw HTML omitted --&gt;）中的数据结构。在符号表中，程序&lt;!-- raw HTML omitted --&gt;源代码&lt;!-- raw HTML omitted --&gt;中的每个标识符都和它的声明或使用信息绑定在一起，比如其&lt;!-- raw HTML omitted --&gt;数据类型&lt;!-- raw HTML omitted --&gt;、&lt;!-- raw HTML omitted --&gt;作用域&lt;!-- raw HTML omitted --&gt;以及&lt;!-- raw HTML omitted --&gt;内存地址&lt;!-- raw HTML omitted --&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;符号表的实现方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LinkedList: 最基础的实现方式（但依然要注意delete方法的递归实现）。但在put方法的实现上，查找方式上又可以分为顺序查找和二分查找。&lt;br&gt;
+– SequentialSearchST&lt;br&gt;
+-BinarySeacrhST&lt;/li&gt;
+&lt;li&gt;BinarySearchTrees: 二叉查找树。二叉查找树的结构为，对于一个Node来说，左肢的所有Node的key都要小于它，而右肢的所有Node都要大于它。这样一种可以左右选择的结构可以方便使用二分查找。而树状的结构又有利于将时间限于对数范围。&lt;br&gt;
+但插入的顺序不同，树的结构未必会是我们期待的，往完全树（complete tree）靠近的结构（这样可以使得高度(height)最短）。因此时间依然是随机的。&lt;br&gt;
+考虑到根节点正好将整个树二分（左边的都小于它(comparable意义而言的)，右边都大于它），我们会发现「二叉查找树和快速排序几乎就是『双胞胎』」。&lt;br&gt;
+在书中，对于这种数据结构的介绍中，主要用递归的方式进行实现（尽管这并非是效率最高的实现方式，但是理解上最容易）。但依然不那么容易理解，特别是比如delete()方法的实现。&lt;/li&gt;
+&lt;li&gt;BinancedSearchTree: 平衡查找树: 二叉查找树在随机插入的时候很好，但是最坏的情况依然可能发生，那就是在插入的时候已经按照从大到小或者从小到大的顺序插入。那么树的形状将是一条斜线。这样一来，查找的时间又会回到(O(N)) .为了解决这个问题，因此引入了平衡查找树。有一些说法叫它「平衡二叉查找树」。平衡查找树应当描述的是一系列平衡二叉树的实践：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;平衡查找树（2-3树）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2-3树：
+&lt;ul&gt;
+&lt;li&gt;2- 结点：一个key，两个link，左link都小于它，右link指向都大于它&lt;/li&gt;
+&lt;li&gt;3- 结点： 两个key，三条link， 左link小于它，右link都大于它，中link在两个key之间&lt;/li&gt;
+&lt;li&gt;完美平衡：所有末端的空链到达root的距离相同&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2-3树的插入：
+&lt;ul&gt;
+&lt;li&gt;如果搜索结束于一个2-结点时，将这个2-结点加上这个新的元素变成3-结点即可。&lt;/li&gt;
+&lt;li&gt;如果搜索结束于一个3-结点：
+&lt;ul&gt;
+&lt;li&gt;只有一个3-结点的树：先临时变为一个4-结点的树，再转换为3个2-结点组成的2-3树：&lt;/li&gt;
+&lt;li&gt;父节点为2-结点的3-结点中插入&lt;/li&gt;
+&lt;li&gt;父节点为3-结点的3-结点中插入&lt;/li&gt;
+&lt;li&gt;根结点的分解&lt;/li&gt;
+&lt;li&gt;一般的二叉树的建立是从上到下（根结点开始），而2-3树的生长是从下到上的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;红黑二叉树（Red–black tree）:&lt;/p&gt;
+&lt;h4 id=&#34;第四章图&#34;&gt;第四章：图&lt;/h4&gt;
+&lt;p&gt;最短路径：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不含环，负边的加权无向图：DijkstraSP 算法。
+&lt;ul&gt;
+&lt;li&gt;关键步骤：放松（relax）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;加权有向环：AcyclicSP 算法——按照拓扑顺序放松，会比Dijkstra算法更快&lt;/li&gt;
+&lt;li&gt;最长算法：
+&lt;ul&gt;
+&lt;li&gt;用于优先限制下的并行任务调度CriticalPathMethod：一个运筹学问题&lt;/li&gt;
+&lt;li&gt;如果加上最后期限，问题转换称为一个有环，负边，的有向图最短路径问题：但需要注意，如果含有负权重的环，那这样的最短路径是没有意义的。仅研究任意点都不存在负权重环当中的最短路径：Bellman-Ford算法&lt;/li&gt;
+&lt;li&gt;套汇——负权重环的检测&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;第五章字符串&#34;&gt;第五章：字符串&lt;/h4&gt;
+&lt;p&gt;字符串排序：利用字符串的特殊性质将字符串键排序，或许比通用的排序算法效率更高。&lt;/p&gt;
+&lt;p&gt;两种字符串排序方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;least-significant-digit (LSD) string sorts: 低位优先排序。从右到左检查字符。&lt;/li&gt;
+&lt;li&gt;most-significant-digit (MSD) string sorts: 从左到右，先检查最高位的——和快速排序类似。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;作为基础，我们首先看的是一种叫做Key-indexed counting（键索引计数法），它分为四步:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Compute frequency counts：计算每个键出现的频率&lt;/li&gt;
+&lt;li&gt;Transform frequency to indices：频率转换成索引，知道每一个键值最开始所在的位置（顺序）&lt;/li&gt;
+&lt;li&gt;Distribute the data: 生成一个辅助数列，进行排序&lt;/li&gt;
+&lt;li&gt;Copy Back&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;LSD string sort:&lt;/p&gt;
+&lt;p&gt;首先复习什么是DeDup–&amp;gt; Data Deduplication.&lt;/p&gt;
 </description>
         </item>
         
