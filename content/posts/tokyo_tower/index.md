@@ -33,7 +33,7 @@ categories:
 
 刚刚Spotify又给我推送了上面那张专辑，于是我搜索了一番，果然也是垃圾处理工厂，根据描述，这座江户垃圾处理工厂由于改建已经在前年解体，新的塔要在令和九年才能完成：
 
-[](https://twitter.com/kosuke11momo){{<twitter 1352632118304600066>}}
+[](https://twitter.com/kosuke11momo){{<twitter user="kosuke11momo" id= "1352632118304600066">}}
 
 
 
