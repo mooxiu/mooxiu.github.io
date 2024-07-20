@@ -15,12 +15,17 @@
         <description>&lt;p&gt;The problem of VIPT(Virtual Indexed Physical Tagged) cache is that multiple virtual addresses can be mapped to the same physical address. This is not a problem for physical indexed and physical tagged cache (AKA, the standard practice), but for VIPT, the virtual address can fetch memory blocks to different caches, once a cache has been written, there&amp;rsquo;s a problem of inconsistency, whcih is so-called &amp;ldquo;aliasing&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;To prevent it, we can make those virtual addresses mapped to the same cache. Let&amp;rsquo;s check a virtual address:&lt;/p&gt;
 &lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 480; 
+			flex-basis: 1152px&#34;
 	&gt;
-	&lt;a href=&#34;https://mooxiu.github.io/vm.png&#34; &gt;
-		&lt;img src=&#34;https://mooxiu.github.io/vm.png&#34;
-			
-			
-			
+	&lt;a href=&#34;https://mooxiu.github.io/posts/vipt/vm.png&#34; data-size=&#34;970x202&#34;&gt;
+		&lt;img src=&#34;https://mooxiu.github.io/posts/vipt/vm.png&#34;
+			width=&#34;970&#34;
+			height=&#34;202&#34;
+			srcset=&#34;https://mooxiu.github.io/posts/vipt/vm_hue4676f3e7c775d3475b3ac396e75abab_25763_480x0_resize_box_3.png 480w, https://mooxiu.github.io/posts/vipt/vm_hue4676f3e7c775d3475b3ac396e75abab_25763_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;virtual memory&#34;&gt;
 	&lt;/a&gt;
