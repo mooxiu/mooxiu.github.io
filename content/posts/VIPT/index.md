@@ -1,7 +1,6 @@
 ---
 title: "How to avoid aliasing in Virtual Indexed Physical Tagged"
 date: 2024-07-20T17:44:00+09:00
-draft: true
 tags: 
     - Virtual Memory
     - TLB
