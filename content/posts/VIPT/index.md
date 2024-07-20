@@ -13,7 +13,7 @@ The problem of VIPT(Virtual Indexed Physical Tagged) cache is that multiple virt
 
 To prevent it, we can make those virtual addresses mapped to the same cache. Let's check a virtual address:
 
-![virtual memory](./virtual%20memory.png)
+![virtual memory](./vm.png)
 
 From the perspective of virtual memory to physical memory translation (top side of the image): 
 
