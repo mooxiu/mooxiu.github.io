@@ -2,24 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on New River, New Water</title>
-    <link>http://localhost:1313/tags/golang/</link>
+    <link>https://mooxiu.github.io/tags/golang/</link>
     <description>Recent content in Golang on New River, New Water</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Feb 2022 11:33:10 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/golang/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Memo: Data Structure Tree</title>
-      <link>http://localhost:1313/posts/data_structure_tree/</link>
-      <pubDate>Thu, 03 Feb 2022 11:33:10 +0800</pubDate>
-      <guid>http://localhost:1313/posts/data_structure_tree/</guid>
-      <description>This is a memo about Tree structure. When dealing with Tree related problems in Leetcode, I try to write concise and clear code.&#xA;Define the Structure For a node in a tree, it can be described as :&#xA;type TreeNode struct { Val int Left *TreeNode Right *TreeNode } Traversal There are 3 fundamental types of traversal. They are Pre-Order Traversal, In-Order Traversal, and Post-Order Traversal. Order is to describe the ranking of root node.</description>
-    </item>
+    <lastBuildDate>Fri, 10 Dec 2021 00:01:30 +0800</lastBuildDate>
+    <atom:link href="https://mooxiu.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go的双向链表</title>
-      <link>http://localhost:1313/posts/golang_double_linked_list/</link>
+      <link>https://mooxiu.github.io/posts/golang_double_linked_list/</link>
       <pubDate>Fri, 10 Dec 2021 00:01:30 +0800</pubDate>
-      <guid>http://localhost:1313/posts/golang_double_linked_list/</guid>
+      <guid>https://mooxiu.github.io/posts/golang_double_linked_list/</guid>
       <description>Although list has rarely been used in Go (Just about always when you are thinking of a list - use a slice instead in Go), there is an official implementation in the standard library. After reading the implementation (go standard package: src/container/list/list.go), I found it very inspiring.&#xA;The Node Basically, it first defines Node, which is referred to as Element in the standard package:&#xA;type Element struct { prev, next Element list *List Value interface{} } It is actually a structure we create a lot when solving linked list problems in websites like LeetCode.</description>
     </item>
   </channel>

@@ -2,101 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on New River, New Water</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://mooxiu.github.io/categories/</link>
     <description>Recent content in Categories on New River, New Water</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Jun 2024 18:26:57 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mooxiu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>杂谈</title>
-      <link>http://localhost:1313/categories/%E6%9D%82%E8%B0%88/</link>
+      <link>https://mooxiu.github.io/categories/%E6%9D%82%E8%B0%88/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/%E6%9D%82%E8%B0%88/</guid>
+      <guid>https://mooxiu.github.io/categories/%E6%9D%82%E8%B0%88/</guid>
       <description></description>
     </item>
     <item>
       <title>日记</title>
-      <link>http://localhost:1313/categories/%E6%97%A5%E8%AE%B0/</link>
+      <link>https://mooxiu.github.io/categories/%E6%97%A5%E8%AE%B0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/%E6%97%A5%E8%AE%B0/</guid>
+      <guid>https://mooxiu.github.io/categories/%E6%97%A5%E8%AE%B0/</guid>
       <description></description>
     </item>
     <item>
       <title>日常</title>
-      <link>http://localhost:1313/categories/%E6%97%A5%E5%B8%B8/</link>
+      <link>https://mooxiu.github.io/categories/%E6%97%A5%E5%B8%B8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/%E6%97%A5%E5%B8%B8/</guid>
+      <guid>https://mooxiu.github.io/categories/%E6%97%A5%E5%B8%B8/</guid>
       <description></description>
     </item>
     <item>
       <title>Life</title>
-      <link>http://localhost:1313/categories/life/</link>
+      <link>https://mooxiu.github.io/categories/life/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/life/</guid>
+      <guid>https://mooxiu.github.io/categories/life/</guid>
       <description></description>
     </item>
     <item>
       <title>冗谈</title>
-      <link>http://localhost:1313/categories/%E5%86%97%E8%B0%88/</link>
+      <link>https://mooxiu.github.io/categories/%E5%86%97%E8%B0%88/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/%E5%86%97%E8%B0%88/</guid>
+      <guid>https://mooxiu.github.io/categories/%E5%86%97%E8%B0%88/</guid>
       <description></description>
     </item>
     <item>
       <title>空谈</title>
-      <link>http://localhost:1313/categories/%E7%A9%BA%E8%B0%88/</link>
+      <link>https://mooxiu.github.io/categories/%E7%A9%BA%E8%B0%88/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/%E7%A9%BA%E8%B0%88/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cate</title>
-      <link>http://localhost:1313/categories/cate/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/cate/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Programming</title>
-      <link>http://localhost:1313/categories/programming/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/programming/</guid>
+      <guid>https://mooxiu.github.io/categories/%E7%A9%BA%E8%B0%88/</guid>
       <description></description>
     </item>
     <item>
       <title>Music</title>
-      <link>http://localhost:1313/categories/music/</link>
+      <link>https://mooxiu.github.io/categories/music/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/music/</guid>
+      <guid>https://mooxiu.github.io/categories/music/</guid>
       <description></description>
     </item>
     <item>
       <title>工具</title>
-      <link>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7/</link>
+      <link>https://mooxiu.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7/</guid>
+      <guid>https://mooxiu.github.io/categories/%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>https://mooxiu.github.io/categories/programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mooxiu.github.io/categories/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>笔记</title>
-      <link>http://localhost:1313/categories/%E7%AC%94%E8%AE%B0/</link>
+      <link>https://mooxiu.github.io/categories/%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://mooxiu.github.io/categories/%E7%AC%94%E8%AE%B0/</guid>
       <description></description>
     </item>
     <item>
       <title>Review</title>
-      <link>http://localhost:1313/categories/review/</link>
+      <link>https://mooxiu.github.io/categories/review/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/review/</guid>
+      <guid>https://mooxiu.github.io/categories/review/</guid>
       <description></description>
     </item>
     <item>
       <title>语言</title>
-      <link>http://localhost:1313/categories/%E8%AF%AD%E8%A8%80/</link>
+      <link>https://mooxiu.github.io/categories/%E8%AF%AD%E8%A8%80/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/%E8%AF%AD%E8%A8%80/</guid>
+      <guid>https://mooxiu.github.io/categories/%E8%AF%AD%E8%A8%80/</guid>
       <description></description>
     </item>
   </channel>
