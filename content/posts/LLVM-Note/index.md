@@ -1,7 +1,6 @@
 ---
 title: "My note on LLVM"
 date: 2024-08-21T22:06:42+09:00
-draft: true
 tags: 
     - Compiler
     - LLVM
