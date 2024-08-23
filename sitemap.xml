@@ -2,25 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mooxiu.github.io/categories/</loc>
+    <lastmod>2024-08-21T22:06:42+09:00</lastmod>
+  </url><url>
+    <loc>https://mooxiu.github.io/tags/compiler/</loc>
+    <lastmod>2024-08-21T22:06:42+09:00</lastmod>
+  </url><url>
+    <loc>https://mooxiu.github.io/categories/computer-science/</loc>
+    <lastmod>2024-08-21T22:06:42+09:00</lastmod>
+  </url><url>
+    <loc>https://mooxiu.github.io/tags/llvm/</loc>
+    <lastmod>2024-08-21T22:06:42+09:00</lastmod>
+  </url><url>
+    <loc>https://mooxiu.github.io/posts/llvm-note/</loc>
+    <lastmod>2024-08-21T22:06:42+09:00</lastmod>
+  </url><url>
     <loc>https://mooxiu.github.io/</loc>
+    <lastmod>2024-08-21T22:06:42+09:00</lastmod>
+  </url><url>
+    <loc>https://mooxiu.github.io/categories/note/</loc>
     <lastmod>2024-08-21T22:06:42+09:00</lastmod>
   </url><url>
     <loc>https://mooxiu.github.io/posts/</loc>
     <lastmod>2024-08-21T22:06:42+09:00</lastmod>
   </url><url>
+    <loc>https://mooxiu.github.io/tags/</loc>
+    <lastmod>2024-08-21T22:06:42+09:00</lastmod>
+  </url><url>
     <loc>https://mooxiu.github.io/tags/cache/</loc>
     <lastmod>2024-07-20T17:44:00+09:00</lastmod>
   </url><url>
-    <loc>https://mooxiu.github.io/categories/</loc>
-    <lastmod>2024-07-20T17:44:00+09:00</lastmod>
-  </url><url>
-    <loc>https://mooxiu.github.io/categories/computer-science/</loc>
-    <lastmod>2024-07-20T17:44:00+09:00</lastmod>
-  </url><url>
     <loc>https://mooxiu.github.io/posts/vipt/</loc>
-    <lastmod>2024-07-20T17:44:00+09:00</lastmod>
-  </url><url>
-    <loc>https://mooxiu.github.io/tags/</loc>
     <lastmod>2024-07-20T17:44:00+09:00</lastmod>
   </url><url>
     <loc>https://mooxiu.github.io/tags/tlb/</loc>

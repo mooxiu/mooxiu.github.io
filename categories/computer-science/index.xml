@@ -6,8 +6,15 @@
     <description>Recent content in Computer Science on New River, New Water</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Jul 2024 17:44:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 21 Aug 2024 22:06:42 +0900</lastBuildDate>
     <atom:link href="https://mooxiu.github.io/categories/computer-science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My note on LLVM</title>
+      <link>https://mooxiu.github.io/posts/llvm-note/</link>
+      <pubDate>Wed, 21 Aug 2024 22:06:42 +0900</pubDate>
+      <guid>https://mooxiu.github.io/posts/llvm-note/</guid>
+      <description>This is my note for This LLVM Talk. This is a very beginning level note.&#xA;Code LLVM monorepo: Now the single source of truth is now in github. Subdirectories: Each one is a sub project. The most famous one is llvm-project/clang (the &amp;ldquo;core&amp;rdquo;)(front-end for C/C++/Cuda, etc)(what is front-end) Building: default building is debug build, and very slow More on /GettingStarted.html Compilers file.cpp -&amp;gt; Clang AST -&amp;gt; LLVM IR -&amp;gt; Selection DAG -&amp;gt; LLVM MIR -&amp;gt; Machine Code Compiler LLVM-IR C to LLVM IR LLVM IR Hierarchy Module GlobalVariable Function BasicBlock Instruction ICmpInst BranchInst assembly-like language always in SSA-from with infinite registers What is SSA: Static Single-assignment form In compiler design, static single assignment form (often abbreviated as SSA form or simply SSA) is a type of intermediate representation (IR) where each variable is assigned exactly once.</description>
+    </item>
     <item>
       <title>How to avoid aliasing in Virtual Indexed Physical Tagged</title>
       <link>https://mooxiu.github.io/posts/vipt/</link>

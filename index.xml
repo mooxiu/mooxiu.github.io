@@ -7,6 +7,199 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Wed, 21 Aug 2024 22:06:42 +0900</lastBuildDate><atom:link href="https://mooxiu.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>My note on LLVM</title>
+        <link>https://mooxiu.github.io/posts/llvm-note/</link>
+        <pubDate>Wed, 21 Aug 2024 22:06:42 +0900</pubDate>
+        
+        <guid>https://mooxiu.github.io/posts/llvm-note/</guid>
+        <description>&lt;p&gt;This is my note for &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=J5xExRGaIIY&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;This LLVM Talk&lt;/a&gt;. This is a very beginning level note.&lt;/p&gt;
+&lt;h2 id=&#34;code&#34;&gt;Code&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;LLVM monorepo: Now the &lt;a class=&#34;link&#34; href=&#34;https://github.com/llvm/llvm-project&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;single source of truth&lt;/a&gt; is now in github.&lt;/li&gt;
+&lt;li&gt;Subdirectories:
+&lt;ul&gt;
+&lt;li&gt;Each one is a sub project.&lt;/li&gt;
+&lt;li&gt;The most famous one is &lt;code&gt;llvm-project/clang&lt;/code&gt; (the &amp;ldquo;core&amp;rdquo;)(front-end for C/C++/Cuda, etc)(what is front-end)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Building: default building is debug build, and very slow
+&lt;ul&gt;
+&lt;li&gt;More on /GettingStarted.html&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;compilers&#34;&gt;Compilers&lt;/h2&gt;
+&lt;p&gt;file.cpp -&amp;gt; Clang AST -&amp;gt; LLVM IR -&amp;gt; Selection DAG -&amp;gt; LLVM MIR -&amp;gt; Machine Code
+&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 210; 
+			flex-basis: 506px&#34;
+	&gt;
+	&lt;a href=&#34;https://mooxiu.github.io/posts/llvm-note/compiler.jpg&#34; data-size=&#34;1944x922&#34;&gt;
+		&lt;img src=&#34;https://mooxiu.github.io/posts/llvm-note/compiler.jpg&#34;
+			width=&#34;1944&#34;
+			height=&#34;922&#34;
+			srcset=&#34;https://mooxiu.github.io/posts/llvm-note/compiler_hu512b0ef0b563c93d5d610ae4bebe448a_147968_480x0_resize_q75_box.jpg 480w, https://mooxiu.github.io/posts/llvm-note/compiler_hu512b0ef0b563c93d5d610ae4bebe448a_147968_1024x0_resize_q75_box.jpg 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;Compiler&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Compiler&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;LLVM-IR
+&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 174; 
+			flex-basis: 419px&#34;
+	&gt;
+	&lt;a href=&#34;https://mooxiu.github.io/posts/llvm-note/image.png&#34; data-size=&#34;1338x766&#34;&gt;
+		&lt;img src=&#34;https://mooxiu.github.io/posts/llvm-note/image.png&#34;
+			width=&#34;1338&#34;
+			height=&#34;766&#34;
+			srcset=&#34;https://mooxiu.github.io/posts/llvm-note/image_hu77209d960b755833220c9a287744c530_623100_480x0_resize_box_3.png 480w, https://mooxiu.github.io/posts/llvm-note/image_hu77209d960b755833220c9a287744c530_623100_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;C to LLVM IR&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;C to LLVM IR&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LLVM IR Hierarchy
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Module
+    GlobalVariable
+    Function
+        BasicBlock
+            Instruction
+                ICmpInst
+                BranchInst
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;assembly-like language always in SSA-from with infinite registers
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Static_single-assignment_form&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;What is SSA: Static Single-assignment form&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In compiler design, static single assignment form (often abbreviated as SSA form or simply SSA) is a type of intermediate representation (IR) where each variable is assigned exactly once. SSA is used in most high-quality optimizing compilers for imperative languages, including LLVM, the GNU Compiler Collection, and many commercial compilers.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 92; 
+			flex-basis: 223px&#34;
+	&gt;
+	&lt;a href=&#34;https://mooxiu.github.io/posts/llvm-note/image-1.png&#34; data-size=&#34;796x856&#34;&gt;
+		&lt;img src=&#34;https://mooxiu.github.io/posts/llvm-note/image-1.png&#34;
+			width=&#34;796&#34;
+			height=&#34;856&#34;
+			srcset=&#34;https://mooxiu.github.io/posts/llvm-note/image-1_hu98f7651168f2733b7ed281e735151780_110392_480x0_resize_box_3.png 480w, https://mooxiu.github.io/posts/llvm-note/image-1_hu98f7651168f2733b7ed281e735151780_110392_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;alt text&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;alt text&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Target and Code Generation
+&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 199; 
+			flex-basis: 478px&#34;
+	&gt;
+	&lt;a href=&#34;https://mooxiu.github.io/posts/llvm-note/image-2.png&#34; data-size=&#34;1232x618&#34;&gt;
+		&lt;img src=&#34;https://mooxiu.github.io/posts/llvm-note/image-2.png&#34;
+			width=&#34;1232&#34;
+			height=&#34;618&#34;
+			srcset=&#34;https://mooxiu.github.io/posts/llvm-note/image-2_hub26abf708cf1b9f6223c5e7b9380e37f_279041_480x0_resize_box_3.png 480w, https://mooxiu.github.io/posts/llvm-note/image-2_hub26abf708cf1b9f6223c5e7b9380e37f_279041_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;Tasks&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Tasks&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Target
+&lt;ul&gt;
+&lt;li&gt;target means architecture the code is generated for: x86, ARM, powerPC etc.&lt;/li&gt;
+&lt;li&gt;SubTarget
+&lt;ul&gt;
+&lt;li&gt;Module level&lt;/li&gt;
+&lt;li&gt;Can choose only generate subtarget&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Machine IR (MIR)
+&lt;ul&gt;
+&lt;li&gt;They are target dependent&lt;/li&gt;
+&lt;li&gt;produced out of llc program
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://llvm.org/docs/CommandGuide/llc.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;What is llc program&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The llc command compiles LLVM source inputs into assembly language for a specified architecture. The assembly language output can then be passed through a native assembler and linker to generate a native executable.The choice of architecture for the output assembly code is automatically determined from the input file, unless the -march option is used to override the default.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Instruction Selection and Register Allocation
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Instruction_selection&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;What is Instruction Selection&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In computer science, instruction selection is the stage of a compiler backend that transforms its middle-level intermediate representation (IR) into a low-level IR.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;We have 3 instruction selectors
+&lt;ul&gt;
+&lt;li&gt;SelectionDAG&lt;/li&gt;
+&lt;li&gt;FastISel&lt;/li&gt;
+&lt;li&gt;GlobalISel&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;If you like my article and want to donate, click the &lt;a class=&#34;link&#34; href=&#34;https://mooxiu.github.io/donate/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;捐赠 Donation&lt;/a&gt; button on the sidebar.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>How to avoid aliasing in Virtual Indexed Physical Tagged</title>
         <link>https://mooxiu.github.io/posts/vipt/</link>
         <pubDate>Sat, 20 Jul 2024 17:44:00 +0900</pubDate>
