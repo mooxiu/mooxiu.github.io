@@ -126,7 +126,3 @@ A valid BST should satisfy following requirements:
 
 - 
 
-
----
-
-If you like my article and want to make a donation, you can click the [捐赠 Donation](https://mooxiu.github.io/donate/) button on the sidebar.
