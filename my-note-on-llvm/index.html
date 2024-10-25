@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" />
+<title>My note on LLVM | New River, New Water</title>
+<meta name="title" content="My note on LLVM" />
+<meta name="description" content="This is my note for This LLVM Talk. This is a very beginning level note.
+Code LLVM monorepo: Now the single source of truth is now in github. Subdirectories: Each one is a sub project. The most famous one is llvm-project/clang (the &ldquo;core&rdquo;)(front-end for C/C&#43;&#43;/Cuda, etc)(what is front-end) Building: default building is debug build, and very slow More on /GettingStarted.html Compilers file.cpp -&gt; Clang AST -&gt; LLVM IR -&gt; Selection DAG -&gt; LLVM MIR -&gt; Machine Code LLVM-IR LLVM IR Hierarchy Module GlobalVariable Function BasicBlock Instruction ICmpInst BranchInst assembly-like language always in SSA-from with infinite registers What is SSA: Static Single-assignment form In compiler design, static single assignment form (often abbreviated as SSA form or simply SSA) is a type of intermediate representation (IR) where each variable is assigned exactly once." />
+<meta name="keywords" content="Compiler,LLVM," />
+
+
+<meta property="og:url" content="http://localhost:1313/my-note-on-llvm/">
+  <meta property="og:site_name" content="New River, New Water">
+  <meta property="og:title" content="My note on LLVM">
+  <meta property="og:description" content="This is my note for This LLVM Talk. This is a very beginning level note.
+Code LLVM monorepo: Now the single source of truth is now in github. Subdirectories: Each one is a sub project. The most famous one is llvm-project/clang (the “core”)(front-end for C/C&#43;&#43;/Cuda, etc)(what is front-end) Building: default building is debug build, and very slow More on /GettingStarted.html Compilers file.cpp -&gt; Clang AST -&gt; LLVM IR -&gt; Selection DAG -&gt; LLVM MIR -&gt; Machine Code LLVM-IR LLVM IR Hierarchy Module GlobalVariable Function BasicBlock Instruction ICmpInst BranchInst assembly-like language always in SSA-from with infinite registers What is SSA: Static Single-assignment form In compiler design, static single assignment form (often abbreviated as SSA form or simply SSA) is a type of intermediate representation (IR) where each variable is assigned exactly once.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-08-21T22:06:42+09:00">
+    <meta property="article:modified_time" content="2024-08-21T22:06:42+09:00">
+    <meta property="article:tag" content="Compiler">
+    <meta property="article:tag" content="LLVM">
+    <meta property="og:image" content="http://localhost:1313/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/share.png">
+  <meta name="twitter:title" content="My note on LLVM">
+  <meta name="twitter:description" content="This is my note for This LLVM Talk. This is a very beginning level note.
+Code LLVM monorepo: Now the single source of truth is now in github. Subdirectories: Each one is a sub project. The most famous one is llvm-project/clang (the “core”)(front-end for C/C&#43;&#43;/Cuda, etc)(what is front-end) Building: default building is debug build, and very slow More on /GettingStarted.html Compilers file.cpp -&gt; Clang AST -&gt; LLVM IR -&gt; Selection DAG -&gt; LLVM MIR -&gt; Machine Code LLVM-IR LLVM IR Hierarchy Module GlobalVariable Function BasicBlock Instruction ICmpInst BranchInst assembly-like language always in SSA-from with infinite registers What is SSA: Static Single-assignment form In compiler design, static single assignment form (often abbreviated as SSA form or simply SSA) is a type of intermediate representation (IR) where each variable is assigned exactly once.">
+
+
+
+
+  <meta itemprop="name" content="My note on LLVM">
+  <meta itemprop="description" content="This is my note for This LLVM Talk. This is a very beginning level note.
+Code LLVM monorepo: Now the single source of truth is now in github. Subdirectories: Each one is a sub project. The most famous one is llvm-project/clang (the “core”)(front-end for C/C&#43;&#43;/Cuda, etc)(what is front-end) Building: default building is debug build, and very slow More on /GettingStarted.html Compilers file.cpp -&gt; Clang AST -&gt; LLVM IR -&gt; Selection DAG -&gt; LLVM MIR -&gt; Machine Code LLVM-IR LLVM IR Hierarchy Module GlobalVariable Function BasicBlock Instruction ICmpInst BranchInst assembly-like language always in SSA-from with infinite registers What is SSA: Static Single-assignment form In compiler design, static single assignment form (often abbreviated as SSA form or simply SSA) is a type of intermediate representation (IR) where each variable is assigned exactly once.">
+  <meta itemprop="datePublished" content="2024-08-21T22:06:42+09:00">
+  <meta itemprop="dateModified" content="2024-08-21T22:06:42+09:00">
+  <meta itemprop="wordCount" content="308">
+  <meta itemprop="image" content="http://localhost:1313/images/share.png">
+  <meta itemprop="keywords" content="Compiler,LLVM">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+  <script>
+    MathJax = {
+        tex: {
+            inlineMath: [
+                ['$', '$'],
+                ['\\(', '\\)'],
+            ],
+        },
+        svg: {
+            fontCache: 'global',
+        },
+    };
+</script>
+<script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script></head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>New River, New Water</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>My note on LLVM</h1>
+<p>
+  <i>
+    <time datetime='2024-08-21' pubdate>
+      21 Aug, 2024
+    </time>
+  </i>
+</p>
+
+<content>
+  <p>This is my note for <a href="https://www.youtube.com/watch?v=J5xExRGaIIY">This LLVM Talk</a>. This is a very beginning level note.</p>
+<h2 id="code">Code</h2>
+<ul>
+<li>LLVM monorepo: Now the <a href="https://github.com/llvm/llvm-project">single source of truth</a> is now in github.</li>
+<li>Subdirectories:
+<ul>
+<li>Each one is a sub project.</li>
+<li>The most famous one is <code>llvm-project/clang</code> (the &ldquo;core&rdquo;)(front-end for C/C++/Cuda, etc)(what is front-end)</li>
+</ul>
+</li>
+<li>Building: default building is debug build, and very slow
+<ul>
+<li>More on /GettingStarted.html</li>
+</ul>
+</li>
+</ul>
+<h2 id="compilers">Compilers</h2>
+<p>file.cpp -&gt; Clang AST -&gt; LLVM IR -&gt; Selection DAG -&gt; LLVM MIR -&gt; Machine Code
+<img src="compiler.jpg" alt="Compiler"></p>
+<ul>
+<li>
+<p>LLVM-IR
+<img src="image.png" alt="C to LLVM IR"></p>
+<ul>
+<li>LLVM IR Hierarchy
+<pre tabindex="0"><code>Module
+    GlobalVariable
+    Function
+        BasicBlock
+            Instruction
+                ICmpInst
+                BranchInst
+</code></pre></li>
+<li>assembly-like language always in SSA-from with infinite registers
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Static_single-assignment_form">What is SSA: Static Single-assignment form</a>
+<ul>
+<li>
+<blockquote>
+<p>In compiler design, static single assignment form (often abbreviated as SSA form or simply SSA) is a type of intermediate representation (IR) where each variable is assigned exactly once. SSA is used in most high-quality optimizing compilers for imperative languages, including LLVM, the GNU Compiler Collection, and many commercial compilers.</p>
+</blockquote>
+</li>
+<li><img src="image-1.png" alt="alt text"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Target and Code Generation
+<img src="image-2.png" alt="Tasks"></p>
+<ul>
+<li>Target
+<ul>
+<li>target means architecture the code is generated for: x86, ARM, powerPC etc.</li>
+<li>SubTarget
+<ul>
+<li>Module level</li>
+<li>Can choose only generate subtarget</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Machine IR (MIR)
+<ul>
+<li>They are target dependent</li>
+<li>produced out of llc program
+<ul>
+<li><a href="https://llvm.org/docs/CommandGuide/llc.html">What is llc program</a>
+<ul>
+<li>
+<blockquote>
+<p>The llc command compiles LLVM source inputs into assembly language for a specified architecture. The assembly language output can then be passed through a native assembler and linker to generate a native executable.The choice of architecture for the output assembly code is automatically determined from the input file, unless the -march option is used to override the default.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Instruction Selection and Register Allocation
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Instruction_selection">What is Instruction Selection</a>
+<ul>
+<li>
+<blockquote>
+<p>In computer science, instruction selection is the stage of a compiler backend that transforms its middle-level intermediate representation (IR) into a low-level IR.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>We have 3 instruction selectors
+<ul>
+<li>SelectionDAG</li>
+<li>FastISel</li>
+<li>GlobalISel</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>If you like my article and want to donate, click the <a href="https://mooxiu.github.io/donate/">捐赠 Donation</a> button on the sidebar.</p>
+
+</content>
+<p>
+  
+  <a href="http://localhost:1313/blog/compiler/">#Compiler</a>
+  
+  <a href="http://localhost:1313/blog/llvm/">#LLVM</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

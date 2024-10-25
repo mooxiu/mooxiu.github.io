@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>笔记 on New River, New Water</title>
+    <link>http://localhost:1313/categories/%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 笔记 on New River, New Water</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2024, haruka hsiao.</copyright>
+    <lastBuildDate>Mon, 04 Oct 2021 18:38:25 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Juicy Steak, Finally</title>
+      <link>http://localhost:1313/juicy-steak-finally/</link>
+      <pubDate>Mon, 04 Oct 2021 18:38:25 +0800</pubDate>
+      <guid>http://localhost:1313/juicy-steak-finally/</guid>
+      <description>连续几个周末，因为减肥的需求，有时候我依靠牛排来度过一餐晚饭。在我的记忆中，我在日本的时候可以做出很好吃的牛排，但前几个星期我做出的牛排又老又柴，不能说难以下咽，但也着实不符合我心目中自己的水准。&#xA;黄油，迷迭香这些配料我应有尽有，但总感觉是错了什么步骤，直到昨天看了名厨Gorden Ramsay的几个视频(比如 厨神戈登·拉姆齐教你：在家烹饪出完美牛排的10大要点， 还有 地狱厨神戈登拉姆齐：如何煎出完美牛排)我才明白自己究竟犯了什么错误：&#xA;牛排不要洗，而是用厨房纸巾把牛排表面解冻的血水吸干（这是我自己总结出来的，但在知乎上似乎有一些争论） 在砧板上用手撒盐，牛排在表面滚动充分吸收盐分 放入锅的瞬间要用手将牛排摆在锅里，并且按实使得牛肉与油锅充分接触 煎牛排的时候先只用油煎，大蒜和迷迭香要在几乎两面都煎好之后放 黄油要在起锅之前最后放，然后用勺子舀起黄油泼在牛排上（这样才有充分的黄油香味） 如果不是用刀叉吃而是用筷子吃的话，摆盘前应当先切片（这当然也是我的经验） 仅仅是遵循了上述的步骤，今天做出的牛排就远胜前几次。&#xA;If you like my article and want to make a donation, you can click the 捐赠 Donation button on the side bar.</description>
+    </item>
+    <item>
+      <title>双系统升级Win10 20H1的时候Linux引导失效修理</title>
+      <link>http://localhost:1313/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%8D%87%E7%BA%A7win10-20h1%E7%9A%84%E6%97%B6%E5%80%99linux%E5%BC%95%E5%AF%BC%E5%A4%B1%E6%95%88%E4%BF%AE%E7%90%86/</link>
+      <pubDate>Mon, 26 Jul 2021 10:06:18 +0800</pubDate>
+      <guid>http://localhost:1313/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%8D%87%E7%BA%A7win10-20h1%E7%9A%84%E6%97%B6%E5%80%99linux%E5%BC%95%E5%AF%BC%E5%A4%B1%E6%95%88%E4%BF%AE%E7%90%86/</guid>
+      <description>The Situation Dual boot: Win10 and Manjaro Linux.&#xA;When trying to update Win10 to the latest Win10 20H version, after rebooting my system, it did not enter the booting interface, rather it says:&#xA;Unknown filesystem, entering rescue mod&#xA;First Try After searching the internet, I find this video shows the same problem.&#xA;However, after I ls my hd partion one by one on my pc, I found there are 3 partions showing they have ext2 filesystem.</description>
+    </item>
+    <item>
+      <title>Tritone, 三全音代理或降二代五和弦</title>
+      <link>http://localhost:1313/tritone-%E4%B8%89%E5%85%A8%E9%9F%B3%E4%BB%A3%E7%90%86%E6%88%96%E9%99%8D%E4%BA%8C%E4%BB%A3%E4%BA%94%E5%92%8C%E5%BC%A6/</link>
+      <pubDate>Sun, 30 May 2021 18:18:15 +0800</pubDate>
+      <guid>http://localhost:1313/tritone-%E4%B8%89%E5%85%A8%E9%9F%B3%E4%BB%A3%E7%90%86%E6%88%96%E9%99%8D%E4%BA%8C%E4%BB%A3%E4%BA%94%E5%92%8C%E5%BC%A6/</guid>
+      <description>复习时间 II-&amp;gt;V-&amp;gt;I 五级和弦（特别是属七和弦）有强烈的趋势接到一级和弦，最常见的C大调progression:&#xA;Dm -&amp;gt; G7 -&amp;gt; C 从和弦级数上来说就是II -&amp;gt; V -&amp;gt; I.&#xA;因此从功能和声的角度来说，V是I的Dominant Chord(属和弦)&#xA;Why 因为属和弦有非常不稳定的组合。&#xA;Take G7 chord for an example. It is composed of:&#xA;G, B, D, F and between B and F is 6 halftone, that is 3 whole tone, and it sounds so discordant &amp;ndash; which makes us have a strong motivation to solve it to Tonic Chord.&#xA;Here we get the name: Tritone (that is 3 whole tone).</description>
+    </item>
+    <item>
+      <title>Note for TOXIC breakdown</title>
+      <link>http://localhost:1313/note-for-toxic-breakdown/</link>
+      <pubDate>Thu, 06 May 2021 21:27:12 +0800</pubDate>
+      <guid>http://localhost:1313/note-for-toxic-breakdown/</guid>
+      <description>Britney Spears的Toxic一直是我喜欢的一首歌，Britney Spears: The Story of Toxic 解析了这首歌的制作，以下是一些提到的或许有用的点：&#xA;前奏的采样 前奏的采样来自于一首印度所谓バングラ音乐：&#xA;There Mere Beech Mein (Late Mangeshkar &amp;amp; S.P. Balasubrahmanyam, 1981)&#xA;之前另一则视频生动形象地演示给了我们前奏是如何采样的，只能说惊为天人。&#xA;从采样到最终的成品，前奏之所以可以做得这么扁平乃是因为一个简单的EQ，将低频和高频几乎全部截去。当然也用到了一点点的混响。&#xA;原声吉他 使用到了压缩。何谓压缩(compression)，视频主用了一个比喻：「就像把东西推到你的脸上」。听感而言就是觉得离自己非常近。&#xA;如此说来，Podcast类音频的制作或许使用压缩是一个好办法。&#xA;电吉他 副歌部分结束的Surf Rock Guitar的音效是怎么来的呢？&#xA;如果去掉所有效果，听起来几乎就是midi guitar的声音，但是使用了&#xA;Lo-Fi Slap(一种Slap delay) 频率曲线截去低频和高频 一些guitar rig reverb 增六和弦: Augmented Sixth Chords 好和弦关于增六和弦的说明&#xA;增六度接八度，是一个古典音乐常用的写法。&#xA;C大调的Ab - F# (常常出现在一个调的降6度)，很容易接到G - G，也就是增六和弦接到G和弦或者C/G和弦。&#xA;这首歌的制作人之一 Cathy Dennis, 90年代就一度非常厉害的创作歌手，出道专辑销量也非常不错。千禧年之后转型制作人，除了这首歌之外，她还有炮制了一些金曲例如：&#xA;Can&amp;rsquo;t Get You Out of My Head, Kylie Minogue I Kissed a Girl, Katy Perry 如何获得音频片段 这是我在reddit上搜索到的。尽管并非官方的project（如同Logic Pro里自带的演示项目那样），但在网络上搜索「{曲名} + stems」就可以搜索到很多的这样的工程。</description>
+    </item>
+    <item>
+      <title>从马尔可夫不等式到弱大数定律</title>
+      <link>http://localhost:1313/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/</link>
+      <pubDate>Sat, 18 Jan 2020 19:15:01 +0000</pubDate>
+      <guid>http://localhost:1313/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/</guid>
+      <description>回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚：&#xA;首先是Markov不等式。 它是以俄国数学家Andrey Andreyevich Markov的名字命名，同时也有Markov Chain这个在信息论上著名的东西。这个不等式，简单而言，就是我们可以一个随机变量的期望值判断这个随机变量取值的概率：&#xA;$$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$&#xA;显而易见，随机变量大于更大的(a)的概率会越低。比方说，当​ $( a = E[X] )$的时候，我们有​$( P(X \geq E[x]) \leq 1 )$ , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果$( a = 2E[X] )$​, 我们可以得到$( P(X \geq 2E[X]) \leq 0.5 )$​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. 马尔可夫不等式维基百科上举例也清晰易懂:&#xA;马尔可夫不等式的一个应用是，不超过1/5的人口会有超过5倍于人均收入的收入。&#xA;「概率导论」 一书构造了一个随机变量​ $(Y_a)$来证明这个不等式:&#xA;$$&#xA;\begin{equation}&#xA;Y_a=&#xA;\begin{cases}&#xA;0, (X &amp;lt; a) \&#xA;a, (X \geq a)&#xA;\end{cases}&#xA;\end{equation}&#xA;$$&#xA;那么:&#xA;$$E[Y_a] = P(X &amp;lt; a) * 0 + P(X \geq a) * a = a*P(X \geq a)$$</description>
+    </item>
+  </channel>
+</rss>

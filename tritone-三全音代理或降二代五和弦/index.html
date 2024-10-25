@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" />
+<title>Tritone, 三全音代理或降二代五和弦 | New River, New Water</title>
+<meta name="title" content="Tritone, 三全音代理或降二代五和弦" />
+<meta name="description" content="原理以及用法" />
+<meta name="keywords" content="Music Theory," />
+
+
+<meta property="og:url" content="http://localhost:1313/tritone-%E4%B8%89%E5%85%A8%E9%9F%B3%E4%BB%A3%E7%90%86%E6%88%96%E9%99%8D%E4%BA%8C%E4%BB%A3%E4%BA%94%E5%92%8C%E5%BC%A6/">
+  <meta property="og:site_name" content="New River, New Water">
+  <meta property="og:title" content="Tritone, 三全音代理或降二代五和弦">
+  <meta property="og:description" content="原理以及用法">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2021-05-30T18:18:15+08:00">
+    <meta property="article:modified_time" content="2021-05-30T18:18:15+08:00">
+    <meta property="article:tag" content="Music Theory">
+    <meta property="og:image" content="http://localhost:1313/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/share.png">
+  <meta name="twitter:title" content="Tritone, 三全音代理或降二代五和弦">
+  <meta name="twitter:description" content="原理以及用法">
+
+
+
+
+  <meta itemprop="name" content="Tritone, 三全音代理或降二代五和弦">
+  <meta itemprop="description" content="原理以及用法">
+  <meta itemprop="datePublished" content="2021-05-30T18:18:15+08:00">
+  <meta itemprop="dateModified" content="2021-05-30T18:18:15+08:00">
+  <meta itemprop="wordCount" content="212">
+  <meta itemprop="image" content="http://localhost:1313/images/share.png">
+  <meta itemprop="keywords" content="Music Theory">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+  <script>
+    MathJax = {
+        tex: {
+            inlineMath: [
+                ['$', '$'],
+                ['\\(', '\\)'],
+            ],
+        },
+        svg: {
+            fontCache: 'global',
+        },
+    };
+</script>
+<script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script></head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>New River, New Water</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>Tritone, 三全音代理或降二代五和弦</h1>
+<p>
+  <i>
+    <time datetime='2021-05-30' pubdate>
+      30 May, 2021
+    </time>
+  </i>
+</p>
+
+<content>
+  <h2 id="复习时间">复习时间</h2>
+<h3 id="ii-v-i">II-&gt;V-&gt;I</h3>
+<p>五级和弦（特别是属七和弦）有强烈的趋势接到一级和弦，最常见的<strong>C</strong>大调progression:</p>
+<pre tabindex="0"><code>Dm -&gt; G7 -&gt; C
+</code></pre><p>从和弦级数上来说就是<strong>II</strong> -&gt; <strong>V</strong> -&gt; <strong>I</strong>.</p>
+<p>因此从功能和声的角度来说，V是I的<strong>Dominant Chord(属和弦)</strong></p>
+<h3 id="why">Why</h3>
+<p>因为属和弦有非常不稳定的组合。</p>
+<p>Take <strong>G7</strong> chord for an example. It is composed of:</p>
+<pre tabindex="0"><code>G, B, D, F
+</code></pre><p>and between <strong>B</strong> and <strong>F</strong> is <strong>6 halftone</strong>, that is <strong>3 whole tone</strong>, and it sounds so discordant &ndash; which makes us have a strong motivation to solve it to <strong>Tonic Chord</strong>.</p>
+<p>Here we get the name: <strong>Tritone</strong> (that is 3 whole tone).</p>
+<h2 id="用法">用法</h2>
+<h3 id="副属和弦-secondery-dominant-chord">副属和弦 (Secondery Dominant Chord)</h3>
+<p>In my understanding, the so-called <strong>Secondary Dominant Chord</strong> is the dominant chord of any chord. 我们把要到的和弦当作一级和弦，那它上面的五级和弦就是它的副属和弦。</p>
+<p>For example, next progression:</p>
+<pre tabindex="0"><code>C -&gt; E7 -&gt; Am
+</code></pre><p><strong>E</strong> is the 5th note of <strong>A</strong>, so <strong>E7</strong> is the dominant 7th chord of <strong>Am</strong>. 注意这里E7并不是C大调的和弦，也就是说，我们通过使用属和弦使用了一个离调的和弦。</p>
+<p>副属和弦之递归：We can still add a chord between C and E7, that is <strong>B7</strong> (B is the 5th note of E):</p>
+<pre tabindex="0"><code>C -&gt; B7 -&gt; E7 -&gt; Am
+</code></pre><p>and this trick goes on and on&hellip; Yes! it reminds us of <strong>Circle of 5th(五度圏)</strong>:</p>
+<p><img src="c5.png" alt="circle of 5th"></p>
+<h3 id="三全音代理tritone-substitution">三全音代理（Tritone Substitution）</h3>
+<p>因为我们已经提炼出来Dominant 7th chord的tension来自于它的三全音，我们完全可以保留这个三全音，然后使用其他的和弦。例如G7和弦:</p>
+<pre tabindex="0"><code>G B D F
+</code></pre><p>我们保留它三全音的结构<strong>B F</strong>, 使用另外的和弦，比如<strong>Db7</strong>和弦：</p>
+<pre tabindex="0"><code>Db F Ab Cb(B)
+</code></pre><p>因此我们可以使用<strong>Db7</strong> 去替代 <strong>G7</strong>，也就是说<strong>Db7</strong> 也会有强烈的解决到 <strong>C</strong>的动机。</p>
+<p>一个规律是三全音代理的和弦是目标和弦的高半音的Dominant 7th, 所以我们可以很快找到这样的一些选择：</p>
+<pre tabindex="0"><code>Dm7 -&gt; G7 -&gt; CMaj7
+</code></pre><p>我们可以在每一个和弦的前面接上它的三全音代理：</p>
+<pre tabindex="0"><code>(Eb7) -&gt; Dm7 -&gt; (Ab7) -&gt; G7 -&gt; (Db7) -&gt; CMaj7 
+</code></pre><p>这个trick也被称为<strong>替代属和弦</strong>，或者<strong>降二代五</strong>（降二即高半音，代五指替代属和弦）。</p>
+<p><img src="https://2.bp.blogspot.com/-2hdj6Os2jQU/XDmCzaI3DPI/AAAAAAABhhU/m6sVtFQjBdUBEs1gOqi5VgBs2MpFn6HoACLcBGAs/s1600/%25E4%25B8%2580%25E5%2580%258B%25E9%2599%258D%25E4%25BA%258C%25E4%25BB%25A3%25E4%25BA%2594%2B%25E5%2590%2584%25E8%2587%25AA%25E8%25A1%25A8%25E8%25BF%25B0.jpg" alt="降二代五用法"></p>
+<h2 id="ref">ref:</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Wdn1acmup5g">很酷炫的「三全音代理」和弦！</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/41952075">一招让你的属和弦与众不同——降二代五怎么用！</a></li>
+<li><a href="http://www.chipinkaiyajazz.com/2019/01/blog-post_30.html">一個降二代五 各自表述 - 爵士樂與黑樂中的表現方式不盡相同</a></li>
+</ul>
+
+</content>
+<p>
+  
+  <a href="http://localhost:1313/blog/music-theory/">#Music Theory</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Music on New River, New Water</title>
+    <link>http://localhost:1313/blog/music/</link>
+    <description>Recent content in Music on New River, New Water</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2024, haruka hsiao.</copyright>
+    <lastBuildDate>Fri, 07 Jan 2022 22:29:21 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/music/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding Relationship of Math Rock, Mid-Western Emo, Prog Metal, etc</title>
+      <link>http://localhost:1313/understanding-relationship-of-math-rock-mid-western-emo-prog-metal-etc/</link>
+      <pubDate>Fri, 07 Jan 2022 22:29:21 +0800</pubDate>
+      <guid>http://localhost:1313/understanding-relationship-of-math-rock-mid-western-emo-prog-metal-etc/</guid>
+      <description>I am really confused about the relationship among following genres:&#xA;Math Rock Mid Westen Emo Progressive Metal Post Rock I mean, when people talking about math-rock, they tend to mention mid-western emo chord, blabla. I&amp;rsquo;m getting more and more lost in those conceptions, however I begin to get things into shape when I think about this problem in a programming way.&#xA;So here is the result from My Own Understanding:</description>
+    </item>
+  </channel>
+</rss>

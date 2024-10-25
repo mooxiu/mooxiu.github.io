@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>在家办公 on New River, New Water</title>
+    <link>http://localhost:1313/blog/%E5%9C%A8%E5%AE%B6%E5%8A%9E%E5%85%AC/</link>
+    <description>Recent content in 在家办公 on New River, New Water</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2024, haruka hsiao.</copyright>
+    <lastBuildDate>Sun, 20 Mar 2022 19:16:40 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/%E5%9C%A8%E5%AE%B6%E5%8A%9E%E5%85%AC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Eight Days A Week</title>
+      <link>http://localhost:1313/eight-days-a-week/</link>
+      <pubDate>Sun, 20 Mar 2022 19:16:40 +0800</pubDate>
+      <guid>http://localhost:1313/eight-days-a-week/</guid>
+      <description>在疫情已经过了两年半之后，我终于讽刺地第一次体验到了在家办公，与此同时，世界上的其他国家几乎都宣布了疫情的结束。&#xA;与大多数人不同的是，我对于长时间处在同一个物理空间这件事情没有任何怨言，只要这里安静，没有其他人，我可以自由地变化任何姿势，坐着，站着，趴着，这都让我觉得非常自由，Free As In Freedom。我不明白为什么很多人对于疫情期间无法出门旅游这件事情感到如此愤怒，与此同时，这些人在无法自由访问各种网站这件事情上却没有任何不满。&#xA;我一开始以为WFH会是这样一种情况: 但事实上并非如此, 这周因为我有非常具体的工作，而且时间非常紧张，我几乎所有的时间都用来Coding；每天早上我们都会开会，所以像上述视频这样睡到中午起来是绝无可能的；幸运的是，和公司的内网连接非常稳定，几乎没有给我造成任何障碍，在密集的编程作业中，我有几次都进入了沉浸式的所谓Flow的状态。当然至于写出什么样的代码这种事情就只能听天由命了。&#xA;不过相比于写代码，一般来说，人与人之间的沟通往往是远程办公的最大挑战。但我们team之间这周几乎连share screen都不需要，在群里扔github PR截图几乎就满足了我们的全部需求……当然是在彼此之间对于任务都非常了解的情况下。&#xA;If you like my article and want to make a donation, you can click the 捐赠 Donation button on the side bar.</description>
+    </item>
+  </channel>
+</rss>
