@@ -1,6 +1,6 @@
 [submodule "public"]
 	path = public
-	url = https://github.com/MuyaoXiao/muyaoxiao.github.io
+	url = git@github.com/mooxiu/mooxiu.github.io
 [submodule "themes/hugo-bearblog"]
 	path = themes/hugo-bearblog
-	url = https://github.com/mooxiu/hugo-bearblog.git
+	url = git@github.com:mooxiu/hugo-bearblog.git
