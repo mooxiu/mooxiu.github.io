@@ -1,9 +1,3 @@
-[submodule "themes/eure"]
-	path = themes/eure
-	url = https://github.com/wangchucheng/hugo-eureka.git
 [submodule "public"]
 	path = public
 	url = https://github.com/MuyaoXiao/muyaoxiao.github.io
-[submodule "themes/hugo-bearblog"]
-	path = themes/hugo-bearblog
-	url = https://github.com/janraasch/hugo-bearblog.git
