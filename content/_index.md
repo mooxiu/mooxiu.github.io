@@ -11,4 +11,4 @@ Hi, This is my blog.
 
 I write code and play guitars (but recently I don't have too much time for that).
 
-I like cyber travel in Google map, thus you can also find me here in [GeoGuessr](https://www.geoguessr.com/me/profile).
+I like cyber travel in Google map, thus you can also find me here in [GeoGuessr](https://www.geoguessr.com/user/664331c2446cb2301f76c565).
