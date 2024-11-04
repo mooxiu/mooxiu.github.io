@@ -45,7 +45,7 @@ It categorizes computer architectures based on single/multiple instruction and s
 It categorizes computer architectures based on single/multiple instruction and single/multiple data into 4 types: SISD(Single Instruction Single Data), MISD(Multiple Instruction Single Data), SIMD(Single Instruction Multiple Data), MIMD(Multiple Instruction Multiple Data). The 4 acronyms are easy to get by simple combinations, but the key here is to understand their concepts and applications.">
   <meta itemprop="datePublished" content="2024-11-04T00:43:02+09:00">
   <meta itemprop="dateModified" content="2024-11-04T00:43:02+09:00">
-  <meta itemprop="wordCount" content="693">
+  <meta itemprop="wordCount" content="694">
   <meta itemprop="image" content="https://mooxiu.github.io/images/share.png">
   <meta itemprop="keywords" content="Computer Science,Architecture,HPC">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -285,6 +285,7 @@ It categorizes computer architectures based on single/multiple instruction and s
 <img src="SIMD_vs_MIMD.png" alt="SIMD vs MIMD"></p>
 <p>In my understanding, the distributed nature of modern computing center also make MIMD much more popular and cheap. Even though I think the concepts of SIMD and MIMD are independent on the specific physical architecture of computer (share memory/UMA vs cluster/NUMA), but for a cluster, MIMD is often the only way to do.</p>
 <p>I have experience in writing openMP and MPI parallelism programs in my coursework, I think both of them fall into the category of MIMD or even SPMD. When we&rsquo;re using openMP to parallel vectors addition in a shared memory computer (for example, my MacBook), it has no difference of manually creating threads and run.</p>
+<h3 id="mpmd">MPMD?</h3>
 <h3 id="thoughts">Thoughts</h3>
 <p>For a flat loop, can we make it nested to use SIMD and MIMD in the same time? For example:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> N; i<span style="color:#f92672">++</span>) {
