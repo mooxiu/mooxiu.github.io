@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data Structure on New River, New Water</title>
-    <link>http://localhost:1313/blog/data-structure/</link>
+    <link>https://mooxiu.github.io/blog/data-structure/</link>
     <description>Recent content in Data Structure on New River, New Water</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>Copyright © 2024, haruka hsiao.</copyright>
     <lastBuildDate>Fri, 10 Dec 2021 00:01:30 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/data-structure/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mooxiu.github.io/blog/data-structure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go的双向链表</title>
-      <link>http://localhost:1313/go%E7%9A%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</link>
+      <link>https://mooxiu.github.io/go%E7%9A%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</link>
       <pubDate>Fri, 10 Dec 2021 00:01:30 +0800</pubDate>
-      <guid>http://localhost:1313/go%E7%9A%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</guid>
+      <guid>https://mooxiu.github.io/go%E7%9A%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</guid>
       <description>Although list has rarely been used in Go (Just about always when you are thinking of a list - use a slice instead in Go), there is an official implementation in the standard library. After reading the implementation (go standard package: src/container/list/list.go), I found it very inspiring.&#xA;The Node Basically, it first defines Node, which is referred to as Element in the standard package:&#xA;type Element struct { prev, next Element list *List Value interface{} } It is actually a structure we create a lot when solving linked list problems in websites like LeetCode.</description>
     </item>
   </channel>
