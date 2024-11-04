@@ -1,4 +1,4 @@
-MSG = "update"
+MSG=update😋
 
 commit-public:
 	cd public && \

@@ -43,6 +43,9 @@ In my understanding, the distributed nature of modern computing center also make
 
 I have experience in writing openMP and MPI parallelism programs in my coursework, I think both of them fall into the category of MIMD or even SPMD. When we're using openMP to parallel vectors addition in a shared memory computer (for example, my MacBook), it has no difference of manually creating threads and run. 
 
+### MPMD?
+
+
 ### Thoughts
 
 For a flat loop, can we make it nested to use SIMD and MIMD in the same time? For example:
