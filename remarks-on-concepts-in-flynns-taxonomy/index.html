@@ -45,7 +45,7 @@ It categorizes computer architectures based on single/multiple instruction and s
 It categorizes computer architectures based on single/multiple instruction and single/multiple data into 4 types: SISD(Single Instruction Single Data), MISD(Multiple Instruction Single Data), SIMD(Single Instruction Multiple Data), MIMD(Multiple Instruction Multiple Data). The 4 acronyms are easy to get by simple combinations, but the key here is to understand their concepts and applications.">
   <meta itemprop="datePublished" content="2024-11-04T00:43:02+09:00">
   <meta itemprop="dateModified" content="2024-11-04T00:43:02+09:00">
-  <meta itemprop="wordCount" content="694">
+  <meta itemprop="wordCount" content="943">
   <meta itemprop="image" content="https://mooxiu.github.io/images/share.png">
   <meta itemprop="keywords" content="Computer Science,Architecture,HPC">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -286,6 +286,26 @@ It categorizes computer architectures based on single/multiple instruction and s
 <p>In my understanding, the distributed nature of modern computing center also make MIMD much more popular and cheap. Even though I think the concepts of SIMD and MIMD are independent on the specific physical architecture of computer (share memory/UMA vs cluster/NUMA), but for a cluster, MIMD is often the only way to do.</p>
 <p>I have experience in writing openMP and MPI parallelism programs in my coursework, I think both of them fall into the category of MIMD or even SPMD. When we&rsquo;re using openMP to parallel vectors addition in a shared memory computer (for example, my MacBook), it has no difference of manually creating threads and run.</p>
 <h3 id="mpmd">MPMD?</h3>
+<p>Multiple Program Multiple Data (MPMD) is not a concept discussed in Flynn&rsquo;s Taxonomy, and I really suspect if it has been well-defined, as it does not have a Wikipedia entry and not found in reference books [2] and [3].</p>
+<p>Nevertheless, we can easily derive the conception from SPMD: it can simply mean multiple programs running different data. Here are some comparisons<a href="https://support.moldex3d.com/2022/en/1-2-1-1_parallelapplications.html">6</a>:</p>
+<p><img src="MPMD.png" alt="MPMD">
+(MPMD)</p>
+<p><img src="SPMD.png" alt="SPMD">
+(SPMD)</p>
+<p>Here we should say that multiple programs can be different programs, this is what it distinguishes itself from SPMD. Actually, MPI programming model is sometimes referred to as MPMD[5].</p>
+<ul>
+<li>
+<p>One example [7]:
+<img src="MPMD_vs_SPMD.png" alt="MPMD vs SPMD">
+In MPMD, the rank is to differentiate which process will do which work, and in SIMD, the rank is to differentiate which data each process will work on.</p>
+</li>
+<li>
+<p>Another example: ChatGPT told me MPMD is useful in heterogeneous computing systems or in workflows where different stages are performed on different processors.</p>
+</li>
+</ul>
+<p>But I encountered MPMD in wield context [8]. In the paper, the author aims to run CUDA program in different platform other than Nvidia GPU, and it says:
+<img src="paper.png" alt="Paper"></p>
+<p>In my understanding, this transformation should be called <strong>MPMD-to-SPMD</strong> as it tries to run from CPU-GPU to CPU only.</p>
 <h3 id="thoughts">Thoughts</h3>
 <p>For a flat loop, can we make it nested to use SIMD and MIMD in the same time? For example:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> N; i<span style="color:#f92672">++</span>) {
@@ -303,6 +323,9 @@ It categorizes computer architectures based on single/multiple instruction and s
 <p>[2]: R. Robey and Y. Zamora, “Parallel and High Performance Computing”.</p>
 <p>[3]: A. Grama, Ed., Introduction to parallel computing, 2. ed., [Reprint.]. Harlow: Pearson, 2011.</p>
 <p>[4]: E. Lindholm, J. Nickolls, S. Oberman, and J. Montrym, “NVIDIA Tesla: A Unified Graphics and Computing Architecture,” IEEE Micro, vol. 28, no. 2, pp. 39–55, Mar. 2008, doi: 10.1109/MM.2008.31.</p>
+<p>[5]: <a href="https://www.mcs.anl.gov/~itf/dbpp/text/node95.html">The MPI Programming Model</a></p>
+<p>[7]: Cameron Hughes and Tracy Hughes. 2003. Parallel and Distributed Programming Using C++. Prentice Hall Professional Technical Reference.</p>
+<p>[8]: R. Han, J. Lee, J. Sim, and H. Kim, “COX : Exposing CUDA Warp-level Functions to CPUs,” ACM Trans. Archit. Code Optim., vol. 19, no. 4, pp. 1–25, Dec. 2022, doi: 10.1145/3554736.</p>
 <p>This is a page about »Distinguish Some Acronyms«.</p>
 
 </content>
