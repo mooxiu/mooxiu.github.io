@@ -1,12 +1,14 @@
+MSG = "update"
+
 commit-public:
 	cd public && \
 	git add . && \
-	git commit -m "update" || true && \
+	git commit -m "$(MSG)" || true && \
 	git push
 
 commit-blog:
 	git add . && \
-	git commit -m "update" && \
+	git commit -m "$(MSG)" || true && \
 	git push
 
 gen:
