@@ -45,6 +45,29 @@ I have experience in writing openMP and MPI parallelism programs in my coursewor
 
 ### MPMD?
 
+Multiple Program Multiple Data (MPMD) is not a concept discussed in Flynn's Taxonomy, and I really suspect if it has been well-defined, as it does not have a Wikipedia entry and not found in reference books [2] and [3].
+
+Nevertheless, we can easily derive the conception from SPMD: it can simply mean multiple programs running different data. Here are some comparisons[6]:
+
+![MPMD](MPMD.png)
+(MPMD)
+
+![SPMD](SPMD.png)
+(SPMD)
+
+Here we should say that multiple programs can be different programs, this is what it distinguishes itself from SPMD. Actually, MPI programming model is sometimes referred to as MPMD[5].
+
+- One example [7]:
+![MPMD vs SPMD](MPMD_vs_SPMD.png)
+In MPMD, the rank is to differentiate which process will do which work, and in SIMD, the rank is to differentiate which data each process will work on.
+
+- Another example: ChatGPT told me MPMD is useful in heterogeneous computing systems or in workflows where different stages are performed on different processors.
+
+But I encountered MPMD in wield context [8]. In the paper, the author aims to run CUDA program in different platform other than Nvidia GPU, and it says:
+![Paper](paper.png)
+
+In my understanding, this transformation should be called **MPMD-to-SPMD** as it tries to run from CPU-GPU to CPU only.
+
 
 ### Thoughts
 
@@ -75,6 +98,13 @@ for (int i = 0; i < N/inst_size; i++) {
 
 [4]: E. Lindholm, J. Nickolls, S. Oberman, and J. Montrym, “NVIDIA Tesla: A Unified Graphics and Computing Architecture,” IEEE Micro, vol. 28, no. 2, pp. 39–55, Mar. 2008, doi: 10.1109/MM.2008.31.
 
+[5]: [The MPI Programming Model](https://www.mcs.anl.gov/~itf/dbpp/text/node95.html)
+
+[6]: https://support.moldex3d.com/2022/en/1-2-1-1_parallelapplications.html
+
+[7]: Cameron Hughes and Tracy Hughes. 2003. Parallel and Distributed Programming Using C++. Prentice Hall Professional Technical Reference.
+
+[8]: R. Han, J. Lee, J. Sim, and H. Kim, “COX : Exposing CUDA Warp-level Functions to CPUs,” ACM Trans. Archit. Code Optim., vol. 19, no. 4, pp. 1–25, Dec. 2022, doi: 10.1145/3554736.
 
 
 This is a page about »Distinguish Some Acronyms«.
