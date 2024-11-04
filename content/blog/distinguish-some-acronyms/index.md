@@ -1,5 +1,5 @@
 +++
-title = "Remarks about concepts in Flynn's taxonomy"
+title = "Remarks on concepts in Flynn's taxonomy"
 date = "2024-11-04T00:43:02+09:00"
 
 #
