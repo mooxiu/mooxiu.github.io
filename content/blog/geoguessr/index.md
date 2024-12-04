@@ -11,7 +11,7 @@ categories:
     - 杂谈
 ---
 
-Updated: 
+Updated in Dec 4th, 2024: 
 
 ## Useful Links
 - [Wikipedia: Comparison of European road signs](https://en.m.wikipedia.org/wiki/Comparison_of_European_road_signs)
