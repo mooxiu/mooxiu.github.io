@@ -15,3 +15,6 @@ gen:
 	hugo
 
 run: gen commit-public commit-blog
+
+# new article
+# hugo new blog/${article name}/index.md
