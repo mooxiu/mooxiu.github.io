@@ -10,7 +10,7 @@ date = "2025-01-03T17:55:10+09:00"
 tags = ["BlueSky", "SNS", "天竺"]
 +++
 
-天竺提供了便利的导出个人数据的方法，我相信这是号称开放的社交网络的必要条件。
+天竺[2]提供了便利的导出个人数据的方法，我相信这是号称开放的社交网络的必要条件。
 我没有研究过mastodon的具体protocol，但是我所在的mastodon instance同样拥有导出个人数据的选项，而且相比于天竺要简单得多：导出的数据是一个tar.gz，里面是一些media file 和所有 Toots 的 json 文件。
 
 ## 范围
@@ -50,6 +50,6 @@ go-repo-export unpack-records xxx.car
 
 ## Reference
 [1] https://docs.bsky.app/blog/repo-export#the-repository-car-file
-
+[2] 把BlueSky叫做天竺的来历：https://blog.yitianshijie.net/2024/11/18/twitter-shumei/
 
 This is a page about »Bluesky_archive«.
