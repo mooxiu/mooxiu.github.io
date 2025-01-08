@@ -1,13 +1,13 @@
 ---
 title: "轻食是为了留长发"
 description: "作为上班族的减肥餐思考"
+draft: true
 date: 2021-09-06T21:22:09+08:00
 tags:
   - 减肥
   - 长发
 categories:
   - 空谈
-draft: true
 ---
 
 ## 长发和减肥有什么关系
