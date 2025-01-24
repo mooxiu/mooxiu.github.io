@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://mooxiu.github.io/static/images/favicon.png" />
+<title>RIKEN R-CCS Spring School 2025 体验 | New River, New Water</title>
+<meta name="title" content="RIKEN R-CCS Spring School 2025 体验" />
+<meta name="description" content="上周从一月15号到17号，我去神户参加了理化学研究所计算科学研究中心 (R-CCS) 的 Spring School. 虽说线上线下都可参与，但我既然人在日本，不如趁此契机去远一点的地方散散心。 线下参与的大概十个人，全职学生都可报销差旅费用，我可能是其中唯一一个远离校园的上班族（遴选标准是学生/企业工作的 Scientist/ Engineer, 然后选大概四十人），因此无缘这些福利了。
+R-CCS位于靠近神户机场的人工岛上，交通而言出差非常方便，到市区的三ノ宮駅也才二十分钟左右的电车车程。 但周围只有一些研究所，大学机构等，餐厅商店什么的一概都无，午餐只能去附近的 cafeteria 解决。 不过，在建筑物中的一些地方可以远眺远处的神户塔和明石海峡大桥。
+接下来说说内容。
+R-CCS 对于 Spring School 的定位大概是讲一个具体的课题和介绍大家体验 Fugaku Super Computer. 今年的主讲人是 Dr.Suzuki Atsuki，汉字大致是写作铃木厚，他的研究方向是有限元方法。 第一天讲解系数矩阵的Krylov subspace method, 第二天讲Schwarz preconditioner如何加快计算速度，第三天则是讲在有限元方法中的应用。 每天上午讲理论，下午讲计算的代码，最后时间是HandsOn，也就是在Fugaku上运行这些数值方法。
+优点是尽管只是一个Spring School，但并没有开成小学生春游的感觉，而是围绕一个核心内容进行讲解。 而且三天的内容都是连贯的，make it work, make it fast and apply to research. 更不用说，Slides上无数的数学公式都一丝不苟，无懈可击。
+但是考虑到大家的背景不一，不得不说难度和内容的量有些过大了。 硬要解释的话，可以认为他们并不指望你当下完全理解，但是可以在日后的研究中发挥种子的作用。 但问题是，如今具体的知识并不是一个难以access的东西，只要能总结出适当的关键词，有无数的大学公开课视频和课件可以看，更不用说AI让模糊搜索变得更容易。
+理想的私以为应当花更多时间在背景和最基础结论的推导，然后后面具体的case只讲一个或者两个就行。 以第一天的 Krylov Subspace Method为例：
+重点的特性比如Coercive Matrix，显然除了定义之外应该举出更多的例子加深理解，而不是紧锣密鼓地进行下一步。 对于$Ax = b$, 不同性质的 A 有不同的方法： symmetric，positive definite symmetric, indefinite unsymmetric, coercive unsymmetric, general 但显然，没有必要针对每种方法都拉出来讲一遍算法，把特殊的两种，比如对称且正定，非对称且coercive这两种拿出来详细讲解，练习应当有最好的效果。 另外，HandsOn的安排和设置我认为并不合理。 长达一天的讲课之后，末尾出现一个半到两个小时的HandsOn，而且是给了写好的代码，只是让每个人去运行，这更是没什么意义。 这里的问题更多了：" />
+<meta name="keywords" content="" />
+
+
+<meta property="og:url" content="https://mooxiu.github.io/riken-r-ccs-spring-school-2025-%E4%BD%93%E9%AA%8C/">
+  <meta property="og:site_name" content="New River, New Water">
+  <meta property="og:title" content="RIKEN R-CCS Spring School 2025 体验">
+  <meta property="og:description" content="上周从一月15号到17号，我去神户参加了理化学研究所计算科学研究中心 (R-CCS) 的 Spring School. 虽说线上线下都可参与，但我既然人在日本，不如趁此契机去远一点的地方散散心。 线下参与的大概十个人，全职学生都可报销差旅费用，我可能是其中唯一一个远离校园的上班族（遴选标准是学生/企业工作的 Scientist/ Engineer, 然后选大概四十人），因此无缘这些福利了。
+R-CCS位于靠近神户机场的人工岛上，交通而言出差非常方便，到市区的三ノ宮駅也才二十分钟左右的电车车程。 但周围只有一些研究所，大学机构等，餐厅商店什么的一概都无，午餐只能去附近的 cafeteria 解决。 不过，在建筑物中的一些地方可以远眺远处的神户塔和明石海峡大桥。
+接下来说说内容。
+R-CCS 对于 Spring School 的定位大概是讲一个具体的课题和介绍大家体验 Fugaku Super Computer. 今年的主讲人是 Dr.Suzuki Atsuki，汉字大致是写作铃木厚，他的研究方向是有限元方法。 第一天讲解系数矩阵的Krylov subspace method, 第二天讲Schwarz preconditioner如何加快计算速度，第三天则是讲在有限元方法中的应用。 每天上午讲理论，下午讲计算的代码，最后时间是HandsOn，也就是在Fugaku上运行这些数值方法。
+优点是尽管只是一个Spring School，但并没有开成小学生春游的感觉，而是围绕一个核心内容进行讲解。 而且三天的内容都是连贯的，make it work, make it fast and apply to research. 更不用说，Slides上无数的数学公式都一丝不苟，无懈可击。
+但是考虑到大家的背景不一，不得不说难度和内容的量有些过大了。 硬要解释的话，可以认为他们并不指望你当下完全理解，但是可以在日后的研究中发挥种子的作用。 但问题是，如今具体的知识并不是一个难以access的东西，只要能总结出适当的关键词，有无数的大学公开课视频和课件可以看，更不用说AI让模糊搜索变得更容易。
+理想的私以为应当花更多时间在背景和最基础结论的推导，然后后面具体的case只讲一个或者两个就行。 以第一天的 Krylov Subspace Method为例：
+重点的特性比如Coercive Matrix，显然除了定义之外应该举出更多的例子加深理解，而不是紧锣密鼓地进行下一步。 对于$Ax = b$, 不同性质的 A 有不同的方法： symmetric，positive definite symmetric, indefinite unsymmetric, coercive unsymmetric, general 但显然，没有必要针对每种方法都拉出来讲一遍算法，把特殊的两种，比如对称且正定，非对称且coercive这两种拿出来详细讲解，练习应当有最好的效果。 另外，HandsOn的安排和设置我认为并不合理。 长达一天的讲课之后，末尾出现一个半到两个小时的HandsOn，而且是给了写好的代码，只是让每个人去运行，这更是没什么意义。 这里的问题更多了：">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-01-24T23:12:08+09:00">
+    <meta property="article:modified_time" content="2025-01-24T23:12:08+09:00">
+    <meta property="og:image" content="https://mooxiu.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mooxiu.github.io/images/share.png">
+  <meta name="twitter:title" content="RIKEN R-CCS Spring School 2025 体验">
+  <meta name="twitter:description" content="上周从一月15号到17号，我去神户参加了理化学研究所计算科学研究中心 (R-CCS) 的 Spring School. 虽说线上线下都可参与，但我既然人在日本，不如趁此契机去远一点的地方散散心。 线下参与的大概十个人，全职学生都可报销差旅费用，我可能是其中唯一一个远离校园的上班族（遴选标准是学生/企业工作的 Scientist/ Engineer, 然后选大概四十人），因此无缘这些福利了。
+R-CCS位于靠近神户机场的人工岛上，交通而言出差非常方便，到市区的三ノ宮駅也才二十分钟左右的电车车程。 但周围只有一些研究所，大学机构等，餐厅商店什么的一概都无，午餐只能去附近的 cafeteria 解决。 不过，在建筑物中的一些地方可以远眺远处的神户塔和明石海峡大桥。
+接下来说说内容。
+R-CCS 对于 Spring School 的定位大概是讲一个具体的课题和介绍大家体验 Fugaku Super Computer. 今年的主讲人是 Dr.Suzuki Atsuki，汉字大致是写作铃木厚，他的研究方向是有限元方法。 第一天讲解系数矩阵的Krylov subspace method, 第二天讲Schwarz preconditioner如何加快计算速度，第三天则是讲在有限元方法中的应用。 每天上午讲理论，下午讲计算的代码，最后时间是HandsOn，也就是在Fugaku上运行这些数值方法。
+优点是尽管只是一个Spring School，但并没有开成小学生春游的感觉，而是围绕一个核心内容进行讲解。 而且三天的内容都是连贯的，make it work, make it fast and apply to research. 更不用说，Slides上无数的数学公式都一丝不苟，无懈可击。
+但是考虑到大家的背景不一，不得不说难度和内容的量有些过大了。 硬要解释的话，可以认为他们并不指望你当下完全理解，但是可以在日后的研究中发挥种子的作用。 但问题是，如今具体的知识并不是一个难以access的东西，只要能总结出适当的关键词，有无数的大学公开课视频和课件可以看，更不用说AI让模糊搜索变得更容易。
+理想的私以为应当花更多时间在背景和最基础结论的推导，然后后面具体的case只讲一个或者两个就行。 以第一天的 Krylov Subspace Method为例：
+重点的特性比如Coercive Matrix，显然除了定义之外应该举出更多的例子加深理解，而不是紧锣密鼓地进行下一步。 对于$Ax = b$, 不同性质的 A 有不同的方法： symmetric，positive definite symmetric, indefinite unsymmetric, coercive unsymmetric, general 但显然，没有必要针对每种方法都拉出来讲一遍算法，把特殊的两种，比如对称且正定，非对称且coercive这两种拿出来详细讲解，练习应当有最好的效果。 另外，HandsOn的安排和设置我认为并不合理。 长达一天的讲课之后，末尾出现一个半到两个小时的HandsOn，而且是给了写好的代码，只是让每个人去运行，这更是没什么意义。 这里的问题更多了：">
+
+
+
+
+  <meta itemprop="name" content="RIKEN R-CCS Spring School 2025 体验">
+  <meta itemprop="description" content="上周从一月15号到17号，我去神户参加了理化学研究所计算科学研究中心 (R-CCS) 的 Spring School. 虽说线上线下都可参与，但我既然人在日本，不如趁此契机去远一点的地方散散心。 线下参与的大概十个人，全职学生都可报销差旅费用，我可能是其中唯一一个远离校园的上班族（遴选标准是学生/企业工作的 Scientist/ Engineer, 然后选大概四十人），因此无缘这些福利了。
+R-CCS位于靠近神户机场的人工岛上，交通而言出差非常方便，到市区的三ノ宮駅也才二十分钟左右的电车车程。 但周围只有一些研究所，大学机构等，餐厅商店什么的一概都无，午餐只能去附近的 cafeteria 解决。 不过，在建筑物中的一些地方可以远眺远处的神户塔和明石海峡大桥。
+接下来说说内容。
+R-CCS 对于 Spring School 的定位大概是讲一个具体的课题和介绍大家体验 Fugaku Super Computer. 今年的主讲人是 Dr.Suzuki Atsuki，汉字大致是写作铃木厚，他的研究方向是有限元方法。 第一天讲解系数矩阵的Krylov subspace method, 第二天讲Schwarz preconditioner如何加快计算速度，第三天则是讲在有限元方法中的应用。 每天上午讲理论，下午讲计算的代码，最后时间是HandsOn，也就是在Fugaku上运行这些数值方法。
+优点是尽管只是一个Spring School，但并没有开成小学生春游的感觉，而是围绕一个核心内容进行讲解。 而且三天的内容都是连贯的，make it work, make it fast and apply to research. 更不用说，Slides上无数的数学公式都一丝不苟，无懈可击。
+但是考虑到大家的背景不一，不得不说难度和内容的量有些过大了。 硬要解释的话，可以认为他们并不指望你当下完全理解，但是可以在日后的研究中发挥种子的作用。 但问题是，如今具体的知识并不是一个难以access的东西，只要能总结出适当的关键词，有无数的大学公开课视频和课件可以看，更不用说AI让模糊搜索变得更容易。
+理想的私以为应当花更多时间在背景和最基础结论的推导，然后后面具体的case只讲一个或者两个就行。 以第一天的 Krylov Subspace Method为例：
+重点的特性比如Coercive Matrix，显然除了定义之外应该举出更多的例子加深理解，而不是紧锣密鼓地进行下一步。 对于$Ax = b$, 不同性质的 A 有不同的方法： symmetric，positive definite symmetric, indefinite unsymmetric, coercive unsymmetric, general 但显然，没有必要针对每种方法都拉出来讲一遍算法，把特殊的两种，比如对称且正定，非对称且coercive这两种拿出来详细讲解，练习应当有最好的效果。 另外，HandsOn的安排和设置我认为并不合理。 长达一天的讲课之后，末尾出现一个半到两个小时的HandsOn，而且是给了写好的代码，只是让每个人去运行，这更是没什么意义。 这里的问题更多了：">
+  <meta itemprop="datePublished" content="2025-01-24T23:12:08+09:00">
+  <meta itemprop="dateModified" content="2025-01-24T23:12:08+09:00">
+  <meta itemprop="wordCount" content="117">
+  <meta itemprop="image" content="https://mooxiu.github.io/images/share.png">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+  <script>
+    MathJax = {
+        tex: {
+            inlineMath: [
+                ['$', '$'],
+                ['\\(', '\\)'],
+            ],
+        },
+        svg: {
+            fontCache: 'global',
+        },
+    };
+</script>
+<script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script></head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>New River, New Water</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>RIKEN R-CCS Spring School 2025 体验</h1>
+<p>
+  <i>
+    <time datetime='2025-01-24' pubdate>
+      24 Jan, 2025
+    </time>
+  </i>
+</p>
+
+<content>
+  <p>上周从一月15号到17号，我去神户参加了理化学研究所计算科学研究中心 (R-CCS) 的 Spring School.
+虽说线上线下都可参与，但我既然人在日本，不如趁此契机去远一点的地方散散心。
+线下参与的大概十个人，全职学生都可报销差旅费用，我可能是其中唯一一个远离校园的上班族（遴选标准是学生/企业工作的 Scientist/ Engineer, 然后选大概四十人），因此无缘这些福利了。</p>
+<p>R-CCS位于靠近神户机场的人工岛上，交通而言出差非常方便，到市区的三ノ宮駅也才二十分钟左右的电车车程。
+但周围只有一些研究所，大学机构等，餐厅商店什么的一概都无，午餐只能去附近的 cafeteria 解决。
+不过，在建筑物中的一些地方可以远眺远处的神户塔和明石海峡大桥。</p>
+<p>接下来说说内容。</p>
+<p>R-CCS 对于 Spring School 的定位大概是讲一个具体的课题和介绍大家体验 Fugaku Super Computer.
+今年的主讲人是 Dr.Suzuki Atsuki，汉字大致是写作铃木厚，他的研究方向是有限元方法。
+第一天讲解系数矩阵的Krylov subspace method, 第二天讲Schwarz preconditioner如何加快计算速度，第三天则是讲在有限元方法中的应用。
+每天上午讲理论，下午讲计算的代码，最后时间是HandsOn，也就是在Fugaku上运行这些数值方法。</p>
+<p>优点是尽管只是一个Spring School，但并没有开成小学生春游的感觉，而是围绕一个核心内容进行讲解。
+而且三天的内容都是连贯的，make it work, make it fast and apply to research.
+更不用说，Slides上无数的数学公式都一丝不苟，无懈可击。</p>
+<p>但是考虑到大家的背景不一，不得不说难度和内容的量有些过大了。
+硬要解释的话，可以认为他们并不指望你当下完全理解，但是可以在日后的研究中发挥种子的作用。
+但问题是，如今具体的知识并不是一个难以access的东西，只要能总结出适当的关键词，有无数的大学公开课视频和课件可以看，更不用说AI让模糊搜索变得更容易。</p>
+<p>理想的私以为应当花更多时间在背景和最基础结论的推导，然后后面具体的case只讲一个或者两个就行。
+以第一天的 Krylov Subspace Method为例：</p>
+<ul>
+<li>重点的特性比如Coercive Matrix，显然除了定义之外应该举出更多的<strong>例子</strong>加深理解，而不是紧锣密鼓地进行下一步。</li>
+<li>对于$Ax = b$, 不同性质的 A 有不同的方法：
+<ul>
+<li>symmetric，positive definite</li>
+<li>symmetric, indefinite</li>
+<li>unsymmetric, coercive</li>
+<li>unsymmetric, general
+但显然，没有必要针对每种方法都拉出来讲一遍算法，把特殊的两种，比如对称且正定，非对称且coercive这两种拿出来详细讲解，练习应当有最好的效果。</li>
+</ul>
+</li>
+</ul>
+<p>另外，HandsOn的安排和设置我认为并不合理。
+长达一天的讲课之后，末尾出现一个半到两个小时的HandsOn，而且是给了写好的代码，只是让每个人去运行，这更是没什么意义。
+这里的问题更多了：</p>
+<ul>
+<li>HandsOn应该在每个小的知识点之后，比如对称矩阵的CSR表示，Conjugate Gradient算法显然值得在讲完之后迅速分别来一个半个小时和一个小时的Coding HandsOn</li>
+<li>我记得其中一份代码是GMRES方法。我的建议是应当选择一个非常简单的矩阵，给出文档，写好框架，在HandsOn的时间大家去把剩下的核心部分补全就好。
+<ul>
+<li>HandsOn的部分可考虑复用和开源</li>
+<li>因为每个人都带了计算机，因此可以让大家在本地运行一个较小的矩阵，在Fugaku上跑更大的矩阵；
+<ul>
+<li>一方面实现算法本身就是学习的过程，小的例子利于大家理解</li>
+<li>Fugaku上运行更大的矩阵也方便大家认识Fugaku的性能</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>注意到参加Spring School的绝大多数人都是PhD Student，而且大多数都不是计算科学和应用数学的PhD Student，
+很多人的研究领域充其量只需要一些运用，根本不需要做算法研究，因此我并不认为大家的数学水平显著地高于我，我不会觉得我的建议只是因为我太菜了。</p>
+<p>尽管以前在国内上学的时候，大家常常抱怨基本靠自学，这一点在我的经验中是对的。
+以我在日本上学的经验，日本大学的教学质量也可以说乏善可陈，我上过的计算机科学的课程中（我现在说的并不是那一类Theoretical Computer Science）有良好作业和Lab的课比例小得可怜，绝大多数就是写一写essay。
+我的修士导师曾说他觉得日本的学生高中不比美国学生弱，但大学之后成就就不如美国学生了。
+我想至少教学上是个问题，我们暂不谈产业的问题和投入资金的问题，我想至少同样的资源下完全可以做得更好。</p>
+<p>至于这次的Spring School HandsOn部分，我觉得思路还是没有转变过来。
+上课的时候应该默认大家什么都不懂而不是默认大家每天都浸淫在Numerical Linear Algebra之中，完全弄懂一个部分比什么都没有弄清楚要好。</p>
+<p>尽管有这么多不足，但这些不足我觉得是日本共通的问题。
+具体到这次活动，总体而言是well organized活动，流程清晰，no surprise.
+RIKEN的Staff们都nice得不可思议，尽管不是学生的我享受不到免费车票和住宿的福利，但我还是想对它们表示感谢。</p>
+<p>今年的Summer School会在葡萄牙举行，Staff还鼓励我去报名，我说我是一个可悲的Salary Man.
+Staff说，啊那工作很忙，可能没有时间吧。
+I really want to be a full-time student, 我想。</p>
+
+</content>
+<p>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>
