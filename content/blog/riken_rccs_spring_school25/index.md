@@ -1,5 +1,5 @@
 +++
-title = "RIKEN R-CCS Spring School 2025 体验"
+title = "RIKEN R-CCS Spring School 2025 体验: it's complicated"
 date = "2025-01-24T23:12:08+09:00"
 +++
 
