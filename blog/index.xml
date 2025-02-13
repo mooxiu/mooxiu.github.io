@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on New River, New Water</title>
+    <title>Blog on New River, New Water</title>
     <link>https://mooxiu.github.io/blog/</link>
-    <description>Recent content in Blogs on New River, New Water</description>
+    <description>Recent content in Blog on New River, New Water</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>Copyright © 2024, haruka hsiao.</copyright>
-    <lastBuildDate>Wed, 27 Nov 2024 21:47:41 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 09 Feb 2025 23:57:19 +0900</lastBuildDate>
     <atom:link href="https://mooxiu.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Way To 明室</title>
+      <link>https://mooxiu.github.io/way-to-%E6%98%8E%E5%AE%A4/</link>
+      <pubDate>Sun, 09 Feb 2025 23:57:19 +0900</pubDate>
+      <guid>https://mooxiu.github.io/way-to-%E6%98%8E%E5%AE%A4/</guid>
+      <description>购入了家庭的第一个相机（Sony的Alpha6700）之后，我开始雄心勃勃地想要拍好照片。&#xA;但突然想要做好一件你已经草率地做了很久的一件事并不容易，我们的拍照视角事实上往往被那些「好照片」限制住了，我发现我费劲心机想要拍的一个画面往往是我记忆中某个样板的画面。&#xA;这样以来，拍出了许多对我而言既不重要，美感上也并不令人惊喜的照片，更好的器材变成了「数毛」的游戏。&#xA;但我发现我观察事物的视角也发生了改变，我想要看到我以前从来没有看到过的东西。&#xA;Anyway, 我在BlueSky上创设了一个新账号专门存放我自己的Photography: @haruka-lens.bsky.social.&#xA;This is a page about »Photography Beginner«.</description>
+    </item>
+    <item>
+      <title>RIKEN R-CCS Spring School 2025 体验: well, it&#39;s complicated</title>
+      <link>https://mooxiu.github.io/riken-r-ccs-spring-school-2025-%E4%BD%93%E9%AA%8C-well-its-complicated/</link>
+      <pubDate>Fri, 24 Jan 2025 23:12:08 +0900</pubDate>
+      <guid>https://mooxiu.github.io/riken-r-ccs-spring-school-2025-%E4%BD%93%E9%AA%8C-well-its-complicated/</guid>
+      <description>上周从一月15号到17号，我去神户参加了理化学研究所计算科学研究中心 (R-CCS) 的 Spring School. 虽说线上线下都可参与，但我既然人在日本，不如趁此契机去远一点的地方散散心。 线下参与的大概十个人，全职学生都可报销差旅费用，我可能是其中唯一一个远离校园的上班族（遴选标准是学生/企业工作的 Scientist/ Engineer, 然后选大概四十人），因此无缘这些福利了。&#xA;R-CCS位于靠近神户机场的人工岛上，交通而言出差非常方便，到市区的三ノ宮駅也才二十分钟左右的电车车程。 但周围只有一些研究所，大学机构等，餐厅商店什么的一概都无，午餐只能去附近的 cafeteria 解决。 不过，在建筑物中的一些地方可以远眺远处的神户塔和明石海峡大桥。&#xA;接下来说说内容。&#xA;R-CCS 对于 Spring School 的定位大概是讲一个具体的课题和介绍大家体验 Fugaku Super Computer. 今年的主讲人是 Dr.Suzuki Atsushi，汉字大致是写作铃木厚，他的研究方向是有限元方法。 第一天讲解系数矩阵的Krylov subspace method, 第二天讲Schwarz preconditioner如何加快计算速度，第三天则是讲在有限元方法中的应用。 每天上午讲理论，下午讲计算的代码，最后时间是HandsOn，也就是在Fugaku上运行这些数值方法。&#xA;优点是尽管只是一个Spring School，但并没有开成小学生春游的感觉，而是围绕一个核心内容进行讲解。 而且三天的内容都是连贯的，make it work, make it fast and apply to research. 更不用说，Slides上无数的数学公式都一丝不苟，无懈可击。&#xA;但是考虑到大家的背景不一，不得不说难度和内容的量有些过大了。 硬要解释的话，可以认为他们并不指望你当下完全理解，但是可以在日后的研究中发挥种子的作用。 但问题是，如今具体的知识并不是一个难以access的东西，只要能总结出适当的关键词，有无数的大学公开课视频和课件可以看，更不用说AI让模糊搜索变得更容易。&#xA;理想的私以为应当花更多时间在背景和最基础结论的推导，然后后面具体的case只讲一个或者两个就行。 以第一天的 Krylov Subspace Method为例：&#xA;重点的特性比如Coercive Matrix，显然除了定义之外应该举出更多的例子加深理解，而不是紧锣密鼓地进行下一步。 对于$Ax = b$, 不同性质的 A 有不同的方法： symmetric，positive definite symmetric, indefinite unsymmetric, coercive unsymmetric, general 但显然，没有必要针对每种方法都拉出来讲一遍算法，把特殊的两种，比如对称且正定，非对称且coercive这两种拿出来详细讲解，练习应当有最好的效果。 另外，HandsOn的安排和设置我认为并不合理。 长达一天的讲课之后，末尾出现一个半到两个小时的HandsOn，而且是给了写好的代码，只是让每个人去运行，这更是没什么意义。</description>
+    </item>
+    <item>
+      <title>两个常常被写错的日文词</title>
+      <link>https://mooxiu.github.io/%E4%B8%A4%E4%B8%AA%E5%B8%B8%E5%B8%B8%E8%A2%AB%E5%86%99%E9%94%99%E7%9A%84%E6%97%A5%E6%96%87%E8%AF%8D/</link>
+      <pubDate>Thu, 23 Jan 2025 21:28:35 +0900</pubDate>
+      <guid>https://mooxiu.github.io/%E4%B8%A4%E4%B8%AA%E5%B8%B8%E5%B8%B8%E8%A2%AB%E5%86%99%E9%94%99%E7%9A%84%E6%97%A5%E6%96%87%E8%AF%8D/</guid>
+      <description>一个是日本的 Permanent Residence 签证「永住」，在中文语境下，常被写作「永驻」。 原因很有可能是输入法 “yongzhu” 的第一个选项是「永驻」。&#xA;另一个是「渋谷」常被写作和读作「涉谷」，但其实是「涩谷」。 不得不说写法上「涉」可能比「涩」更像是「渋」，而且「涉谷」又可以被解释为动词「涉」加名词「谷」—— 但这依然是错的。</description>
+    </item>
+    <item>
+      <title>如何在从天竺(BlueSky)备份自己的数据</title>
+      <link>https://mooxiu.github.io/%E5%A6%82%E4%BD%95%E5%9C%A8%E4%BB%8E%E5%A4%A9%E7%AB%BAbluesky%E5%A4%87%E4%BB%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Fri, 03 Jan 2025 17:55:10 +0900</pubDate>
+      <guid>https://mooxiu.github.io/%E5%A6%82%E4%BD%95%E5%9C%A8%E4%BB%8E%E5%A4%A9%E7%AB%BAbluesky%E5%A4%87%E4%BB%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E6%95%B0%E6%8D%AE/</guid>
+      <description>天竺[2]提供了便利的导出个人数据的方法，我相信这是号称开放的社交网络的必要条件。 我没有研究过mastodon的具体protocol，但是我所在的mastodon instance同样拥有导出个人数据的选项，而且相比于天竺要简单得多：导出的数据是一个tar.gz，里面是一些media file 和所有 Toots 的 json 文件。&#xA;范围 天竺导出的文件默认并不包含图片和多媒体信息，应该是基于使用权的考量。 而且除了支持导出自己的数据之外，也可以使用它的API去导出其他用户的公开数据。&#xA;方法 天竺所使用的 AT Protocol 对每一个用户赋予了一个DID，这是每个用户的唯一可识别码。 也就是说，除了显示的用户名，和一个可以自定义的handle之外，DID是每个用户不可更改的ID。 天竺的API正是通过在请求中携带DID去获取用户数据的。&#xA;需要注意的是，用户的DID并不是隐私信息，而且目前天竺Currently, there are no private profiles on Bluesky，因此如果不想让其他人获取你的post，你最好不要发。 如何知道一个用户的DID参见这里，但这篇文章讲的是备份自己的数据，可直接在web UI上操作：&#xA;解析 天竺导出的文件格式为.car，可以通过官方提供的一个命令行工具进行解析：https://github.com/bluesky-social/cookbook/tree/main/go-repo-export&#xA;具体的做法是：&#xA;安装Go&#xA;安装命令行工具&#xA;go install github.com/bluesky-social/cookbook/go-repo-export@latest 解析 go-repo-export unpack-records xxx.car 解析之后会生成一个文件夹，包含了个人的各种数据。 比较重要的是app.bsky.feed.post中每一个对每一个post都有一个独立的.json文件。&#xA;Reference [1] https://docs.bsky.app/blog/repo-export#the-repository-car-file&#xA;[2] 把BlueSky叫做天竺的来历&#xA;This is a page about »Bluesky_archive«.</description>
+    </item>
     <item>
       <title>Email冷静期</title>
       <link>https://mooxiu.github.io/email%E5%86%B7%E9%9D%99%E6%9C%9F/</link>
@@ -80,25 +108,11 @@
       <description>Seinfeld 中有一集（S03E01），Seinfeld讲道：&#xA;每次有人推荐一位医生，他总是最好的医生&#xA;「这家伙是最好的」&#xA;不可能全是最好的，不肯呢个有这么多最好的医生。有人成绩垫底毕业，那些医生在哪儿？&#xA;这也是我常常在看医生的时候思考的问题，那些成绩垫底的医生毕业之后去了哪里？我的脑海中浮现出了我的一些成绩不怎么样的同学，如果让我去找他们看诊，我多半不乐意。那我怎么就可以判断我看病遇到的这些医生就不是这样的人呢？&#xA;一种常见的思路就是，去找那些有丰富经验的医生。比方说，在医院的预约小程序上，你可以选择「专家门诊」或者「普通门诊」。坐镇专家门诊的往往就是一些拥有丰富经验的医生。但这里有一个预设，也就是医生可以随着经验的增长达到更高的医疗水准。可问题是，事实往往不是这样，我们不会说一个考试经验丰富的学生就能考得更好。为什么到了医生这里，我们就假设这些医生因为有更长的看病经验，水准就一定更高呢？&#xA;我想我还有另一种思路去看待这个问题，那就是人类的医学水准其实还停留在比较低的地步。在大多数情况下，对于非手术类的疾病，只要医生不是很离谱，开出的药不是很离谱，基本上都会自愈。我怀疑甚至这种时候，西药中药什么的也无所谓，因为我感觉都是靠自己的身体。&#xA;If you like my article and want to donate, click the 捐赠 Donation button on the sidebar.</description>
     </item>
     <item>
-      <title>从「爱你」到爱你</title>
-      <link>https://mooxiu.github.io/%E4%BB%8E%E7%88%B1%E4%BD%A0%E5%88%B0%E7%88%B1%E4%BD%A0/</link>
-      <pubDate>Sun, 29 May 2022 20:32:04 +0800</pubDate>
-      <guid>https://mooxiu.github.io/%E4%BB%8E%E7%88%B1%E4%BD%A0%E5%88%B0%E7%88%B1%E4%BD%A0/</guid>
-      <description>最近王心凌的回春居然成为热门话题，不免让我想到，喜欢上王心凌可能是我排名前五的改变人生的事情。&#xA;我开始喜欢这个人是在2015（2014？）年大三的时候，我相信很少有人在这个时间点开始关注她，如果看看那个时候她的几张专辑「爱不爱」，「第十个王心凌」的相关照片就知道，那正是她走成熟路线的几年，跟所谓「白幼瘦」审美沾不上边。&#xA;那年九月的某一天晚上，我开始思考这样一个问题：「那些过气歌手都在干什么呢？」&#xA;一番反思之后，我忽然想起了「王心凌」这个名字。我发现我自己其实一直都觉得她很好看，但是作为一个一本正经的男性，我很难去干一件显得自己仿佛没什么品味的事情，虽然我没什么品味，但我那个时候热衷于装作一副很有品味的样子。事实上，我对她没有任何了解，没有主动听过她任何一首歌，被动听过她的歌估计也不超过五首……&#xA;我知道这个名字还是在我小学五年级的时候，那个时候我在安徽的一所民办学校读书。那年学校招了一个舞蹈老师，现在回想起来是一个气质相当gaygay的男性。学校应秉承着有什么资源就物尽其用的心态，整个学校那年每个班每周都有两节舞蹈课。这位老师也算是尽职尽责，他自己把「爱你」这首歌重新编舞，然后我们的折磨来了，我们伴随着「爱你」这首歌跳了整整一学期的舞，稍微不认真就会被竹鞭伺候。以至于在其后的漫长岁月中，王心凌这个名字伴随的四个字并不是什么「甜心教主」，而是「PTSD」。&#xA;而在2015（2014？）年9月的一个晚上，那个时候因为各种事情，自己的人生多少有点受挫，我开始检索这个人的信息。我心想，「我要不就试着假装成为了王心凌的粉丝，应该是一件很讽刺很有意思的事情吧」。我开始从她的第一张专辑听到最新的一张专辑，了解到这个人出道到现在的经历，在微博上关注了她。然后我发现微博上关注美女好像也不是什么遭天谴的事情吧，我开始尝试进一步关注一些我认为很好看的女性，我也就是那个时候开始尝试努力去喜欢乃木坂46AKB48SNH48，如果喜欢不起来，就假装自己喜欢，逼自己听她们的歌，看她们的综艺，久而久之就会变成真的喜欢。由此，我发现我走上了一条自我解放的道路。&#xA;我以前听说过一个故事，说一位音乐发烧友听完了各种名盘，西洋摇滚东洋电子西欧古典北欧爵士之后，发现毕生最爱乃是一张日版林志颖专辑。后来我影影约约感受到了那是怎么一回事了。从小到大，我们听到的都是实力主义论调，认为强大的就应该崇拜，所以听歌就得看唱功，拼创作，久而久之，这些人心中的感受力逐渐下滑，他们听歌不是根据自己的耳朵来的，而是根据他人的评价来的，一旦当他们的信息源很一般的时候就非常好笑了，听过卡拉扬精选，古尔德巴赫之后就觉得自己仿佛跻身上流品味无敌了……但其实也就是些古典cliche，这是一种什么精神，我觉得是一种小镇做题家精神。讽刺的是，这些人也许并不出身小镇，往往做题能力也一般，但是就是在任何领域对「强大」都痴迷到不行……只能说胜负欲是品味的敌人吧（电台司令有云：「Ambition makes you look pretty ugly」）。&#xA;能够主动喜欢上王心凌我觉得我真正远离了那种「做题精神」。你喜欢强大的，我偏喜欢「不行」的，你喜欢纽约扬基，我偏要喜欢巴尔的摩金莺; 你喜欢西野七濑因为她长年C位，我偏喜欢中田花奈因为她三单就糊（这个时候就有人问：中田花奈是谁？That&amp;rsquo;s exactly what I mean）。&#xA;当然，我没有说王心凌「不行」的意思，相反看看王心凌所有专辑的命名企划真是唱片工业完蛋之前的典范，每一张专辑英文名都是「Cyndi *」， 比如「爱你」那张专辑的英文名叫「Cyndi Loves You」, 「睫毛弯弯」那张专辑叫做「Cyndi with U」, 一直到最近的2018年「爱・心凌」叫做「Cyndi Loves 2 Sing」, 这整体感……。很多人吹椎名林檎专辑曲目名的对称性，我觉得王心凌这专辑命名也可以吹一吹， 唱片时代古风犹存。&#xA;但是唱片工业嘛，质量稳定，制作可靠，最火的几首歌往往就是最好的几首了。但歌有没有那么好其实也没那么重要，现在有一堆人拿着偶像（指アイドル）的学习成绩，唱功，舞蹈能力，所谓「业务能力」去比来比去真的是没事找事，偶像最大的业务能力就是让人喜欢的能力。&#xA;If you like my article and want to donate, click the 捐赠 Donation button on the sidebar.</description>
-    </item>
-    <item>
       <title>Eight Days A Week</title>
       <link>https://mooxiu.github.io/eight-days-a-week/</link>
       <pubDate>Sun, 20 Mar 2022 19:16:40 +0800</pubDate>
       <guid>https://mooxiu.github.io/eight-days-a-week/</guid>
       <description>在疫情已经过了两年半之后，我终于讽刺地第一次体验到了在家办公，与此同时，世界上的其他国家几乎都宣布了疫情的结束。&#xA;与大多数人不同的是，我对于长时间处在同一个物理空间这件事情没有任何怨言，只要这里安静，没有其他人，我可以自由地变化任何姿势，坐着，站着，趴着，这都让我觉得非常自由，Free As In Freedom。我不明白为什么很多人对于疫情期间无法出门旅游这件事情感到如此愤怒，与此同时，这些人在无法自由访问各种网站这件事情上却没有任何不满。&#xA;我一开始以为WFH会是这样一种情况: 但事实上并非如此, 这周因为我有非常具体的工作，而且时间非常紧张，我几乎所有的时间都用来Coding；每天早上我们都会开会，所以像上述视频这样睡到中午起来是绝无可能的；幸运的是，和公司的内网连接非常稳定，几乎没有给我造成任何障碍，在密集的编程作业中，我有几次都进入了沉浸式的所谓Flow的状态。当然至于写出什么样的代码这种事情就只能听天由命了。&#xA;不过相比于写代码，一般来说，人与人之间的沟通往往是远程办公的最大挑战。但我们team之间这周几乎连share screen都不需要，在群里扔github PR截图几乎就满足了我们的全部需求……当然是在彼此之间对于任务都非常了解的情况下。&#xA;If you like my article and want to make a donation, you can click the 捐赠 Donation button on the side bar.</description>
-    </item>
-    <item>
-      <title>Understanding Relationship of Math Rock, Mid-Western Emo, Prog Metal, etc</title>
-      <link>https://mooxiu.github.io/understanding-relationship-of-math-rock-mid-western-emo-prog-metal-etc/</link>
-      <pubDate>Fri, 07 Jan 2022 22:29:21 +0800</pubDate>
-      <guid>https://mooxiu.github.io/understanding-relationship-of-math-rock-mid-western-emo-prog-metal-etc/</guid>
-      <description>I am really confused about the relationship among following genres:&#xA;Math Rock Mid Westen Emo Progressive Metal Post Rock I mean, when people talking about math-rock, they tend to mention mid-western emo chord, blabla. I&amp;rsquo;m getting more and more lost in those conceptions, however I begin to get things into shape when I think about this problem in a programming way.&#xA;So here is the result from My Own Understanding:</description>
     </item>
     <item>
       <title>键盘艺术的练习之路：vim和emacs</title>
@@ -134,13 +148,6 @@
       <pubDate>Mon, 04 Oct 2021 18:38:25 +0800</pubDate>
       <guid>https://mooxiu.github.io/juicy-steak-finally/</guid>
       <description>连续几个周末，因为减肥的需求，有时候我依靠牛排来度过一餐晚饭。在我的记忆中，我在日本的时候可以做出很好吃的牛排，但前几个星期我做出的牛排又老又柴，不能说难以下咽，但也着实不符合我心目中自己的水准。&#xA;黄油，迷迭香这些配料我应有尽有，但总感觉是错了什么步骤，直到昨天看了名厨Gorden Ramsay的几个视频(比如 厨神戈登·拉姆齐教你：在家烹饪出完美牛排的10大要点， 还有 地狱厨神戈登拉姆齐：如何煎出完美牛排)我才明白自己究竟犯了什么错误：&#xA;牛排不要洗，而是用厨房纸巾把牛排表面解冻的血水吸干（这是我自己总结出来的，但在知乎上似乎有一些争论） 在砧板上用手撒盐，牛排在表面滚动充分吸收盐分 放入锅的瞬间要用手将牛排摆在锅里，并且按实使得牛肉与油锅充分接触 煎牛排的时候先只用油煎，大蒜和迷迭香要在几乎两面都煎好之后放 黄油要在起锅之前最后放，然后用勺子舀起黄油泼在牛排上（这样才有充分的黄油香味） 如果不是用刀叉吃而是用筷子吃的话，摆盘前应当先切片（这当然也是我的经验） 仅仅是遵循了上述的步骤，今天做出的牛排就远胜前几次。&#xA;If you like my article and want to make a donation, you can click the 捐赠 Donation button on the side bar.</description>
-    </item>
-    <item>
-      <title>轻食是为了留长发</title>
-      <link>https://mooxiu.github.io/%E8%BD%BB%E9%A3%9F%E6%98%AF%E4%B8%BA%E4%BA%86%E7%95%99%E9%95%BF%E5%8F%91/</link>
-      <pubDate>Mon, 06 Sep 2021 21:22:09 +0800</pubDate>
-      <guid>https://mooxiu.github.io/%E8%BD%BB%E9%A3%9F%E6%98%AF%E4%B8%BA%E4%BA%86%E7%95%99%E9%95%BF%E5%8F%91/</guid>
-      <description>长发和减肥有什么关系 小时候我一直对长发男性怀有憧憬，单因为严格的管教，至今未能实现我的心愿。我爸妈在这方面简直就是警察，看到我刚剪的头发都要做出一副友邦惊诧的样子，说「你有多久没剪头发啦！」 但其实我刚刚剪过：刘海不及眉毛，鬓角和后翼更是寸草不生，即便如此，他们仍不满意。&#xA;于是我觉得，我要留长发————而且不是那种暗戳戳的长发，而是如假包换，让所有人看到都能意识到我是有意识留长发的，长发。既然下定决心，那么接下来需要做的事情唯有等待而已。但在我刚刚踌躇满志地将我的计划告诉女朋友之后，她刚刚小心翼翼地指出：「只有瘦的人留长头发才好看」。&#xA;这点醒了我，我停下了手中的可乐和雪糕，我心想，到了应该认真减肥的时候了。我说「认真」减肥，这其实也并不代表我之前没有认真减肥过，我的记录是连续吃了一个月的赛百味。但在我开发出 起司 🧀️+鸡腿排 🍗+培根 🥓 的绝妙组合之后，赛百味彻底失去了减肥的功效，这种组合的味道已经可以和麦当劳相媲美，当然热量也可以说是有过之而无不及。&#xA;痛定思痛，我发现我长此以往的减肥计划不够极端（当然我也并不是要损害我的健康），我需要的时候时间和效果都拔群的减肥食谱————我可没有时间像一个小红书博主那样做出每周不重样而且秀色可餐的食物。我需要简洁，高效，和可重复的食谱。而我的优势在于我对于食物重复性的忍耐程度非常高，这可以使得我仅仅使用极少数的食谱坚持相当长的一段时间。以下是我目前的想法，暂时就称之为 v0.0.1:&#xA;我的食谱 The Recipe v0.0.1： 早餐 全麦面包 1 ～ 2 片 牛奶若干 / 冰咖啡 小番茄 🍅 / 黄瓜 🥒 午餐 午餐的目的在于，不能暴食的同时也需要给自己提供维持一天的工作所需要的能量&#xA;自己带饭 这里是重点，指白米饭，我可以控制米饭的量只有半碗，同时因为自己带了饭所以自己没有借口去吃麦当劳之类的东西了 公司楼下大米先生的一盘含有蛋白质的菜（如：🍅 炒 🥚， 鸡肉）以及一盘蔬菜 晚餐 晚餐的情况有些复杂，因为我们的下班时间不固定，有时候我可以撑到回家吃饭的时间，有时候则非得在公司吃饭不可，因此这里需要分为两种情况&#xA;Situation 1: 七点下班回家吃饭 如果女朋友做饭那就吃饭 如果没有那就吃： 五个饺子 🥟/ 两个包子/ TBD Situation 2: 九点才能回家 公司附近一家叫做Green and Tasty的沙拉店 需要节制： 周一不能和同事去吃蓝蛙 周末不能好吃好吃的了 要早点睡觉 If you like my article and want to make a donation, you can click the 捐赠 Donation button on the side bar.</description>
     </item>
     <item>
       <title>双系统升级Win10 20H1的时候Linux引导失效修理</title>
