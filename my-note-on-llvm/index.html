@@ -9,24 +9,7 @@
 <title>My note on LLVM | New River, New Water</title>
 <meta name="title" content="My note on LLVM" />
 <meta name="description" content="This is my note for This LLVM Talk. This is a very beginning level note.
-Code
-
-LLVM monorepo: Now the single source of truth is now in github.
-Subdirectories:
-
-Each one is a sub project.
-The most famous one is llvm-project/clang (the &ldquo;core&rdquo;)(front-end for C/C&#43;&#43;/Cuda, etc)(what is front-end)
-
-
-Building: default building is debug build, and very slow
-
-More on /GettingStarted.html
-
-
-
-Compilers
-file.cpp -&gt; Clang AST -&gt; LLVM IR -&gt; Selection DAG -&gt; LLVM MIR -&gt; Machine Code
-" />
+Code LLVM monorepo: Now the single source of truth is now in github. Subdirectories: Each one is a sub project. The most famous one is llvm-project/clang (the &ldquo;core&rdquo;)(front-end for C/C&#43;&#43;/Cuda, etc)(what is front-end) Building: default building is debug build, and very slow More on /GettingStarted.html Compilers file.cpp -&gt; Clang AST -&gt; LLVM IR -&gt; Selection DAG -&gt; LLVM MIR -&gt; Machine Code LLVM-IR LLVM IR Hierarchy Module GlobalVariable Function BasicBlock Instruction ICmpInst BranchInst assembly-like language always in SSA-from with infinite registers What is SSA: Static Single-assignment form In compiler design, static single assignment form (often abbreviated as SSA form or simply SSA) is a type of intermediate representation (IR) where each variable is assigned exactly once." />
 <meta name="keywords" content="Compiler,LLVM," />
 
 
@@ -34,7 +17,7 @@ file.cpp -&gt; Clang AST -&gt; LLVM IR -&gt; Selection DAG -&gt; LLVM MIR -&gt; 
   <meta property="og:site_name" content="New River, New Water">
   <meta property="og:title" content="My note on LLVM">
   <meta property="og:description" content="This is my note for This LLVM Talk. This is a very beginning level note.
-Code LLVM monorepo: Now the single source of truth is now in github. Subdirectories: Each one is a sub project. The most famous one is llvm-project/clang (the “core”)(front-end for C/C&#43;&#43;/Cuda, etc)(what is front-end) Building: default building is debug build, and very slow More on /GettingStarted.html Compilers file.cpp -&gt; Clang AST -&gt; LLVM IR -&gt; Selection DAG -&gt; LLVM MIR -&gt; Machine Code">
+Code LLVM monorepo: Now the single source of truth is now in github. Subdirectories: Each one is a sub project. The most famous one is llvm-project/clang (the “core”)(front-end for C/C&#43;&#43;/Cuda, etc)(what is front-end) Building: default building is debug build, and very slow More on /GettingStarted.html Compilers file.cpp -&gt; Clang AST -&gt; LLVM IR -&gt; Selection DAG -&gt; LLVM MIR -&gt; Machine Code LLVM-IR LLVM IR Hierarchy Module GlobalVariable Function BasicBlock Instruction ICmpInst BranchInst assembly-like language always in SSA-from with infinite registers What is SSA: Static Single-assignment form In compiler design, static single assignment form (often abbreviated as SSA form or simply SSA) is a type of intermediate representation (IR) where each variable is assigned exactly once.">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -51,14 +34,14 @@ Code LLVM monorepo: Now the single source of truth is now in github. Subdirector
   <meta name="twitter:image" content="https://mooxiu.github.io/images/share.png">
   <meta name="twitter:title" content="My note on LLVM">
   <meta name="twitter:description" content="This is my note for This LLVM Talk. This is a very beginning level note.
-Code LLVM monorepo: Now the single source of truth is now in github. Subdirectories: Each one is a sub project. The most famous one is llvm-project/clang (the “core”)(front-end for C/C&#43;&#43;/Cuda, etc)(what is front-end) Building: default building is debug build, and very slow More on /GettingStarted.html Compilers file.cpp -&gt; Clang AST -&gt; LLVM IR -&gt; Selection DAG -&gt; LLVM MIR -&gt; Machine Code">
+Code LLVM monorepo: Now the single source of truth is now in github. Subdirectories: Each one is a sub project. The most famous one is llvm-project/clang (the “core”)(front-end for C/C&#43;&#43;/Cuda, etc)(what is front-end) Building: default building is debug build, and very slow More on /GettingStarted.html Compilers file.cpp -&gt; Clang AST -&gt; LLVM IR -&gt; Selection DAG -&gt; LLVM MIR -&gt; Machine Code LLVM-IR LLVM IR Hierarchy Module GlobalVariable Function BasicBlock Instruction ICmpInst BranchInst assembly-like language always in SSA-from with infinite registers What is SSA: Static Single-assignment form In compiler design, static single assignment form (often abbreviated as SSA form or simply SSA) is a type of intermediate representation (IR) where each variable is assigned exactly once.">
 
 
 
 
   <meta itemprop="name" content="My note on LLVM">
   <meta itemprop="description" content="This is my note for This LLVM Talk. This is a very beginning level note.
-Code LLVM monorepo: Now the single source of truth is now in github. Subdirectories: Each one is a sub project. The most famous one is llvm-project/clang (the “core”)(front-end for C/C&#43;&#43;/Cuda, etc)(what is front-end) Building: default building is debug build, and very slow More on /GettingStarted.html Compilers file.cpp -&gt; Clang AST -&gt; LLVM IR -&gt; Selection DAG -&gt; LLVM MIR -&gt; Machine Code">
+Code LLVM monorepo: Now the single source of truth is now in github. Subdirectories: Each one is a sub project. The most famous one is llvm-project/clang (the “core”)(front-end for C/C&#43;&#43;/Cuda, etc)(what is front-end) Building: default building is debug build, and very slow More on /GettingStarted.html Compilers file.cpp -&gt; Clang AST -&gt; LLVM IR -&gt; Selection DAG -&gt; LLVM MIR -&gt; Machine Code LLVM-IR LLVM IR Hierarchy Module GlobalVariable Function BasicBlock Instruction ICmpInst BranchInst assembly-like language always in SSA-from with infinite registers What is SSA: Static Single-assignment form In compiler design, static single assignment form (often abbreviated as SSA form or simply SSA) is a type of intermediate representation (IR) where each variable is assigned exactly once.">
   <meta itemprop="datePublished" content="2024-08-21T22:06:42+09:00">
   <meta itemprop="dateModified" content="2024-08-21T22:06:42+09:00">
   <meta itemprop="wordCount" content="308">
@@ -298,7 +281,8 @@ Code LLVM monorepo: Now the single source of truth is now in github. Subdirector
 <ul>
 <li>
 <blockquote>
-<p>In compiler design, static single assignment form (often abbreviated as SSA form or simply SSA) is a type of intermediate representation (IR) where each variable is assigned exactly once. SSA is used in most high-quality optimizing compilers for imperative languages, including LLVM, the GNU Compiler Collection, and many commercial compilers.</p></blockquote>
+<p>In compiler design, static single assignment form (often abbreviated as SSA form or simply SSA) is a type of intermediate representation (IR) where each variable is assigned exactly once. SSA is used in most high-quality optimizing compilers for imperative languages, including LLVM, the GNU Compiler Collection, and many commercial compilers.</p>
+</blockquote>
 </li>
 <li><img src="image-1.png" alt="alt text"></li>
 </ul>
@@ -331,7 +315,8 @@ Code LLVM monorepo: Now the single source of truth is now in github. Subdirector
 <ul>
 <li>
 <blockquote>
-<p>The llc command compiles LLVM source inputs into assembly language for a specified architecture. The assembly language output can then be passed through a native assembler and linker to generate a native executable.The choice of architecture for the output assembly code is automatically determined from the input file, unless the -march option is used to override the default.</p></blockquote>
+<p>The llc command compiles LLVM source inputs into assembly language for a specified architecture. The assembly language output can then be passed through a native assembler and linker to generate a native executable.The choice of architecture for the output assembly code is automatically determined from the input file, unless the -march option is used to override the default.</p>
+</blockquote>
 </li>
 </ul>
 </li>
@@ -345,7 +330,8 @@ Code LLVM monorepo: Now the single source of truth is now in github. Subdirector
 <ul>
 <li>
 <blockquote>
-<p>In computer science, instruction selection is the stage of a compiler backend that transforms its middle-level intermediate representation (IR) into a low-level IR.</p></blockquote>
+<p>In computer science, instruction selection is the stage of a compiler backend that transforms its middle-level intermediate representation (IR) into a low-level IR.</p>
+</blockquote>
 </li>
 </ul>
 </li>

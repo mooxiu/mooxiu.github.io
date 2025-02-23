@@ -253,7 +253,8 @@ It categorizes computer architectures based on single/multiple instruction and s
 <p>The problem of SIMD is that it needs both support from compiler and hardware (Intel: MMX, SSE, SSE2; AMD: AVX). Also, if the application is memory bound, it has limited benefit. Given the difficulty to make SIMD work, the performance improvement can still not be ignored.[2]</p>
 <p>There are a bunch of different ways to do SIMD operations in C++. As far as I know, we can use <a href="https://www.openmp.org/spec-html/5.0/openmpsu42.html">SIMD directives of OpenMP</a> (from OpenMP 4.0), or use C++ intrinsics, it might be different for different compiler and hardware platforms, but <a href="http://const.me/articles/simd/simd.pdf">here is a guidebook for it</a>. Also chapter 6 in [2] has shown a lot of ways of doing SIMD.</p>
 <blockquote>
-<p>Note: SIMT(Single Instruction Multiple Threads) is a variant of SIMD, often used to describe GPU work group. (&ldquo;Thank you&rdquo;, Nvidia 2008[4])</p></blockquote>
+<p>Note: SIMT(Single Instruction Multiple Threads) is a variant of SIMD, often used to describe GPU work group. (&ldquo;Thank you&rdquo;, Nvidia 2008[4])</p>
+</blockquote>
 <h3 id="mimd">MIMD</h3>
 <p>MIMD is actually more popular nowadays, even through SIMD has lower requirement on hardware (as it only needs one controller) and less requirement on memory (do not need to replicate instruction/program), SIMD requires specialized CPUs. We have actually seen a lot of such things happen, like distributed storage, cloud computing, GPU computing.</p>
 <p>Computers in which each processing element is capable of executing a different program independent of the other processing elements are called multiple instruction stream, multiple data stream (MIMD) computers [3]. Specially, <strong>Single Program Multiple Data (SPMD)</strong> is a simple variant of MIMD.</p>
