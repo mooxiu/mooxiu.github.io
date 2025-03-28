@@ -294,7 +294,7 @@ type Element struct { prev, next Element list *List Value interface{} } It is ac
 <p>Consider when a key got hit in LRU, we often assume that it can be frequently accessed, so we need to move it to the front of our structure.</p>
 <p>On the other hand, if the capacity is full and we need to add a new key to the structure, we also need to quickly drop out the oldest key at the end of our structure.</p>
 <p>In this situation, a double-linked list can achieve the above two operations very effectively.</p>
-<!-- raw HTML omitted -->
+<!-- Also, considering dealing with a cache, it is better to be a  data structure to quickly peek/get what we want to find in hopefully $O(1)$ time. So a HashMap is necessary.  -->
 <hr>
 <p>If you like my article and want to make a donation, you can click the <a href="https://mooxiu.github.io/donate/">捐赠 Donation</a> button on the side bar.</p>
 
