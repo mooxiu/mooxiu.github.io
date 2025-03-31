@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>Copyright © 2024, haruka hsiao.</copyright>
-    <lastBuildDate>Mon, 31 Mar 2025 14:24:17 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 31 Mar 2025 15:17:12 +0900</lastBuildDate>
     <atom:link href="https://mooxiu.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why_linux_desktop</title>
+      <link>https://mooxiu.github.io/2025/03/31/why_linux_desktop/</link>
+      <pubDate>Mon, 31 Mar 2025 15:17:12 +0900</pubDate>
+      <guid>https://mooxiu.github.io/2025/03/31/why_linux_desktop/</guid>
+      <description>&lt;p&gt;我一直以来想拥有一个专属的PC仅安装Linux Desktop，最近终于实现了，比如这篇文章就是在一台Ubuntu上开着NeoVim写的.&#xA;前段时间我把这个想法告诉了其他人，别人告诉我没有必要，比如你可以安装虚拟机，或者用remote的方式，或者用Windows的WSL……&lt;/p&gt;&#xA;&lt;p&gt;Yes I am aware of all the alternatives.&lt;/p&gt;&#xA;&lt;p&gt;上周看America Football的演出，主唱Mike Kinsella的琴弦（一把墨绿色的Tele）在唱『You know I should be leaving soon』(有些不记得了，但肯定是一首LP1里面的歌)的时候断掉了，他不得不换了一把黑色的Modern Tele重唱了一遍，他刚一上手就说了一句类似『it sounds different』的话。&lt;/p&gt;&#xA;&lt;p&gt;我觉得拥有多个设备就像拥有多把吉他，尽管原则上我们拥有同样的效果器，调音一样，那么声音应该类似，至少作为演出来说糊弄一下观众肯定没有问题，但是it sounds different.&#xA;我想这就是为什么我一直想要一个专属的Linux Desktop尽管我可以有很多中实现相似效果的办法，因为it sounds different.&lt;/p&gt;&#xA;&lt;p&gt;This is a page about »Why_linux_desktop«.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Logseq停止开发了吗？但无所谓</title>
       <link>https://mooxiu.github.io/2025/03/31/is_logseq_dead/</link>
