@@ -243,7 +243,8 @@
 <p>Dual boot: Win10 and Manjaro Linux.</p>
 <p>When trying to update Win10 to the latest Win10 20H version, after rebooting my system, it did not enter the booting interface, rather it says:</p>
 <blockquote>
-<p>Unknown filesystem, entering rescue mod</p></blockquote>
+<p>Unknown filesystem, entering rescue mod</p>
+</blockquote>
 <h2 id="first-try">First Try</h2>
 <p>After searching the internet, I find <a href="https://www.youtube.com/watch?v=a8UuIBdMh4M">this video</a> shows the same problem.</p>
 <p>However, after I <code>ls</code> my hd partion one by one on my pc, I found there are 3 partions showing they have ext2 filesystem. I think that is because they are:</p>
@@ -259,7 +260,8 @@
 </span></span><span style="display:flex;"><span>normal
 </span></span></code></pre></div><p>but they all show:</p>
 <blockquote>
-<p>&lsquo;/boot/grub/xxx/normal.mod&rsquo; not found</p></blockquote>
+<p>&lsquo;/boot/grub/xxx/normal.mod&rsquo; not found</p>
+</blockquote>
 <h2 id="second-try">Second Try</h2>
 <p>I found <a href="https://www.youtube.com/watch?v=ZpIOteojORE">another tutorial</a> from the comments of the above one. And it solves my problem.</p>
 <p>After I type <code>ls (hd0,gpt7)/</code>(notice there is a backslash), it turns out that it only have <code>grub/</code> under the partition, which means I should <code>set prefix</code> as <code>(hd0,gpt7)/grub</code> rather than <code>(hd0,gpt7)/boot/grub</code>.</p>
@@ -271,7 +273,8 @@
 <p>then launch your linux and write it to your terminal:
 &ldquo;sudo update-grub &quot; then
 &ldquo;sudo grub-install /dev/sda&rdquo;
-it will save your config</p></blockquote>
+it will save your config</p>
+</blockquote>
 <p>It works perfect!</p>
 
 </content>
