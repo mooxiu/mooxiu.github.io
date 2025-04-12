@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="http://localhost:1313/static/images/favicon.png" />
+<title>Memo: Data Structure Tree | New River, New Water</title>
+<meta name="title" content="Memo: Data Structure Tree" />
+<meta name="description" content="全网最不完整总结" />
+<meta name="keywords" content="Data_Structure,Algorithm,Leetcode,Go,Golang," />
+
+
+<meta property="og:url" content="http://localhost:1313/memo-data-structure-tree/">
+  <meta property="og:site_name" content="New River, New Water">
+  <meta property="og:title" content="Memo: Data Structure Tree">
+  <meta property="og:description" content="全网最不完整总结">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2022-02-03T11:33:10+08:00">
+    <meta property="article:modified_time" content="2022-02-03T11:33:10+08:00">
+    <meta property="article:tag" content="Data_Structure">
+    <meta property="article:tag" content="Algorithm">
+    <meta property="article:tag" content="Leetcode">
+    <meta property="article:tag" content="Go">
+    <meta property="article:tag" content="Golang">
+    <meta property="og:image" content="http://localhost:1313/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/share.png">
+  <meta name="twitter:title" content="Memo: Data Structure Tree">
+  <meta name="twitter:description" content="全网最不完整总结">
+
+
+
+
+  <meta itemprop="name" content="Memo: Data Structure Tree">
+  <meta itemprop="description" content="全网最不完整总结">
+  <meta itemprop="datePublished" content="2022-02-03T11:33:10+08:00">
+  <meta itemprop="dateModified" content="2022-02-03T11:33:10+08:00">
+  <meta itemprop="wordCount" content="281">
+  <meta itemprop="image" content="http://localhost:1313/images/share.png">
+  <meta itemprop="keywords" content="Data_Structure,Algorithm,Leetcode,Go,Golang">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+      --width: 800px;
+      --font-main: Verdana, sans-serif;
+      --font-secondary: Verdana, sans-serif;
+      --font-scale: 1em;
+      --background-color: #fff;
+      --heading-color: #222;
+      --text-color: #444;
+      --link-color: #3273dc;
+      --visited-color:  #8b6fcb;
+      --code-background-color: #f2f2f2;
+      --code-color: #222;
+      --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+      :root {
+          --background-color: #333;
+          --heading-color: #eee;
+          --text-color: #ddd;
+          --link-color: #8cc2dd;
+          --visited-color:  #8b6fcb;
+          --code-background-color: #777;
+          --code-color: #ddd;
+          --blockquote-color: #ccc;
+      }
+  }
+
+  body {
+      font-family: var(--font-secondary);
+      font-size: var(--font-scale);
+      margin: auto;
+      padding: 20px;
+      max-width: var(--width);
+      text-align: left;
+      background-color: var(--background-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.5;
+      color: var(--text-color);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-main);
+      color: var(--heading-color);
+  }
+
+  a {
+      color: var(--link-color);
+      cursor: pointer;
+      text-decoration: none;
+  }
+
+  a:hover {
+      text-decoration: underline; 
+  }
+
+  nav a {
+      margin-right: 8px;
+  }
+
+  strong, b {
+      color: var(--heading-color);
+  }
+
+  button {
+      margin: 0;
+      cursor: pointer;
+  }
+
+  main {
+      line-height: 1.6;
+  }
+
+  table {
+      width: 100%;
+  }
+
+  hr {
+      border: 0;
+      border-top: 1px dashed;
+  }
+
+  img {
+      max-width: 100%;
+  }
+
+  code {
+      font-family: monospace;
+      padding: 2px;
+      background-color: var(--code-background-color);
+      color: var(--code-color);
+      border-radius: 3px;
+  }
+
+  blockquote {
+      border-left: 1px solid #999;
+      color: var(--code-color);
+      padding-left: 20px;
+      font-style: italic;
+  }
+
+  footer {
+      padding: 25px 0;
+      text-align: center;
+  }
+
+  .title:hover {
+      text-decoration: none;
+  }
+
+  .title h1 {
+      font-size: 1.5em;
+  }
+
+  .inline {
+      width: auto !important;
+  }
+
+  .highlight, .code {
+      padding: 1px 15px;
+      background-color: var(--code-background-color);
+      color: var(--code-color);
+      border-radius: 3px;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+      list-style-type: none;
+      padding: unset;
+  }
+
+  ul.blog-posts li {
+      display: flex;
+  }
+
+  ul.blog-posts li span {
+      flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+      color: var(--visited-color);
+  }
+</style>
+
+  <script>
+    MathJax = {
+        tex: {
+            inlineMath: [
+                ['$', '$'],
+                ['\\(', '\\)'],
+            ],
+        },
+        svg: {
+            fontCache: 'global',
+        },
+    };
+</script>
+<script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script></head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>New River, New Water</h2>
+</a>
+<nav><a href="/">Home</a>
+
+<a href="/lists/">Lists</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>Memo: Data Structure Tree</h1>
+<p>
+  <i>
+    <time datetime='2022-02-03'>
+      03 Feb, 2022
+    </time>
+  </i>
+</p>
+
+<content>
+  <p>This is a memo about <code>Tree</code> structure. When dealing with <code>Tree</code> related problems in Leetcode, I try to write concise and clear code.</p>
+<h1 id="define-the-structure">Define the Structure</h1>
+<p>For a node in a tree, it can be described as :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">TreeNode</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Val</span> <span style="color:#66d9ef">int</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Left</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Right</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span> 
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="traversal">Traversal</h1>
+<p>There are 3 fundamental types of traversal. They are <em>Pre-Order Traversal</em>, <em>In-Order Traversal</em>, and <em>Post-Order Traversal</em>. <em>Order</em> is to describe the ranking of root node.</p>
+<ul>
+<li><em>Pre-Order</em>(NLR): Node -&gt; Left -&gt; Right</li>
+<li><em>In-Order</em>(LNR): Left -&gt; Node -&gt; Right</li>
+<li><em>Post-Order</em>(LRN): Left -&gt; Right -&gt; Node</li>
+</ul>
+<p>See the diagram from <a href="https://en.wikipedia.org/wiki/Tree_traversal#In-order,_LNR">Wikipedia</a> about tree traversal:
+<img src="traversal.png" alt="Traversal" style="zoom:50%;" /></p>
+<h2 id="pre-order">Pre-Order</h2>
+<h3 id="recursive">Recursive</h3>
+<p>Recursive method is pretty straightforward:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">preOrderTraversalRecursive</span>(<span style="color:#a6e22e">node</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">node</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// do with current node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">printNode</span>(<span style="color:#a6e22e">node</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// do with left 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">preOrderTraversalRecursive</span>(<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Left</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// do with right	
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">preOrderTraversalRecursive</span>(<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Right</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="iteration">Iteration</h3>
+<p>We need a stack when using iteration method.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">preOrderTraversalIteration</span>(<span style="color:#a6e22e">node</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">stack</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">New</span>()	
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">curr</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">node</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">stack</span>.<span style="color:#a6e22e">Len</span>() &gt; <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">curr</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">curr</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">printNode</span>(<span style="color:#a6e22e">curr</span>)	
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">stack</span>.<span style="color:#a6e22e">PushBack</span>(<span style="color:#a6e22e">curr</span>) <span style="color:#75715e">// push element in the stack (add element to the back of the list)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#a6e22e">curr</span> = <span style="color:#a6e22e">curr</span>.<span style="color:#a6e22e">Left</span>
+</span></span><span style="display:flex;"><span>		} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">back</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">stack</span>.<span style="color:#a6e22e">Back</span>()
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">curr</span> = <span style="color:#a6e22e">back</span>.<span style="color:#a6e22e">Value</span>.(<span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>).<span style="color:#a6e22e">Right</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">stack</span>.<span style="color:#a6e22e">Remove</span>(<span style="color:#a6e22e">back</span>)
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="in-order">In-Order</h2>
+<h3 id="recursive-1">Recursive</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">inOrderTraversalRecursive</span>(<span style="color:#a6e22e">node</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">node</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// do with left node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">inOrderTraversalRecursive</span>(<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Left</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// do with current node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">printNode</span>(<span style="color:#a6e22e">node</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// do with right node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">inOrderTraversalRecursive</span>(<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Right</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="iteration-1">Iteration</h3>
+<p>// todo</p>
+<h2 id="post-order">Post-Order</h2>
+<h3 id="recursive-2">Recursive</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">postOrderTraversalRecursive</span>(<span style="color:#a6e22e">node</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TreeNode</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">node</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// do with left node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">postOrderTraversalRecursive</span>(<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Left</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// do with right node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">postOrderTraversalRecursive</span>(<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">Right</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// do with current node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">printNode</span>(<span style="color:#a6e22e">node</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="iteration-2">Iteration</h3>
+<h1 id="binary-search-treebst-不是bts">Binary Search Tree(BST, 不是BTS)</h1>
+<h2 id="validation">Validation</h2>
+<p>A valid BST should satisfy following requirements:</p>
+<ul>
+<li></li>
+</ul>
+
+</content>
+<p>
+  
+  <a href="http://localhost:1313/blog/data_structure/">#Data_Structure</a>
+  
+  <a href="http://localhost:1313/blog/algorithm/">#Algorithm</a>
+  
+  <a href="http://localhost:1313/blog/leetcode/">#Leetcode</a>
+  
+  <a href="http://localhost:1313/blog/go/">#Go</a>
+  
+  <a href="http://localhost:1313/blog/golang/">#Golang</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

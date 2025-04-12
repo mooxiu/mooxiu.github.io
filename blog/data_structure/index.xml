@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data_Structure on New River, New Water</title>
+    <link>http://localhost:1313/blog/data_structure/</link>
+    <description>Recent content in Data_Structure on New River, New Water</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2024, haruka hsiao.</copyright>
+    <lastBuildDate>Thu, 03 Feb 2022 11:33:10 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/data_structure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Memo: Data Structure Tree</title>
+      <link>http://localhost:1313/memo-data-structure-tree/</link>
+      <pubDate>Thu, 03 Feb 2022 11:33:10 +0800</pubDate>
+      <guid>http://localhost:1313/memo-data-structure-tree/</guid>
+      <description>This is a memo about Tree structure. When dealing with Tree related problems in Leetcode, I try to write concise and clear code.&#xA;Define the Structure For a node in a tree, it can be described as :&#xA;type TreeNode struct { Val int Left *TreeNode Right *TreeNode } Traversal There are 3 fundamental types of traversal. They are Pre-Order Traversal, In-Order Traversal, and Post-Order Traversal. Order is to describe the ranking of root node.</description>
+    </item>
+  </channel>
+</rss>

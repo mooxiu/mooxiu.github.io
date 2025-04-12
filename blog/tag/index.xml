@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tag on New River, New Water</title>
+    <link>http://localhost:1313/blog/tag/</link>
+    <description>Recent content in Tag on New River, New Water</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2024, haruka hsiao.</copyright>
+    <lastBuildDate>Wed, 09 Feb 2022 00:14:03 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tag/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vim_markdown</title>
+      <link>http://localhost:1313/vim_markdown/</link>
+      <pubDate>Wed, 09 Feb 2022 00:14:03 +0800</pubDate>
+      <guid>http://localhost:1313/vim_markdown/</guid>
+      <description>在编辑markdown文档这件事情上，我曾使用过许多工具。&#xA;最开始是Typora，它的「所见即所得」的特性令人陶醉，而且非常优美。但我觉得我不应当陶醉于此，我想用更hardcore一点的方式，同时我也希望能够使用vim进行编辑。于是我把目光投向了VSCode，它的编辑体验就更像我以前写LaTEx的体验了，左边是raw文档，右边是渲染的结果。为了让这件事情更彻底，我开始探索纯粹使用vim来进行markdown编辑。&#xA;markdown语法高亮 markdown的Preview Management: https://github.com/junegunn/vim-plug Preview: https://github.com/instant-markdown/vim-instant-markdown If you like my article and want to make a donation, you can click the 捐赠 Donation button on the side bar.</description>
+    </item>
+    <item>
+      <title>Sounds_explore</title>
+      <link>http://localhost:1313/sounds_explore/</link>
+      <pubDate>Sun, 23 May 2021 19:27:54 +0800</pubDate>
+      <guid>http://localhost:1313/sounds_explore/</guid>
+      <description>列举一些我们常常听到但是不知道叫什么名字的声音。&#xA;Orchestra Hit 八十年代音乐常常出现的弦乐打击音，https://www.youtube.com/watch?v=8A1Aj1_EF9Y 这个视频介绍了这个声音究竟来源何处：Stravinsky的「Firebirds」中Infernal Dance(地狱之舞)的开头，是一个小六度。&#xA;Fairlight CMI designed by Peter Vogel，最早的Digital Synthesizer, Digital audio workstation(DAW) 以及Digital sampler。80年代是Sequencer(序列发生器)和Digital Sampler（数字采样器）进入音乐家视野的年代。数字采样器可以通过一段任意长度的录制下的片段，在键盘上弹奏出不同的音高。&#xA;Babooshka by Kate Bush, 1980: 采样了一段砸碎玻璃的声音 Peter Vogel手边正好有一张Firebird的唱片，它录制了开头的声音作为一段采样并命名为「ORCH2.VC」（然而根据Wikipedia的介绍，它的名字应该是「ORCH5」，「ORCH2」是一个loop过的版本）。 使用了Orchestra Hit采样的音乐包括：&#xA;Planet Rock by Afrika Bambaataa, 1982: 第一张使用orch2.vc采样的音乐 The Whihelm Scream 也就是「AHHHHOU」这样的声音。&#xA;最早来自于一部1951年的电影「Distant Drums」，当一个士兵泅水的时候被短吻鳄袭击时发出的声音。 而「The Whihelm Scream」这个名字则是因为1953年的电影「The Charge at Feather River」当中名为「Pvt. Whilhelm」中箭时的采样。&#xA;这个声音后来变得如此知名和广为应用，则是因为sound designer Ben Butt在为Star Wars电影工作的时候注意到了这个声音，并且在电影中大量使用。&#xA;从这个合集中也可以看出来。&#xA;Sound Effects(https://www.youtube.com/watch?v=BpSygUv0qEE) Famous Sound(https://www.synthmania.com/Famous%20Sounds.htm) </description>
+    </item>
+  </channel>
+</rss>
