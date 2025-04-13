@@ -14,7 +14,7 @@
       <link>http://localhost:1313/%E4%B8%BA%E4%BD%95%E5%88%86%E8%B4%9D%E6%80%BB%E6%98%AF%E8%B4%9F%E5%80%BC/</link>
       <pubDate>Wed, 24 Nov 2021 21:50:38 +0800</pubDate>
       <guid>http://localhost:1313/%E4%B8%BA%E4%BD%95%E5%88%86%E8%B4%9D%E6%80%BB%E6%98%AF%E8%B4%9F%E5%80%BC/</guid>
-      <description>使用音频软件对音乐进行编辑的时候，我们几乎总是会注意到，在这些软件中，音乐的分贝总是一个负值(下面是一张compressor（压缩器）的截图，请注意红色方框中但分贝数字)：&#xA;这几乎和我们日常的经验截然不同，日常生活中，我们常能听到类似以下的描述：&#xA;人耳最好不要长期曝露在xx分贝之下&#xA;或者&#xA;施工的声音大约是xx分贝&#xA;dB（分贝），似乎是我们都很熟悉很基本的对声音大小进行衡量的单位，但此时跟在一个负值后面的它显得如此陌生。事实上，前面一句话的「对声音大小进行衡量的单位」这句话就非常模糊，何谓声音大小？如果两个人的耳朵对于同样的声音有着不同的敏感度的话，那么这个声音对于两个人的声音大小是不同的吗？一旦有诸如此类的问题，我们就会发现对声音大小（响度）进行描述的物理单位似乎需要被更严谨地定义。&#xA;If you like my article and want to make a donation, you can click the 捐赠 Donation button on the side bar.</description>
+      <description>&lt;p&gt;使用音频软件对音乐进行编辑的时候，我们几乎总是会注意到，在这些软件中，音乐的分贝总是一个负值(下面是一张compressor（压缩器）的截图，请注意红色方框中但分贝数字)：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;logic_pro_screenshot.png&#34; alt=&#34;minus db in logic pro&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;这几乎和我们日常的经验截然不同，日常生活中，我们常能听到类似以下的描述：&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;人耳最好不要长期曝露在xx分贝之下&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;或者&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;施工的声音大约是xx分贝&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;dB（分贝），似乎是我们都很熟悉很基本的对声音大小进行衡量的单位，但此时跟在一个负值后面的它显得如此陌生。事实上，前面一句话的「对声音大小进行衡量的单位」这句话就非常模糊，何谓声音大小？如果两个人的耳朵对于同样的声音有着不同的敏感度的话，那么这个声音对于两个人的声音大小是不同的吗？一旦有诸如此类的问题，我们就会发现对声音大小（响度）进行描述的物理单位似乎需要被更严谨地定义。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;If you like my article and want to make a donation, you can click the &lt;a href=&#34;https://mooxiu.github.io/donate/&#34;&gt;捐赠 Donation&lt;/a&gt; button on the side bar.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

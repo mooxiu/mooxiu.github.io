@@ -9,8 +9,14 @@
 <title>Go的双向链表 | New River, New Water</title>
 <meta name="title" content="Go的双向链表" />
 <meta name="description" content="Although list has rarely been used in Go (Just about always when you are thinking of a list - use a slice instead in Go), there is an official implementation in the standard library. After reading the implementation (go standard package: src/container/list/list.go), I found it very inspiring.
-The Node Basically, it first defines Node, which is referred to as Element in the standard package:
-type Element struct { prev, next Element list *List Value interface{} } It is actually a structure we create a lot when solving linked list problems in websites like LeetCode." />
+The Node
+Basically, it first defines Node, which is referred to as Element in the standard package:
+type Element struct {
+    prev, next Element
+    list *List
+    Value interface{} 
+}
+It is actually a structure we create a lot when solving linked list problems in websites like LeetCode. The difference is:" />
 <meta name="keywords" content="Data Structure,Golang," />
 
 
@@ -19,7 +25,7 @@ type Element struct { prev, next Element list *List Value interface{} } It is ac
   <meta property="og:title" content="Go的双向链表">
   <meta property="og:description" content="Although list has rarely been used in Go (Just about always when you are thinking of a list - use a slice instead in Go), there is an official implementation in the standard library. After reading the implementation (go standard package: src/container/list/list.go), I found it very inspiring.
 The Node Basically, it first defines Node, which is referred to as Element in the standard package:
-type Element struct { prev, next Element list *List Value interface{} } It is actually a structure we create a lot when solving linked list problems in websites like LeetCode.">
+type Element struct { prev, next Element list *List Value interface{} } It is actually a structure we create a lot when solving linked list problems in websites like LeetCode. The difference is:">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -37,7 +43,7 @@ type Element struct { prev, next Element list *List Value interface{} } It is ac
   <meta name="twitter:title" content="Go的双向链表">
   <meta name="twitter:description" content="Although list has rarely been used in Go (Just about always when you are thinking of a list - use a slice instead in Go), there is an official implementation in the standard library. After reading the implementation (go standard package: src/container/list/list.go), I found it very inspiring.
 The Node Basically, it first defines Node, which is referred to as Element in the standard package:
-type Element struct { prev, next Element list *List Value interface{} } It is actually a structure we create a lot when solving linked list problems in websites like LeetCode.">
+type Element struct { prev, next Element list *List Value interface{} } It is actually a structure we create a lot when solving linked list problems in websites like LeetCode. The difference is:">
 
 
 
@@ -45,7 +51,7 @@ type Element struct { prev, next Element list *List Value interface{} } It is ac
   <meta itemprop="name" content="Go的双向链表">
   <meta itemprop="description" content="Although list has rarely been used in Go (Just about always when you are thinking of a list - use a slice instead in Go), there is an official implementation in the standard library. After reading the implementation (go standard package: src/container/list/list.go), I found it very inspiring.
 The Node Basically, it first defines Node, which is referred to as Element in the standard package:
-type Element struct { prev, next Element list *List Value interface{} } It is actually a structure we create a lot when solving linked list problems in websites like LeetCode.">
+type Element struct { prev, next Element list *List Value interface{} } It is actually a structure we create a lot when solving linked list problems in websites like LeetCode. The difference is:">
   <meta itemprop="datePublished" content="2021-12-10T00:01:30+08:00">
   <meta itemprop="dateModified" content="2021-12-10T00:01:30+08:00">
   <meta itemprop="wordCount" content="589">
@@ -272,16 +278,16 @@ type Element struct { prev, next Element list *List Value interface{} } It is ac
 <h2 id="the-sentinel-element">The Sentinel Element</h2>
 <p>Sentinel is a very common practice when dealing with linked-list. Because we usually have to do some operations like remove or insert a head node to the linked list. It can be helpful to have a static node on which we can always rely.</p>
 <p>But here, the sentinel is even more helpful, as it is not only pointer to the beginnig <code>Element</code> of the list, but also the ending <code>Element</code> of the list. We can conclude from following code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// Front returns the first element of list l or nil if the list is empty.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">l</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">List</span>) <span style="color:#a6e22e">Front</span>() <span style="color:#f92672">*</span><span style="color:#a6e22e">Element</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// Front returns the first element of list l or nil if the list is empty.</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">l</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">List</span>) <span style="color:#a6e22e">Front</span>() <span style="color:#f92672">*</span><span style="color:#a6e22e">Element</span> {
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">l</span>.<span style="color:#a6e22e">len</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
 </span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">l</span>.<span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">next</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Back returns the last element of list l or nil if the list is empty.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">l</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">List</span>) <span style="color:#a6e22e">Back</span>() <span style="color:#f92672">*</span><span style="color:#a6e22e">Element</span> {
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Back returns the last element of list l or nil if the list is empty.</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">l</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">List</span>) <span style="color:#a6e22e">Back</span>() <span style="color:#f92672">*</span><span style="color:#a6e22e">Element</span> {
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">l</span>.<span style="color:#a6e22e">len</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
 </span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
 </span></span><span style="display:flex;"><span>	}

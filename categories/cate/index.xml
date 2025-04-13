@@ -14,7 +14,7 @@
       <link>http://localhost:1313/vim_markdown/</link>
       <pubDate>Wed, 09 Feb 2022 00:14:03 +0800</pubDate>
       <guid>http://localhost:1313/vim_markdown/</guid>
-      <description>在编辑markdown文档这件事情上，我曾使用过许多工具。&#xA;最开始是Typora，它的「所见即所得」的特性令人陶醉，而且非常优美。但我觉得我不应当陶醉于此，我想用更hardcore一点的方式，同时我也希望能够使用vim进行编辑。于是我把目光投向了VSCode，它的编辑体验就更像我以前写LaTEx的体验了，左边是raw文档，右边是渲染的结果。为了让这件事情更彻底，我开始探索纯粹使用vim来进行markdown编辑。&#xA;markdown语法高亮 markdown的Preview Management: https://github.com/junegunn/vim-plug Preview: https://github.com/instant-markdown/vim-instant-markdown If you like my article and want to make a donation, you can click the 捐赠 Donation button on the side bar.</description>
+      <description>&lt;p&gt;在编辑markdown文档这件事情上，我曾使用过许多工具。&lt;/p&gt;&#xA;&lt;p&gt;最开始是Typora，它的「所见即所得」的特性令人陶醉，而且非常优美。但我觉得我不应当陶醉于此，我想用更hardcore一点的方式，同时我也希望能够使用vim进行编辑。于是我把目光投向了&lt;em&gt;VSCode&lt;/em&gt;，它的编辑体验就更像我以前写&lt;em&gt;LaTEx&lt;/em&gt;的体验了，左边是raw文档，右边是渲染的结果。为了让这件事情更彻底，我开始探索纯粹使用vim来进行markdown编辑。&lt;/p&gt;&#xA;&lt;h2 id=&#34;markdown语法高亮&#34;&gt;markdown语法高亮&lt;/h2&gt;&#xA;&lt;h2 id=&#34;markdown的preview&#34;&gt;markdown的Preview&lt;/h2&gt;&#xA;&lt;h3 id=&#34;management&#34;&gt;Management: &lt;a href=&#34;https://github.com/junegunn/vim-plug&#34;&gt;https://github.com/junegunn/vim-plug&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;h3 id=&#34;preview&#34;&gt;Preview: &lt;a href=&#34;https://github.com/instant-markdown/vim-instant-markdown&#34;&gt;https://github.com/instant-markdown/vim-instant-markdown&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;If you like my article and want to make a donation, you can click the &lt;a href=&#34;https://mooxiu.github.io/donate/&#34;&gt;捐赠 Donation&lt;/a&gt; button on the side bar.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
