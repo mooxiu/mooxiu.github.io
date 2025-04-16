@@ -4,9 +4,9 @@
     <title>Win10 on New River, New Water</title>
     <link>https://mooxiu.github.io/blog/win10/</link>
     <description>Recent content in Win10 on New River, New Water</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright © 2024, haruka hsiao.</copyright>
+    <copyright>Copyright © 2024, muyao haruka hsiao.</copyright>
     <lastBuildDate>Mon, 26 Jul 2021 10:06:18 +0800</lastBuildDate>
     <atom:link href="https://mooxiu.github.io/blog/win10/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -14,7 +14,7 @@
       <link>https://mooxiu.github.io/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%8D%87%E7%BA%A7win10-20h1%E7%9A%84%E6%97%B6%E5%80%99linux%E5%BC%95%E5%AF%BC%E5%A4%B1%E6%95%88%E4%BF%AE%E7%90%86/</link>
       <pubDate>Mon, 26 Jul 2021 10:06:18 +0800</pubDate>
       <guid>https://mooxiu.github.io/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%8D%87%E7%BA%A7win10-20h1%E7%9A%84%E6%97%B6%E5%80%99linux%E5%BC%95%E5%AF%BC%E5%A4%B1%E6%95%88%E4%BF%AE%E7%90%86/</guid>
-      <description>&lt;h2 id=&#34;the-situation&#34;&gt;The Situation&lt;/h2&gt;&#xA;&lt;p&gt;Dual boot: Win10 and Manjaro Linux.&lt;/p&gt;&#xA;&lt;p&gt;When trying to update Win10 to the latest Win10 20H version, after rebooting my system, it did not enter the booting interface, rather it says:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Unknown filesystem, entering rescue mod&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;first-try&#34;&gt;First Try&lt;/h2&gt;&#xA;&lt;p&gt;After searching the internet, I find &lt;a href=&#34;https://www.youtube.com/watch?v=a8UuIBdMh4M&#34;&gt;this video&lt;/a&gt; shows the same problem.&lt;/p&gt;&#xA;&lt;p&gt;However, after I &lt;code&gt;ls&lt;/code&gt; my hd partion one by one on my pc, I found there are 3 partions showing they have ext2 filesystem. I think that is because they are:&lt;/p&gt;</description>
+      <description>The Situation Dual boot: Win10 and Manjaro Linux.&#xA;When trying to update Win10 to the latest Win10 20H version, after rebooting my system, it did not enter the booting interface, rather it says:&#xA;Unknown filesystem, entering rescue mod&#xA;First Try After searching the internet, I find this video shows the same problem.&#xA;However, after I ls my hd partion one by one on my pc, I found there are 3 partions showing they have ext2 filesystem.</description>
     </item>
   </channel>
 </rss>
