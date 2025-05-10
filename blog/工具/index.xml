@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>工具 on New River, New Water</title>
-    <link>https://mooxiu.github.io/blog/%E5%B7%A5%E5%85%B7/</link>
+    <link>http://localhost:1313/blog/%E5%B7%A5%E5%85%B7/</link>
     <description>Recent content in 工具 on New River, New Water</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2024, muyao haruka hsiao.</copyright>
     <lastBuildDate>Wed, 27 Nov 2024 21:47:41 +0900</lastBuildDate>
-    <atom:link href="https://mooxiu.github.io/blog/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Email冷静期</title>
-      <link>https://mooxiu.github.io/email%E5%86%B7%E9%9D%99%E6%9C%9F/</link>
+      <link>http://localhost:1313/email%E5%86%B7%E9%9D%99%E6%9C%9F/</link>
       <pubDate>Wed, 27 Nov 2024 21:47:41 +0900</pubDate>
-      <guid>https://mooxiu.github.io/email%E5%86%B7%E9%9D%99%E6%9C%9F/</guid>
-      <description>&lt;p&gt;我就是那种写完 Email 头脑一热点击立即发送，随即就后悔有病句/歧义/语法错误/内容不完整 的人。&lt;/p&gt;&#xA;&lt;p&gt;好在这个问题的解决方法也很简单，那就是&amp;quot;remember to always think twice&amp;quot;。既然有「离婚冷静期」，不妨把这个方法论称为「Email冷静期」好了。目前大致有以下几种实现：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;手动定时发送。一般来说邮件的实时性并不强，拖个一天两天没有问题，不妨索性定时一天之后发送，中间有充足的时间可以后悔。&lt;/li&gt;&#xA;&lt;li&gt;延时发送：在点击发送后并不直接发送，而是延迟一段时间后再发送。我印象中多年前罗永浩在演示他手机的短信功能时就有类似的实现。道理是我们往往是在发送的瞬间后悔，因此只需要简单的半分钟左右的延时发送便足以解决多种问题。&lt;/li&gt;&#xA;&lt;li&gt;发送前确认。原理和延时发送类似，而且还多了防止在编辑过程中手滑直接enter发送邮件。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;iPhone上的mail客户端似乎就带有延时发送的功能（目前我的系统版本是18.1.1），但是Mac上的mail似乎就没有这种功能（Sequoia 15.1.1）。除此之外，一点点的延时似乎还是让我感到不安。&lt;/p&gt;&#xA;&lt;p&gt;我心中的解法是发送前确认，也就是点击发送的瞬间弹出一个对话框，问我是否要发送。但在Mac的客户端上似乎怎么也无法实现这一功能，可能对于绝大多数人来说都无此必要。我不确定在其他的一些付费的客户端比如&lt;a href=&#34;https://sparkmailapp.com/&#34;&gt;Spark&lt;/a&gt;是否有实现，但我找到了一个&lt;a href=&#34;https://addons.thunderbird.net/en-us/thunderbird/addon/check-before-sending-email/&#34;&gt;Thunderbird插件的实现&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;从插件的&lt;a href=&#34;https://addons.thunderbird.net/en-us/thunderbird/addon/check-before-sending-email/&#34;&gt;预览图&lt;/a&gt;就可以看出作者大概是日本人，这也符合人们对于日本人易于不安（读作ふあん）的刻板印象。更好笑的是这个插件不仅在发送的时候要求你手动确认发信人，收信人，邮件标题和内容，而且它还有一个默认设置：即便你确认了一切信息，它会将邮件放到一个本地的outbox，你需要手动再去最终发送。原谅我一个thunderbird新人可怎么也没找到办法把邮件从outbox发出去，还好这一默认设置可以取消。不知道这个插件是否最初为日本企业设计，如今我的印象是日企中用Outlook这种臃肿的客户端比较多，还在坚持Thunderbird的多少也颇有古风了。&lt;/p&gt;&#xA;&lt;p&gt;This is a page about »Email_calm«.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/email%E5%86%B7%E9%9D%99%E6%9C%9F/</guid>
+      <description>我就是那种写完 Email 头脑一热点击立即发送，随即就后悔有病句/歧义/语法错误/内容不完整 的人。&#xA;好在这个问题的解决方法也很简单，那就是&amp;quot;remember to always think twice&amp;quot;。既然有「离婚冷静期」，不妨把这个方法论称为「Email冷静期」好了。目前大致有以下几种实现：&#xA;手动定时发送。一般来说邮件的实时性并不强，拖个一天两天没有问题，不妨索性定时一天之后发送，中间有充足的时间可以后悔。 延时发送：在点击发送后并不直接发送，而是延迟一段时间后再发送。我印象中多年前罗永浩在演示他手机的短信功能时就有类似的实现。道理是我们往往是在发送的瞬间后悔，因此只需要简单的半分钟左右的延时发送便足以解决多种问题。 发送前确认。原理和延时发送类似，而且还多了防止在编辑过程中手滑直接enter发送邮件。 iPhone上的mail客户端似乎就带有延时发送的功能（目前我的系统版本是18.1.1），但是Mac上的mail似乎就没有这种功能（Sequoia 15.1.1）。除此之外，一点点的延时似乎还是让我感到不安。&#xA;我心中的解法是发送前确认，也就是点击发送的瞬间弹出一个对话框，问我是否要发送。但在Mac的客户端上似乎怎么也无法实现这一功能，可能对于绝大多数人来说都无此必要。我不确定在其他的一些付费的客户端比如Spark是否有实现，但我找到了一个Thunderbird插件的实现.&#xA;从插件的预览图就可以看出作者大概是日本人，这也符合人们对于日本人易于不安（读作ふあん）的刻板印象。更好笑的是这个插件不仅在发送的时候要求你手动确认发信人，收信人，邮件标题和内容，而且它还有一个默认设置：即便你确认了一切信息，它会将邮件放到一个本地的outbox，你需要手动再去最终发送。原谅我一个thunderbird新人可怎么也没找到办法把邮件从outbox发出去，还好这一默认设置可以取消。不知道这个插件是否最初为日本企业设计，如今我的印象是日企中用Outlook这种臃肿的客户端比较多，还在坚持Thunderbird的多少也颇有古风了。&#xA;This is a page about »Email_calm«.</description>
     </item>
   </channel>
 </rss>
