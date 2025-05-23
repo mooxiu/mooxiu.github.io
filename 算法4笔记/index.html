@@ -9,11 +9,21 @@
 <title>「算法4」笔记 | New River, New Water</title>
 <meta name="title" content="「算法4」笔记" />
 <meta name="description" content="这则笔记主要记录我在阅读「算法」（by Robert Sedgewick et Kevin Wayne）这本书时学到的基本的算法和思想。
-第一章：算法基础 面向API编程的思维：先去考量这个程序将要实现什么API，然后分门别类写它的实现。
+第一章：算法基础
+面向API编程的思维：先去考量这个程序将要实现什么API，然后分门别类写它的实现。
 三种数据结构：背包（bag），队列（queue）（包括双向队列），栈（stack）。分别用数组（array）和链表（linked list）实现。
 算法分析：能够分析算法的时间复杂度。（当然这个我以前就会，因此不再赘述）
 具体问题：
-binomial distribution： 伯努利分布（二项分布）的递归和递推 Binary Search： 时间复杂度为(lg N) 的一种查找方式，前提是数列本身是有序的。 fibonacci Search： 一种只用加减的查找方式，二分查找的一种变体。 Welford 算法： 一种求方差的one-pass 算法，可以实现空间复杂度仅为(O(1)) 。因为精度的缘故，数学上普通的方差计算方式极有可能得到相当离谱的方差结果。 Dijkstra 双栈算数表达式求和：非常经典的算法。双栈模型可以用于各种问题的解决，并且本身也可以做到相当多的事情：比如仅用递归函数，用双栈对其中一个栈进行逆序。 2-sum：是解决3-sum的基础。一般而言比较优秀的算法是首先进行快排，接着进行遍历&#43;二分查找。这样可以让时间复杂度变为(O(N lg N))。 第二章：排序 初级排序算法：选择排序(Select Sort)， 插入排序(Insertion Sort)，希尔排序(Shell Sort)。我将Shell Sort看作是Insetion Sort的一种特别形式。这三种算法中，尽管Select是最慢的（因为无法利用最初输入的顺序），但它所需要的空间是最小的。
+
+binomial distribution： 伯努利分布（二项分布）的递归和递推
+Binary Search： 时间复杂度为(lg N) 的一种查找方式，前提是数列本身是有序的。
+fibonacci Search： 一种只用加减的查找方式，二分查找的一种变体。
+Welford 算法： 一种求方差的one-pass 算法，可以实现空间复杂度仅为(O(1)) 。因为精度的缘故，数学上普通的方差计算方式极有可能得到相当离谱的方差结果。
+Dijkstra 双栈算数表达式求和：非常经典的算法。双栈模型可以用于各种问题的解决，并且本身也可以做到相当多的事情：比如仅用递归函数，用双栈对其中一个栈进行逆序。
+2-sum：是解决3-sum的基础。一般而言比较优秀的算法是首先进行快排，接着进行遍历&#43;二分查找。这样可以让时间复杂度变为(O(N lg N))。
+
+第二章：排序
+初级排序算法：选择排序(Select Sort)， 插入排序(Insertion Sort)，希尔排序(Shell Sort)。我将Shell Sort看作是Insetion Sort的一种特别形式。这三种算法中，尽管Select是最慢的（因为无法利用最初输入的顺序），但它所需要的空间是最小的。
 归并排序（Merge Sort）（我总是不记得到底是「归并」还是「并归」）：一种分治（divide-and-conquer）思想的排序算法。事实上分成两个部分，一个部分是一个递归的sort函数，另一个是将sort的两部分merge起来的函数。是一种渐进最优的排序算法，时间是(N lg N)级别的。
 快速排序（Quick Sort）：Merge排序依然需要一个辅助的队列auxiliay。但快速排序则是将时间最短和空间小这两个优点结合了起来。它同样其实也是两个部分，一个是一个递归的Sort函数，另一个是寻找切分点的partition函数。但它的问题是比较脆弱。
 脆弱来源于何处：比如在选取分割点的时候，如果每次取得用于分割的元素恰好位于最小或者最大值，这样性能就比较低劣。因为在快排的时候一定要事先进行Shuffle使得数组处于乱序。这样平均之下更容易取到恰好中间分割的数字。（引申出了我一个问题：如何最快取得一个数组的中位数？如何one-pass地获取一个stream的中位数列？）
@@ -30,8 +40,10 @@ binomial distribution： 伯努利分布（二项分布）的递归和递推 Bin
 <meta name="keywords" content="algorithms,book," />
 
 
-<meta property="og:title" content="「算法4」笔记" />
-<meta property="og:description" content="这则笔记主要记录我在阅读「算法」（by Robert Sedgewick et Kevin Wayne）这本书时学到的基本的算法和思想。
+<meta property="og:url" content="http://localhost:1313/%E7%AE%97%E6%B3%954%E7%AC%94%E8%AE%B0/">
+  <meta property="og:site_name" content="New River, New Water">
+  <meta property="og:title" content="「算法4」笔记">
+  <meta property="og:description" content="这则笔记主要记录我在阅读「算法」（by Robert Sedgewick et Kevin Wayne）这本书时学到的基本的算法和思想。
 第一章：算法基础 面向API编程的思维：先去考量这个程序将要实现什么API，然后分门别类写它的实现。
 三种数据结构：背包（bag），队列（queue）（包括双向队列），栈（stack）。分别用数组（array）和链表（linked list）实现。
 算法分析：能够分析算法的时间复杂度。（当然这个我以前就会，因此不再赘述）
@@ -49,41 +61,21 @@ binomial distribution： 伯努利分布（二项分布）的递归和递推 Bin
 我对于优先队列的认知是，能够在输入数据的同时对数据加以排序。
 索引优先队列：为了方便引用优先队列中的元素，在优先队列上，给每个元素做了索引。实现了更多的几个方法。
 堆排序（HeapSort）： 唯一能够同时最优利用空间和时间的方法。但是现代应用程序当中排序主要还是利用快排，之所以如此是因为堆排序无法利用缓存。
-具体问题：" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/%E7%AE%97%E6%B3%954%E7%AC%94%E8%AE%B0/" /><meta property="og:image" content="http://localhost:1313/images/share.png" /><meta property="article:section" content="blog" />
-
-<meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
-
-
-
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://localhost:1313/images/share.png" /><meta name="twitter:title" content="「算法4」笔记"/>
-<meta name="twitter:description" content="这则笔记主要记录我在阅读「算法」（by Robert Sedgewick et Kevin Wayne）这本书时学到的基本的算法和思想。
-第一章：算法基础 面向API编程的思维：先去考量这个程序将要实现什么API，然后分门别类写它的实现。
-三种数据结构：背包（bag），队列（queue）（包括双向队列），栈（stack）。分别用数组（array）和链表（linked list）实现。
-算法分析：能够分析算法的时间复杂度。（当然这个我以前就会，因此不再赘述）
-具体问题：
-binomial distribution： 伯努利分布（二项分布）的递归和递推 Binary Search： 时间复杂度为(lg N) 的一种查找方式，前提是数列本身是有序的。 fibonacci Search： 一种只用加减的查找方式，二分查找的一种变体。 Welford 算法： 一种求方差的one-pass 算法，可以实现空间复杂度仅为(O(1)) 。因为精度的缘故，数学上普通的方差计算方式极有可能得到相当离谱的方差结果。 Dijkstra 双栈算数表达式求和：非常经典的算法。双栈模型可以用于各种问题的解决，并且本身也可以做到相当多的事情：比如仅用递归函数，用双栈对其中一个栈进行逆序。 2-sum：是解决3-sum的基础。一般而言比较优秀的算法是首先进行快排，接着进行遍历&#43;二分查找。这样可以让时间复杂度变为(O(N lg N))。 第二章：排序 初级排序算法：选择排序(Select Sort)， 插入排序(Insertion Sort)，希尔排序(Shell Sort)。我将Shell Sort看作是Insetion Sort的一种特别形式。这三种算法中，尽管Select是最慢的（因为无法利用最初输入的顺序），但它所需要的空间是最小的。
-归并排序（Merge Sort）（我总是不记得到底是「归并」还是「并归」）：一种分治（divide-and-conquer）思想的排序算法。事实上分成两个部分，一个部分是一个递归的sort函数，另一个是将sort的两部分merge起来的函数。是一种渐进最优的排序算法，时间是(N lg N)级别的。
-快速排序（Quick Sort）：Merge排序依然需要一个辅助的队列auxiliay。但快速排序则是将时间最短和空间小这两个优点结合了起来。它同样其实也是两个部分，一个是一个递归的Sort函数，另一个是寻找切分点的partition函数。但它的问题是比较脆弱。
-脆弱来源于何处：比如在选取分割点的时候，如果每次取得用于分割的元素恰好位于最小或者最大值，这样性能就比较低劣。因为在快排的时候一定要事先进行Shuffle使得数组处于乱序。这样平均之下更容易取到恰好中间分割的数字。（引申出了我一个问题：如何最快取得一个数组的中位数？如何one-pass地获取一个stream的中位数列？）
-处理含有大量重复元素时：三向切分是更有效的方式。
-重点： 切分的写法。
-优先队列（Priority Queues）：事实上是一种部分排序的数据模型。比如当计算机给各种应用分配资源时，看重的是最重要的若干个程序的资源，因此实际上我们只要能够找出有限个的最大值就可。
-它支持两种操作：delMax（删除最大元素）， 以及 insert（插入元素）。
-为了实现优先队列，这里提到了一种新的数据结构，这里提到了新的数据结构：二叉堆（binary heap）（或者简称「堆」）。但事实上，它仍然是一个数组，it’s all about imagination。这些数组可以被想象成树状结构，因此我们在删除最大元素和插入元素时可以以(O(lgN))的时间复杂度完成它。
-但这本书截至介绍二叉堆时，其实并没有介绍二叉树（？）。关于二叉树（Binary tree），完全二叉树（Complete Binary Tree）的东西：CMU的课件。
-我对于优先队列的认知是，能够在输入数据的同时对数据加以排序。
-索引优先队列：为了方便引用优先队列中的元素，在优先队列上，给每个元素做了索引。实现了更多的几个方法。
-堆排序（HeapSort）： 唯一能够同时最优利用空间和时间的方法。但是现代应用程序当中排序主要还是利用快排，之所以如此是因为堆排序无法利用缓存。
-具体问题："/>
+具体问题：">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:tag" content="Algorithms">
+    <meta property="article:tag" content="Book">
+    <meta property="og:image" content="http://localhost:1313/images/share.png">
 
 
 
-<meta itemprop="name" content="「算法4」笔记">
-<meta itemprop="description" content="这则笔记主要记录我在阅读「算法」（by Robert Sedgewick et Kevin Wayne）这本书时学到的基本的算法和思想。
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/share.png">
+  <meta name="twitter:title" content="「算法4」笔记">
+  <meta name="twitter:description" content="这则笔记主要记录我在阅读「算法」（by Robert Sedgewick et Kevin Wayne）这本书时学到的基本的算法和思想。
 第一章：算法基础 面向API编程的思维：先去考量这个程序将要实现什么API，然后分门别类写它的实现。
 三种数据结构：背包（bag），队列（queue）（包括双向队列），栈（stack）。分别用数组（array）和链表（linked list）实现。
 算法分析：能够分析算法的时间复杂度。（当然这个我以前就会，因此不再赘述）
@@ -103,8 +95,32 @@ binomial distribution： 伯努利分布（二项分布）的递归和递推 Bin
 堆排序（HeapSort）： 唯一能够同时最优利用空间和时间的方法。但是现代应用程序当中排序主要还是利用快排，之所以如此是因为堆排序无法利用缓存。
 具体问题：">
 
-<meta itemprop="wordCount" content="165"><meta itemprop="image" content="http://localhost:1313/images/share.png" />
-<meta itemprop="keywords" content="algorithms,book," />
+
+
+
+  <meta itemprop="name" content="「算法4」笔记">
+  <meta itemprop="description" content="这则笔记主要记录我在阅读「算法」（by Robert Sedgewick et Kevin Wayne）这本书时学到的基本的算法和思想。
+第一章：算法基础 面向API编程的思维：先去考量这个程序将要实现什么API，然后分门别类写它的实现。
+三种数据结构：背包（bag），队列（queue）（包括双向队列），栈（stack）。分别用数组（array）和链表（linked list）实现。
+算法分析：能够分析算法的时间复杂度。（当然这个我以前就会，因此不再赘述）
+具体问题：
+binomial distribution： 伯努利分布（二项分布）的递归和递推 Binary Search： 时间复杂度为(lg N) 的一种查找方式，前提是数列本身是有序的。 fibonacci Search： 一种只用加减的查找方式，二分查找的一种变体。 Welford 算法： 一种求方差的one-pass 算法，可以实现空间复杂度仅为(O(1)) 。因为精度的缘故，数学上普通的方差计算方式极有可能得到相当离谱的方差结果。 Dijkstra 双栈算数表达式求和：非常经典的算法。双栈模型可以用于各种问题的解决，并且本身也可以做到相当多的事情：比如仅用递归函数，用双栈对其中一个栈进行逆序。 2-sum：是解决3-sum的基础。一般而言比较优秀的算法是首先进行快排，接着进行遍历&#43;二分查找。这样可以让时间复杂度变为(O(N lg N))。 第二章：排序 初级排序算法：选择排序(Select Sort)， 插入排序(Insertion Sort)，希尔排序(Shell Sort)。我将Shell Sort看作是Insetion Sort的一种特别形式。这三种算法中，尽管Select是最慢的（因为无法利用最初输入的顺序），但它所需要的空间是最小的。
+归并排序（Merge Sort）（我总是不记得到底是「归并」还是「并归」）：一种分治（divide-and-conquer）思想的排序算法。事实上分成两个部分，一个部分是一个递归的sort函数，另一个是将sort的两部分merge起来的函数。是一种渐进最优的排序算法，时间是(N lg N)级别的。
+快速排序（Quick Sort）：Merge排序依然需要一个辅助的队列auxiliay。但快速排序则是将时间最短和空间小这两个优点结合了起来。它同样其实也是两个部分，一个是一个递归的Sort函数，另一个是寻找切分点的partition函数。但它的问题是比较脆弱。
+脆弱来源于何处：比如在选取分割点的时候，如果每次取得用于分割的元素恰好位于最小或者最大值，这样性能就比较低劣。因为在快排的时候一定要事先进行Shuffle使得数组处于乱序。这样平均之下更容易取到恰好中间分割的数字。（引申出了我一个问题：如何最快取得一个数组的中位数？如何one-pass地获取一个stream的中位数列？）
+处理含有大量重复元素时：三向切分是更有效的方式。
+重点： 切分的写法。
+优先队列（Priority Queues）：事实上是一种部分排序的数据模型。比如当计算机给各种应用分配资源时，看重的是最重要的若干个程序的资源，因此实际上我们只要能够找出有限个的最大值就可。
+它支持两种操作：delMax（删除最大元素）， 以及 insert（插入元素）。
+为了实现优先队列，这里提到了一种新的数据结构，这里提到了新的数据结构：二叉堆（binary heap）（或者简称「堆」）。但事实上，它仍然是一个数组，it’s all about imagination。这些数组可以被想象成树状结构，因此我们在删除最大元素和插入元素时可以以(O(lgN))的时间复杂度完成它。
+但这本书截至介绍二叉堆时，其实并没有介绍二叉树（？）。关于二叉树（Binary tree），完全二叉树（Complete Binary Tree）的东西：CMU的课件。
+我对于优先队列的认知是，能够在输入数据的同时对数据加以排序。
+索引优先队列：为了方便引用优先队列中的元素，在优先队列上，给每个元素做了索引。实现了更多的几个方法。
+堆排序（HeapSort）： 唯一能够同时最优利用空间和时间的方法。但是现代应用程序当中排序主要还是利用快排，之所以如此是因为堆排序无法利用缓存。
+具体问题：">
+  <meta itemprop="wordCount" content="165">
+  <meta itemprop="image" content="http://localhost:1313/images/share.png">
+  <meta itemprop="keywords" content="Algorithms,Book">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
   <style>
