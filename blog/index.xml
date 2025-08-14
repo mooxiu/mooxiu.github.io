@@ -14,7 +14,7 @@
       <link>https://mooxiu.github.io/2025/08/14/slr_parsing/</link>
       <pubDate>Thu, 14 Aug 2025 18:18:37 +0900</pubDate>
       <guid>https://mooxiu.github.io/2025/08/14/slr_parsing/</guid>
-      <description>&lt;p&gt;This blog is aiming to sort out some parsing concepts, especially, by walking through a simple CFG example.&lt;/p&gt;&#xA;&lt;p&gt;Most concepts are from Stanford CS143 &lt;em&gt;Compilers&lt;/em&gt;, and &lt;em&gt;Compilers: Principles, Techniques, &amp;amp; Tools&lt;/em&gt; (A.K.A the &lt;em&gt;Dragon Book&lt;/em&gt;).&#xA;This blog is just reflecting and trying to deepen &lt;strong&gt;my own&lt;/strong&gt; understanding of the topic,&#xA;you should refer to the course and the book for stricter definitions.&lt;/p&gt;&#xA;&lt;h2 id=&#34;cfg-example&#34;&gt;CFG Example&lt;/h2&gt;&#xA;&lt;p&gt;$$ E \rightarrow E + E ; | ; id \tag{CFG-1}$$&lt;/p&gt;</description>
+      <description>&lt;p&gt;This blog is aiming to sort out some parsing concepts, especially, by walking through a simple CFG example.&lt;/p&gt;&#xA;&lt;p&gt;Most concepts are from Stanford CS143 &lt;em&gt;Compilers&lt;/em&gt;, and &lt;em&gt;Compilers: Principles, Techniques, &amp;amp; Tools&lt;/em&gt; (A.K.A the &lt;em&gt;Dragon Book&lt;/em&gt;).&#xA;This blog is just reflecting and trying to deepen &lt;strong&gt;my own&lt;/strong&gt; understanding of the topic,&#xA;you should refer to the course and the book for stricter definitions.&lt;/p&gt;&#xA;&lt;h2 id=&#34;cfg-example&#34;&gt;CFG Example&lt;/h2&gt;&#xA;&lt;p&gt;$$ E \rightarrow E + E | id \tag{CFG-1}$$&lt;/p&gt;</description>
     </item>
     <item>
       <title>我给数字极简主义写了几个Slogan</title>

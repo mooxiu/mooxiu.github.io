@@ -13,7 +13,7 @@ Most concepts are from Stanford CS143 Compilers, and Compilers: Principles, Tech
 This blog is just reflecting and trying to deepen my own understanding of the topic,
 you should refer to the course and the book for stricter definitions.
 CFG Example
-$$ E \rightarrow E &#43; E ; | ; id \tag{CFG-1}$$" />
+$$ E \rightarrow E &#43; E | id \tag{CFG-1}$$" />
 <meta name="keywords" content="" />
 
 
@@ -22,7 +22,7 @@ $$ E \rightarrow E &#43; E ; | ; id \tag{CFG-1}$$" />
   <meta property="og:title" content="Try Understanding SLR Parsing by Walking Through an Example">
   <meta property="og:description" content="This blog is aiming to sort out some parsing concepts, especially, by walking through a simple CFG example.
 Most concepts are from Stanford CS143 Compilers, and Compilers: Principles, Techniques, &amp; Tools (A.K.A the Dragon Book). This blog is just reflecting and trying to deepen my own understanding of the topic, you should refer to the course and the book for stricter definitions.
-CFG Example $$ E \rightarrow E &#43; E ; | ; id \tag{CFG-1}$$">
+CFG Example $$ E \rightarrow E &#43; E | id \tag{CFG-1}$$">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -38,7 +38,7 @@ CFG Example $$ E \rightarrow E &#43; E ; | ; id \tag{CFG-1}$$">
   <meta name="twitter:title" content="Try Understanding SLR Parsing by Walking Through an Example">
   <meta name="twitter:description" content="This blog is aiming to sort out some parsing concepts, especially, by walking through a simple CFG example.
 Most concepts are from Stanford CS143 Compilers, and Compilers: Principles, Techniques, &amp; Tools (A.K.A the Dragon Book). This blog is just reflecting and trying to deepen my own understanding of the topic, you should refer to the course and the book for stricter definitions.
-CFG Example $$ E \rightarrow E &#43; E ; | ; id \tag{CFG-1}$$">
+CFG Example $$ E \rightarrow E &#43; E | id \tag{CFG-1}$$">
 
 
 
@@ -46,10 +46,10 @@ CFG Example $$ E \rightarrow E &#43; E ; | ; id \tag{CFG-1}$$">
   <meta itemprop="name" content="Try Understanding SLR Parsing by Walking Through an Example">
   <meta itemprop="description" content="This blog is aiming to sort out some parsing concepts, especially, by walking through a simple CFG example.
 Most concepts are from Stanford CS143 Compilers, and Compilers: Principles, Techniques, &amp; Tools (A.K.A the Dragon Book). This blog is just reflecting and trying to deepen my own understanding of the topic, you should refer to the course and the book for stricter definitions.
-CFG Example $$ E \rightarrow E &#43; E ; | ; id \tag{CFG-1}$$">
+CFG Example $$ E \rightarrow E &#43; E | id \tag{CFG-1}$$">
   <meta itemprop="datePublished" content="2025-08-14T18:18:37+09:00">
   <meta itemprop="dateModified" content="2025-08-14T18:18:37+09:00">
-  <meta itemprop="wordCount" content="869">
+  <meta itemprop="wordCount" content="867">
   <meta itemprop="image" content="https://mooxiu.github.io/images/share.png">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -253,7 +253,7 @@ CFG Example $$ E \rightarrow E &#43; E ; | ; id \tag{CFG-1}$$">
 This blog is just reflecting and trying to deepen <strong>my own</strong> understanding of the topic,
 you should refer to the course and the book for stricter definitions.</p>
 <h2 id="cfg-example">CFG Example</h2>
-<p>$$ E \rightarrow E + E ; | ; id \tag{CFG-1}$$</p>
+<p>$$ E \rightarrow E + E | id \tag{CFG-1}$$</p>
 <h2 id="lr0-dfa">LR(0) DFA</h2>
 <h3 id="states-of-the-dfa">States of the DFA</h3>
 <ul>
