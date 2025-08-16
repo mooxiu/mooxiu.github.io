@@ -39,7 +39,7 @@ CFG Example $$ E \rightarrow E &#43; E | id \tag{CFG-1}$$"/>
 Most concepts are from Stanford CS143 Compilers, and Compilers: Principles, Techniques, &amp; Tools (A.K.A the Dragon Book). This blog is just reflecting and trying to deepen my own understanding of the topic, you should refer to the course and the book for stricter definitions.
 CFG Example $$ E \rightarrow E &#43; E | id \tag{CFG-1}$$"><meta itemprop="datePublished" content="2025-08-14T18:18:37+09:00" />
 <meta itemprop="dateModified" content="2025-08-14T18:18:37+09:00" />
-<meta itemprop="wordCount" content="869"><meta itemprop="image" content="https://mooxiu.github.io/images/share.png" />
+<meta itemprop="wordCount" content="1033"><meta itemprop="image" content="https://mooxiu.github.io/images/share.png" />
 <meta itemprop="keywords" content="" />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -443,10 +443,11 @@ For example, $id + id * id$ could be parsed as $(id + id) * id$ or $id + (id * i
 In the above $id + id + id$ parsing example, we came across such a conflict.</p>
 </li>
 <li>
-<p><em>reduce/reduce conflict</em> happens when there&rsquo;re multiple reduction productions.
-A no-brain example could be:</p>
+<p><em>reduce/reduce conflict</em> happens when there&rsquo;re multiple reduction productions.</p>
 </li>
 </ul>
+<h4 id="a-simple-reduce-reduce-conflict-example">A simple reduce-reduce conflict example</h4>
+<p>A no-brain example could be:</p>
 <p>$$
 E \rightarrow A | B
 $$
@@ -457,6 +458,31 @@ $$
 B \rightarrow x
 $$
 when we have an $x$ in the parsing stack, while we have 2 productions $A \rightarrow x$ and $B \rightarrow x$ producing $x$, the parser could not decide which one to apply.</p>
+<h4 id="a-complicated-reduce-reduce-conflict-example">A complicated reduce-reduce conflict example</h4>
+<p>Supposer the grammar is like:
+$$
+S \rightarrow A(S)B | \epsilon
+$$
+$$
+A \rightarrow S | SB | x | \epsilon
+$$
+$$
+B \rightarrow SB | y
+$$</p>
+<p>The initial SLR(1) parsing automaton state of the grammar contains following LR(0) items:
+$$  S&rsquo; \rightarrow .S $$
+$$  S \rightarrow .A(S)B $$
+$$  S \rightarrow . $$
+$$  A \rightarrow .S $$
+$$  A \rightarrow .SB $$
+$$  A \rightarrow .x $$
+$$  A \rightarrow . $$</p>
+<p>This grammar has a <em>reduce-reduce conflict</em> on input <code>(</code>.</p>
+<p>Why?
+Because <code>(</code> is both in $FOLLOW(A)$ (line 1 of the grammar) and $FOLLOW(S)$ (line 2 of the grammar we know that $FOLLOW(A) \subseteq FOLLOW(S)$).</p>
+<p>Intuitively, the fact tells us that <code>(</code> is valid following both an <code>A</code> and an <code>S</code>.
+Notice that both <code>A</code> and <code>S</code> could be reduced to an $\epsilon$,
+that&rsquo;s why here we&rsquo;re facing a situation where there&rsquo;s more than one valid reductions.</p>
 <h3 id="decision-of-the-action">Decision of the Action</h3>
 <p>The root for the conflict is $I_4$, where we have 2 <em>LR(0) items</em>, which are:
 $$
