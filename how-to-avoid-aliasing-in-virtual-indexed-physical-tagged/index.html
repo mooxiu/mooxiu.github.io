@@ -45,7 +45,7 @@ To prevent it, we can make those virtual addresses mapped to the same cache. Let
 To prevent it, we can make those virtual addresses mapped to the same cache. Let’s check a virtual address:">
   <meta itemprop="datePublished" content="2024-07-20T17:44:00+09:00">
   <meta itemprop="dateModified" content="2024-07-20T17:44:00+09:00">
-  <meta itemprop="wordCount" content="313">
+  <meta itemprop="wordCount" content="312">
   <meta itemprop="image" content="https://mooxiu.github.io/images/share.png">
   <meta itemprop="keywords" content="Virtual Memory,TLB,Cache">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -255,9 +255,8 @@ To prevent it, we can make those virtual addresses mapped to the same cache. Let
 VPN2 -&gt; TLB -&gt; PPN
 </code></pre><p>and <code>PageOffset1 == PageOffset2</code>.</p>
 <p>From the perspective of memory address to cache (bottom side of the image): As tag is physically tagged, we don&rsquo;t need to worry about tag part, we need the index to also be the same. Considering the page offset parts are the same, if we can make the index part inside of page offset part, then this condition is also satisfied:</p>
-<p>$$len(PageOffset) &gt;= len(index) + len(offset)$$</p>
-<p>To make this formula more meaningful:</p>
-<p>$$2^{len(PageOffset)} &gt;= 2^{len(index)} \cdot 2^{len(offset)}$$
+$$len(PageOffset) >= len(index) + len(offset)$$<p>To make this formula more meaningful:</p>
+$$2^{len(PageOffset)} >= 2^{len(index)} \cdot 2^{len(offset)}$$<p>
 that is:</p>
 <pre tabindex="0"><code>page size &gt;= cache set count * cache line size
 </code></pre><p>that is:</p>

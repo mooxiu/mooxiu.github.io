@@ -13,7 +13,43 @@ Most concepts are from Stanford CS143 Compilers, and Compilers: Principles, Tech
 This blog is just reflecting and trying to deepen my own understanding of the topic,
 you should refer to the course and the book for stricter definitions.
 CFG Example
-$$ E \rightarrow E &#43; E | id \tag{CFG-1}$$" />
+$$ E \rightarrow E &#43; E | id \tag{CFG-1}$$LR(0) DFA
+States of the DFA
+
+$I_0$:
+
+$E&#39; \rightarrow .E$
+$E \rightarrow .E &#43; E$ ($\epsilon$ transition from above transition, similar below)
+$E \rightarrow .id$
+
+
+$I_1$:
+
+$E&#39; \rightarrow E.$
+$E \rightarrow E. &#43; E$
+
+
+$I_2$:
+
+$E \rightarrow id.$
+
+
+$I_3$:
+
+$E \rightarrow E &#43; .E$
+$E \rightarrow .E &#43; E$
+$E \rightarrow .id$
+
+
+$I_4$:
+
+$E \rightarrow E &#43; E.$
+$E \rightarrow E. &#43; E$
+
+
+
+Transition Diagram
+" />
 <meta name="keywords" content="" />
 
 
@@ -22,7 +58,7 @@ $$ E \rightarrow E &#43; E | id \tag{CFG-1}$$" />
   <meta property="og:title" content="Try Understanding SLR Parsing by Walking Through an Example">
   <meta property="og:description" content="This blog is aiming to sort out some parsing concepts, especially, by walking through a simple CFG example.
 Most concepts are from Stanford CS143 Compilers, and Compilers: Principles, Techniques, &amp; Tools (A.K.A the Dragon Book). This blog is just reflecting and trying to deepen my own understanding of the topic, you should refer to the course and the book for stricter definitions.
-CFG Example $$ E \rightarrow E &#43; E | id \tag{CFG-1}$$">
+CFG Example $$ E \rightarrow E &#43; E | id \tag{CFG-1}$$LR(0) DFA States of the DFA $I_0$: $E&#39; \rightarrow .E$ $E \rightarrow .E &#43; E$ ($\epsilon$ transition from above transition, similar below) $E \rightarrow .id$ $I_1$: $E&#39; \rightarrow E.$ $E \rightarrow E. &#43; E$ $I_2$: $E \rightarrow id.$ $I_3$: $E \rightarrow E &#43; .E$ $E \rightarrow .E &#43; E$ $E \rightarrow .id$ $I_4$: $E \rightarrow E &#43; E.$ $E \rightarrow E. &#43; E$ Transition Diagram">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -38,7 +74,7 @@ CFG Example $$ E \rightarrow E &#43; E | id \tag{CFG-1}$$">
   <meta name="twitter:title" content="Try Understanding SLR Parsing by Walking Through an Example">
   <meta name="twitter:description" content="This blog is aiming to sort out some parsing concepts, especially, by walking through a simple CFG example.
 Most concepts are from Stanford CS143 Compilers, and Compilers: Principles, Techniques, &amp; Tools (A.K.A the Dragon Book). This blog is just reflecting and trying to deepen my own understanding of the topic, you should refer to the course and the book for stricter definitions.
-CFG Example $$ E \rightarrow E &#43; E | id \tag{CFG-1}$$">
+CFG Example $$ E \rightarrow E &#43; E | id \tag{CFG-1}$$LR(0) DFA States of the DFA $I_0$: $E&#39; \rightarrow .E$ $E \rightarrow .E &#43; E$ ($\epsilon$ transition from above transition, similar below) $E \rightarrow .id$ $I_1$: $E&#39; \rightarrow E.$ $E \rightarrow E. &#43; E$ $I_2$: $E \rightarrow id.$ $I_3$: $E \rightarrow E &#43; .E$ $E \rightarrow .E &#43; E$ $E \rightarrow .id$ $I_4$: $E \rightarrow E &#43; E.$ $E \rightarrow E. &#43; E$ Transition Diagram">
 
 
 
@@ -46,10 +82,10 @@ CFG Example $$ E \rightarrow E &#43; E | id \tag{CFG-1}$$">
   <meta itemprop="name" content="Try Understanding SLR Parsing by Walking Through an Example">
   <meta itemprop="description" content="This blog is aiming to sort out some parsing concepts, especially, by walking through a simple CFG example.
 Most concepts are from Stanford CS143 Compilers, and Compilers: Principles, Techniques, &amp; Tools (A.K.A the Dragon Book). This blog is just reflecting and trying to deepen my own understanding of the topic, you should refer to the course and the book for stricter definitions.
-CFG Example $$ E \rightarrow E &#43; E | id \tag{CFG-1}$$">
+CFG Example $$ E \rightarrow E &#43; E | id \tag{CFG-1}$$LR(0) DFA States of the DFA $I_0$: $E&#39; \rightarrow .E$ $E \rightarrow .E &#43; E$ ($\epsilon$ transition from above transition, similar below) $E \rightarrow .id$ $I_1$: $E&#39; \rightarrow E.$ $E \rightarrow E. &#43; E$ $I_2$: $E \rightarrow id.$ $I_3$: $E \rightarrow E &#43; .E$ $E \rightarrow .E &#43; E$ $E \rightarrow .id$ $I_4$: $E \rightarrow E &#43; E.$ $E \rightarrow E. &#43; E$ Transition Diagram">
   <meta itemprop="datePublished" content="2025-08-14T18:18:37+09:00">
   <meta itemprop="dateModified" content="2025-08-14T18:18:37+09:00">
-  <meta itemprop="wordCount" content="1033">
+  <meta itemprop="wordCount" content="1030">
   <meta itemprop="image" content="https://mooxiu.github.io/images/share.png">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -253,20 +289,19 @@ CFG Example $$ E \rightarrow E &#43; E | id \tag{CFG-1}$$">
 This blog is just reflecting and trying to deepen <strong>my own</strong> understanding of the topic,
 you should refer to the course and the book for stricter definitions.</p>
 <h2 id="cfg-example">CFG Example</h2>
-<p>$$ E \rightarrow E + E | id \tag{CFG-1}$$</p>
-<h2 id="lr0-dfa">LR(0) DFA</h2>
+$$ E \rightarrow E + E | id \tag{CFG-1}$$<h2 id="lr0-dfa">LR(0) DFA</h2>
 <h3 id="states-of-the-dfa">States of the DFA</h3>
 <ul>
 <li>$I_0$:
 <ul>
-<li>$E&rsquo; \rightarrow .E$</li>
+<li>$E' \rightarrow .E$</li>
 <li>$E \rightarrow .E + E$ ($\epsilon$ transition from above transition, similar below)</li>
 <li>$E \rightarrow .id$</li>
 </ul>
 </li>
 <li>$I_1$:
 <ul>
-<li>$E&rsquo; \rightarrow E.$</li>
+<li>$E' \rightarrow E.$</li>
 <li>$E \rightarrow E. + E$</li>
 </ul>
 </li>
@@ -293,7 +328,7 @@ you should refer to the course and the book for stricter definitions.</p>
 <p><img src="d2.svg" alt="transition diagram"></p>
 <h3 id="parsing-example">Parsing Example</h3>
 <p>The table is produced by following example 4.43 of the Dragon Book.</p>
-<h4 id="parsing-id--id">Parsing $id + id$</h4>
+<h4 id="parsing">Parsing $id + id$</h4>
 <table>
   <thead>
       <tr>
@@ -377,7 +412,7 @@ Here the transition from $I_0$ to $I_1$ can be annotated as $GOTO(I_0, E) = I_1$
 <p>Here, the <em>Stack</em> column of Line 2 could also be updated as <code>0 2</code>.</p>
 </li>
 </ul>
-<h4 id="parsing-id--id--id">Parsing $id + id + id$</h4>
+<h4 id="parsing-1">Parsing $id + id + id$</h4>
 <table>
   <thead>
       <tr>
@@ -458,36 +493,46 @@ In the above $id + id + id$ parsing example, we came across such a conflict.</p>
 </ul>
 <h4 id="a-simple-reduce-reduce-conflict-example">A simple reduce-reduce conflict example</h4>
 <p>A no-brain example could be:</p>
-<p>$$
-E \rightarrow A | B
 $$
+        E \rightarrow A | B
+$$<p>
+</p>
 $$
-A \rightarrow x
+        A \rightarrow x 
+$$<p>
+</p>
 $$
-$$
-B \rightarrow x
-$$
+        B \rightarrow x
+$$<p>
 when we have an $x$ in the parsing stack, while we have 2 productions $A \rightarrow x$ and $B \rightarrow x$ producing $x$, the parser could not decide which one to apply.</p>
 <h4 id="a-complicated-reduce-reduce-conflict-example">A complicated reduce-reduce conflict example</h4>
 <p>Supposer the grammar is like:
+</p>
+$$ 
+  S \rightarrow A(S)B | \epsilon
+$$<p>
+</p>
 $$
-S \rightarrow A(S)B | \epsilon
+  A \rightarrow S | SB | x | \epsilon
+$$<p>
+</p>
 $$
-$$
-A \rightarrow S | SB | x | \epsilon
-$$
-$$
-B \rightarrow SB | y
-$$</p>
-<p>The initial SLR(1) parsing automaton state of the grammar contains following LR(0) items:
-$$  S&rsquo; \rightarrow .S $$
-$$  S \rightarrow .A(S)B $$
-$$  S \rightarrow . $$
-$$  A \rightarrow .S $$
-$$  A \rightarrow .SB $$
-$$  A \rightarrow .x $$
-$$  A \rightarrow . $$</p>
-<p>This grammar has a <em>reduce-reduce conflict</em> on input <code>(</code>.</p>
+  B \rightarrow SB | y
+$$<p>The initial SLR(1) parsing automaton state of the grammar contains following LR(0) items:
+</p>
+$$  S' \rightarrow .S $$<p>
+</p>
+$$  S \rightarrow .A(S)B $$<p>
+</p>
+$$  S \rightarrow . $$<p>
+</p>
+$$  A \rightarrow .S $$<p>
+</p>
+$$  A \rightarrow .SB $$<p>
+</p>
+$$  A \rightarrow .x $$<p>
+</p>
+$$  A \rightarrow . $$<p>This grammar has a <em>reduce-reduce conflict</em> on input <code>(</code>.</p>
 <p>Why?
 Because <code>(</code> is both in $FOLLOW(A)$ (line 1 of the grammar) and $FOLLOW(S)$ (line 2 of the grammar we know that $FOLLOW(A) \subseteq FOLLOW(S)$).</p>
 <p>Intuitively, the fact tells us that <code>(</code> is valid following both an <code>A</code> and an <code>S</code>.
@@ -495,13 +540,15 @@ Notice that both <code>A</code> and <code>S</code> could be reduced to an $\epsi
 that&rsquo;s why here we&rsquo;re facing a situation where there&rsquo;s more than one valid reductions.</p>
 <h3 id="decision-of-the-action">Decision of the Action</h3>
 <p>The root for the conflict is $I_4$, where we have 2 <em>LR(0) items</em>, which are:
+</p>
 $$
-E \rightarrow E + E. \tag{Item-1}
-$$
+        E \rightarrow E + E. \tag{Item-1}
+$$<p>
 and
-$$   <br>
-E \rightarrow E. + E \tag{Item-2}
-$$
+</p>
+$$      
+        E \rightarrow E. + E \tag{Item-2}
+$$<p>
 .</p>
 <p>For <em>Item-1</em>, we already reach the end,
 the choice for it is reduction.

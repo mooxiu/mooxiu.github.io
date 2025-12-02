@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://mooxiu.github.io/static/images/favicon.png" />
+<title>Problem in Fortran Matrix Offloading: Transpose Example | New River, New Water</title>
+<meta name="title" content="Problem in Fortran Matrix Offloading: Transpose Example" />
+<meta name="description" content="Fortran stores matrix in Column-Major ordering, while normal backends stores matrix in Row-Major ordering, which will brings trouble.
+I will use matrix transpose as an example to explain.
+1 Problem
+Consider following example:
+
+In Fortran, we create a matrix $A$, print it, stores in memory and returns a pointer $p_F$.
+Pass $p_{F}$ to a different backend, suppose C&#43;&#43;, do a transpose and stores the result in $p_{c}$
+Back to Fortran, recover data from $p_{C}$, print it.
+
+Question: will step 3 print the correct result as we expected?" />
+<meta name="keywords" content="" />
+
+
+<meta property="og:url" content="https://mooxiu.github.io/2025/12/02/fortran-matrix-offloading/">
+  <meta property="og:site_name" content="New River, New Water">
+  <meta property="og:title" content="Problem in Fortran Matrix Offloading: Transpose Example">
+  <meta property="og:description" content="Fortran stores matrix in Column-Major ordering, while normal backends stores matrix in Row-Major ordering, which will brings trouble. I will use matrix transpose as an example to explain.
+1 Problem Consider following example:
+In Fortran, we create a matrix $A$, print it, stores in memory and returns a pointer $p_F$. Pass $p_{F}$ to a different backend, suppose C&#43;&#43;, do a transpose and stores the result in $p_{c}$ Back to Fortran, recover data from $p_{C}$, print it. Question: will step 3 print the correct result as we expected?">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-12-02T17:02:35+09:00">
+    <meta property="article:modified_time" content="2025-12-02T17:02:35+09:00">
+    <meta property="og:image" content="https://mooxiu.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mooxiu.github.io/images/share.png">
+  <meta name="twitter:title" content="Problem in Fortran Matrix Offloading: Transpose Example">
+  <meta name="twitter:description" content="Fortran stores matrix in Column-Major ordering, while normal backends stores matrix in Row-Major ordering, which will brings trouble. I will use matrix transpose as an example to explain.
+1 Problem Consider following example:
+In Fortran, we create a matrix $A$, print it, stores in memory and returns a pointer $p_F$. Pass $p_{F}$ to a different backend, suppose C&#43;&#43;, do a transpose and stores the result in $p_{c}$ Back to Fortran, recover data from $p_{C}$, print it. Question: will step 3 print the correct result as we expected?">
+
+
+
+
+  <meta itemprop="name" content="Problem in Fortran Matrix Offloading: Transpose Example">
+  <meta itemprop="description" content="Fortran stores matrix in Column-Major ordering, while normal backends stores matrix in Row-Major ordering, which will brings trouble. I will use matrix transpose as an example to explain.
+1 Problem Consider following example:
+In Fortran, we create a matrix $A$, print it, stores in memory and returns a pointer $p_F$. Pass $p_{F}$ to a different backend, suppose C&#43;&#43;, do a transpose and stores the result in $p_{c}$ Back to Fortran, recover data from $p_{C}$, print it. Question: will step 3 print the correct result as we expected?">
+  <meta itemprop="datePublished" content="2025-12-02T17:02:35+09:00">
+  <meta itemprop="dateModified" content="2025-12-02T17:02:35+09:00">
+  <meta itemprop="wordCount" content="501">
+  <meta itemprop="image" content="https://mooxiu.github.io/images/share.png">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+      --width: 800px;
+      --font-main: Verdana, sans-serif;
+      --font-secondary: Verdana, sans-serif;
+      --font-scale: 1em;
+      --background-color: #fff;
+      --heading-color: #222;
+      --text-color: #444;
+      --link-color: #3273dc;
+      --visited-color:  #8b6fcb;
+      --code-background-color: #f2f2f2;
+      --code-color: #222;
+      --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+      :root {
+          --background-color: #333;
+          --heading-color: #eee;
+          --text-color: #ddd;
+          --link-color: #8cc2dd;
+          --visited-color:  #8b6fcb;
+          --code-background-color: #777;
+          --code-color: #ddd;
+          --blockquote-color: #ccc;
+      }
+  }
+
+  body {
+      font-family: var(--font-secondary);
+      font-size: var(--font-scale);
+      margin: auto;
+      padding: 20px;
+      max-width: var(--width);
+      text-align: left;
+      background-color: var(--background-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.5;
+      color: var(--text-color);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-main);
+      color: var(--heading-color);
+  }
+
+  a {
+      color: var(--link-color);
+      cursor: pointer;
+      text-decoration: none;
+  }
+
+  a:hover {
+      text-decoration: underline; 
+  }
+
+  nav a {
+      margin-right: 8px;
+  }
+
+  strong, b {
+      color: var(--heading-color);
+  }
+
+  button {
+      margin: 0;
+      cursor: pointer;
+  }
+
+  main {
+      line-height: 1.6;
+  }
+
+  table {
+      width: 100%;
+  }
+
+  hr {
+      border: 0;
+      border-top: 1px dashed;
+  }
+
+  img {
+      max-width: 100%;
+  }
+
+  code {
+      font-family: monospace;
+      padding: 2px;
+      background-color: var(--code-background-color);
+      color: var(--code-color);
+      border-radius: 3px;
+  }
+
+  blockquote {
+      border-left: 1px solid #999;
+      color: var(--code-color);
+      padding-left: 20px;
+      font-style: italic;
+  }
+
+  footer {
+      padding: 25px 0;
+      text-align: center;
+  }
+
+  .title:hover {
+      text-decoration: none;
+  }
+
+  .title h1 {
+      font-size: 1.5em;
+  }
+
+  .inline {
+      width: auto !important;
+  }
+
+  .highlight, .code {
+      padding: 1px 15px;
+      background-color: var(--code-background-color);
+      color: var(--code-color);
+      border-radius: 3px;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+      list-style-type: none;
+      padding: unset;
+  }
+
+  ul.blog-posts li {
+      display: flex;
+  }
+
+  ul.blog-posts li span {
+      flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+      color: var(--visited-color);
+  }
+</style>
+
+  <script>
+    MathJax = {
+        tex: {
+            inlineMath: [
+                ['$', '$'],
+                ['\\(', '\\)'],
+            ],
+        },
+        svg: {
+            fontCache: 'global',
+        },
+    };
+</script>
+<script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script></head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>New River, New Water</h2>
+</a>
+<nav><a href="/">Home</a>
+
+<a href="/lists/">Lists</a>
+
+<a href="/quotes/">Quotes</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>Problem in Fortran Matrix Offloading: Transpose Example</h1>
+<p>
+  <i>
+    <time datetime='2025-12-02'>
+      02 Dec, 2025
+    </time>
+  </i>
+</p>
+
+<content>
+  <p>Fortran stores matrix in <em>Column-Major</em> ordering, while normal backends stores matrix in <em>Row-Major</em> ordering, which will brings trouble.
+I will use <em>matrix transpose</em> as an example to explain.</p>
+<h2 id="1-problem">1 Problem</h2>
+<p>Consider following example:</p>
+<ol>
+<li>In Fortran, we create a matrix $A$, print it, stores in memory and returns a pointer $p_F$.</li>
+<li>Pass $p_{F}$ to a different backend, suppose C++, do a transpose and stores the result in $p_{c}$</li>
+<li>Back to Fortran, recover data from $p_{C}$, print it.</li>
+</ol>
+<p>Question: will step 3 print the correct result as we expected?</p>
+<h2 id="2-case-1--matrix">2 Case 1: $N \times N$ Matrix</h2>
+<p>Suppose the original matrix is $3 \times 3$ matrix:
+</p>
+$$
+A_{Fortran} = \begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+\tag{Printed in Step 1}
+$$<p>When <em>Fortran</em> stores it in memory, it will become something like:
+</p>
+$$
+[3, 4, 7, 2, 5, 8, 3, 6, 9] \tag{Memory Stored from Fortran}
+$$<p>
+Pass to <em>C++</em> backend, when recovering, <em>C++</em> would think it is a matrix like:
+</p>
+$$
+A_{C++} = \begin{bmatrix}
+1 & 4 & 7 \\
+2 & 5 & 8 \\
+3 & 6 & 9
+\end{bmatrix}
+$$<p>
+Do the transpose, it becomes:
+</p>
+$$
+(A_{C++})^T = \begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+$$<p>
+Save to $p_{C}$:
+</p>
+$$
+[1, 2, 3, 4, 5, 6, 7, 8, 9] \tag{Memory Stored from Cpp}
+$$<p>
+When recovering from it, <em>Fortran</em> again scans it thinking is stores in columns:
+</p>
+$$
+(A_{Fortran})^T = \begin{bmatrix}
+1 & 4 & 7\\
+2 & 5 & 8\\
+3 & 6 & 9
+\end{bmatrix}
+\tag{Printed in Step 3}
+$$<p>
+Notice that the result is <strong>correct by coincident</strong>! Because we scan the memory in a wrong way TWICE.</p>
+<h2 id="3-case-2--matrix-">3 Case 2: $N \times M$ Matrix ($N \neq M$)</h2>
+<p>We&rsquo;re not this lucky if we&rsquo;re going to transpose matrix with different length in size.</p>
+<p>Suppose the original matrix is $2 \times 3$ matrix:
+</p>
+$$
+B_{Fortran} = \begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 
+\end{bmatrix}
+\tag{Printed in Step 1}
+$$<p>When <em>Fortran</em> stores it in memory, it will become something like:
+</p>
+$$
+[1, 4, 2, 5, 3, 6] \tag{Memory Stored from Fortran}
+$$<p>
+Pass to <em>C++</em> backend, when recovering, <em>C++</em> would think it is a matrix like:
+</p>
+$$
+B_{C++} = \begin{bmatrix}
+1 & 4 & 2 \\
+5 & 3 & 6 
+\end{bmatrix}
+$$<p>
+Do the transpose, it becomes:
+</p>
+$$
+(B_{C++})^T = \begin{bmatrix}
+1 & 5  \\
+4 & 3  \\
+2 & 6
+\end{bmatrix}
+$$<p>
+Save to $p_{C}$:
+</p>
+$$
+[1, 5, 4, 3, 2, 6] \tag{Memory Stored from Cpp}
+$$<p>
+When recovering from it, <em>Fortran</em> again scans it thinking is stores in columns:
+</p>
+$$
+(B_{Fortran})^T = \begin{bmatrix}
+1 & 3\\
+5 & 2\\
+4 & 6
+\end{bmatrix}
+\tag{Printed in Step 3}
+$$<p>
+Notice that this is <strong>NOT</strong> the correct transpose of step 1.</p>
+<hr>
+<script src="https://giscus.app/client.js"
+        data-repo="mooxiu/mooxiu.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkyOTcwMzE4NTM="
+        data-category="General"
+        data-category-id="DIC_kwDOEbRYrc4CpB2L"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+<p><em>If you have any feedback to this article, feel free to <a href="https://github.com/mooxiu/mooxiu.github.io/discussions">comment here</a> or <a href="mailto:monetshaw@outlook.com">send an email to me</a></em></p>
+
+</content>
+<p>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>
