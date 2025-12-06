@@ -7,9 +7,22 @@
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>Copyright © 2024, muyao haruka hsiao.</copyright>
+<<<<<<< Updated upstream
     <lastBuildDate>Tue, 02 Dec 2025 17:02:35 +0900</lastBuildDate>
     <atom:link href="https://mooxiu.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+=======
+    <lastBuildDate>Sat, 06 Dec 2025 16:43:00 +0900</lastBuildDate>
+    <atom:link href="https://mooxiu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>甲子园伦理与做题家精神</title>
+      <link>https://mooxiu.github.io/2025/12/06/koshien/</link>
+      <pubDate>Sat, 06 Dec 2025 16:43:00 +0900</pubDate>
+      <guid>https://mooxiu.github.io/2025/12/06/koshien/</guid>
+      <description>&lt;p&gt;我从来对甲子园提不起兴趣，而且我想我不会对它有兴趣。&#xA;我明白很多人 glorify 它的理由：青春，友情，热血，戏剧化等等；&#xA;但这其实很类似在中国做题：&#xA;在一亿人的省份跟几十万人同场竞技（高考），你每天打磨自己的能力，夙兴夜寐。&#xA;那里也有青春，友情，热血，戏剧化（比如考试掉链子了或者运气爆棚碰到原题）。&lt;/p&gt;&#xA;&lt;p&gt;做题这件事，除了缺乏一点外部性（没有类似甲子园这种比赛表演），其实本质上和甲子园差不多。&#xA;我并不是反对学术和棒球，我觉得学术非常美妙，棒球也非常美妙。&lt;/p&gt;&#xA;&lt;p&gt;但是高中做题和甲子园是一种棒球和学术的拟像：&#xA;你在初等数学里琢磨出了一万个并不普遍的技巧，&#xA;并不会让你真正理解数学。&#xA;而高考式的训练，让你不敢越雷池一步，很多时候会让人远离真正的数学和科学。&#xA;甲子园也是同理，那里不是真正的最高殿堂，如果为那样的比赛彻底毁坏自己的健康（比如作为先发自毁式地连续投过多轮），&#xA;让那些东西成为自己以后人生的唯一谈资，这实在让人可悲。&#xA;与此同时，伟大的棒球运动员大谷翔平，山本由伸都不是常规意义上的「甲子园明星」，&#xA;后者甚至都没有在甲子园出场。&lt;/p&gt;&#xA;&lt;p&gt;生命虽然短暂，但人生是漫长的。&#xA;把青春搞得轰轰烈烈，而把工作，生产设计得百无聊赖，&#xA;很难让人觉得自洽，甚至让人觉得有点幼稚。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;script src=&#34;https://giscus.app/client.js&#34;&#xA;        data-repo=&#34;mooxiu/mooxiu.github.io&#34;&#xA;        data-repo-id=&#34;MDEwOlJlcG9zaXRvcnkyOTcwMzE4NTM=&#34;&#xA;        data-category=&#34;General&#34;&#xA;        data-category-id=&#34;DIC_kwDOEbRYrc4CpB2L&#34;&#xA;        data-mapping=&#34;pathname&#34;&#xA;        data-strict=&#34;0&#34;&#xA;        data-reactions-enabled=&#34;1&#34;&#xA;        data-emit-metadata=&#34;0&#34;&#xA;        data-input-position=&#34;bottom&#34;&#xA;        data-theme=&#34;light&#34;&#xA;        data-lang=&#34;en&#34;&#xA;        crossorigin=&#34;anonymous&#34;&#xA;        async&gt;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;&lt;em&gt;If you have any feedback to this article, feel free to &lt;a href=&#34;https://github.com/mooxiu/mooxiu.github.io/discussions&#34;&gt;comment here&lt;/a&gt; or &lt;a href=&#34;mailto:monetshaw@outlook.com&#34;&gt;send an email to me&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+>>>>>>> Stashed changes
       <title>Problem in Fortran Matrix Offloading: Transpose Example</title>
       <link>https://mooxiu.github.io/2025/12/02/fortran-matrix-offloading/</link>
       <pubDate>Tue, 02 Dec 2025 17:02:35 +0900</pubDate>
@@ -49,7 +62,11 @@
       <link>https://mooxiu.github.io/2025/05/24/common_era/</link>
       <pubDate>Sat, 24 May 2025 00:56:38 +0900</pubDate>
       <guid>https://mooxiu.github.io/2025/05/24/common_era/</guid>
+<<<<<<< Updated upstream
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;公历纪元的第1年称作“公元1年”或“公元元年”，前一年称作“公元前1年”，没有“公元0年”。 &lt;a href=&#34;https://zh.wikipedia.org/zh-hans/%E5%85%AC%E5%85%83&#34;&gt;1&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;公元纪年的数字构成了一个罕见的整数集子集，也就是它是&lt;/p&gt;&#xA;$$&#xA;\\{x \in \mathbf{Z} | x \neq 0 \\}&#xA;$$&lt;!-- need double backslash to render bracket in hugo --&gt;&#xA;&lt;p&gt;（如果我们认为时间是无限的话）.&lt;/p&gt;&#xA;&lt;p&gt;有趣的是，公元纪年无法构成一个加法群，因为 Identity (0) 不存在。&#xA;真是一个特殊却 Ubiquitous 的例子。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;script src=&#34;https://giscus.app/client.js&#34;&#xA;        data-repo=&#34;mooxiu/mooxiu.github.io&#34;&#xA;        data-repo-id=&#34;MDEwOlJlcG9zaXRvcnkyOTcwMzE4NTM=&#34;&#xA;        data-category=&#34;General&#34;&#xA;        data-category-id=&#34;DIC_kwDOEbRYrc4CpB2L&#34;&#xA;        data-mapping=&#34;pathname&#34;&#xA;        data-strict=&#34;0&#34;&#xA;        data-reactions-enabled=&#34;1&#34;&#xA;        data-emit-metadata=&#34;0&#34;&#xA;        data-input-position=&#34;bottom&#34;&#xA;        data-theme=&#34;light&#34;&#xA;        data-lang=&#34;en&#34;&#xA;        crossorigin=&#34;anonymous&#34;&#xA;        async&gt;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;&lt;em&gt;If you have any feedback to this article, feel free to &lt;a href=&#34;https://github.com/mooxiu/mooxiu.github.io/discussions&#34;&gt;comment here&lt;/a&gt; or &lt;a href=&#34;mailto:monetshaw@outlook.com&#34;&gt;send an email to me&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
+=======
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;公历纪元的第1年称作“公元1年”或“公元元年”，前一年称作“公元前1年”，没有“公元0年”。 &lt;a href=&#34;https://zh.wikipedia.org/zh-hans/%E5%85%AC%E5%85%83&#34;&gt;1&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;公元纪年的数字构成了一个罕见的整数集子集，也就是它是&lt;/p&gt;&#xA;$$&#xA;\\{x \in \mathbf{Z} | x \neq 0 \\}&#xA;$$&lt;!-- need double backslash to render bracket in hugo --&gt;&#xA;&lt;p&gt;（如果我们认为时间是无限的话）.&lt;/p&gt;&#xA;&lt;p&gt;有趣的是，公元纪年无法构成一个加法群，因为 Identity (0) 不存在。&#xA;真是一个特殊却 Ubiquitous 的例子。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;script src=&#34;https://giscus.app/client.js&#34;&#xA;        data-repo=&#34;mooxiu/mooxiu.github.io&#34;&#xA;        data-repo-id=&#34;MDEwOlJlcG9zaXRvcnkyOTcwMzE4NTM=&#34;&#xA;        data-category=&#34;General&#34;&#xA;        data-category-id=&#34;DIC_kwDOEbRYrc4CpB2L&#34;&#xA;        data-mapping=&#34;pathname&#34;&#xA;        data-strict=&#34;0&#34;&#xA;        data-reactions-enabled=&#34;1&#34;&#xA;        data-emit-metadata=&#34;0&#34;&#xA;        data-input-position=&#34;bottom&#34;&#xA;        data-theme=&#34;light&#34;&#xA;        data-lang=&#34;en&#34;&#xA;        crossorigin=&#34;anonymous&#34;&#xA;        async&gt;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;&lt;em&gt;If you have any feedback to this article, feel free to &lt;a href=&#34;https://github.com/mooxiu/mooxiu.github.io/discussions&#34;&gt;comment here&lt;/a&gt; or &lt;a href=&#34;mailto:monetshaw@outlook.com&#34;&gt;send an email to me&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
+>>>>>>> Stashed changes
     </item>
     <item>
       <title>七輪</title>
@@ -294,7 +311,11 @@
       <link>https://mooxiu.github.io/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/</link>
       <pubDate>Sat, 18 Jan 2020 19:15:01 +0000</pubDate>
       <guid>https://mooxiu.github.io/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/</guid>
+<<<<<<< Updated upstream
       <description>&lt;p&gt;回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚：&lt;/p&gt;&#xA;&lt;h5 id=&#34;首先是markov不等式&#34;&gt;首先是Markov不等式。&lt;/h5&gt;&#xA;&lt;p&gt;它是以俄国数学家Andrey Andreyevich Markov的名字命名，同时也有Markov Chain这个在信息论上著名的东西。这个不等式，简单而言，就是我们可以一个随机变量的期望值判断这个随机变量取值的概率：&lt;/p&gt;&#xA;$$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$&lt;p&gt;显而易见，随机变量大于更大的\(a\)的概率会越低。比方说，当​ $\( a = E[X] \)$的时候，我们有​$\( P(X \geq E[x]) \leq 1 \)$ , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果$\( a = 2E[X] \)$​, 我们可以得到$\( P(X \geq 2E[X]) \leq 0.5 \)$​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. &lt;a href=&#34;https://zh.wikipedia.org/wiki/%E9%A6%AC%E7%88%BE%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F&#34;&gt;马尔可夫不等式维基百科&lt;/a&gt;上举例也清晰易懂:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;马尔可夫不等式的一个应用是，不超过1/5的人口会有超过5倍于人均收入的收入。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://book.douban.com/subject/26694188/&#34;&gt;「概率导论」&lt;/a&gt; 一书构造了一个随机变量​ $\(Y_a\)$来证明这个不等式:&lt;/p&gt;&#xA;$$  &#xA;\begin{equation}  &#xA;Y_a=  &#xA;\begin{cases}  &#xA;0, (X &lt; a) \\  &#xA;a, (X \geq a)  &#xA;\end{cases}  &#xA;\end{equation}  &#xA;$$&lt;p&gt;那么:&lt;/p&gt;&#xA;$$E[Y_a] = P(X &lt; a) \* 0 + P(X \geq a) \* a = a*P(X \geq a)$$&lt;p&gt;我们考虑到:&lt;/p&gt;</description>
+=======
+      <description>&lt;p&gt;回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚：&lt;/p&gt;&#xA;&lt;h5 id=&#34;首先是markov不等式&#34;&gt;首先是Markov不等式。&lt;/h5&gt;&#xA;&lt;p&gt;它是以俄国数学家Andrey Andreyevich Markov的名字命名，同时也有Markov Chain这个在信息论上著名的东西。这个不等式，简单而言，就是我们可以一个随机变量的期望值判断这个随机变量取值的概率：&lt;/p&gt;&#xA;$$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$&lt;p&gt;显而易见，随机变量大于更大的\(a\)的概率会越低。比方说，当​ $\( a = E[X] \)$的时候，我们有​$\( P(X \geq E[x]) \leq 1 \)$ , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果$\( a = 2E[X] \)$​, 我们可以得到$\( P(X \geq 2E[X]) \leq 0.5 \)$​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. &lt;a href=&#34;https://zh.wikipedia.org/wiki/%E9%A6%AC%E7%88%BE%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F&#34;&gt;马尔可夫不等式维基百科&lt;/a&gt;上举例也清晰易懂:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;马尔可夫不等式的一个应用是，不超过1/5的人口会有超过5倍于人均收入的收入。&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://book.douban.com/subject/26694188/&#34;&gt;「概率导论」&lt;/a&gt; 一书构造了一个随机变量​ $\(Y_a\)$来证明这个不等式:&lt;/p&gt;&#xA;$$  &#xA;\begin{equation}  &#xA;Y_a=  &#xA;\begin{cases}  &#xA;0, (X &lt; a) \\  &#xA;a, (X \geq a)  &#xA;\end{cases}  &#xA;\end{equation}  &#xA;$$&lt;p&gt;那么:&lt;/p&gt;&#xA;$$E[Y_a] = P(X &lt; a) \* 0 + P(X \geq a) \* a = a*P(X \geq a)$$&lt;p&gt;我们考虑到:&lt;/p&gt;</description>
+>>>>>>> Stashed changes
     </item>
     <item>
       <title>「昨日奇迹」：灾难之后如何重拾人类文明</title>
