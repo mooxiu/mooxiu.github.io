@@ -260,7 +260,8 @@ $$E[Y_a] = P(X &lt; a) \* 0 &#43; P(X \geq a) \* a = a*P(X \geq a)$$ 我们考�
 $$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$
 <p>显而易见，随机变量大于更大的\(a\)的概率会越低。比方说，当​ $\( a = E[X] \)$的时候，我们有​$\( P(X \geq E[x]) \leq 1 \)$ , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果$\( a = 2E[X] \)$​, 我们可以得到$\( P(X \geq 2E[X]) \leq 0.5 \)$​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. <a href="https://zh.wikipedia.org/wiki/%E9%A6%AC%E7%88%BE%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F">马尔可夫不等式维基百科</a>上举例也清晰易懂:</p>
 <blockquote>
-<p>马尔可夫不等式的一个应用是，不超过1/5的人口会有超过5倍于人均收入的收入。</p></blockquote>
+<p>马尔可夫不等式的一个应用是，不超过1/5的人口会有超过5倍于人均收入的收入。</p>
+</blockquote>
 <p><a href="https://book.douban.com/subject/26694188/">「概率导论」</a> 一书构造了一个随机变量​ $\(Y_a\)$来证明这个不等式:</p>
 $$  
 \begin{equation}  
