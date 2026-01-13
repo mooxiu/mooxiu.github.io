@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cache on New River, New Water</title>
-    <link>https://mooxiu.github.io/blog/cache/</link>
+    <link>http://localhost:1313/blog/cache/</link>
     <description>Recent content in Cache on New River, New Water</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>Copyright © 2024, muyao haruka hsiao.</copyright>
     <lastBuildDate>Sat, 20 Jul 2024 17:44:00 +0900</lastBuildDate>
-    <atom:link href="https://mooxiu.github.io/blog/cache/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/cache/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to avoid aliasing in Virtual Indexed Physical Tagged</title>
-      <link>https://mooxiu.github.io/how-to-avoid-aliasing-in-virtual-indexed-physical-tagged/</link>
+      <link>http://localhost:1313/how-to-avoid-aliasing-in-virtual-indexed-physical-tagged/</link>
       <pubDate>Sat, 20 Jul 2024 17:44:00 +0900</pubDate>
-      <guid>https://mooxiu.github.io/how-to-avoid-aliasing-in-virtual-indexed-physical-tagged/</guid>
+      <guid>http://localhost:1313/how-to-avoid-aliasing-in-virtual-indexed-physical-tagged/</guid>
       <description>&lt;p&gt;The problem of VIPT(Virtual Indexed Physical Tagged) cache is that multiple virtual addresses can be mapped to the same physical address. This is not a problem for physical indexed and physical tagged cache (AKA, the standard practice), but for VIPT, the virtual address can fetch memory blocks to different caches, once a cache has been written, there&amp;rsquo;s a problem of inconsistency, whcih is so-called &amp;ldquo;aliasing&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;To prevent it, we can make those virtual addresses mapped to the same cache. Let&amp;rsquo;s check a virtual address:&lt;/p&gt;</description>
     </item>
   </channel>

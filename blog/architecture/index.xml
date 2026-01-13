@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Architecture on New River, New Water</title>
-    <link>https://mooxiu.github.io/blog/architecture/</link>
+    <link>http://localhost:1313/blog/architecture/</link>
     <description>Recent content in Architecture on New River, New Water</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>Copyright © 2024, muyao haruka hsiao.</copyright>
     <lastBuildDate>Mon, 04 Nov 2024 00:43:02 +0900</lastBuildDate>
-    <atom:link href="https://mooxiu.github.io/blog/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Remarks on concepts in Flynn&#39;s taxonomy</title>
-      <link>https://mooxiu.github.io/remarks-on-concepts-in-flynns-taxonomy/</link>
+      <link>http://localhost:1313/remarks-on-concepts-in-flynns-taxonomy/</link>
       <pubDate>Mon, 04 Nov 2024 00:43:02 +0900</pubDate>
-      <guid>https://mooxiu.github.io/remarks-on-concepts-in-flynns-taxonomy/</guid>
+      <guid>http://localhost:1313/remarks-on-concepts-in-flynns-taxonomy/</guid>
       <description>&lt;p&gt;The so-called Flynn&amp;rsquo;s taxonomy is proposed by Michael J. Flynn in his paper &lt;em&gt;Very high-speed computing systems&lt;/em&gt; and &lt;em&gt;Some Computer Organizations and Their Effectiveness&lt;/em&gt; published in 1970s.[1]&lt;/p&gt;&#xA;&lt;p&gt;It categorizes computer architectures based on single/multiple instruction and single/multiple data into 4 types: SISD(Single Instruction Single Data), MISD(Multiple Instruction Single Data), SIMD(Single Instruction Multiple Data), MIMD(Multiple Instruction Multiple Data). The 4 acronyms are easy to get by simple combinations, but the key here is to understand their concepts and applications.&lt;/p&gt;</description>
     </item>
   </channel>
