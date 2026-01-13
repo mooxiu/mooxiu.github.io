@@ -9,34 +9,30 @@
 <title>从马尔可夫不等式到弱大数定律 | New River, New Water</title>
 <meta name="title" content="从马尔可夫不等式到弱大数定律" />
 <meta name="description" content="回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚：
-首先是Markov不等式。
-它是以俄国数学家Andrey Andreyevich Markov的名字命名，同时也有Markov Chain这个在信息论上著名的东西。这个不等式，简单而言，就是我们可以一个随机变量的期望值判断这个随机变量取值的概率：
-$$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$显而易见，随机变量大于更大的\(a\)的概率会越低。比方说，当​ $\( a = E[X] \)$的时候，我们有​$\( P(X \geq E[x]) \leq 1 \)$ , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果$\( a = 2E[X] \)$​, 我们可以得到$\( P(X \geq 2E[X]) \leq 0.5 \)$​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. 马尔可夫不等式维基百科上举例也清晰易懂:
-
+首先是Markov不等式。 它是以俄国数学家Andrey Andreyevich Markov的名字命名，同时也有Markov Chain这个在信息论上著名的东西。这个不等式，简单而言，就是我们可以一个随机变量的期望值判断这个随机变量取值的概率：
+$$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$ 显而易见，随机变量大于更大的\(a\)的概率会越低。比方说，当​ $\( a = E[X] \)$的时候，我们有​$\( P(X \geq E[x]) \leq 1 \)$ , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果$\( a = 2E[X] \)$​, 我们可以得到$\( P(X \geq 2E[X]) \leq 0.5 \)$​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. 马尔可夫不等式维基百科上举例也清晰易懂:
 马尔可夫不等式的一个应用是，不超过1/5的人口会有超过5倍于人均收入的收入。
 
 「概率导论」 一书构造了一个随机变量​ $\(Y_a\)$来证明这个不等式:
-$$  
-\begin{equation}  
-Y_a=  
-\begin{cases}  
-0, (X &lt; a) \\  
-a, (X \geq a)  
-\end{cases}  
-\end{equation}  
-$$那么:
-$$E[Y_a] = P(X &lt; a) \* 0 &#43; P(X \geq a) \* a = a*P(X \geq a)$$我们考虑到:" />
+$$ \begin{equation} Y_a= \begin{cases} 0, (X &lt; a) \\ a, (X \geq a) \end{cases} \end{equation} $$ 那么:
+$$E[Y_a] = P(X &lt; a) \* 0 &#43; P(X \geq a) \* a = a*P(X \geq a)$$ 我们考虑到:" />
 <meta name="keywords" content="mathmatics," />
 
 
+<<<<<<< HEAD
 <meta property="og:url" content="http://localhost:1313/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/">
   <meta property="og:site_name" content="New River, New Water">
   <meta property="og:title" content="从马尔可夫不等式到弱大数定律">
   <meta property="og:description" content="回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚：
+=======
+<meta property="og:title" content="从马尔可夫不等式到弱大数定律" />
+<meta property="og:description" content="回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚：
+>>>>>>> d42af2c63a5acb204af7120668b30855c1d0b24f
 首先是Markov不等式。 它是以俄国数学家Andrey Andreyevich Markov的名字命名，同时也有Markov Chain这个在信息论上著名的东西。这个不等式，简单而言，就是我们可以一个随机变量的期望值判断这个随机变量取值的概率：
-$$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$显而易见，随机变量大于更大的\(a\)的概率会越低。比方说，当​ $\( a = E[X] \)$的时候，我们有​$\( P(X \geq E[x]) \leq 1 \)$ , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果$\( a = 2E[X] \)$​, 我们可以得到$\( P(X \geq 2E[X]) \leq 0.5 \)$​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. 马尔可夫不等式维基百科上举例也清晰易懂:
+$$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$ 显而易见，随机变量大于更大的\(a\)的概率会越低。比方说，当​ $\( a = E[X] \)$的时候，我们有​$\( P(X \geq E[x]) \leq 1 \)$ , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果$\( a = 2E[X] \)$​, 我们可以得到$\( P(X \geq 2E[X]) \leq 0.5 \)$​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. 马尔可夫不等式维基百科上举例也清晰易懂:
 马尔可夫不等式的一个应用是，不超过1/5的人口会有超过5倍于人均收入的收入。
 「概率导论」 一书构造了一个随机变量​ $\(Y_a\)$来证明这个不等式:
+<<<<<<< HEAD
 $$ \begin{equation} Y_a= \begin{cases} 0, (X &lt; a) \\ a, (X \geq a) \end{cases} \end{equation} $$那么:
 $$E[Y_a] = P(X &lt; a) \* 0 &#43; P(X \geq a) \* a = a*P(X \geq a)$$我们考虑到:">
   <meta property="og:locale" content="en_US">
@@ -46,30 +42,44 @@ $$E[Y_a] = P(X &lt; a) \* 0 &#43; P(X \geq a) \* a = a*P(X \geq a)$$我们考虑
     <meta property="article:modified_time" content="2020-01-18T19:15:01+00:00">
     <meta property="article:tag" content="Mathmatics">
     <meta property="og:image" content="http://localhost:1313/images/share.png">
+=======
+$$ \begin{equation} Y_a= \begin{cases} 0, (X &lt; a) \\ a, (X \geq a) \end{cases} \end{equation} $$ 那么:
+$$E[Y_a] = P(X &lt; a) \* 0 &#43; P(X \geq a) \* a = a*P(X \geq a)$$ 我们考虑到:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mooxiu.github.io/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/" /><meta property="og:image" content="https://mooxiu.github.io/images/share.png" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2020-01-18T19:15:01+00:00" />
+<meta property="article:modified_time" content="2020-01-18T19:15:01+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+>>>>>>> d42af2c63a5acb204af7120668b30855c1d0b24f
 
 
 
 
+<<<<<<< HEAD
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/images/share.png">
   <meta name="twitter:title" content="从马尔可夫不等式到弱大数定律">
   <meta name="twitter:description" content="回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚：
+=======
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://mooxiu.github.io/images/share.png" /><meta name="twitter:title" content="从马尔可夫不等式到弱大数定律"/>
+<meta name="twitter:description" content="回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚：
+>>>>>>> d42af2c63a5acb204af7120668b30855c1d0b24f
 首先是Markov不等式。 它是以俄国数学家Andrey Andreyevich Markov的名字命名，同时也有Markov Chain这个在信息论上著名的东西。这个不等式，简单而言，就是我们可以一个随机变量的期望值判断这个随机变量取值的概率：
-$$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$显而易见，随机变量大于更大的\(a\)的概率会越低。比方说，当​ $\( a = E[X] \)$的时候，我们有​$\( P(X \geq E[x]) \leq 1 \)$ , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果$\( a = 2E[X] \)$​, 我们可以得到$\( P(X \geq 2E[X]) \leq 0.5 \)$​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. 马尔可夫不等式维基百科上举例也清晰易懂:
+$$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$ 显而易见，随机变量大于更大的\(a\)的概率会越低。比方说，当​ $\( a = E[X] \)$的时候，我们有​$\( P(X \geq E[x]) \leq 1 \)$ , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果$\( a = 2E[X] \)$​, 我们可以得到$\( P(X \geq 2E[X]) \leq 0.5 \)$​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. 马尔可夫不等式维基百科上举例也清晰易懂:
 马尔可夫不等式的一个应用是，不超过1/5的人口会有超过5倍于人均收入的收入。
 「概率导论」 一书构造了一个随机变量​ $\(Y_a\)$来证明这个不等式:
-$$ \begin{equation} Y_a= \begin{cases} 0, (X &lt; a) \\ a, (X \geq a) \end{cases} \end{equation} $$那么:
-$$E[Y_a] = P(X &lt; a) \* 0 &#43; P(X \geq a) \* a = a*P(X \geq a)$$我们考虑到:">
+$$ \begin{equation} Y_a= \begin{cases} 0, (X &lt; a) \\ a, (X \geq a) \end{cases} \end{equation} $$ 那么:
+$$E[Y_a] = P(X &lt; a) \* 0 &#43; P(X \geq a) \* a = a*P(X \geq a)$$ 我们考虑到:"/>
 
 
 
-
-  <meta itemprop="name" content="从马尔可夫不等式到弱大数定律">
-  <meta itemprop="description" content="回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚：
+<meta itemprop="name" content="从马尔可夫不等式到弱大数定律">
+<meta itemprop="description" content="回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚：
 首先是Markov不等式。 它是以俄国数学家Andrey Andreyevich Markov的名字命名，同时也有Markov Chain这个在信息论上著名的东西。这个不等式，简单而言，就是我们可以一个随机变量的期望值判断这个随机变量取值的概率：
-$$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$显而易见，随机变量大于更大的\(a\)的概率会越低。比方说，当​ $\( a = E[X] \)$的时候，我们有​$\( P(X \geq E[x]) \leq 1 \)$ , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果$\( a = 2E[X] \)$​, 我们可以得到$\( P(X \geq 2E[X]) \leq 0.5 \)$​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. 马尔可夫不等式维基百科上举例也清晰易懂:
+$$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$ 显而易见，随机变量大于更大的\(a\)的概率会越低。比方说，当​ $\( a = E[X] \)$的时候，我们有​$\( P(X \geq E[x]) \leq 1 \)$ , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果$\( a = 2E[X] \)$​, 我们可以得到$\( P(X \geq 2E[X]) \leq 0.5 \)$​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. 马尔可夫不等式维基百科上举例也清晰易懂:
 马尔可夫不等式的一个应用是，不超过1/5的人口会有超过5倍于人均收入的收入。
 「概率导论」 一书构造了一个随机变量​ $\(Y_a\)$来证明这个不等式:
+<<<<<<< HEAD
 $$ \begin{equation} Y_a= \begin{cases} 0, (X &lt; a) \\ a, (X \geq a) \end{cases} \end{equation} $$那么:
 $$E[Y_a] = P(X &lt; a) \* 0 &#43; P(X \geq a) \* a = a*P(X \geq a)$$我们考虑到:">
   <meta itemprop="datePublished" content="2020-01-18T19:15:01+00:00">
@@ -77,6 +87,13 @@ $$E[Y_a] = P(X &lt; a) \* 0 &#43; P(X \geq a) \* a = a*P(X \geq a)$$我们考虑
   <meta itemprop="wordCount" content="280">
   <meta itemprop="image" content="http://localhost:1313/images/share.png">
   <meta itemprop="keywords" content="Mathmatics">
+=======
+$$ \begin{equation} Y_a= \begin{cases} 0, (X &lt; a) \\ a, (X \geq a) \end{cases} \end{equation} $$ 那么:
+$$E[Y_a] = P(X &lt; a) \* 0 &#43; P(X \geq a) \* a = a*P(X \geq a)$$ 我们考虑到:"><meta itemprop="datePublished" content="2020-01-18T19:15:01+00:00" />
+<meta itemprop="dateModified" content="2020-01-18T19:15:01+00:00" />
+<meta itemprop="wordCount" content="292"><meta itemprop="image" content="https://mooxiu.github.io/images/share.png" />
+<meta itemprop="keywords" content="mathmatics," />
+>>>>>>> d42af2c63a5acb204af7120668b30855c1d0b24f
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
   <style>
@@ -277,7 +294,8 @@ $$E[Y_a] = P(X &lt; a) \* 0 &#43; P(X \geq a) \* a = a*P(X \geq a)$$我们考虑
   <p>回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚：</p>
 <h5 id="首先是markov不等式">首先是Markov不等式。</h5>
 <p>它是以俄国数学家Andrey Andreyevich Markov的名字命名，同时也有Markov Chain这个在信息论上著名的东西。这个不等式，简单而言，就是我们可以一个随机变量的期望值判断这个随机变量取值的概率：</p>
-$$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$<p>显而易见，随机变量大于更大的\(a\)的概率会越低。比方说，当​ $\( a = E[X] \)$的时候，我们有​$\( P(X \geq E[x]) \leq 1 \)$ , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果$\( a = 2E[X] \)$​, 我们可以得到$\( P(X \geq 2E[X]) \leq 0.5 \)$​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. <a href="https://zh.wikipedia.org/wiki/%E9%A6%AC%E7%88%BE%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F">马尔可夫不等式维基百科</a>上举例也清晰易懂:</p>
+$$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$
+<p>显而易见，随机变量大于更大的\(a\)的概率会越低。比方说，当​ $\( a = E[X] \)$的时候，我们有​$\( P(X \geq E[x]) \leq 1 \)$ , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果$\( a = 2E[X] \)$​, 我们可以得到$\( P(X \geq 2E[X]) \leq 0.5 \)$​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. <a href="https://zh.wikipedia.org/wiki/%E9%A6%AC%E7%88%BE%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F">马尔可夫不等式维基百科</a>上举例也清晰易懂:</p>
 <blockquote>
 <p>马尔可夫不等式的一个应用是，不超过1/5的人口会有超过5倍于人均收入的收入。</p>
 </blockquote>
@@ -290,17 +308,26 @@ Y_a=
 a, (X \geq a)  
 \end{cases}  
 \end{equation}  
-$$<p>那么:</p>
-$$E[Y_a] = P(X < a) \* 0 + P(X \geq a) \* a = a*P(X \geq a)$$<p>我们考虑到:</p>
-$$  \quad X < a: X\geq 0 = Y_a ;\\  \quad X \geq a: X\geq a = Y_a;\  $$<p>显而易见, ​\( E(X) \geq E(Y\_a) \)， 而上面又说\( E(Y\_a)= aP(X\geq a) \)​, 所以:</p>
-$$aP(X\geq a) = E(Y_a) \leq E(X) \\  P(X \geq a) \leq \dfrac{E(X)}{a}  $$<p>但我们亦容易看出，Markov不等式仅仅用了期望这一个变量进行估计，因此它的上界仍然是保守的。考虑到如果我们也知道随机变量的方差的话，我们可以更准确地对其进行预估，也就是试图把方差$\(\sigma^2\)​$引入上述不等式，我们得到了:</p>
+$$
+<p>那么:</p>
+$$E[Y_a] = P(X < a) \* 0 + P(X \geq a) \* a = a*P(X \geq a)$$
+<p>我们考虑到:</p>
+$$  \quad X < a: X\geq 0 = Y_a ;\\  \quad X \geq a: X\geq a = Y_a;\  $$
+<p>显而易见, ​\( E(X) \geq E(Y\_a) \)， 而上面又说\( E(Y\_a)= aP(X\geq a) \)​, 所以:</p>
+$$aP(X\geq a) = E(Y_a) \leq E(X) \\  P(X \geq a) \leq \dfrac{E(X)}{a}  $$
+<p>但我们亦容易看出，Markov不等式仅仅用了期望这一个变量进行估计，因此它的上界仍然是保守的。考虑到如果我们也知道随机变量的方差的话，我们可以更准确地对其进行预估，也就是试图把方差$\(\sigma^2\)​$引入上述不等式，我们得到了:</p>
 <h5 id="切比雪夫不等式chebyshev8217s-inequality">切比雪夫不等式(Chebyshev’s Inequality).</h5>
 <p>既然试图$\(\sigma^2\)$把​带入Markov，我们就应当去思考哪个地方可以写成方差的形式。事实上:</p>
-$$E[(X &#8211; E(X) )^2] = \sigma^2$$<p>构造一个$​\(Z\)$的随机变量，令​$\( Z = (X &#8211; E[X])^2 \)$, 显然​ $\(Z\)$也同时满足大于等于$\(0\)$​ 这一条件。我们再写一个关于​的Markov方程：</p>
-$$P(E(Z) \geq a) \leq \dfrac{E[Z]}{a}$$<p>考虑到$\( E[Z] = E[(X &#8211; E[X])^2] = \sigma^2 \)​$, 把上面的式子稍做转换:</p>
-$$P((X-E[X])^2 \geq a) \leq \dfrac{\sigma^2}{a}$$<p>如果把​ $\(a\)写作\(c^2\)​，把\(E[X]\)​记作​\(\mu \)$， 则:</p>
-$$P((X- \mu)^2 \geq c^2) \leq \dfrac{\sigma^2}{c^2}$$<p>不要忘了$\( (X &#8211; \mu)^2 \geq c^2 \)​$等价于$\( |X &#8211; \mu| \geq c \)​$ , 上述式子可以转化为Chebyshev不等式的标准形式:</p>
-$$P(|X-\mu| \geq c) \leq \dfrac{\sigma^2}{c^2} \qquad(c \geq 0)$$<p>它说明了什么呢？在一个我们知晓了期望和方差的随机变量身上，我们可以大致估计它和期望的偏差会是多大的情况。显然，与它的均值偏差越大的概率越小。不过，从上述的推理过程也可知，这两个不等式只是一体两面，无非是下面的不等式知道更多的信息，因此有更精确的结论而已。不难想象，如果我们知道随机变量的模式，我们可以通过这一信息得到更为精确的估计。</p>
+$$E[(X &#8211; E(X) )^2] = \sigma^2$$
+<p>构造一个$​\(Z\)$的随机变量，令​$\( Z = (X &#8211; E[X])^2 \)$, 显然​ $\(Z\)$也同时满足大于等于$\(0\)$​ 这一条件。我们再写一个关于​的Markov方程：</p>
+$$P(E(Z) \geq a) \leq \dfrac{E[Z]}{a}$$
+<p>考虑到$\( E[Z] = E[(X &#8211; E[X])^2] = \sigma^2 \)​$, 把上面的式子稍做转换:</p>
+$$P((X-E[X])^2 \geq a) \leq \dfrac{\sigma^2}{a}$$
+<p>如果把​ $\(a\)写作\(c^2\)​，把\(E[X]\)​记作​\(\mu \)$， 则:</p>
+$$P((X- \mu)^2 \geq c^2) \leq \dfrac{\sigma^2}{c^2}$$
+<p>不要忘了$\( (X &#8211; \mu)^2 \geq c^2 \)​$等价于$\( |X &#8211; \mu| \geq c \)​$ , 上述式子可以转化为Chebyshev不等式的标准形式:</p>
+$$P(|X-\mu| \geq c) \leq \dfrac{\sigma^2}{c^2} \qquad(c \geq 0)$$
+<p>它说明了什么呢？在一个我们知晓了期望和方差的随机变量身上，我们可以大致估计它和期望的偏差会是多大的情况。显然，与它的均值偏差越大的概率越小。不过，从上述的推理过程也可知，这两个不等式只是一体两面，无非是下面的不等式知道更多的信息，因此有更精确的结论而已。不难想象，如果我们知道随机变量的模式，我们可以通过这一信息得到更为精确的估计。</p>
 <p>尽管从推理的过程来看它们都是trivial的，但它们依旧在看待事物的方式上给人很大的冲击。从切比雪夫不等式推导而来的大数定理就是一例。</p>
 <h5 id="弱大数定律">弱大数定律</h5>
 <p>有弱大数定律(Weak Law of Large Numbers)，当然也有强大数定律(Strong Law of Large Numbers). 在分析里，极限的定义颇费章节，但从认识论上，这两者给人的直观感受是一致的，也就是对于独立同分布随机变量的样本均值，在大样本的情况下，与随机变量的均值非常接近。弱大数定律于此处有一限定，是说「有很大的概率」与样本均值非常接近。而强大数定律则直言这一概率为1.</p>
@@ -308,10 +335,12 @@ $$P(|X-\mu| \geq c) \leq \dfrac{\sigma^2}{c^2} \qquad(c \geq 0)$$<p>它说明了
 <p>事实上，现代概率论的概率的认知乃是自Kolmogorov于1933年基于测度论的公理化结果。</p>
 <p>从切比雪夫到弱大数定律的变换不难理解，在这里我稍加说明:</p>
 <p>有n个独立同分布的变量，分别是$\( X\_1, X\_2, X_3 \cdots \)$​ , 它们的样本均值为:</p>
-$$M\_n = \dfrac{1}{n} \sum\_i^{n}X_i$$<p>那么,​$\( E[M\_n] = \dfrac{1}{n} (E[X\_1] + E[X\_2] + \cdots + E[X\_3]) = \dfrac{1}{n} \sum\_{i=1}^{n} E[X\_i]= \dfrac{n\mu}{n} = \mu \)  \( var(M\_n) = \dfrac{1}{n^2} \cdot var(\sum\_{n=1}^{n} X\_i) = \dfrac{\sum\_{i=1}^n var(X_i)}{n^2} = \dfrac{n\sigma^2}{n^2} = \dfrac{\sigma^2}{n} \)$</p>
+$$M\_n = \dfrac{1}{n} \sum\_i^{n}X_i$$
+<p>那么,​$\( E[M\_n] = \dfrac{1}{n} (E[X\_1] + E[X\_2] + \cdots + E[X\_3]) = \dfrac{1}{n} \sum\_{i=1}^{n} E[X\_i]= \dfrac{n\mu}{n} = \mu \)  \( var(M\_n) = \dfrac{1}{n^2} \cdot var(\sum\_{n=1}^{n} X\_i) = \dfrac{\sum\_{i=1}^n var(X_i)}{n^2} = \dfrac{n\sigma^2}{n^2} = \dfrac{\sigma^2}{n} \)$</p>
 <p>​</p>
 <p>带入Chebyshev不等式，我们有:</p>
-$$P(|M_n &#8211; \mu| \geq c) \leq \dfrac{\sigma^2}{nc^2}$$<p>对于一个固定的$\(c\)​$而言，当$​\(n\)$ 趋近于无穷大的时候, $\( P(|M\_n &#8211; \mu| \geq c) \leq 0 \)$. 当然概率不可以为负，也就是说​$\( P(|M\_n -\mu|\geq c) = 0 \)$：当​趋于无穷大的时候，样本平均值和随机变量期望值的偏差大于任意一个常数的概率都为0. 以上就是我对于弱大数定律的认知，更加严谨的定义和推导应查阅更权威的文本。</p>
+$$P(|M_n &#8211; \mu| \geq c) \leq \dfrac{\sigma^2}{nc^2}$$
+<p>对于一个固定的$\(c\)​$而言，当$​\(n\)$ 趋近于无穷大的时候, $\( P(|M\_n &#8211; \mu| \geq c) \leq 0 \)$. 当然概率不可以为负，也就是说​$\( P(|M\_n -\mu|\geq c) = 0 \)$：当​趋于无穷大的时候，样本平均值和随机变量期望值的偏差大于任意一个常数的概率都为0. 以上就是我对于弱大数定律的认知，更加严谨的定义和推导应查阅更权威的文本。</p>
 <p>关于在WordPress中显示Latex数学公式参考<a href="http://www.fanyeong.com/2017/07/21/wordpress-how-to-display-equation/">这里</a>。</p>
 
 </content>

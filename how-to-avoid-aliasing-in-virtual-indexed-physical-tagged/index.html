@@ -9,10 +9,11 @@
 <title>How to avoid aliasing in Virtual Indexed Physical Tagged | New River, New Water</title>
 <meta name="title" content="How to avoid aliasing in Virtual Indexed Physical Tagged" />
 <meta name="description" content="The problem of VIPT(Virtual Indexed Physical Tagged) cache is that multiple virtual addresses can be mapped to the same physical address. This is not a problem for physical indexed and physical tagged cache (AKA, the standard practice), but for VIPT, the virtual address can fetch memory blocks to different caches, once a cache has been written, there&rsquo;s a problem of inconsistency, whcih is so-called &ldquo;aliasing&rdquo;.
-To prevent it, we can make those virtual addresses mapped to the same cache. Let&rsquo;s check a virtual address:" />
+To prevent it, we can make those virtual addresses mapped to the same cache." />
 <meta name="keywords" content="Virtual Memory,TLB,Cache," />
 
 
+<<<<<<< HEAD
 <meta property="og:url" content="http://localhost:1313/how-to-avoid-aliasing-in-virtual-indexed-physical-tagged/">
   <meta property="og:site_name" content="New River, New Water">
   <meta property="og:title" content="How to avoid aliasing in Virtual Indexed Physical Tagged">
@@ -27,10 +28,20 @@ To prevent it, we can make those virtual addresses mapped to the same cache. Let
     <meta property="article:tag" content="TLB">
     <meta property="article:tag" content="Cache">
     <meta property="og:image" content="http://localhost:1313/images/share.png">
+=======
+<meta property="og:title" content="How to avoid aliasing in Virtual Indexed Physical Tagged" />
+<meta property="og:description" content="The problem of VIPT(Virtual Indexed Physical Tagged) cache is that multiple virtual addresses can be mapped to the same physical address. This is not a problem for physical indexed and physical tagged cache (AKA, the standard practice), but for VIPT, the virtual address can fetch memory blocks to different caches, once a cache has been written, there&rsquo;s a problem of inconsistency, whcih is so-called &ldquo;aliasing&rdquo;.
+To prevent it, we can make those virtual addresses mapped to the same cache." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mooxiu.github.io/how-to-avoid-aliasing-in-virtual-indexed-physical-tagged/" /><meta property="og:image" content="https://mooxiu.github.io/images/share.png" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-07-20T17:44:00+09:00" />
+<meta property="article:modified_time" content="2024-07-20T17:44:00+09:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+>>>>>>> d42af2c63a5acb204af7120668b30855c1d0b24f
 
 
 
 
+<<<<<<< HEAD
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/images/share.png">
   <meta name="twitter:title" content="How to avoid aliasing in Virtual Indexed Physical Tagged">
@@ -48,6 +59,21 @@ To prevent it, we can make those virtual addresses mapped to the same cache. Let
   <meta itemprop="wordCount" content="312">
   <meta itemprop="image" content="http://localhost:1313/images/share.png">
   <meta itemprop="keywords" content="Virtual Memory,TLB,Cache">
+=======
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://mooxiu.github.io/images/share.png" /><meta name="twitter:title" content="How to avoid aliasing in Virtual Indexed Physical Tagged"/>
+<meta name="twitter:description" content="The problem of VIPT(Virtual Indexed Physical Tagged) cache is that multiple virtual addresses can be mapped to the same physical address. This is not a problem for physical indexed and physical tagged cache (AKA, the standard practice), but for VIPT, the virtual address can fetch memory blocks to different caches, once a cache has been written, there&rsquo;s a problem of inconsistency, whcih is so-called &ldquo;aliasing&rdquo;.
+To prevent it, we can make those virtual addresses mapped to the same cache."/>
+
+
+
+<meta itemprop="name" content="How to avoid aliasing in Virtual Indexed Physical Tagged">
+<meta itemprop="description" content="The problem of VIPT(Virtual Indexed Physical Tagged) cache is that multiple virtual addresses can be mapped to the same physical address. This is not a problem for physical indexed and physical tagged cache (AKA, the standard practice), but for VIPT, the virtual address can fetch memory blocks to different caches, once a cache has been written, there&rsquo;s a problem of inconsistency, whcih is so-called &ldquo;aliasing&rdquo;.
+To prevent it, we can make those virtual addresses mapped to the same cache."><meta itemprop="datePublished" content="2024-07-20T17:44:00+09:00" />
+<meta itemprop="dateModified" content="2024-07-20T17:44:00+09:00" />
+<meta itemprop="wordCount" content="313"><meta itemprop="image" content="https://mooxiu.github.io/images/share.png" />
+<meta itemprop="keywords" content="Virtual Memory,TLB,Cache," />
+>>>>>>> d42af2c63a5acb204af7120668b30855c1d0b24f
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
   <style>
@@ -255,8 +281,10 @@ To prevent it, we can make those virtual addresses mapped to the same cache. Let
 VPN2 -&gt; TLB -&gt; PPN
 </code></pre><p>and <code>PageOffset1 == PageOffset2</code>.</p>
 <p>From the perspective of memory address to cache (bottom side of the image): As tag is physically tagged, we don&rsquo;t need to worry about tag part, we need the index to also be the same. Considering the page offset parts are the same, if we can make the index part inside of page offset part, then this condition is also satisfied:</p>
-$$len(PageOffset) >= len(index) + len(offset)$$<p>To make this formula more meaningful:</p>
-$$2^{len(PageOffset)} >= 2^{len(index)} \cdot 2^{len(offset)}$$<p>
+$$len(PageOffset) >= len(index) + len(offset)$$
+<p>To make this formula more meaningful:</p>
+$$2^{len(PageOffset)} >= 2^{len(index)} \cdot 2^{len(offset)}$$
+<p>
 that is:</p>
 <pre tabindex="0"><code>page size &gt;= cache set count * cache line size
 </code></pre><p>that is:</p>

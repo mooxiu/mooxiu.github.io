@@ -4,7 +4,7 @@
     <title>Computer Science on New River, New Water</title>
     <link>http://localhost:1313/blog/computer-science/</link>
     <description>Recent content in Computer Science on New River, New Water</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2024, muyao haruka hsiao.</copyright>
     <lastBuildDate>Mon, 04 Nov 2024 00:43:02 +0900</lastBuildDate>
@@ -13,8 +13,13 @@
       <title>Remarks on concepts in Flynn&#39;s taxonomy</title>
       <link>http://localhost:1313/remarks-on-concepts-in-flynns-taxonomy/</link>
       <pubDate>Mon, 04 Nov 2024 00:43:02 +0900</pubDate>
+<<<<<<< HEAD
       <guid>http://localhost:1313/remarks-on-concepts-in-flynns-taxonomy/</guid>
       <description>&lt;p&gt;The so-called Flynn&amp;rsquo;s taxonomy is proposed by Michael J. Flynn in his paper &lt;em&gt;Very high-speed computing systems&lt;/em&gt; and &lt;em&gt;Some Computer Organizations and Their Effectiveness&lt;/em&gt; published in 1970s.[1]&lt;/p&gt;&#xA;&lt;p&gt;It categorizes computer architectures based on single/multiple instruction and single/multiple data into 4 types: SISD(Single Instruction Single Data), MISD(Multiple Instruction Single Data), SIMD(Single Instruction Multiple Data), MIMD(Multiple Instruction Multiple Data). The 4 acronyms are easy to get by simple combinations, but the key here is to understand their concepts and applications.&lt;/p&gt;</description>
+=======
+      <guid>https://mooxiu.github.io/remarks-on-concepts-in-flynns-taxonomy/</guid>
+      <description>The so-called Flynn&amp;rsquo;s taxonomy is proposed by Michael J. Flynn in his paper Very high-speed computing systems and Some Computer Organizations and Their Effectiveness published in 1970s.[1]&#xA;It categorizes computer architectures based on single/multiple instruction and single/multiple data into 4 types: SISD(Single Instruction Single Data), MISD(Multiple Instruction Single Data), SIMD(Single Instruction Multiple Data), MIMD(Multiple Instruction Multiple Data). The 4 acronyms are easy to get by simple combinations, but the key here is to understand their concepts and applications.</description>
+>>>>>>> d42af2c63a5acb204af7120668b30855c1d0b24f
     </item>
   </channel>
 </rss>

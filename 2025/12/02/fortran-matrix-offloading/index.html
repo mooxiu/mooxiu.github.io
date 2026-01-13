@@ -8,19 +8,13 @@
 <link rel="shortcut icon" href="http://localhost:1313/static/images/favicon.png" />
 <title>Problem in Fortran Matrix Offloading: Transpose Example | New River, New Water</title>
 <meta name="title" content="Problem in Fortran Matrix Offloading: Transpose Example" />
-<meta name="description" content="Fortran stores matrix in Column-Major ordering, while normal backends stores matrix in Row-Major ordering, which will brings trouble.
-I will use matrix transpose as an example to explain.
-1 Problem
-Consider following example:
-
-In Fortran, we create a matrix $A$, print it, stores in memory and returns a pointer $p_F$.
-Pass $p_{F}$ to a different backend, suppose C&#43;&#43;, do a transpose and stores the result in $p_{c}$
-Back to Fortran, recover data from $p_{C}$, print it.
-
-Question: will step 3 print the correct result as we expected?" />
+<meta name="description" content="Fortran stores matrix in Column-Major ordering, while normal backends stores matrix in Row-Major ordering, which will brings trouble. I will use matrix transpose as an example to explain.
+1 Problem Consider following example:
+In Fortran, we create a matrix $A$, print it, stores in memory and returns a pointer $p_F$. Pass $p_{F}$ to a different backend, suppose C&#43;&#43;, do a transpose and stores the result in $p_{c}$ Back to Fortran, recover data from $p_{C}$, print it." />
 <meta name="keywords" content="" />
 
 
+<<<<<<< HEAD
 <meta property="og:url" content="http://localhost:1313/2025/12/02/fortran-matrix-offloading/">
   <meta property="og:site_name" content="New River, New Water">
   <meta property="og:title" content="Problem in Fortran Matrix Offloading: Transpose Example">
@@ -33,28 +27,50 @@ In Fortran, we create a matrix $A$, print it, stores in memory and returns a poi
     <meta property="article:published_time" content="2025-12-02T17:02:35+09:00">
     <meta property="article:modified_time" content="2025-12-02T17:02:35+09:00">
     <meta property="og:image" content="http://localhost:1313/images/share.png">
+=======
+<meta property="og:title" content="Problem in Fortran Matrix Offloading: Transpose Example" />
+<meta property="og:description" content="Fortran stores matrix in Column-Major ordering, while normal backends stores matrix in Row-Major ordering, which will brings trouble. I will use matrix transpose as an example to explain.
+1 Problem Consider following example:
+In Fortran, we create a matrix $A$, print it, stores in memory and returns a pointer $p_F$. Pass $p_{F}$ to a different backend, suppose C&#43;&#43;, do a transpose and stores the result in $p_{c}$ Back to Fortran, recover data from $p_{C}$, print it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mooxiu.github.io/2025/12/02/fortran-matrix-offloading/" /><meta property="og:image" content="https://mooxiu.github.io/images/share.png" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2025-12-02T17:02:35+09:00" />
+<meta property="article:modified_time" content="2025-12-02T17:02:35+09:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+>>>>>>> d42af2c63a5acb204af7120668b30855c1d0b24f
 
 
 
 
+<<<<<<< HEAD
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/images/share.png">
   <meta name="twitter:title" content="Problem in Fortran Matrix Offloading: Transpose Example">
   <meta name="twitter:description" content="Fortran stores matrix in Column-Major ordering, while normal backends stores matrix in Row-Major ordering, which will brings trouble. I will use matrix transpose as an example to explain.
+=======
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://mooxiu.github.io/images/share.png" /><meta name="twitter:title" content="Problem in Fortran Matrix Offloading: Transpose Example"/>
+<meta name="twitter:description" content="Fortran stores matrix in Column-Major ordering, while normal backends stores matrix in Row-Major ordering, which will brings trouble. I will use matrix transpose as an example to explain.
+>>>>>>> d42af2c63a5acb204af7120668b30855c1d0b24f
 1 Problem Consider following example:
-In Fortran, we create a matrix $A$, print it, stores in memory and returns a pointer $p_F$. Pass $p_{F}$ to a different backend, suppose C&#43;&#43;, do a transpose and stores the result in $p_{c}$ Back to Fortran, recover data from $p_{C}$, print it. Question: will step 3 print the correct result as we expected?">
+In Fortran, we create a matrix $A$, print it, stores in memory and returns a pointer $p_F$. Pass $p_{F}$ to a different backend, suppose C&#43;&#43;, do a transpose and stores the result in $p_{c}$ Back to Fortran, recover data from $p_{C}$, print it."/>
 
 
 
-
-  <meta itemprop="name" content="Problem in Fortran Matrix Offloading: Transpose Example">
-  <meta itemprop="description" content="Fortran stores matrix in Column-Major ordering, while normal backends stores matrix in Row-Major ordering, which will brings trouble. I will use matrix transpose as an example to explain.
+<meta itemprop="name" content="Problem in Fortran Matrix Offloading: Transpose Example">
+<meta itemprop="description" content="Fortran stores matrix in Column-Major ordering, while normal backends stores matrix in Row-Major ordering, which will brings trouble. I will use matrix transpose as an example to explain.
 1 Problem Consider following example:
+<<<<<<< HEAD
 In Fortran, we create a matrix $A$, print it, stores in memory and returns a pointer $p_F$. Pass $p_{F}$ to a different backend, suppose C&#43;&#43;, do a transpose and stores the result in $p_{c}$ Back to Fortran, recover data from $p_{C}$, print it. Question: will step 3 print the correct result as we expected?">
   <meta itemprop="datePublished" content="2025-12-02T17:02:35+09:00">
   <meta itemprop="dateModified" content="2025-12-02T17:02:35+09:00">
   <meta itemprop="wordCount" content="501">
   <meta itemprop="image" content="http://localhost:1313/images/share.png">
+=======
+In Fortran, we create a matrix $A$, print it, stores in memory and returns a pointer $p_F$. Pass $p_{F}$ to a different backend, suppose C&#43;&#43;, do a transpose and stores the result in $p_{c}$ Back to Fortran, recover data from $p_{C}$, print it."><meta itemprop="datePublished" content="2025-12-02T17:02:35+09:00" />
+<meta itemprop="dateModified" content="2025-12-02T17:02:35+09:00" />
+<meta itemprop="wordCount" content="503"><meta itemprop="image" content="https://mooxiu.github.io/images/share.png" />
+<meta itemprop="keywords" content="" />
+>>>>>>> d42af2c63a5acb204af7120668b30855c1d0b24f
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
   <style>
@@ -262,7 +278,7 @@ I will use <em>matrix transpose</em> as an example to explain.</p>
 <li>Back to Fortran, recover data from $p_{C}$, print it.</li>
 </ol>
 <p>Question: will step 3 print the correct result as we expected?</p>
-<h2 id="2-case-1--matrix">2 Case 1: $N \times N$ Matrix</h2>
+<h2 id="2-case-1-n-times-n-matrix">2 Case 1: $N \times N$ Matrix</h2>
 <p>Suppose the original matrix is $3 \times 3$ matrix:
 </p>
 $$
@@ -272,11 +288,13 @@ A_{Fortran} = \begin{bmatrix}
 7 & 8 & 9
 \end{bmatrix}
 \tag{Printed in Step 1}
-$$<p>When <em>Fortran</em> stores it in memory, it will become something like:
+$$
+<p>When <em>Fortran</em> stores it in memory, it will become something like:
 </p>
 $$
 [3, 4, 7, 2, 5, 8, 3, 6, 9] \tag{Memory Stored from Fortran}
-$$<p>
+$$
+<p>
 Pass to <em>C++</em> backend, when recovering, <em>C++</em> would think it is a matrix like:
 </p>
 $$
@@ -285,7 +303,8 @@ A_{C++} = \begin{bmatrix}
 2 & 5 & 8 \\
 3 & 6 & 9
 \end{bmatrix}
-$$<p>
+$$
+<p>
 Do the transpose, it becomes:
 </p>
 $$
@@ -294,12 +313,14 @@ $$
 4 & 5 & 6 \\
 7 & 8 & 9
 \end{bmatrix}
-$$<p>
+$$
+<p>
 Save to $p_{C}$:
 </p>
 $$
 [1, 2, 3, 4, 5, 6, 7, 8, 9] \tag{Memory Stored from Cpp}
-$$<p>
+$$
+<p>
 When recovering from it, <em>Fortran</em> again scans it thinking is stores in columns:
 </p>
 $$
@@ -309,9 +330,10 @@ $$
 3 & 6 & 9
 \end{bmatrix}
 \tag{Printed in Step 3}
-$$<p>
+$$
+<p>
 Notice that the result is <strong>correct by coincident</strong>! Because we scan the memory in a wrong way TWICE.</p>
-<h2 id="3-case-2--matrix-">3 Case 2: $N \times M$ Matrix ($N \neq M$)</h2>
+<h2 id="3-case-2-n-times-m-matrix-n-neq-m">3 Case 2: $N \times M$ Matrix ($N \neq M$)</h2>
 <p>We&rsquo;re not this lucky if we&rsquo;re going to transpose matrix with different length in size.</p>
 <p>Suppose the original matrix is $2 \times 3$ matrix:
 </p>
@@ -321,11 +343,13 @@ B_{Fortran} = \begin{bmatrix}
 4 & 5 & 6 
 \end{bmatrix}
 \tag{Printed in Step 1}
-$$<p>When <em>Fortran</em> stores it in memory, it will become something like:
+$$
+<p>When <em>Fortran</em> stores it in memory, it will become something like:
 </p>
 $$
 [1, 4, 2, 5, 3, 6] \tag{Memory Stored from Fortran}
-$$<p>
+$$
+<p>
 Pass to <em>C++</em> backend, when recovering, <em>C++</em> would think it is a matrix like:
 </p>
 $$
@@ -333,7 +357,8 @@ B_{C++} = \begin{bmatrix}
 1 & 4 & 2 \\
 5 & 3 & 6 
 \end{bmatrix}
-$$<p>
+$$
+<p>
 Do the transpose, it becomes:
 </p>
 $$
@@ -342,12 +367,14 @@ $$
 4 & 3  \\
 2 & 6
 \end{bmatrix}
-$$<p>
+$$
+<p>
 Save to $p_{C}$:
 </p>
 $$
 [1, 5, 4, 3, 2, 6] \tag{Memory Stored from Cpp}
-$$<p>
+$$
+<p>
 When recovering from it, <em>Fortran</em> again scans it thinking is stores in columns:
 </p>
 $$
@@ -357,7 +384,8 @@ $$
 4 & 6
 \end{bmatrix}
 \tag{Printed in Step 3}
-$$<p>
+$$
+<p>
 Notice that this is <strong>NOT</strong> the correct transpose of step 1.</p>
 <hr>
 <script src="https://giscus.app/client.js"
