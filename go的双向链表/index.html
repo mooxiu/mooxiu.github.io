@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="shortcut icon" href="https://mooxiu.github.io/images/favicon.png" />
+<link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" />
 <title>Go的双向链表 | New River, New Water</title>
 <meta name="title" content="Go的双向链表" />
 <meta name="description" content="Although list has rarely been used in Go (Just about always when you are thinking of a list - use a slice instead in Go), there is an official implementation in the standard library. After reading the implementation (go standard package: src/container/list/list.go), I found it very inspiring.
@@ -19,7 +19,7 @@ type Element struct { prev, next Element list *List Value interface{} } It is ac
 The Node Basically, it first defines Node, which is referred to as Element in the standard package:
 type Element struct { prev, next Element list *List Value interface{} } It is actually a structure we create a lot when solving linked list problems in websites like LeetCode." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mooxiu.github.io/go%E7%9A%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/" /><meta property="og:image" content="https://mooxiu.github.io/images/share.png" /><meta property="article:section" content="blog" />
+<meta property="og:url" content="http://localhost:1313/go%E7%9A%84%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/" /><meta property="og:image" content="http://localhost:1313/images/share.png" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2021-12-10T00:01:30+08:00" />
 <meta property="article:modified_time" content="2021-12-10T00:01:30+08:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
 
@@ -27,7 +27,7 @@ type Element struct { prev, next Element list *List Value interface{} } It is ac
 
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://mooxiu.github.io/images/share.png" /><meta name="twitter:title" content="Go的双向链表"/>
+<meta name="twitter:image" content="http://localhost:1313/images/share.png" /><meta name="twitter:title" content="Go的双向链表"/>
 <meta name="twitter:description" content="Although list has rarely been used in Go (Just about always when you are thinking of a list - use a slice instead in Go), there is an official implementation in the standard library. After reading the implementation (go standard package: src/container/list/list.go), I found it very inspiring.
 The Node Basically, it first defines Node, which is referred to as Element in the standard package:
 type Element struct { prev, next Element list *List Value interface{} } It is actually a structure we create a lot when solving linked list problems in websites like LeetCode."/>
@@ -39,7 +39,7 @@ type Element struct { prev, next Element list *List Value interface{} } It is ac
 The Node Basically, it first defines Node, which is referred to as Element in the standard package:
 type Element struct { prev, next Element list *List Value interface{} } It is actually a structure we create a lot when solving linked list problems in websites like LeetCode."><meta itemprop="datePublished" content="2021-12-10T00:01:30+08:00" />
 <meta itemprop="dateModified" content="2021-12-10T00:01:30+08:00" />
-<meta itemprop="wordCount" content="589"><meta itemprop="image" content="https://mooxiu.github.io/images/share.png" />
+<meta itemprop="wordCount" content="567"><meta itemprop="image" content="http://localhost:1313/images/share.png" />
 <meta itemprop="keywords" content="Data Structure,Golang," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -288,16 +288,27 @@ type Element struct { prev, next Element list *List Value interface{} } It is ac
 <p>In this situation, a double-linked list can achieve the above two operations very effectively.</p>
 <!-- Also, considering dealing with a cache, it is better to be a  data structure to quickly peek/get what we want to find in hopefully $O(1)$ time. So a HashMap is necessary.  -->
 <hr>
-<p>If you like my article and want to make a donation, you can click the <a href="https://mooxiu.github.io/donate/">捐赠 Donation</a> button on the side bar.</p>
+
 
 </content>
-<p>
-  
-  <a href="https://mooxiu.github.io/blog/data-structure/">#Data Structure</a>
-  
-  <a href="https://mooxiu.github.io/blog/golang/">#Golang</a>
-  
-</p>
+
+
+<div style="display: flex; justify-content:
+space-between; margin-top: 2em;">
+  <div>
+    
+      <a href="http://localhost:1313/%E6%96%87%E6%98%8E%E7%8E%A9%E5%90%8E%E6%84%9F/" style="font: italic, serif; font-size: smaller; font-weight: bold;">Prev: 文明玩后感</a>
+    
+  </div>
+  <br>
+  <div>
+    
+      <a href="http://localhost:1313/notion%E5%BE%88%E5%A5%BD%E6%89%80%E4%BB%A5%E6%88%91%E9%80%89%E6%8B%A9logseq/" style="font: italic, serif; font-size: smaller; font-weight: bold;">Next: notion很好，所以我选择logseq</a>
+    
+  </div>
+</div>
+
+
 
   </main>
   <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
